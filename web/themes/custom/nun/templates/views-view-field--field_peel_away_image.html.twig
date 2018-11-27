@@ -1,0 +1,44 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a single field in a view.
+ *
+ * Available variables:
+ * - view: The view that the field belongs to.
+ * - field: The field handler that can process the input.
+ * - row: The raw result of the database query that generated this field.
+ * - output: The processed output that will normally be used.
+ *
+ * When fetching output from the row this construct should be used:
+ * data = row[field.field_alias]
+ *
+ * The above will guarantee that you'll always get the correct data, regardless
+ * of any changes in the aliasing that might happen if the view is modified.
+ *
+ * @see template_preprocess_views_view_field()
+ *
+ * @ingroup themeable
+ */
+#}
+{# This is a custom template for the field_peel_away_image to use the value of the peel away
+    Image as a background. In d7 this was done in a views header textarea using a style tag with
+   a token, but 8 seems to strip out any <style> and <script> tags as a security measure. This field
+   in the view can NOT be set to hidden or this markup won't get added.  #}
+<style>
+
+@media (min-width: 768px ) {
+  .peel-away {
+     background-image: url( '{{ output -}}' );
+  }
+}
+@media (min-width: 992px ) {
+  .peel-away {
+     background-image: url( '{{ output -}}' );
+  }
+}
+@media (min-width: 1200px ) {
+   .peel-away {
+      background-image: url( '{{ output -}}' );
+   }
+}
+</style>

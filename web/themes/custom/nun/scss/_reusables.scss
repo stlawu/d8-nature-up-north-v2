@@ -1,0 +1,96 @@
+.encounter-layover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: block;
+  font-size: 1.3em;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+  position: absolute;
+  text-align: right;
+  top: 0px;
+  width: 100%;
+  span:before {
+    background-image: url("/themes/nun/img/northworthy_white_sm.png");
+    background-repeat: no-repeat;
+    content: "";
+    display: inline-block;
+    height: 20px;
+    vertical-align: baseline;
+    width: 20px;
+  }
+  span {
+    padding-right: 0.5em;
+  }
+}
+
+.peel-away-button {
+  margin-top: 0px;
+  background: transparent;
+  color: $link-blue;
+  border: 1.5px solid $link-blue;
+  box-shadow: 0px 0px 4px darken($link-blue, 15%);
+  padding: 0;
+}
+
+.highlighted-menu {
+  background: #0081c2;
+  background-image: linear-gradient(to bottom, #0088cc, #0077b3);
+  background-repeat: repeat-x;
+  color: white;
+}
+
+.vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.orange-button {
+  background-image: linear-gradient(to bottom, #f4a72d, #d38813);
+  background-repeat: repeat-x;
+  border-radius: 4px;
+  box-shadow: 0px 0px 3px darken($light-gray, 15%);
+  border: 1px solid white;
+  text-shadow: 0px 0px 3px #333;
+}
+.reverse-orange {
+  background-image: linear-gradient(to bottom, #d38813, #f4a72d);
+}
+
+.links-button {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: transparent;
+  padding: 0;
+}
+
+.btn-blue {
+  background-color: #006dcc;
+  background-image: linear-gradient(to bottom, #0088cc, #0044cc);
+  background-repeat: repeat-x;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.btn-blue:hover {
+  background-color: #0044cc;
+  color: white;
+}
+
+.panel-default {
+  > .panel-heading {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: auto;
+  }
+}
+
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+    margin-right: 5px;
+    position: static;
+}
+.radio label, .checkbox label {
+  padding-left: 20px;
+}

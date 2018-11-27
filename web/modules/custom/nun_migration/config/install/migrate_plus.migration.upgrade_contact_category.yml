@@ -1,0 +1,31 @@
+uuid: c63f0a55-a891-4785-b88a-a60a32057e01
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_contact_category
+migration_tags:
+  - 'Drupal 6'
+  - 'Drupal 7'
+migration_group: migrate_drupal_7
+label: 'Contact category configuration'
+source:
+  plugin: contact_category
+process:
+  id:
+    -
+      plugin: machine_name
+      source: category
+    -
+      plugin: dedupe_entity
+      entity_type: contact_form
+      field: id
+      length: 32
+  label: category
+  recipients: recipients
+  reply: reply
+  weight: weight
+destination:
+  plugin: 'entity:contact_form'
+migration_dependencies:
+  required: {  }
+  optional: {  }

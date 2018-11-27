@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - nun_migration
+id: profile
+label: 'Profile Custom Migration'
+description: 'Migrate d7 profile2 to d8 profile'
+source_type: 'Profile'
+module: null
+shared_configuration:
+  source:
+    key: d7

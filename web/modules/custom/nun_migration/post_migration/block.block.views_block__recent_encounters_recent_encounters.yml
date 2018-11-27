@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.recent_encounters
+  module:
+    - system
+    - views
+  theme:
+    - nun
+id: views_block__recent_encounters_recent_encounters
+theme: nun
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:recent_encounters-recent_encounters'
+settings:
+  id: 'views_block:recent_encounters-recent_encounters'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "/node/add/*\r\n/feedback\r\n/encounter/*\r\n/encounters-map\r\n<front>"
+    negate: true
+    context_mapping: {  }

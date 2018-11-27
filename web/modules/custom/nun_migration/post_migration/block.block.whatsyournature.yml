@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:8568af99-8802-4edd-9a66-2d28ced50160'
+  module:
+    - block_content
+    - user
+  theme:
+    - nun
+id: whatsyournature
+theme: nun
+region: highlighted
+weight: -8
+provider: null
+plugin: 'block_content:8568af99-8802-4edd-9a66-2d28ced50160'
+settings:
+  id: 'block_content:8568af99-8802-4edd-9a66-2d28ced50160'
+  label: 'What''s Your Nature?'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      anonymous: anonymous
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

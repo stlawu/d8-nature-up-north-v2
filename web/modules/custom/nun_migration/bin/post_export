@@ -1,0 +1,120 @@
+#!/bin/bash
+
+no_blocks="false"
+no_menus="false"
+no_config="false"
+for var in "$@"
+do
+    case "$var" in
+        --no-blocks)
+          no_blocks="true"
+          ;;
+        --no-menus)
+          no_menus="true"
+          ;;
+        --no-config)
+          no_config="true"
+          ;;
+        --help)
+          echo "./bin/post_export [--no-blocks] [--no-config] [--no-menus]"
+          exit
+    esac
+done
+
+# must be run from the nun_migration directory e.g. ./bin/re_migrate
+. ./MIGRATE_CONFIG
+
+rm -rf ./tmp_post_migration
+
+if [[ "$no_config" == "true" ]]; then
+    echo "skipping config export..."
+else
+drush config-export --destination=modules/custom/nun_migration/tmp_post_migration/
+mv ./tmp_post_migration/core.entity_form_display.*.default.yml ./post_migration/
+mv ./tmp_post_migration/core.entity_view_display.*.default.yml ./post_migration/
+mv ./tmp_post_migration/core.entity_view_display.*.teaser.yml ./post_migration/
+mv ./tmp_post_migration/pathauto.pattern.*.yml ./post_migration/
+mv ./tmp_post_migration/views.view.*.yml ./post_migration/
+mv ./tmp_post_migration/backup_migrate.*.yml ./post_migration/
+mv ./tmp_post_migration/image.style.*.yml ./post_migration/
+mv ./tmp_post_migration/nun.settings.yml ./post_migration/
+mv ./tmp_post_migration/filter.format.*.yml ./post_migration/
+mv ./tmp_post_migration/block.block.*.yml ./post_migration
+mv ./tmp_post_migration/webform.webform.*.yml ./post_migration
+mv ./tmp_post_migration/system.menu.*.yml ./post_migration
+mv ./tmp_post_migration/core.date_format.*.yml ./post_migration
+
+# these are NEW fields that didn't exist or have no data in the d7 install
+fields=(
+"field_organization_location" "field_organization_address" "field_organization_email" "field_organization_telephone"
+"field_event_location" "field_event_address" "field_event_email" "field_event_telephone"
+"field_encounter_map_label"
+"field_instructions"
+"field_event_date"
+)
+## NOTE: field_event_date is being over-written and re-migrated because we can't a single source field
+# type to multiple destination field types (the old date supported ranges and in d8 there are different field types).
+
+for field in ${fields[@]}
+do
+    mv ./tmp_post_migration/field.field.node.*.${field}.yml ./post_migration/
+    mv ./tmp_post_migration/field.storage.node.${field}.yml ./post_migration/
+done
+
+profile_fields=(
+"field_profile_current_location" "field_profile_full_name" "field_profile_hometown" "field_profile_activities" "field_profile_photo" "field_bio"
+)
+for field in ${profile_fields[@]}
+do
+    mv ./tmp_post_migration/field.field.profile.*.${field}.yml ./post_migration/
+    mv ./tmp_post_migration/field.storage.profile.${field}.yml ./post_migration/
+done
+# these are fields that existed in the d7 system that require re-configuration
+# or manual configuration
+fields_no_storage=(
+    "field_blog_category" "field_nys_standard" "field_hidden_tags"
+    "field_tags_other" "field_add_your_organization"
+    "field_trail" "field_trail_reference" "field_blog_related_content"
+    "field_link"
+    "comment_node_trail" "comment_node_encounter" "comment_node_blog"
+    "comment_node_educator_resource"
+)
+for field in ${fields_no_storage[@]}
+do
+    mv ./tmp_post_migration/field.field.node.*.${field}.yml ./post_migration/
+done
+#field.field.node.community_organization.field_organization_location.yml
+#field.storage.node.field_organization_location.yml
+#field.field.node.community_organization.field_organization_address.yml
+#field.storage.node.field_organization_address.yml
+
+
+
+rm -rf ./tmp_post_migration
+
+for yml in `ls ./post_migration/*.yml | grep -v field.storage`
+do
+    sed '/^uuid/d' ${yml} > ${yml}.no_uuid
+    mv ${yml}.no_uuid ${yml}
+done
+
+fi
+
+if [[ "$no_blocks" == "true" ]]; then
+    echo "skipping block export..."
+else
+    mysqldump -u ${DEST_DB_USER} -p${DEST_DB_PW} ${DEST_DB_DB} block_content block_content_field_data block_content_field_revision block_content_revision block_content_revision__body block_content__body > ./post_migration/blocks.sql
+fi
+
+if [[ "$no_menus" == "true" ]]; then
+    echo "skipping menu export..."
+else
+    mysqldump -u ${DEST_DB_USER} -p${DEST_DB_PW} ${DEST_DB_DB} menu_link_content menu_link_content_data menu_tree > ./post_migration/menus.sql
+fi
+
+
+#ignores=("intern_bio" "species_account" "test" "webform" "monitor_change_photopoint" "monitorchange_slu_quad" "photo_post_from_canton_school" "photo_post_from_eastside_element" "photo_post_from_heuvelton_centra")
+#for i in ${ignores[@]}
+#do
+#    rm ./post_migration/*${i}*
+#done

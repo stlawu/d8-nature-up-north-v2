@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: community_organization
+label: 'Community Organization'
+type: 'canonical_entities:node'
+pattern: 'community/[node:title]'
+selection_criteria:
+  b99114e6-f1f6-4ecd-9948-67f48a3f820e:
+    id: node_type
+    bundles:
+      community_organization: community_organization
+    negate: false
+    context_mapping:
+      node: node
+    uuid: b99114e6-f1f6-4ecd-9948-67f48a3f820e
+selection_logic: and
+weight: -5
+relationships: {  }

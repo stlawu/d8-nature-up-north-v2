@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - nun_migration
+id: date_range
+label: 'Date Range Field Custom Migration'
+description: 'Re-migrate d7 dates that had an end date.'
+source_type: 'Custom fields'
+module: null
+shared_configuration:
+  source:
+    key: d7

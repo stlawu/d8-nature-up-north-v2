@@ -1,0 +1,24 @@
+uuid: fc2f49b1-cb87-47da-85c4-36af5abf07ae
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - nun_migration
+_core:
+  default_config_hash: '-NlUbsLVYSxyu4yB0WBx4dDkZ6FMYKpQK0tDsLyMyqM'
+id: field_organization_location
+migration_tags: null
+migration_group: location
+label: 'Organization location'
+source:
+  plugin: djc_location_source
+  source_field: field_contact_information
+process:
+  lat: latitude
+  lng: longitude
+  entity_id: entity_id
+destination:
+  plugin: djc_field_populator
+  destination_field: field_organization_location
+migration_dependencies: null

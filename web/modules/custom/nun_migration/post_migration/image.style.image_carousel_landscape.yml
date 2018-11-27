@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: image_carousel_landscape
+label: 'Image Carousel Landscape'
+effects:
+  9cef1bf6-f45a-4e7a-bf66-1b9258db3cf7:
+    uuid: 9cef1bf6-f45a-4e7a-bf66-1b9258db3cf7
+    id: image_scale
+    weight: 1
+    data:
+      width: 870
+      height: null
+      upscale: true

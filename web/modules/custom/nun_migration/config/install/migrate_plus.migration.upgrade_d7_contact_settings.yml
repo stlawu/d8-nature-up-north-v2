@@ -1,0 +1,29 @@
+uuid: 3d630f75-ee44-4804-9b63-c17f461534e2
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_contact_settings
+migration_tags:
+  - 'Drupal 7'
+migration_group: migrate_drupal_7
+label: 'Contact configuration'
+source:
+  plugin: contact_settings
+  variables:
+    - contact_default_status
+    - contact_threshold_limit
+process:
+  user_default_enabled: contact_default_status
+  flood/limit: contact_threshold_limit
+  default_form:
+    plugin: migration
+    migration: upgrade_contact_category
+    source: default_category
+destination:
+  plugin: config
+  config_name: contact.settings
+migration_dependencies:
+  required:
+    - upgrade_contact_category
+  optional:
+    - upgrade_contact_category

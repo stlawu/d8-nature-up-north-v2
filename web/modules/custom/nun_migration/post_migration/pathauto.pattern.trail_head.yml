@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: trail_head
+label: 'Trail Head'
+type: 'canonical_entities:node'
+pattern: 'trailhead/[node:title]'
+selection_criteria:
+  2a2fefca-2ef6-41ef-91ff-1b5ef7fecc9d:
+    id: node_type
+    bundles:
+      trail_head: trail_head
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 2a2fefca-2ef6-41ef-91ff-1b5ef7fecc9d
+selection_logic: and
+weight: -5
+relationships: {  }

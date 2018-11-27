@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.partner.body
+    - field.field.node.partner.comment_node_partner
+    - field.field.node.partner.field_partner_logo
+    - field.field.node.partner.field_partner_type
+    - field.field.node.partner.field_partner_web_site
+    - node.type.partner
+  module:
+    - image
+    - text
+    - user
+id: node.partner.teaser
+targetEntityType: node
+bundle: partner
+mode: teaser
+content:
+  body:
+    label: hidden
+    weight: 1
+    type: text_summary_or_trimmed
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_partner_logo:
+    label: hidden
+    weight: 0
+    type: image
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+  sharethis:
+    weight: 10
+    region: content
+hidden:
+  comment_node_partner: true
+  field_partner_type: true
+  field_partner_web_site: true

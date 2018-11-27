@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: square_encounter_thumbnail
+label: 'Square encounter thumbnail'
+effects:
+  ac9e9ed1-322a-4712-8cd8-70873ed20358:
+    uuid: ac9e9ed1-322a-4712-8cd8-70873ed20358
+    id: image_effects_auto_orient
+    weight: 1
+    data:
+      scan_exif: true
+  03093de9-d229-41fb-a39e-4471805e8ff2:
+    uuid: 03093de9-d229-41fb-a39e-4471805e8ff2
+    id: image_scale_and_crop
+    weight: 3
+    data:
+      width: 75
+      height: 75

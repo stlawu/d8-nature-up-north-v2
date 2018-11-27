@@ -1,0 +1,141 @@
+uuid: 2d103031-1d3a-4475-9c38-8413eeb1cef5
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_revision_event
+migration_tags:
+  - 'Drupal 7'
+migration_group: migrate_drupal_7
+label: 'Node revisions (Event)'
+source:
+  plugin: d7_node_revision
+  node_type: event
+process:
+  nid: nid
+  vid: vid
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: und
+  title: title
+  uid: node_uid
+  status: status
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+  revision_uid: revision_uid
+  revision_log: log
+  revision_timestamp: timestamp
+  body:
+    plugin: iterator
+    source: body
+    process:
+      value: value
+      format:
+        -
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            - null
+        -
+          plugin: skip_on_empty
+          method: process
+        -
+          plugin: migration
+          migration:
+            - upgrade_d6_filter_format
+            - upgrade_d7_filter_format
+          source: format
+  field_event_date: field_event_date
+  field_contact_person:
+    plugin: iterator
+    source: field_contact_person
+    process:
+      value: value
+      format:
+        -
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            - null
+        -
+          plugin: skip_on_empty
+          method: process
+        -
+          plugin: migration
+          migration:
+            - upgrade_d6_filter_format
+            - upgrade_d7_filter_format
+          source: format
+  field_additional_info:
+    plugin: iterator
+    source: field_additional_info
+    process:
+      value: value
+      format:
+        -
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            - null
+        -
+          plugin: skip_on_empty
+          method: process
+        -
+          plugin: migration
+          migration:
+            - upgrade_d6_filter_format
+            - upgrade_d7_filter_format
+          source: format
+  field_more_info_url:
+    plugin: d6_cck_link
+    source: field_more_info_url
+  field_attachements:
+    plugin: iterator
+    source: field_attachements
+    process:
+      target_id: fid
+      display: display
+      description: description
+  field_event_category: field_event_category
+  field_skill_level: field_skill_level
+  field_event_image:
+    plugin: iterator
+    source: field_event_image
+    process:
+      target_id: fid
+      alt: alt
+      title: title
+      width: width
+      height: height
+  field_appropriate_ages: field_appropriate_ages
+  field_event_location: field_event_location
+  field_add_your_organization:
+    plugin: iterator
+    source: field_add_your_organization
+    process:
+      target_id: tid
+  field_instructions: field_instructions
+destination:
+  plugin: 'entity_revision:node'
+  default_bundle: event
+migration_dependencies:
+  required:
+    59: upgrade_d7_node_announcement_
+    60: upgrade_d7_node_blog
+    61: upgrade_d7_node_community_organization
+    62: upgrade_d7_node_educator_resource
+    63: upgrade_d7_node_encounter
+    64: upgrade_d7_node_event
+    65: upgrade_d7_node_page
+    66: upgrade_d7_node_partner
+    67: upgrade_d7_node_peel_away_image
+    68: upgrade_d7_node_trail
+    69: upgrade_d7_node_trail_head
+  optional:
+    - upgrade_d6_filter_format
+    - upgrade_d7_filter_format

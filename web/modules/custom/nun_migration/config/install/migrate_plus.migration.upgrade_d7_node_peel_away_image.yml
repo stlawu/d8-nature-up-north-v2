@@ -1,0 +1,73 @@
+uuid: c169b896-917f-4c97-a361-467dce96f15a
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_peel_away_image
+migration_tags:
+  - 'Drupal 7'
+migration_group: migrate_drupal_7
+label: 'Nodes (Peel Away Image)'
+source:
+  plugin: d7_node
+  node_type: peel_away_image
+process:
+  nid: tnid
+  vid: vid
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: und
+  title: title
+  uid: node_uid
+  status: status
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+  revision_uid: revision_uid
+  revision_log: log
+  revision_timestamp: timestamp
+  field_peel_away_description:
+    plugin: iterator
+    source: field_peel_away_description
+    process:
+      value: value
+      format:
+        -
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            - null
+        -
+          plugin: skip_on_empty
+          method: process
+        -
+          plugin: migration
+          migration:
+            - upgrade_d6_filter_format
+            - upgrade_d7_filter_format
+          source: format
+  field_peel_away_headline_link:
+    plugin: d6_cck_link
+    source: field_peel_away_headline_link
+  field_peel_away_image:
+    plugin: iterator
+    source: field_peel_away_image
+    process:
+      target_id: fid
+      alt: alt
+      title: title
+      width: width
+      height: height
+destination:
+  plugin: 'entity:node'
+  default_bundle: peel_away_image
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+  optional:
+    - upgrade_d7_field_instance
+    - upgrade_d6_filter_format
+    - upgrade_d7_filter_format

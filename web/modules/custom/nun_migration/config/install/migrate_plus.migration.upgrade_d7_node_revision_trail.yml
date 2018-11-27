@@ -1,0 +1,162 @@
+uuid: 55a09d7d-7849-4820-8e4c-98f8e63c514b
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_revision_trail
+migration_tags:
+  - 'Drupal 7'
+migration_group: migrate_drupal_7
+label: 'Node revisions (Trail Description)'
+source:
+  plugin: d7_node_revision
+  node_type: trail
+process:
+  nid: nid
+  vid: vid
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: und
+  title: title
+  uid: node_uid
+  status: status
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+  revision_uid: revision_uid
+  revision_log: log
+  revision_timestamp: timestamp
+  field_trail_summary:
+    plugin: iterator
+    source: field_trail_summary
+    process:
+      value: value
+      format:
+        -
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            - null
+        -
+          plugin: skip_on_empty
+          method: process
+        -
+          plugin: migration
+          migration:
+            - upgrade_d6_filter_format
+            - upgrade_d7_filter_format
+          source: format
+  field_difficulty: field_difficulty
+  field_elevation_gain: field_elevation_gain
+  field_image:
+    plugin: iterator
+    source: field_image
+    process:
+      target_id: fid
+      alt: alt
+      title: title
+      width: width
+      height: height
+  field_trail_safety_recommendatio:
+    plugin: iterator
+    source: field_trail_safety_recommendatio
+    process:
+      value: value
+      format:
+        -
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            - null
+        -
+          plugin: skip_on_empty
+          method: process
+        -
+          plugin: migration
+          migration:
+            - upgrade_d6_filter_format
+            - upgrade_d7_filter_format
+          source: format
+  field_tips:
+    plugin: iterator
+    source: field_tips
+    process:
+      value: value
+      format:
+        -
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            - null
+        -
+          plugin: skip_on_empty
+          method: process
+        -
+          plugin: migration
+          migration:
+            - upgrade_d6_filter_format
+            - upgrade_d7_filter_format
+          source: format
+  field_things_to_look_for:
+    plugin: iterator
+    source: field_things_to_look_for
+    process:
+      value: value
+      format:
+        -
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            - null
+        -
+          plugin: skip_on_empty
+          method: process
+        -
+          plugin: migration
+          migration:
+            - upgrade_d6_filter_format
+            - upgrade_d7_filter_format
+          source: format
+  field_type: field_type
+  field_trail_pdf:
+    plugin: iterator
+    source: field_trail_pdf
+    process:
+      target_id: fid
+      display: display
+      description: description
+  field_trail_map_image:
+    plugin: iterator
+    source: field_trail_map_image
+    process:
+      target_id: fid
+      alt: alt
+      title: title
+      width: width
+      height: height
+  field_trail_dogs: field_trail_dogs
+  field_distance_round_trip_: field_distance_round_trip_
+destination:
+  plugin: 'entity_revision:node'
+  default_bundle: trail
+migration_dependencies:
+  required:
+    59: upgrade_d7_node_announcement_
+    60: upgrade_d7_node_blog
+    61: upgrade_d7_node_community_organization
+    62: upgrade_d7_node_educator_resource
+    63: upgrade_d7_node_encounter
+    64: upgrade_d7_node_event
+    65: upgrade_d7_node_page
+    66: upgrade_d7_node_partner
+    67: upgrade_d7_node_peel_away_image
+    68: upgrade_d7_node_trail
+    69: upgrade_d7_node_trail_head
+  optional:
+    - upgrade_d6_filter_format
+    - upgrade_d7_filter_format

@@ -1,0 +1,55 @@
+global-styling:
+  css:
+    theme:
+      css/style.css: {}
+  js:
+    js/global.js: {}
+  dependencies:
+    - core/jquery
+
+bootstrap-scripts:
+  js:
+    bootstrap/assets/javascripts/bootstrap/affix.js: {}
+    bootstrap/assets/javascripts/bootstrap/alert.js: {}
+    bootstrap/assets/javascripts/bootstrap/button.js: {}
+    bootstrap/assets/javascripts/bootstrap/carousel.js: {}
+    bootstrap/assets/javascripts/bootstrap/collapse.js: {}
+    bootstrap/assets/javascripts/bootstrap/dropdown.js: {}
+    bootstrap/assets/javascripts/bootstrap/modal.js: {}
+    bootstrap/assets/javascripts/bootstrap/tooltip.js: {}
+    bootstrap/assets/javascripts/bootstrap/popover.js: {}
+    bootstrap/assets/javascripts/bootstrap/scrollspy.js: {}
+    bootstrap/assets/javascripts/bootstrap/tab.js: {}
+    bootstrap/assets/javascripts/bootstrap/transition.js: {}
+
+front-js:
+  js:
+    js/front.js: {}
+  dependencies:
+    - core/jquery
+
+owl-carousel:
+  css:
+    theme:
+      css/owl.carousel.css: {}
+      css/owl.theme.css: {}
+  js:
+    js/owl.carousel.min.js: {}
+    js/owl-carousel.js: {}
+  dependencies:
+    - core/jquery
+
+encounter:
+  js:
+    https://unpkg.com/leaflet@1.0.3/dist/leaflet.js: {}
+    js/encounter_node.js: {}
+  css:
+    theme:
+      https://unpkg.com/leaflet@1.0.3/dist/leaflet.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+
+encounter_mod:
+  js:
+    js/encounter_mod.js: {}

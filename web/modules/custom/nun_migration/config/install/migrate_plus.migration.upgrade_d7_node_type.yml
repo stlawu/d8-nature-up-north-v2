@@ -1,0 +1,29 @@
+uuid: b4fd3cb3-62bc-4f5d-9e03-d820b6ceb0c6
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_type
+migration_tags:
+  - 'Drupal 7'
+migration_group: migrate_drupal_7
+label: 'Node type configuration'
+source:
+  plugin: d7_node_type
+  constants:
+    preview: 1
+process:
+  type: type
+  name: name
+  description: description
+  help: help
+  title_label: title_label
+  preview_mode: constants/preview
+  display_submitted: display_submitted
+  new_revision: options/revision
+  create_body: create_body
+  create_body_label: body_label
+destination:
+  plugin: 'entity:node_type'
+migration_dependencies:
+  required: {  }
+  optional: {  }

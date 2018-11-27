@@ -1,0 +1,5 @@
+name: NUN Migration Helper
+type: module
+description: Code to assist in the NUN migration.
+package: DJ Case
+core: '8.x'

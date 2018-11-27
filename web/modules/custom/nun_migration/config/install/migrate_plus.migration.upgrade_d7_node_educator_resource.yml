@@ -1,0 +1,88 @@
+uuid: d8fe578e-c2d0-4e74-b573-4596161cb1b4
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_educator_resource
+migration_tags:
+  - 'Drupal 7'
+migration_group: migrate_drupal_7
+label: 'Nodes (Educator Resource)'
+source:
+  plugin: d7_node
+  node_type: educator_resource
+process:
+  nid: tnid
+  vid: vid
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: und
+  title: title
+  uid: node_uid
+  status: status
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+  revision_uid: revision_uid
+  revision_log: log
+  revision_timestamp: timestamp
+  field_grade_level: field_grade_level
+  field_link:
+    plugin: d6_cck_link
+    source: field_link
+  field_resource_type: field_resource_type
+  field_subject_s_: field_subject_s_
+  field_file_s_:
+    plugin: iterator
+    source: field_file_s_
+    process:
+      target_id: fid
+      display: display
+      description: description
+  field_nys_standard:
+    plugin: iterator
+    source: field_nys_standard
+    process:
+      target_id: tid
+  field_ed_res_image:
+    plugin: iterator
+    source: field_ed_res_image
+    process:
+      target_id: fid
+      alt: alt
+      title: title
+      width: width
+      height: height
+  field_description:
+    plugin: iterator
+    source: field_description
+    process:
+      value: value
+      format:
+        -
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            - null
+        -
+          plugin: skip_on_empty
+          method: process
+        -
+          plugin: migration
+          migration:
+            - upgrade_d6_filter_format
+            - upgrade_d7_filter_format
+          source: format
+destination:
+  plugin: 'entity:node'
+  default_bundle: educator_resource
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+  optional:
+    - upgrade_d7_field_instance
+    - upgrade_d6_filter_format
+    - upgrade_d7_filter_format

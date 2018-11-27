@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies: {  }
+name: partner_logo_vertical
+label: partner_logo_vertical
+effects:
+  e338d1b0-7f13-403e-8a38-14fcc044da9b:
+    uuid: e338d1b0-7f13-403e-8a38-14fcc044da9b
+    id: image_scale
+    weight: 1
+    data:
+      width: null
+      height: 100
+      upscale: false
+  f53195f4-dea9-4eeb-99bc-7c494ec99176:
+    uuid: f53195f4-dea9-4eeb-99bc-7c494ec99176
+    id: image_desaturate
+    weight: 2
+    data: {  }

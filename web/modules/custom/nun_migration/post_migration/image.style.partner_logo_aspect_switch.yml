@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies: {  }
+name: partner_logo_aspect_switch
+label: 'Partner logo aspect switch'
+effects:
+  93f8e974-4375-42ec-b995-aaf7184986f0:
+    uuid: 93f8e974-4375-42ec-b995-aaf7184986f0
+    id: image_scale
+    weight: 1
+    data:
+      width: 100
+      height: null
+      upscale: false
+  afd9d536-c78c-4373-85c9-88f578389d43:
+    uuid: afd9d536-c78c-4373-85c9-88f578389d43
+    id: image_desaturate
+    weight: 2
+    data: {  }

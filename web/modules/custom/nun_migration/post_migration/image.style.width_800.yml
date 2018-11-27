@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: width_800
+label: 'Width 800'
+effects:
+  84f8e140-83e8-475f-b51b-4b0379c4e17a:
+    uuid: 84f8e140-83e8-475f-b51b-4b0379c4e17a
+    id: image_scale
+    weight: -9
+    data:
+      width: 800
+      height: null
+      upscale: true
+  1f45c0f9-30f9-4e62-9985-b6c51e6b34a5:
+    uuid: 1f45c0f9-30f9-4e62-9985-b6c51e6b34a5
+    id: image_effects_auto_orient
+    weight: -10
+    data:
+      scan_exif: true

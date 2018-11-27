@@ -1,0 +1,3 @@
+MIGRATE_CONFIG
+sql_backups
+*.log

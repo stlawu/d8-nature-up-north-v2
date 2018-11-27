@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - bootstrap
+id: bootstrap_menu_menu_footer
+theme: bootstrap
+region: footer
+weight: -19
+provider: null
+plugin: 'system_menu_block:menu-footer'
+settings:
+  id: broken
+  label: '<none>'
+  provider: core
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

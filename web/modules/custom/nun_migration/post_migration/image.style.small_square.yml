@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: small_square
+label: small_square
+effects:
+  037533e4-7800-4c3a-bdc2-b7eee23c6a88:
+    uuid: 037533e4-7800-4c3a-bdc2-b7eee23c6a88
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 60
+      height: 60

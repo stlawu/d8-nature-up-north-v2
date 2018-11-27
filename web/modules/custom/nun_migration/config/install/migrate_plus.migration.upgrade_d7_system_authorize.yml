@@ -1,0 +1,21 @@
+uuid: 8687fd13-39c9-404a-be10-b23e9542e333
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_system_authorize
+migration_tags:
+  - 'Drupal 7'
+migration_group: migrate_drupal_7
+label: null
+source:
+  plugin: variable
+  variables:
+    - authorize_filetransfer_default
+process:
+  filetransfer_default: authorize_filetransfer_default
+destination:
+  plugin: config
+  config_name: system.authorize
+migration_dependencies:
+  required: {  }
+  optional: {  }

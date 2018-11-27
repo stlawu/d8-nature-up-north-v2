@@ -1,0 +1,22 @@
+uuid: c1391fd9-d788-4f92-a645-b4e1e8b9f9b0
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_system_maintenance
+migration_tags:
+  - 'Drupal 6'
+  - 'Drupal 7'
+migration_group: migrate_drupal_7
+label: 'Maintenance page configuration'
+source:
+  plugin: variable
+  variables:
+    - site_offline_message
+process:
+  message: site_offline_message
+destination:
+  plugin: config
+  config_name: system.maintenance
+migration_dependencies:
+  required: {  }
+  optional: {  }

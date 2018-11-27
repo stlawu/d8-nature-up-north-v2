@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.blogger.field_bio
+    - profile.type.blogger
+id: profile.blogger.default
+targetEntityType: profile
+bundle: blogger
+mode: default
+content:
+  field_bio:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden: {  }

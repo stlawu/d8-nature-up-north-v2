@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - nun_migration
+id: field_event_date
+migration_tags: null
+migration_group: date_range
+label: 'Event date'
+source:
+  plugin: djc_date_range_source
+  source_field: field_event_date
+process:
+  value: value
+  end_value: end_value
+  entity_id: entity_id
+destination:
+  plugin: djc_field_populator
+  destination_field: field_event_date
+migration_dependencies: null

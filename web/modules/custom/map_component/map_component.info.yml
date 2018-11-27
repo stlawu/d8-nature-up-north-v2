@@ -1,0 +1,5 @@
+name: Map compoment
+description: 'Custom maps component'
+package: 'DJ Case'
+type: module
+core: 8.x

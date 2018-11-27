@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - sharethis
+  theme:
+    - nun
+id: sharethis
+theme: nun
+region: content
+weight: -6
+provider: null
+plugin: sharethis_block
+settings:
+  id: sharethis_block
+  label: Sharethis
+  provider: sharethis
+  label_display: '0'
+visibility: {  }

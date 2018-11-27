@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - nun_migration
+id: field_organization_telephone
+migration_tags: null
+migration_group: location
+label: 'Organization telephone'
+source:
+  plugin: djc_phone_source
+  source_field: field_contact_information
+process:
+  value: phone
+  entity_id: entity_id
+destination:
+  plugin: djc_field_populator
+  destination_field: field_organization_telephone
+migration_dependencies: null

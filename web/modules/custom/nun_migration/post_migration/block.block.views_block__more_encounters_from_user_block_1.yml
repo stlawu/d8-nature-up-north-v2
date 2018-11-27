@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.more_encounters_from_user
+  module:
+    - ctools
+    - views
+  theme:
+    - nun
+id: views_block__more_encounters_from_user_block_1
+theme: nun
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:more_encounters_from_user-block_1'
+settings:
+  id: 'views_block:more_encounters_from_user-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      encounter: encounter
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
