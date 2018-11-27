@@ -7,6 +7,10 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
     ],
     "require": {
@@ -19,10 +23,11 @@
         "drupal/console": "^1",
         "drupal/core": "^8",
         "drupal/simple_block": "^1.0@beta",
-        "drush/drush": "~8",
-        "rvtraveller/qs-composer-installer": "^1.1",
         "drush-ops/behat-drush-endpoint": "^0.0.5",
+        "drush/drush": "~8",
+        "oomphinc/composer-installers-extender": "^1.1",
         "pantheon-systems/quicksilver-pushback": "~1",
+        "rvtraveller/qs-composer-installer": "^1.1",
         "webflo/drupal-core-strict": "^8"
     },
     "require-dev": {
@@ -40,7 +45,7 @@
     "conflict": {
             "drupal/drupal": "*"
     },
-    "minimum-stability": "alpha",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload": {
         "classmap": [
@@ -72,8 +77,19 @@
         ]
     },
     "extra": {
+        "installer-types": [
+            "bower-asset",
+            "npm-asset",
+            "library",
+            "component"
+        ],
         "installer-paths": {
             "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": [
+                "type:drupal-library", 
+                "type:bower-asset", 
+                "type:npm-asset"
+            ],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
