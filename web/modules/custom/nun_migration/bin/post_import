@@ -1,0 +1,55 @@
+#!/bin/bash
+
+no_blocks="false"
+no_menus="false"
+no_config="false"
+for var in "$@"
+do
+    case "$var" in
+        --no-blocks)
+          no_blocks="true"
+          ;;
+        --no-menus)
+          no_menus="true"
+          ;;
+        --no-config)
+          no_config="true"
+          ;;
+        --help)
+          echo "./bin/post_import [--no-blocks] [--no-config] [--no-menus]"
+          exit
+    esac
+done
+
+# must be run from the nun_migration directory e.g. ./bin/re_migrate
+. ./MIGRATE_CONFIG
+
+function set_default_image() {
+    cp ./post_migration/$2 ./sql_backups
+    sed "s=^    uuid:.*$=    uuid: $1=" ./sql_backups/$2 > ./post_migration/$2
+}
+function restore_yml() {
+    mv ./sql_backups/$1 ./post_migration
+}
+
+if [[ "$no_config" == "true" ]]; then
+    echo "skipping config import..."
+else
+    set_default_image `drush sqlq "SELECT uuid FROM file_managed where filename='explorer_default_image.png'"` "field.field.profile.main.field_profile_photo.yml"
+    drush --yes cim --partial --source=modules/custom/nun_migration/post_migration
+    restore_yml "field.field.profile.main.field_profile_photo.yml"
+fi
+
+if [[ "$no_blocks" == "true" ]]; then
+    echo "skipping block import..."
+else
+    mysql -u ${DEST_DB_USER} -p${DEST_DB_PW} -h ${DEST_DB_HOST} ${DEST_DB_DB} < ./post_migration/blocks.sql
+fi
+
+if [[ "$no_menus" == "true" ]]; then
+    echo "skipping menu import..."
+else
+    mysql -u ${DEST_DB_USER} -p${DEST_DB_PW} -h ${DEST_DB_HOST} ${DEST_DB_DB} < ./post_migration/menus.sql
+fi
+
+drush rebuild

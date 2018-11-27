@@ -1,0 +1,51 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_trail_head.default
+    - field.field.node.trail_head.comment_node_trail_head
+    - field.field.node.trail_head.field_location
+    - field.field.node.trail_head.field_trail
+    - field.field.node.trail_head.field_trail_access
+    - node.type.trail_head
+  module:
+    - comment
+    - geolocation
+    - text
+    - user
+id: node.trail_head.default
+targetEntityType: node
+bundle: trail_head
+mode: default
+content:
+  comment_node_trail_head:
+    label: hidden
+    type: comment_default
+    weight: 20
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  field_location:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: geolocation_latlng
+    region: content
+  field_trail_access:
+    label: above
+    weight: 2
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+  sharethis:
+    weight: 10
+    region: content
+hidden:
+  field_trail: true

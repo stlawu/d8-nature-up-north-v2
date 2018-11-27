@@ -1,0 +1,55 @@
+uuid: 1327dc98-155e-489c-93f0-4da7c5a2f3fe
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_taxonomy_term_nys_standards
+migration_tags:
+  - 'Drupal 7'
+migration_group: migrate_drupal_7
+label: 'Taxonomy terms (NYS Standards)'
+source:
+  plugin: d7_taxonomy_term
+  bundle: nys_standards
+process:
+  tid: tid
+  vid:
+    plugin: migration
+    migration: upgrade_d7_taxonomy_vocabulary
+    source: vid
+  name: name
+  description/value: description
+  description/format: format
+  weight: weight
+  parent_id:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: parent
+    -
+      plugin: migration
+      migration: upgrade_d7_taxonomy_term
+  parent:
+    plugin: default_value
+    default_value: 0
+    source: '@parent_id'
+  changed: timestamp
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: nys_standards
+migration_dependencies:
+  required:
+    - upgrade_d7_taxonomy_vocabulary
+  optional:
+    - upgrade_d7_field_instance
+    - upgrade_d7_taxonomy_vocabulary
+    - upgrade_d7_taxonomy_term_tags
+    - upgrade_d7_taxonomy_term_encounter_free_form_tags
+    - upgrade_d7_taxonomy_term_activities
+    - upgrade_d7_taxonomy_term_informal_species_taxonomy
+    - upgrade_d7_taxonomy_term_sponsoring_organization
+    - upgrade_d7_taxonomy_term_class
+    - upgrade_d7_taxonomy_term_blog_category
+    - upgrade_d7_taxonomy_term_encounter_category
+    - upgrade_d7_taxonomy_term_educator_resources
+    - upgrade_d7_taxonomy_term_nys_standards
+    - upgrade_d7_taxonomy_term

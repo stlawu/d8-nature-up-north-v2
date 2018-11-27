@@ -1,0 +1,5 @@
+name: 'NUN Maps'
+description: 'NUN Maps'
+package: 'DJ Case'
+type: module
+core: 8.x

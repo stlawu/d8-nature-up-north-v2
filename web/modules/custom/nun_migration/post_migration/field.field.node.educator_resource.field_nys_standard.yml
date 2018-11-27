@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nys_standard
+    - node.type.educator_resource
+    - taxonomy.vocabulary.nys_standards
+id: node.educator_resource.field_nys_standard
+field_name: field_nys_standard
+entity_type: node
+bundle: educator_resource
+label: 'NYS Standards'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      nys_standards: nys_standards
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

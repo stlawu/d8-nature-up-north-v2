@@ -1,0 +1,28 @@
+uuid: 9efac227-9b48-4eb5-9927-065ab9ede107
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_menu
+migration_tags:
+  - 'Drupal 7'
+migration_group: migrate_drupal_7
+label: Menus
+source:
+  plugin: menu
+process:
+  id:
+    plugin: static_map
+    bypass: true
+    source: menu_name
+    map:
+      main-menu: main
+      management: admin
+      navigation: tools
+      user-menu: account
+  label: title
+  description: description
+destination:
+  plugin: 'entity:menu'
+migration_dependencies:
+  required: {  }
+  optional: {  }

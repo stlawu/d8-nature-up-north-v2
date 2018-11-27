@@ -1,0 +1,65 @@
+/**
+ * Default Variables.
+ *
+ * Modify this file to provide default Bootstrap Framework variables. The
+ * Bootstrap Framework will not override any variables defined here because it
+ * uses the `!default` flag which will only set their default if not already
+ * defined here.
+ *
+ * You can copy existing variables directly from the following file:
+ * ./THEMENAME/bootstrap/assets/stylesheets/bootstrap/_variables.scss
+ */
+
+// Set the proper directory for the Bootstrap Glyphicon font.
+$icon-font-path: '../bootstrap/assets/fonts/bootstrap/';
+
+//custom variables
+$header-bg:  #fafafa;
+$nav-bg: #15586F;
+$light-gray: #afafaf;
+$link-blue: #307093;
+$button-yellow: #f0ac41;
+$annoucements-bg: #f9ebd6;
+$blue-text: #16587E;
+$events-bg: #165870;
+
+//** Global textual link color.
+$link-color:            #307093 !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      #005080 !default;
+
+$font-size-base:          16px !default;
+
+//** Dropdown link text color.
+$dropdown-link-color:            #333333;
+//** Hover color for dropdown links.
+$dropdown-link-hover-color:      white;
+
+$dropdown-link-active-bg: transparent;
+
+$dropdown-link-active-color: black;
+
+
+//== Dropdowns
+//
+
+//** Dropdown link text color.
+$dropdown-link-color:            #333333 !default;
+//** Hover color for dropdown links.
+$dropdown-link-hover-color:      white !default;
+//** Hover background for dropdown links.
+$dropdown-link-hover-bg:         transparent !default;
+
+
+// Basics of a navbar
+$navbar-border-radius:             0px !default;
+
+$navbar-default-color:             black !default;
+$navbar-default-border:            none !default;
+
+// Navbar links
+$navbar-default-link-color:                black !default;
+$navbar-default-link-hover-color:          black !default;
+$navbar-default-link-hover-bg:             transparent !default;
+$navbar-default-link-active-color:         black !default;
+$navbar-default-link-active-bg:            transparent !default;

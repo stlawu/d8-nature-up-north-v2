@@ -1,0 +1,4 @@
+services:
+  plugin.manager.nun_marker_source:
+    class: Drupal\map_component\MarkerSourceManager
+    parent: default_plugin_manager

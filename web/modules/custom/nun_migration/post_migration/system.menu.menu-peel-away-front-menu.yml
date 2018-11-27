@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: menu-peel-away-front-menu
+label: 'Peel Away Front Menu'
+description: ''
+locked: false

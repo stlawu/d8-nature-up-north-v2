@@ -1,0 +1,40 @@
+<?php
+// include the formStateInterface namespace
+use Drupal\Core\Form\FormStateInterface;
+
+function nun_helper_theme() {
+    return [
+      'geolocation_maplink_formatter' => [
+        'variables' => [
+            'lat' => NULL,
+            'lng' => NULL,
+        ],
+        'template' => 'geolocation-maplink-formatter',
+      ],
+      'blog_author_block' => [
+          'variables' => [
+              'user_url' => NULL,
+              'image_url' => NULL,
+              'image_title' => NULL,
+              'image_alt' => NULL,
+              'full_name' => NULL,
+              'hometown' => NULL,
+              'current_location' => NULL,
+              'bio' => NULL,
+          ],
+          'template' => 'blog-author-block',
+      ],
+    ];
+}
+
+function nun_helper_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if($form_id === 'user_register_form') {
+    // a custom submit handler for new user registrations
+    $form['actions']['submit']['#submit'][] = 'nun_helper_registration_submit';
+  }
+}
+
+function nun_helper_registration_submit(&$form, FormStateInterface $form_state) {
+  // set redirect to the node about account creation
+  $form_state->setRedirect('entity.node.canonical', ['node' => 11705]);
+}

@@ -1,0 +1,24 @@
+uuid: 3ea9e37d-714a-4381-8474-4e6f4036d410
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - nun_migration
+_core:
+  default_config_hash: f-cGtmjJCsjMFdU4KQeDMbdwArHwA_4wEnPNzbqfmsY
+id: field_event_location
+migration_tags: null
+migration_group: location
+label: 'Event location'
+source:
+  plugin: djc_location_source
+  source_field: field_event_location
+process:
+  lat: latitude
+  lng: longitude
+  entity_id: entity_id
+destination:
+  plugin: djc_field_populator
+  destination_field: field_event_location
+migration_dependencies: null

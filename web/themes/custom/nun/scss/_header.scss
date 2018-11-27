@@ -1,0 +1,240 @@
+.navbar-header .logo {
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.admin-menu header#navbar {
+  top: 30px;
+}
+.admin-menu-with-shortcuts header#navbar {
+  top: 64px;
+}
+.logo-container {
+  display: inline-block;
+  @media (min-width: $screen-sm-min ) {
+    width: 275px;
+  }
+  @media (min-width: $screen-md-min ) {
+    width: 300px;
+  }
+  @media (min-width: $screen-lg-min ) {
+    width: auto;
+  }
+  .project-of, .mobile-project-of {
+    color: $light-gray;
+    font-size: 15px;
+    margin-top: 10px;
+    display: block;
+    @media (min-width: $screen-sm-min ) {
+      margin-top: 3px;
+    }
+  }
+  .mobile-project-of {
+    display: block;
+    @media (min-width: $screen-sm-min ) {
+      display: none;
+    }
+  }
+  .project-of {
+    display: none;
+    @media (min-width: $screen-sm-min ) {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+  img {
+    width: 100%;
+    max-width: 380px;
+    padding-top: 7px;
+  }
+}
+header.navbar-default {
+  border-bottom: 1px solid #e7e7e7;
+  border-top:  none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  width: 100% !important;
+}
+header .navbar-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.navbar-collapse.collapse {
+  padding: 0;
+}
+header#navbar {
+  nav {
+    display: inline-block;
+    float: right;
+    padding: 4px 0px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: black;
+    text-align: center;
+    text-shadow: none;
+    vertical-align: middle;
+    cursor: pointer;
+    width: 100%;
+    @media (min-width: $screen-sm-min ) {
+      width: 430px;
+    }
+    @media (min-width: $screen-md-min ) {
+      width: 625px;
+    }
+    @media (min-width: $screen-lg-min ) {
+      width: 730px;
+    }
+    .nav {
+      margin: 0 5px 0 10px !important;
+      float: left;
+      width: 46%;
+      li {
+        a {
+          text-shadow: none;
+        }
+      }
+    }
+    .navbar-nav {
+      @media (min-width: $screen-sm-min ) {
+        float: right;
+        width: auto;
+        margin: 0 5px 0 0px !important;
+      }
+      > li {
+        box-shadow: 0px 0px 3px #ccc;
+        -webkit-box-shadow: 0px 0px 3px #ccc;
+        -webkit-appearance: none;
+        border-radius: .1px;
+        margin-bottom: 7px;
+        @media (min-width: $screen-sm-min ) {
+          box-shadow: none;
+          -webkit-box-shadow: none;
+          margin-bottom: 0;
+        }
+        > a, a.active {
+          padding: 10px 15px;
+          line-height: 20px;
+          text-decoration: none;
+          font-size: 1.2em;
+          font-weight: bold;
+          color: black !important;
+          background-color: transparent !important;
+          @media (min-width: $screen-sm-min ) {
+            font-size: .85em;
+            padding: 10px 6px;
+          }
+          @media (min-width: $screen-md-min ) {
+            font-size: 1.1em;
+            padding: 10px 15px;
+          }
+          span.caret {
+            display: none;
+          }
+        }
+      }
+      .dropdown-menu {
+        border-radius: 6px !important;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2) !important;
+        > li {
+          > a, a.active {
+            padding: 3px 20px;
+            font-weight: normal;
+            line-height: 20px;
+            font-size: .9em;
+            text-align: center;
+            @media (min-width: $screen-sm-min ) {
+              font-size: .85em;
+              text-align: left;
+            }
+          }
+          > a:hover, a.active:hover {
+            @extend .highlighted-menu;
+          }
+        }
+      }
+    }
+    .navbar-right {
+      > li:last-child {
+        background-image: linear-gradient(to bottom, #f4a72d, #d38813);
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f4a72d', endColorstr='#d38813');/*For IE7-8-9*/
+        background-repeat: repeat-x;
+        border-radius: 4px;
+        box-shadow: 0px 0px 3px darken($light-gray, 15%);
+        border: 1px solid white;
+        color: white !important;
+        > a {
+          color: white !important;
+        }
+      }
+    }
+  }
+}
+
+header#navbar {
+  nav#block-nun-account-menu > ul.navbar-right {
+      > li {
+        > a, a.active {
+          padding: 6px 15px;
+          font-size: 1em;
+          font-weight: normal;
+          span.caret {
+            display: inline-block;
+          }
+        }
+    }
+  }
+}
+
+
+/* not really in the header, but the size of header affects this */
+.fixed-header-spacer {
+  min-height: 130px;
+  @media (min-width: $screen-sm-min ) {
+    min-height: 110px;
+  }
+  @media (min-width: $screen-md-min ) {
+    width: 115px;
+  }
+  @media (min-width: $screen-lg-min ) {
+    width: 130px;
+  }
+}
+
+//change the my account link for logged in users to red
+.user-logged-in #block-nun-account-menu > ul {
+  > li:last-child {
+    > a {
+      background-image: linear-gradient(to bottom, #b73535, #a71111);
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#b73535', endColorstr='#a71111');/*For IE7-8-9*/
+      background-repeat: repeat-x;
+      border-radius: 4px;
+      box-shadow: 0px 0px 3px darken($light-gray, 15%);
+      border: 1px solid white;
+
+    }
+    > a {
+      color: white !important;
+    }
+  }
+}
+
+
+
+@media (max-width: $screen-xs) {
+  header#navbar {
+    nav {
+      .nav {
+        width: 96%;
+      }
+      .navbar {
+        margin: 0 5px 0 5px !important;
+      }
+    }
+  }
+}

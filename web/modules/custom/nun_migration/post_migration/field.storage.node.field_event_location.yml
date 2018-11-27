@@ -1,0 +1,19 @@
+uuid: 1026a44b-a2dd-48a2-909a-c49131991f59
+langcode: en
+status: true
+dependencies:
+  module:
+    - geolocation
+    - node
+id: node.field_event_location
+field_name: field_event_location
+entity_type: node
+type: geolocation
+settings: {  }
+module: geolocation
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

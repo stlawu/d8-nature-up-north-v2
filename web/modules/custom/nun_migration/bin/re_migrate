@@ -1,0 +1,66 @@
+#!/bin/bash
+
+# must be run from the nun_migration directory e.g. ./bin/re_migrate
+. ./MIGRATE_CONFIG
+
+step=1
+function run_step () {
+  echo "-------------------------------------------------"
+  echo "#${step} ${1}"
+  echo "-------------------------------------------------"
+  echo "Running ${2}"
+  eval $2
+  echo "-------------------------------------------------"
+  echo ""
+  step=$((step+1))
+}
+
+function gather_modules () {
+  modules=""
+  for entry in "$1"/*
+  do
+    if [ -d "$entry" ]; then
+      m=`basename $entry`
+      modules="${modules} ${m}"
+    fi
+  done
+  echo ${modules}
+}
+
+contrib_mods=`gather_modules "${DEST_DRUPAL_PATH}/modules/contrib"`
+# only catches top level modules
+#contrib_mods="${contrib_mods} field_group_migrate" causes issues on d8 don't migrate field groups
+# other core modules we want turned on...
+contrib_mods="${contrib_mods} telephone"
+# WARNING: this module is "experimental" but there appears to be no other alternative
+# for date ranges at the moment
+contrib_mods="${contrib_mods} datetime_range"
+
+custom_mods=`gather_modules "${DEST_DRUPAL_PATH}/modules/custom"`
+
+run_step "Restoring clean DB" "mysql -u ${DEST_DB_USER} -p${DEST_DB_PW} -h ${DEST_DB_HOST} < ${PWD}/sql_backups/nun8.sql; drush rebuild"
+
+run_step "Enabling contrib modules" "drush --yes en ${contrib_mods}"
+
+cp ./config/install/migrate_plus.migration.upgrade_d7_file.yml ./sql_backups
+sed "s=SOURCE_BASE_PATH=${SOURCE_DRUPAL_PATH}=" ./sql_backups/migrate_plus.migration.upgrade_d7_file.yml > ./config/install/migrate_plus.migration.upgrade_d7_file.yml
+run_step "Enabling custom modules" "drush --yes en ${custom_mods}"
+mv ./sql_backups/migrate_plus.migration.upgrade_d7_file.yml ./config/install
+
+#run_step "Setting up base migration config" "drush migrate-upgrade --legacy-db-url=mysql://${SOURCE_DB_USER}:${SOURCE_DB_PW}@${SOURCE_DB_HOST}/${SOURCE_DB_DB} --legacy-root=${SOURCE_DRUPAL_PATH} --configure-only"
+
+#run_step "Importing migration tweaks" "drush --yes cim --partial --source=${PWD}/pre_migration"
+
+run_step "Running the migration (tail -f migration.log)" "drush migrate-import --group=migrate_drupal_7 &> migration.log"
+
+run_step "Post configuration" "/bin/bash ./bin/post_import"
+
+run_step "Running the location migration" "drush migrate-import --group=location"
+
+run_step "Running the profile migration" "drush migrate-import --group=profile"
+
+run_step "Running the date range migration" "drush migrate-import --group=date_range"
+
+echo ""
+echo "Migration complete, go see if it worked..."
+echo ""

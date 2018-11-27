@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: pell_away_image
+label: 'Pell Away Image'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  fe64bc05-5336-4ad9-91fe-8ad2362016da:
+    id: node_type
+    bundles:
+      peel_away_image: peel_away_image
+    negate: false
+    context_mapping:
+      node: node
+    uuid: fe64bc05-5336-4ad9-91fe-8ad2362016da
+selection_logic: and
+weight: -5
+relationships: {  }

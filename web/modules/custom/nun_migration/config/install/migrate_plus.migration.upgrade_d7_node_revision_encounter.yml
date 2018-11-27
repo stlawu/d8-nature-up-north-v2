@@ -1,0 +1,97 @@
+uuid: 72f60d4b-3c25-4d0d-b63b-ef26545d937c
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_revision_encounter
+migration_tags:
+  - 'Drupal 7'
+migration_group: migrate_drupal_7
+label: 'Node revisions (Encounter)'
+source:
+  plugin: d7_node_revision
+  node_type: encounter
+process:
+  nid: nid
+  vid: vid
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: und
+  title: title
+  uid: node_uid
+  status: status
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+  revision_uid: revision_uid
+  revision_log: log
+  revision_timestamp: timestamp
+  field_encounter_date: field_encounter_date
+  field_encounter_description:
+    plugin: iterator
+    source: field_encounter_description
+    process:
+      value: value
+      format:
+        -
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            - null
+        -
+          plugin: skip_on_empty
+          method: process
+        -
+          plugin: migration
+          migration:
+            - upgrade_d6_filter_format
+            - upgrade_d7_filter_format
+          source: format
+  field_encounter_image:
+    plugin: iterator
+    source: field_encounter_image
+    process:
+      target_id: fid
+      alt: alt
+      title: title
+      width: width
+      height: height
+  field_encounter_location: field_encounter_location
+  field_tags_other:
+    plugin: iterator
+    source: field_tags_other
+    process:
+      target_id: tid
+  field_trail_reference: field_trail_reference
+  field_encounter_map_label: field_encounter_map_label
+  field_hidden_tags:
+    plugin: iterator
+    source: field_hidden_tags
+    process:
+      target_id: tid
+  field_common_species_name:
+    plugin: iterator
+    source: field_common_species_name
+    process:
+      target_id: tid
+destination:
+  plugin: 'entity_revision:node'
+  default_bundle: encounter
+migration_dependencies:
+  required:
+    59: upgrade_d7_node_announcement_
+    60: upgrade_d7_node_blog
+    61: upgrade_d7_node_community_organization
+    62: upgrade_d7_node_educator_resource
+    63: upgrade_d7_node_encounter
+    64: upgrade_d7_node_event
+    65: upgrade_d7_node_page
+    66: upgrade_d7_node_partner
+    67: upgrade_d7_node_peel_away_image
+    68: upgrade_d7_node_trail
+    69: upgrade_d7_node_trail_head
+  optional:
+    - upgrade_d6_filter_format
+    - upgrade_d7_filter_format

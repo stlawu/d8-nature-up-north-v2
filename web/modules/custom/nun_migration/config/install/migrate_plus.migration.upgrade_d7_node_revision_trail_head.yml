@@ -1,0 +1,71 @@
+uuid: 422270a7-0c11-402b-bf17-1b97a6459e69
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_revision_trail_head
+migration_tags:
+  - 'Drupal 7'
+migration_group: migrate_drupal_7
+label: 'Node revisions (Trail Head)'
+source:
+  plugin: d7_node_revision
+  node_type: trail_head
+process:
+  nid: nid
+  vid: vid
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: und
+  title: title
+  uid: node_uid
+  status: status
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+  revision_uid: revision_uid
+  revision_log: log
+  revision_timestamp: timestamp
+  field_location: field_location
+  field_trail: field_trail
+  field_trail_access:
+    plugin: iterator
+    source: field_trail_access
+    process:
+      value: value
+      format:
+        -
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            - null
+        -
+          plugin: skip_on_empty
+          method: process
+        -
+          plugin: migration
+          migration:
+            - upgrade_d6_filter_format
+            - upgrade_d7_filter_format
+          source: format
+destination:
+  plugin: 'entity_revision:node'
+  default_bundle: trail_head
+migration_dependencies:
+  required:
+    59: upgrade_d7_node_announcement_
+    60: upgrade_d7_node_blog
+    61: upgrade_d7_node_community_organization
+    62: upgrade_d7_node_educator_resource
+    63: upgrade_d7_node_encounter
+    64: upgrade_d7_node_event
+    65: upgrade_d7_node_page
+    66: upgrade_d7_node_partner
+    67: upgrade_d7_node_peel_away_image
+    68: upgrade_d7_node_trail
+    69: upgrade_d7_node_trail_head
+  optional:
+    - upgrade_d6_filter_format
+    - upgrade_d7_filter_format

@@ -1,0 +1,33 @@
+uuid: e364081a-81aa-4295-b024-79b5deb1d209
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - nun_migration
+_core:
+  default_config_hash: w6Vdy9ILZtfKhS2QLDNLqBNldzfdwWdqSODRTY3YCpM
+id: field_organization_address
+migration_tags: null
+migration_group: location
+label: 'Organization address'
+source:
+  plugin: djc_address_source
+  source_field: field_contact_information
+process:
+  country_code:
+    -
+      plugin: callback
+      callable: strtoupper
+      source: country
+  organization: name
+  address_line1: street
+  address_line2: additional
+  locality: city
+  administrative_area: province
+  postal_code: postal_code
+  entity_id: entity_id
+destination:
+  plugin: djc_field_populator
+  destination_field: field_organization_address
+migration_dependencies: null

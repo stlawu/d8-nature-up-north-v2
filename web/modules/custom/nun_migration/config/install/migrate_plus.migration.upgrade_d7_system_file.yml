@@ -1,0 +1,28 @@
+uuid: 057d08f8-6558-4224-9748-0613757e105d
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_system_file
+migration_tags:
+  - 'Drupal 7'
+migration_group: migrate_drupal_7
+label: 'Drupal 7 file system configuration'
+source:
+  plugin: variable
+  variables:
+    - allow_insecure_uploads
+    - file_temporary_path
+process:
+  allow_insecure_uploads:
+    plugin: static_map
+    source: allow_insecure_uploads
+    map:
+      - false
+      - true
+  path/temporary: file_temporary_path
+destination:
+  plugin: config
+  config_name: system.file
+migration_dependencies:
+  required: {  }
+  optional: {  }

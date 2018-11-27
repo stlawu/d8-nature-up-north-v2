@@ -1,0 +1,18 @@
+nun_maps.encounters:
+  path: '/encounters-map'
+  defaults:
+    _controller: '\Drupal\nun_maps\Controller\Maps::encounters'
+  requirements:
+    _permission: 'access content'
+nun_maps.trails:
+  path: '/trails'
+  defaults:
+    _controller: '\Drupal\nun_maps\Controller\Maps::trails'
+  requirements:
+    _permission: 'access content'
+nun_maps.encounters_and_trails:
+  path: '/encounters-and-trails'
+  defaults:
+    _controller: '\Drupal\nun_maps\Controller\Maps::combined'
+  requirements:
+    _permission: 'access content'

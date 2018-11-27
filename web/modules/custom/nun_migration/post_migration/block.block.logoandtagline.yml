@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a819b27d-a587-4970-b190-2093b3d97cbc'
+  module:
+    - block_content
+  theme:
+    - nun
+id: logoandtagline
+theme: nun
+region: navigation
+weight: -7
+provider: null
+plugin: 'block_content:a819b27d-a587-4970-b190-2093b3d97cbc'
+settings:
+  id: 'block_content:a819b27d-a587-4970-b190-2093b3d97cbc'
+  label: 'Logo and tagline'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

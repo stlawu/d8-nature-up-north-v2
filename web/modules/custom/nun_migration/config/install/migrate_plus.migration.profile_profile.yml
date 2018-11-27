@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - nun_migration
+id: profile_profile
+migration_tags: null
+migration_group: profile
+label: 'Profile'
+source:
+  plugin: d7_profile2_djc
+process:
+  pid: pid
+  type: type
+  uid: uid
+  label: label
+  changed: changed
+  created: created
+  field_profile_current_location: field_profile_current_location
+  field_profile_full_name: field_profile_full_name
+  field_profile_hometown: field_profile_hometown
+  field_profile_activities:
+    plugin: iterator
+    source: field_profile_activities
+    process:
+      target_id: tid
+  field_profile_photo:
+    plugin: iterator
+    source: field_profile_photo
+    process:
+      target_id: fid
+      alt: alt
+      title: title
+      width: width
+      height: height
+  field_bio: field_bio
+destination:
+  plugin: d8_profile_djc
+migration_dependencies: null

@@ -1,0 +1,88 @@
+uuid: 854c7a35-89f4-4f25-8f02-4287fafcba80
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_blog
+migration_tags:
+  - 'Drupal 7'
+migration_group: migrate_drupal_7
+label: 'Nodes (Blog)'
+source:
+  plugin: d7_node
+  node_type: blog
+process:
+  nid: tnid
+  vid: vid
+  langcode:
+    plugin: default_value
+    source: language
+    default_value: und
+  title: title
+  uid: node_uid
+  status: status
+  created: created
+  changed: changed
+  promote: promote
+  sticky: sticky
+  revision_uid: revision_uid
+  revision_log: log
+  revision_timestamp: timestamp
+  body:
+    plugin: iterator
+    source: body
+    process:
+      value: value
+      format:
+        -
+          plugin: static_map
+          bypass: true
+          source: format
+          map:
+            - null
+        -
+          plugin: skip_on_empty
+          method: process
+        -
+          plugin: migration
+          migration:
+            - upgrade_d6_filter_format
+            - upgrade_d7_filter_format
+          source: format
+  field_blog_image:
+    plugin: iterator
+    source: field_blog_image
+    process:
+      target_id: fid
+      alt: alt
+      title: title
+      width: width
+      height: height
+  field_blog_attachment:
+    plugin: iterator
+    source: field_blog_attachment
+    process:
+      target_id: fid
+      display: display
+      description: description
+  field_class_reference:
+    plugin: iterator
+    source: field_class_reference
+    process:
+      target_id: tid
+  field_blog_category:
+    plugin: iterator
+    source: field_blog_category
+    process:
+      target_id: tid
+  field_blog_related_content: field_blog_related_content
+destination:
+  plugin: 'entity:node'
+  default_bundle: blog
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+  optional:
+    - upgrade_d7_field_instance
+    - upgrade_d6_filter_format
+    - upgrade_d7_filter_format

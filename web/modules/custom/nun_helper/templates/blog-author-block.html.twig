@@ -1,0 +1,13 @@
+<div id="blog-authorship">
+    <a class="your-photo" href="{{ user_url}}"><img class="image-responsive" src="{{ image_url }}" title="{{ image_title }}" alt="{{ image_alt }}" /></a>
+    <div class="full-name">By {{ full_name }}</div>
+    {% if home_town %}
+    <div class="hometown"><label>Hometown:</label> {{ hometown }}</div>
+    {% endif %}
+    {% if current_location %}
+    <div class="current-location"><label>Current Location:</label> {{ current_location }}</div>
+    {% endif %}
+    {% if bio %}
+    <p>{{ bio }}</p>
+    {% endif %}
+</div>

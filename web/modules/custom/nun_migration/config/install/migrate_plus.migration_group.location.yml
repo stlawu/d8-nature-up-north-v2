@@ -1,0 +1,17 @@
+uuid: 8a418339-2fb5-417e-8f12-2a979bde5f27
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - nun_migration
+_core:
+  default_config_hash: ZtRscRtDq1cathM81C5Zqtlw1vuJmDMQdCNX-uGsCgM
+id: location
+label: 'Location Field Custom Migration'
+description: 'Break d7 location field into multiple d8 fields'
+source_type: 'Custom fields'
+module: null
+shared_configuration:
+  source:
+    key: d7

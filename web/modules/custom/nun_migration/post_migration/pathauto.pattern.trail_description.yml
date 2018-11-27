@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: trail_description
+label: 'Trail Description'
+type: 'canonical_entities:node'
+pattern: 'trail/[node:title]'
+selection_criteria:
+  97a23dec-0362-4398-ab8d-ebc2f0195e18:
+    id: node_type
+    bundles:
+      trail: trail
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 97a23dec-0362-4398-ab8d-ebc2f0195e18
+selection_logic: and
+weight: -5
+relationships: {  }

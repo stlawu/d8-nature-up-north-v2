@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: image_carousel_portrait
+label: 'Image Carousel Portrait'
+effects:
+  297b3d65-dd66-423f-83ac-a0587ac00e59:
+    uuid: 297b3d65-dd66-423f-83ac-a0587ac00e59
+    id: image_scale
+    weight: 1
+    data:
+      width: null
+      height: 600
+      upscale: true

@@ -1,0 +1,37 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_profile_photo
+    - profile.type.main
+  module:
+    - image
+id: profile.main.field_profile_photo
+field_name: field_profile_photo
+entity_type: profile
+bundle: main
+label: 'Your Photo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: profile_photos
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: faccb212-4376-49bf-9109-bf163a237c1b
+    alt: ''
+    title: ''
+    width: 800
+    height: 800
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

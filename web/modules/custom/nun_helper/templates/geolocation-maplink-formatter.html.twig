@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Default microdata theme implementation for a geolocation with latitude, longitude.
+ *
+ * Available variables:
+ * - lat: The latitude value.
+ * - lng: The longitude value.
+ *
+ * @see template_preprocess()
+ *
+ * @ingroup themeable
+ */
+#}
+{% spaceless %}
+  <a href="https://www.google.com/maps?q={{ lat }},{{ lng }}&z=14z" target="_blank">Google Maps</a>
+{% endspaceless %}

@@ -1,0 +1,37 @@
+.view-encounters {
+  .views-field-field-encounter-image {
+    ul {
+      list-style: none;
+      margin: 1em 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        margin-right: 4px;
+      }
+    }
+  }
+}
+
+.views-field-field-blog-image .img-responsive {
+    display: inline;
+}
+
+.views-element-container .form--inline .form-item .control-label {
+    display: block;
+    margin-bottom: 5px;
+}
+.views-element-container .form-actions {
+    vertical-align: bottom;
+}
+
+//recent encounters side bar block
+.block-views-blockrecent-encounters-recent-encounters {
+  .view-content {
+    .views-row {
+      .views-col {
+        padding: 8px;
+        border-top: 1px solid #ddd;
+      }
+    }
+  }
+}

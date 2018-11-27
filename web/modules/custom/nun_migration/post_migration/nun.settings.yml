@@ -1,0 +1,27 @@
+cdn_provider: ''
+_core:
+  default_config_hash: _5qrDuRmWmRVjW00si3U1s1NrgrocA4N653EYGRfgEE
+favicon:
+  mimetype: image/png
+  path: 'public://favicon.png'
+  url: 'http://d8.natureupnorth.org/themes/nun/favicon.ico'
+  use_default: 0
+schemas:
+  bootstrap: 8000
+  nun: 8000
+features:
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+  node_user_picture: 1
+  logo: true
+  name: false
+  slogan: true
+logo:
+  path: 'public://nun_single_line_logo.png'
+  url: ''
+  use_default: 0
+table_responsive: '-1'
+table: ''
+navbar_position: fixed-top
+fluid_container: 1

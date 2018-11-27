@@ -1,0 +1,11 @@
+map_component.markers:
+  path: '/api/map_component/markers/{id}'
+  methods: 'GET'
+  defaults:
+    _controller: '\Drupal\map_component\Controller\MarkerResource::getMarkers'
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      id:
+        type: string

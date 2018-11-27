@@ -1,0 +1,195 @@
+<?php
+
+use Drupal\migrate\Row;
+use Drupal\migrate\Plugin\MigrateSourceInterface;
+use Drupal\migrate\Plugin\MigrationInterface;
+
+/*
+have explicitly dropped migration steps for certain content-types o/w would need to implement to
+avoid bringing over unwanted content (or errors).
+function nun_migration_migrate_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration) {
+}
+*/
+
+function nun_migration_ignore_content_types() {
+    return [
+        'intern_bio',
+        'monitor_change_photopoint',
+        'photo_post_from_heuvelton_centra',
+        'photo_post_from_canton_school',
+        'photo_post_from_eastside_element',
+        'monitorchange_slu_quad',
+        'species_account',
+        'webform',
+        'test',
+        'profile2',
+    ];
+}
+/**
+ * Implements hook_migrate_MIGRATION_ID_prepare_row for upgrade_d7_node_type
+ */
+function nun_migration_migrate_upgrade_d7_node_type_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration) {
+    if(in_array($row->getSource()['type'],nun_migration_ignore_content_types())) {
+        return FALSE;
+    }
+}
+
+/**
+ * Implements hook_migrate_MIGRATION_ID_prepare_row for upgrade_d7_field
+ * ignore any profile2 fields
+ */
+function nun_migration_migrate_upgrade_d7_field_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration) {
+    if($row->getSource()['entity_type'] === 'profile2') {
+        return FALSE;
+    }
+}
+
+/**
+ * Implements hook_migrate_MIGRATION_ID_prepare_row for upgrade_d7_comment_type
+ * ignore any fields from above ignored content-types
+ */
+function nun_migration_migrate_upgrade_d7_comment_type_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration) {
+    //print("upgrade_d7_comment_type.row=".print_r($row->getSource(),TRUE)."\n");
+    if(in_array($row->getSource()['node_type'],nun_migration_ignore_content_types())) {
+        return FALSE;
+    }
+}
+
+/**
+ * Implements hook_migrate_MIGRATION_ID_prepare_row for upgrade_d7_field_instance
+ * ignore any fields from above ignored content-types
+ */
+function nun_migration_migrate_upgrade_d7_field_instance_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration) {
+    $entity_type = $row->getSource()['entity_type'];
+    $bundle = $row->getSource()['bundle'];
+    //print("upgrade_d7_field_instance.row=".print_r($row->getSource(),TRUE)."\n");
+    if($entity_type === 'profile2' ||
+       ($entity_type === 'node' &&  in_array($row->getSource()['bundle'],nun_migration_ignore_content_types()))) {
+        return FALSE;
+    }
+    if($entity_type === 'comment') {
+        $ignores = [];
+        foreach (nun_migration_ignore_content_types() as $i) {
+            $ignores[] = 'comment_node_'.$i;
+        }
+        if(in_array($bundle,$ignores)) {
+            return FALSE;
+        }
+    }
+    $field_name = $row->getSource()['field_name'];
+    if($field_name === 'field_event_location' || $field_name === 'field_contact_information') {
+        // these two fields are broken form one complex field into four separate fields by the
+        // location migration group that gets run after the main migration logic.
+        // just ignore them here so they are not logged as an error to keep the logs
+        // less confusing and containing actual errors that may need to be addressed.
+        return FALSE;
+    }
+}
+
+/**
+ * Implements hook_migrate_MIGRATION_ID_prepare_row for upgrade_d7_comment_entity_form_display
+ * ignore any fields from above ignored content-types
+ */
+function nun_migration_migrate_upgrade_d7_comment_entity_form_display_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration) {
+    //print("upgrade_d7_comment_entity_form_display.source=".print_r($row->getSource(),TRUE)."\n");
+    if(in_array($row->getSource()['node_type'],nun_migration_ignore_content_types())) {
+        return FALSE;
+    }
+}
+
+/**
+ * Implements hook_migrate_MIGRATION_ID_prepare_row for upgrade_d7_comment_entity_display
+ * ignore any fields from above ignored content-types
+ */
+function nun_migration_migrate_upgrade_d7_comment_entity_display_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration) {
+    //print("upgrade_d7_comment_entity_display.source=".print_r($row->getSource(),TRUE)."\n");
+    if(in_array($row->getSource()['node_type'],nun_migration_ignore_content_types())) {
+        return FALSE;
+    }
+}
+
+/**
+ * Implements hook_migrate_MIGRATION_ID_prepare_row for upgrade_d7_comment_field
+ * ignore any fields from above ignored content-types
+ */
+function nun_migration_migrate_upgrade_d7_comment_field_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration) {
+    //print("nun_migration_migrate_upgrade_d7_comment_field_prepare_row.source=".print_r($row->getSource(),TRUE)."\n");
+    if(in_array($row->getSource()['node_type'],nun_migration_ignore_content_types())) {
+        return FALSE;
+    }
+}
+
+/**
+ * Implements hook_migrate_MIGRATION_ID_prepare_row for upgrade_d7_comment_field_instance
+ * ignore any fields from above ignored content-types
+ */
+function nun_migration_migrate_upgrade_d7_comment_field_instance_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration) {
+    //print("nun_migration_migrate_upgrade_d7_comment_field_instance_prepare_row.source=".print_r($row->getSource(),TRUE)."\n");
+    if(in_array($row->getSource()['node_type'],nun_migration_ignore_content_types())) {
+        return FALSE;
+    }
+}
+
+/**
+ * Implements hook_migrate_MIGRATION_ID_prepare_row for upgrade_d7_comment_entity_form_display_subject
+ * ignore any fields from above ignored content-types
+ */
+function nun_migration_migrate_upgrade_d7_comment_entity_form_display_subject_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration) {
+    //print("upgrade_d7_comment_entity_form_display_subject.source=".print_r($row->getSource(),TRUE)."\n");
+    if(in_array($row->getSource()['node_type'],nun_migration_ignore_content_types())) {
+        return FALSE;
+    }
+}
+
+/**
+ * Implements hook_migrate_MIGRATION_ID_prepare_row for upgrade_d7_field_formatter_settings
+ * ignore any fields from above ignored content-types
+ */
+function nun_migration_migrate_upgrade_d7_field_formatter_settings_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration) {
+    //print("upgrade_d7_field_formatter_settings.source=".print_r($row->getSource(),TRUE)."\n");
+    $entity_type = $row->getSource()['entity_type'];
+    $bundle = $row->getSource()['bundle'];
+    if($entity_type === 'profile2' ||
+       ($entity_type === 'node' &&  in_array($bundle,nun_migration_ignore_content_types()))) {
+        return FALSE;
+    }
+    if($entity_type === 'comment') {
+        $ignores = [];
+        foreach (nun_migration_ignore_content_types() as $i) {
+            $ignores[] = 'comment_node_'.$i;
+        }
+        if(in_array($bundle,$ignores)) {
+            return FALSE;
+        }
+    }
+}
+
+/**
+ * Implements hook_migrate_MIGRATION_ID_prepare_row for upgrade_d7_field_instance_widget_settings
+ * ignore any fields from above ignored content-types
+ */
+function nun_migration_migrate_upgrade_d7_field_instance_widget_settings_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration) {
+    //print("upgrade_d7_comment_entity_form_display_subject.source=".print_r($row->getSource(),TRUE)."\n");
+    $bundle = $row->getSource()['bundle'];
+    if(in_array($bundle,nun_migration_ignore_content_types())) {
+        return FALSE;
+    }
+    $ignores = [];
+    foreach (nun_migration_ignore_content_types() as $i) {
+        $ignores[] = 'comment_node_'.$i;
+    }
+    if(in_array($bundle,$ignores)) {
+        return FALSE;
+    }
+}
+
+/**
+ * Implements hook_migrate_MIGRATION_ID_prepare_row for upgrade_d7_node_title_label
+ */
+function nun_migration_migrate_upgrade_d7_node_title_label_prepare_row(Row $row, MigrateSourceInterface $source, MigrationInterface $migration) {
+    //print("upgrade_d7_node_title_label.source=".print_r($row->getSource(),TRUE)."\n");
+    if(in_array($row->getSource()['type'],nun_migration_ignore_content_types())) {
+        return FALSE;
+    }
+}
+

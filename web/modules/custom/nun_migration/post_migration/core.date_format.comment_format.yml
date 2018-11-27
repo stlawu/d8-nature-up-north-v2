@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: comment_format
+label: 'Comment Format'
+locked: false
+pattern: 'F j, Y - g:ia'

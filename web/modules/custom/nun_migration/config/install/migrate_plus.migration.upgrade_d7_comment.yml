@@ -1,0 +1,52 @@
+uuid: fd1e6c24-46d4-4b15-b3f3-34404547d452
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_comment
+migration_tags:
+  - 'Drupal 7'
+migration_group: migrate_drupal_7
+label: Comments
+source:
+  plugin: d7_comment
+  constants:
+    entity_type: node
+process:
+  cid: cid
+  pid:
+    plugin: migration
+    migration: upgrade_d7_comment
+    source: pid
+  entity_id: nid
+  entity_type: constants/entity_type
+  comment_type: comment_type
+  field_name: comment_type
+  subject: subject
+  uid: uid
+  name: name
+  mail: mail
+  homepage: homepage
+  hostname: hostname
+  created: created
+  changed: changed
+  status: status
+  thread: thread
+  comment_body: comment_body
+destination:
+  plugin: 'entity:comment'
+migration_dependencies:
+  required:
+    59: upgrade_d7_node_announcement_
+    60: upgrade_d7_node_blog
+    61: upgrade_d7_node_community_organization
+    62: upgrade_d7_node_educator_resource
+    63: upgrade_d7_node_encounter
+    64: upgrade_d7_node_event
+    65: upgrade_d7_node_page
+    66: upgrade_d7_node_partner
+    67: upgrade_d7_node_peel_away_image
+    68: upgrade_d7_node_trail
+    69: upgrade_d7_node_trail_head
+    70: upgrade_d7_comment_type
+  optional:
+    - upgrade_d7_comment

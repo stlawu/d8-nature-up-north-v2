@@ -1,0 +1,23 @@
+article.js-comment {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+  .links.list-inline {
+    margin-top: 5px;
+    li {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: transparent;
+      padding: 0;
+      margin-right: 4px;
+    }
+  }
+}
+article.js-comment .links.list-inline li a {
+    padding: 3px 10px;
+    display: inline-block;
+    text-decoration: none;
+}
+.comment-form {
+  @extend .well;
+}

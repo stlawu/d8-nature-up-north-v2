@@ -1,0 +1,8 @@
+component:
+  version: 1.x
+  css:
+    theme:
+      css/component.css: {}
+  js:
+    js/component-requirements.min.js: {}
+    js/component.js: {}

@@ -1,0 +1,124 @@
+<?php
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+
+ use Drupal\image\Entity\ImageStyle;
+
+ function nun_preprocess_page(&$vars) {
+    if($vars['is_front'] === TRUE) {
+      $vars['announcements'] = views_embed_view('announcements', 'home_page_block');
+      $vars['blogs'] = views_embed_view('front_main_content_block', 'home_page_block');
+      $vars['events_up_north'] = views_embed_view('events_up_north_block', 'home_page_block');
+      $vars['recent_encounters'] = views_embed_view('recent_encounters', 'home_page_block');
+      $vars['peel_away_image'] = views_embed_view('peel_away_image', 'peel_away');
+    }
+ }
+
+ function nun_preprocess_comment(&$vars) {
+    $date = $vars['comment']->getCreatedTime();
+    $vars['created'] = \Drupal::service('date.formatter')->format($date, 'comment_format');
+ }
+
+ function nun_preprocess_node(&$vars) {
+    if($vars['node']->getType() === 'blog') {
+      $date = $vars['node']->getCreatedTime();
+      $vars['date'] = \Drupal::service('date.formatter')->format($date, 'custom', 'F j, Y');
+
+
+      $vars['blog_image_data'] = getImageCarouselData($vars['node'], 'field_blog_image');
+      $vars['blog_author_block'] = \Drupal::service('plugin.manager.block')->createInstance('blog_author')->build();
+    }
+    elseif($vars['node']->getType() === 'encounter') {
+      $date = $vars['node']->getCreatedTime();
+      $vars['date'] = \Drupal::service('date.formatter')->format($date, 'custom', 'F j, Y');
+      $vars['encounter_image_data'] = getImageCarouselData($vars['node'], 'field_encounter_image');
+
+      $profile_data = array();
+      $user = \Drupal\user\Entity\User::load($vars['node']->getOwnerId());
+      $profile = \Drupal::entityManager()->getStorage('profile')->loadByUser($user, 'main');
+
+      $photo_field = $profile->get('field_profile_photo');
+      if(!$photo_field->isEmpty()) {
+          $photo_field_value = $photo_field->getValue();
+          $profile_data['image_url'] = ImageStyle::load('square_encounter_large')->buildUrl($photo_field->entity->uri->value);
+          $profile_data['image_title'] = $photo_field_value['title'];
+          $profile_data['image_alt'] = $photo_field_value['alt'];
+      } else {
+          $default_image = $photo_field->getSetting('default_image');
+          if($default_image && $default_image['uuid']) {
+              $default_photo_file = \Drupal::service('entity.repository')->loadEntityByUuid('file',$default_image['uuid']);
+              if($default_photo_file) {
+                  $profile_data['image_url'] = ImageStyle::load('medium')->buildUrl($default_photo_file->getFileUri());
+              }
+          }
+      }
+
+      $profile_data['full_name'] = $profile->get('field_profile_full_name')->value;
+      $profile_data['hometown'] = $profile->get('field_profile_hometown')->value;
+
+      $vars['profile_information'] = $profile_data;
+
+    }
+ }
+
+ function nun_page_attachments_alter(&$build) {
+    $routeMatch = \Drupal::routeMatch();
+    $routeName = $routeMatch->getRouteName();
+    if('entity.node.canonical' === $routeName) {
+        $node = $routeMatch->getParameter('node');
+        if('encounter' === $node->getType()) {
+            $location = $node->get('field_encounter_location');
+            if($location && !$location->isEmpty()) {
+                $build['#attached']['library'][] = 'nun/encounter';
+                $build['#attached']['drupalSettings']['encounter_geolocation'] = $location->getValue()[0];
+            }
+        }
+    } else if ('node.add' === $routeName || 'entity.node.edit_form' === $routeName) {
+        $bundle = 'node.add' === $routeName ?
+            $routeMatch->getParameter('node_type')->id() :
+            $routeMatch->getParameter('node')->getType();
+        if($bundle === 'encounter') {
+            $build['#attached']['library'][] = 'nun/encounter_mod';
+        }
+    }
+
+ }
+
+ function getImageCarouselData($node, $fieldname) {
+   //get the images with an image style for the carousel.
+   $images = $node->get($fieldname);
+   if(count($images) > 0) {
+     $urls = array();
+     if(count($images) > 1) {
+       $i = 0;
+       foreach($images as $image) {
+
+         $uri = $image->entity->uri->value;
+         $properties[$i]['title'] = $image->getValue()['title'];
+         $properties[$i]['alt'] = $image->getValue()['alt'];
+         $width = $image->getValue()['width'];
+         $height = $image->getValue()['height'];
+         if($height > $width) {
+           //no aspect switcher in d8, so test for landscape or portrait manually and load appropriate image style
+           $properties[$i]['uri'] = ImageStyle::load('image_carousel_portrait')->buildUrl($uri);
+         } else {
+           $properties[$i]['uri'] = ImageStyle::load('image_carousel_landscape')->buildUrl($uri);
+         }
+
+         $properties[$i]['thumb_uri'] = ImageStyle::load('square_encounter_thumbnail')->buildUrl($uri);
+         $i++;
+       }
+     } else {
+       //use a different image style when there is only one image
+       $uri = $images[0]->entity->uri->value;
+       $properties['title'] = $images[0]->getValue()['title'];
+       $properties['alt'] = $images[0]->getValue()['alt'];
+       $properties['uri'] = ImageStyle::load('width_800')->buildUrl($uri);
+     }
+     return $properties;
+   }
+ }

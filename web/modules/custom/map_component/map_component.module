@@ -1,0 +1,11 @@
+<?php
+function map_component_theme($existing, $type, $theme, $path) {
+  return array(
+    'map-component' => array(
+        'variables' => array(
+            'api_key' => NULL,
+            'marker_sources' => NULL,
+        ),
+    ),
+  );
+}

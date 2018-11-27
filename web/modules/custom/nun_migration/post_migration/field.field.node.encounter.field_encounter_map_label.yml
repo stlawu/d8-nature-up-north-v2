@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_encounter_map_label
+    - node.type.encounter
+  module:
+    - markup
+id: node.encounter.field_encounter_map_label
+field_name: field_encounter_map_label
+entity_type: node
+bundle: encounter
+label: 'Where were you? Tag your location on the map *'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p><strong>Where were you? Tag your location on the map *</strong></p>\r\n\r\n<p>If your location is not automatically set, click the map and the pin icon will move to where you clicked. Set the pin where your observation occurred.</p>\r\n"
+    format: full_html
+field_type: markup
