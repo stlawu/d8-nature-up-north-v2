@@ -1,0 +1,14 @@
+uuid: 2ae6ba86-bfff-4790-9c4e-3863de2a98fe
+name: d8-nature-up-north-v2
+mail: ncainaru@stlawu.edu
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
