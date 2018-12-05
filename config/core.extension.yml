@@ -15,10 +15,12 @@ module:
   contextual: 0
   ctools: 0
   datetime: 0
+  datetime_range: 0
   dblog: 0
   devel: 0
   dynamic_page_cache: 0
   editor: 0
+  entity_reference_revisions: 0
   field: 0
   field_group: 0
   field_permissions: 0
@@ -30,6 +32,7 @@ module:
   image: 0
   kint: 0
   link: 0
+  markup: 0
   menu_ui: 0
   node: 0
   options: 0
@@ -42,6 +45,7 @@ module:
   simple_block: 0
   system: 0
   taxonomy: 0
+  telephone: 0
   text: 0
   toolbar: 0
   tour: 0
