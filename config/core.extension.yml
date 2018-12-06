@@ -57,6 +57,7 @@ module:
   recaptcha: 0
   redirect: 0
   search: 0
+  search_kint: 0
   sharethis: 0
   shortcut: 0
   simple_block: 0
