@@ -51,9 +51,12 @@ module:
   profile: 0
   quickedit: 0
   rdf: 0
+  redirect: 0
   search: 0
+  sharethis: 0
   shortcut: 0
   simple_block: 0
+  sitemap: 0
   system: 0
   taxonomy: 0
   telephone: 0
@@ -61,6 +64,7 @@ module:
   token: 0
   toolbar: 0
   tour: 0
+  twig_tweak: 0
   update: 0
   user: 0
   vardumper: 0
@@ -68,6 +72,7 @@ module:
   menu_link_content: 1
   pathauto: 1
   views: 10
+  paragraphs: 11
   standard: 1000
 theme:
   stable: 0
