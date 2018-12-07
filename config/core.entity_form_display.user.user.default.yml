@@ -4,9 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.user.user.user_picture
-    - image.style.thumbnail
   module:
-    - image
+    - path
     - user
 _core:
   default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
@@ -18,21 +17,29 @@ content:
   account:
     weight: -10
     region: content
-  contact:
-    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+  google_analytics:
+    weight: 3
     region: content
+    settings: {  }
+    third_party_settings: {  }
   language:
     weight: 0
     region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   timezone:
     weight: 6
     region: content
-  user_picture:
-    type: image_image
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+    settings: {  }
     third_party_settings: {  }
-    weight: -1
-    region: content
-hidden: {  }
+hidden:
+  contact: true
+  user_picture: true
