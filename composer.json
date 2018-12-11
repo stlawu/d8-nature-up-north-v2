@@ -77,7 +77,8 @@
         "oomphinc/composer-installers-extender": "^1.1",
         "pantheon-systems/quicksilver-pushback": "~1",
         "rvtraveller/qs-composer-installer": "^1.1",
-        "webflo/drupal-core-strict": "^8"
+        "webflo/drupal-core-strict": "^8",
+        "wikimedia/composer-merge-plugin": "^1.4"
     },
     "require-dev": {
         "mikey179/vfsstream": "^1.2",
