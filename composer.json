@@ -41,7 +41,7 @@
         "drupal/field_group": "^3.0",
         "drupal/field_permissions": "^1.0",
         "drupal/flag": "^4.0",
-        "drupal/geolocation": "^2.0",
+        "drupal/geolocation": "^1.11",
         "drupal/google_analytics": "^2.3",
         "drupal/honeypot": "^1.29",
         "drupal/image_effects": "~2.0",
