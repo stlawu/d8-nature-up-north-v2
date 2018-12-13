@@ -5820,7 +5820,7 @@ button.close {
   top: 0px;
   width: 100%; }
   .encounter-layover span:before {
-    background-image: url("/themes/nun/img/northworthy_white_sm.png");
+    background-image: url("../img/northworthy_white_sm.png");
     background-repeat: no-repeat;
     content: "";
     display: inline-block;
@@ -6231,7 +6231,7 @@ header#navbar nav#block-nun-account-menu > ul.navbar-right > li > a, .peel-away 
           bottom: 0px;
           width: 100%; }
       .wild-encounters .view-display-id-home_page_block .view-content .views-row .views-field-count span:before {
-        background-image: url("/sites/all/themes/nun/img/northworthy_white_sm.png");
+        background-image: url("../img/northworthy_white_sm.png");
         background-repeat: no-repeat;
         content: " ";
         display: inline-table;
@@ -6554,7 +6554,7 @@ body.navbar-is-fixed-top.path-frontpage {
     border-radius: 0px 0px 10px 10px;
     padding-bottom: 8px; }
   .peel-away .down-arrow {
-    background-image: url("/themes/nun/img/peel-away-down-arrow.png");
+    background-image: url("../img/peel-away-down-arrow.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 45px 27px;
@@ -7301,7 +7301,7 @@ img {
   margin-left: 15px;
   margin-right: 15px;
   color: #6B5724;
-  background-image: url("/themes/nun/img/hero_bg.gif");
+  background-image: url("../img/hero_bg.gif");
   border-radius: 6px;
   border: 1px solid #1B4458; }
   @media (min-width: 768px) {
@@ -7312,7 +7312,7 @@ img {
     background-image: none; }
     @media (min-width: 768px) {
       .region-highlighted #block-whatsyournature {
-        background-image: url("/themes/nun/img/big_marker.png");
+        background-image: url("../img/big_marker.png");
         background-repeat: no-repeat;
         padding-left: 130px;
         min-height: 160px; } }
@@ -7327,7 +7327,7 @@ img {
         content: ' ';
         width: 30px;
         height: 36px;
-        background-image: url("/themes/nun/img/small_marker.png");
+        background-image: url("../img/small_marker.png");
         background-repeat: no-repeat;
         display: inline-block;
         vertical-align: top;
@@ -7549,7 +7549,7 @@ form.node-event-edit-form .group-instructions-group > .field-group-details {
   height: 250px;
   width: 50%;
   top: 0;
-  background: url("/themes/nun/img/left-arrow.png") no-repeat left center;
+  background: url("../img/left-arrow.png") no-repeat left center;
   cursor: pointer; }
 
 .nav-right {
@@ -7558,7 +7558,7 @@ form.node-event-edit-form .group-instructions-group > .field-group-details {
   width: 50%;
   top: 0;
   right: 0;
-  background: url("/themes/nun/img/right-arrow.png") no-repeat right center;
+  background: url("../img/right-arrow.png") no-repeat right center;
   cursor: pointer; }
 
 .caption {
