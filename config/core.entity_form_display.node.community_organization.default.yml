@@ -15,7 +15,7 @@ dependencies:
   module:
     - address
     - field_group
-    - geolocation_google_maps
+    - geolocation
     - image
     - link
     - path
@@ -38,6 +38,7 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Contact Information'
+      region: content
 id: node.community_organization.default
 targetEntityType: node
 bundle: community_organization

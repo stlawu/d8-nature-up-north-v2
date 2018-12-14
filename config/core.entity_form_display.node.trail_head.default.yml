@@ -9,7 +9,7 @@ dependencies:
     - field.field.node.trail_head.field_trail_access
     - node.type.trail_head
   module:
-    - geolocation_google_maps
+    - geolocation
     - path
     - text
 id: node.trail_head.default

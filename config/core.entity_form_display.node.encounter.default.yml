@@ -17,7 +17,7 @@ dependencies:
     - node.type.encounter
   module:
     - datetime
-    - geolocation_google_maps
+    - geolocation
     - image
     - markup
     - path
