@@ -1,0 +1,21 @@
+uuid: 1d339c6b-56e3-47d4-a1d9-92e3f1e47519
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_type
+    - node.type.trail
+  module:
+    - options
+id: node.trail.field_type
+field_name: field_type
+entity_type: node
+bundle: trail
+label: Type
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,20 @@
+uuid: bab612b4-5544-4725-afa3-b59c8286327e
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_graduation_year
+field_name: field_graduation_year
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

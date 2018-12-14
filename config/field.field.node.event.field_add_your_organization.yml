@@ -1,0 +1,28 @@
+uuid: 33f5f5f8-dcd2-4546-b55c-6366b0b53d7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_add_your_organization
+    - node.type.event
+    - taxonomy.vocabulary.sponsoring_organization
+id: node.event.field_add_your_organization
+field_name: field_add_your_organization
+entity_type: node
+bundle: event
+label: 'Sponsoring Organization'
+description: 'Please enter then name of your organization here.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      sponsoring_organization: sponsoring_organization
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,4 +1,4 @@
-uuid: a0c5d9f3-cdf0-4dcb-9372-34f82e64f1a4
+uuid: 6ca3079a-8dcc-4245-aaae-aa33da373c99
 langcode: en
 status: true
 dependencies:
@@ -15,31 +15,29 @@ bundle: user
 mode: default
 content:
   account:
-    weight: -10
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
   google_analytics:
-    weight: 3
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   language:
-    weight: 0
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
   timezone:
     weight: 6
     region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   contact: true
   user_picture: true

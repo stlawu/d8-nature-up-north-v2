@@ -1,0 +1,33 @@
+uuid: 28d0c25a-6511-40fd-ba2e-43d43fc65ccd
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_event_category
+field_name: field_event_category
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Outing (hike, paddle, etc.)'
+      label: 'Outing (hike, paddle, etc.)'
+    -
+      value: Workshop
+      label: Workshop
+    -
+      value: Performance/Lecture/Film
+      label: Performance/Lecture/Film
+    -
+      value: Other
+      label: Other
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

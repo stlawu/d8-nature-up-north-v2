@@ -1,0 +1,8 @@
+uuid: 44566320-4817-4ab3-8d2d-eda2e36ddd40
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_peel_away_image
+label: 'Peel Away Image comment'
+target_entity_type_id: node
+description: null

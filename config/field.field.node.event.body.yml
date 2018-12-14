@@ -1,0 +1,22 @@
+uuid: 4b4ef9fd-3c9b-41af-b593-7bb382f5fe1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.event
+  module:
+    - text
+id: node.event.body
+field_name: body
+entity_type: node
+bundle: event
+label: 'Event description'
+description: 'Describe your event in the way you would like to see it listed on Nature Up North.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

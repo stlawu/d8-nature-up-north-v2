@@ -1,0 +1,23 @@
+uuid: 9d224c42-65d0-4da3-acd2-6c22d35ce753
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: image_carousel_landscape
+label: 'Image Carousel Landscape'
+effects:
+  9cef1bf6-f45a-4e7a-bf66-1b9258db3cf7:
+    uuid: 9cef1bf6-f45a-4e7a-bf66-1b9258db3cf7
+    id: image_scale
+    weight: -9
+    data:
+      width: 870
+      height: null
+      upscale: true
+  db9f4b7c-141d-4c3e-842d-7142f8245f65:
+    uuid: db9f4b7c-141d-4c3e-842d-7142f8245f65
+    id: image_effects_auto_orient
+    weight: -10
+    data:
+      scan_exif: true

@@ -1,0 +1,27 @@
+uuid: 684e9998-df1b-4065-a730-a9a18cf97219
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_trail_pdf
+    - node.type.trail
+  module:
+    - file
+id: node.trail.field_trail_pdf
+field_name: field_trail_pdf
+entity_type: node
+bundle: trail
+label: 'Trail Map PDF'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: ''
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

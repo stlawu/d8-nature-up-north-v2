@@ -1,0 +1,21 @@
+uuid: cd22f55f-84ca-4c3d-b3f4-21b9f45df586
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_category
+    - node.type.event
+  module:
+    - options
+id: node.event.field_event_category
+field_name: field_event_category
+entity_type: node
+bundle: event
+label: Category
+description: 'What type of event is this?  Select all that apply.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,9 @@
+uuid: 1c383344-0e04-4e74-9419-aec0fc690797
+langcode: en
+status: true
+dependencies: {  }
+name: 'Informal species taxonomy'
+vid: informal_species_taxonomy
+description: 'Informal species taxonomy'
+hierarchy: 1
+weight: -4

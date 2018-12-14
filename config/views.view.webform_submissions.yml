@@ -1,4 +1,4 @@
-uuid: 4fc56db6-f963-46c9-9aff-9ca476efb0e2
+uuid: 47522966-eb5d-41a4-9806-9f166cb1469c
 langcode: en
 status: true
 dependencies:
@@ -8,8 +8,6 @@ dependencies:
   module:
     - user
     - webform
-_core:
-  default_config_hash: _7B5YYODi_--G_tOWLcRmuuWsNsOFtDfntkEuwJWQq0
 id: webform_submissions
 label: 'Webform submissions'
 module: views
@@ -587,6 +585,91 @@ display:
         operator: AND
         groups: {  }
       title: 'Webform submissions'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+      tags: {  }
+  embed_default:
+    display_plugin: embed
+    id: embed_default
+    display_title: 'Embed: Default'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      display_description: 'Display submissions.'
+      defaults:
+        fields: true
+        style: false
+        row: false
+        filters: true
+        filter_groups: true
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          override: true
+          sticky: false
+          caption: ''
+          summary: ''
+          description: ''
+          columns:
+            sid: sid
+            in_draft: in_draft
+            created: created
+            remote_addr: remote_addr
+            view_webform_submission: view_webform_submission
+          info:
+            sid:
+              sortable: true
+              default_sort_order: desc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            in_draft:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            created:
+              sortable: true
+              default_sort_order: desc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            remote_addr:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            view_webform_submission:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ' '
+              empty_column: false
+              responsive: ''
+          default: created
+          empty_table: false
+      row:
+        type: fields
+        options:
+          inline: {  }
+          separator: ''
+          hide_empty: false
+          default_field_elements: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -1422,91 +1505,6 @@ display:
         - url.query_args
         - user
         - user.permissions
-      tags: {  }
-  embed_default:
-    display_plugin: embed
-    id: embed_default
-    display_title: 'Embed: Default'
-    position: 1
-    display_options:
-      display_extenders: {  }
-      display_description: 'Display submissions.'
-      defaults:
-        fields: true
-        style: false
-        row: false
-        filters: true
-        filter_groups: true
-      style:
-        type: table
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          override: true
-          sticky: false
-          caption: ''
-          summary: ''
-          description: ''
-          columns:
-            sid: sid
-            in_draft: in_draft
-            created: created
-            remote_addr: remote_addr
-            view_webform_submission: view_webform_submission
-          info:
-            sid:
-              sortable: true
-              default_sort_order: desc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            in_draft:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            created:
-              sortable: true
-              default_sort_order: desc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            remote_addr:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            view_webform_submission:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ' '
-              empty_column: false
-              responsive: ''
-          default: created
-          empty_table: false
-      row:
-        type: fields
-        options:
-          inline: {  }
-          separator: ''
-          hide_empty: false
-          default_field_elements: true
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-        - url.query_args
-        - user
       tags: {  }
   embed_manage:
     display_plugin: embed

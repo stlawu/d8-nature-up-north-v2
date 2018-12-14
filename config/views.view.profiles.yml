@@ -1,4 +1,4 @@
-uuid: 706b8b79-5405-41fd-94e1-fa113329dce4
+uuid: 1767ffef-acb3-47c5-a168-af47b37a3f5e
 langcode: en
 status: true
 dependencies:
@@ -299,7 +299,9 @@ display:
       contexts:
         - 'languages:language_interface'
         - url
-      tags: {  }
+      tags:
+        - 'config:core.entity_view_display.profile.blogger.default'
+        - 'config:core.entity_view_display.profile.main.default'
   profile_type_listing:
     display_plugin: embed
     id: profile_type_listing
@@ -313,7 +315,9 @@ display:
       contexts:
         - 'languages:language_interface'
         - url
-      tags: {  }
+      tags:
+        - 'config:core.entity_view_display.profile.blogger.default'
+        - 'config:core.entity_view_display.profile.main.default'
   user_view:
     display_plugin: embed
     id: user_view
@@ -381,4 +385,6 @@ display:
       contexts:
         - 'languages:language_interface'
         - url
-      tags: {  }
+      tags:
+        - 'config:core.entity_view_display.profile.blogger.default'
+        - 'config:core.entity_view_display.profile.main.default'

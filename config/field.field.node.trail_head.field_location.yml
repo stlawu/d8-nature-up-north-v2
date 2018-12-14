@@ -1,0 +1,21 @@
+uuid: c950e101-f526-4283-bca1-11295df44287
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.trail_head
+  module:
+    - geolocation
+id: node.trail_head.field_location
+field_name: field_location
+entity_type: node
+bundle: trail_head
+label: Location
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

@@ -1,10 +1,13 @@
-uuid: d7884f59-48e2-4aa2-a8b1-3303c65734d7
+uuid: 09ecc164-35b8-4545-9046-7bf5cde13c9b
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
+    - field.field.node.page.comment_node_page
+    - field.field.node.page.field_basic_page_attachment
+    - field.field.node.page.field_basic_page_image
     - node.type.page
   module:
     - text
@@ -18,13 +21,21 @@ mode: teaser
 content:
   body:
     label: hidden
+    weight: 0
     type: text_summary_or_trimmed
-    weight: 100
-    region: content
     settings:
       trim_length: 600
     third_party_settings: {  }
+    region: content
   links:
     weight: 101
     region: content
-hidden: {  }
+    settings: {  }
+    third_party_settings: {  }
+  sharethis:
+    weight: 10
+    region: content
+hidden:
+  comment_node_page: true
+  field_basic_page_attachment: true
+  field_basic_page_image: true

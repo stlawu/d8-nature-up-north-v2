@@ -1,0 +1,20 @@
+uuid: 13b9a0a6-d195-496d-9c78-33737049340f
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_diet
+field_name: field_diet
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

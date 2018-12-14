@@ -1,0 +1,27 @@
+uuid: 9936363a-816c-4646-989f-d787bf74e7a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_partner
+    - field.field.comment.comment_node_partner.comment_body
+  module:
+    - text
+id: comment.comment_node_partner.default
+targetEntityType: comment
+bundle: comment_node_partner
+mode: default
+content:
+  comment_body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

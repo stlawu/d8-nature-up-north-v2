@@ -1,0 +1,21 @@
+uuid: aa75346d-43a0-4dc0-9315-9629747bf555
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_encounter_description
+    - node.type.encounter
+  module:
+    - text
+id: node.encounter.field_encounter_description
+field_name: field_encounter_description
+entity_type: node
+bundle: encounter
+label: 'What was it like? Describe your encounter or experience'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

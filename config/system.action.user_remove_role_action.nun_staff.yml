@@ -1,0 +1,14 @@
+uuid: 0140980a-0425-4d66-a994-8c1fd3f70b5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.nun_staff
+  module:
+    - user
+id: user_remove_role_action.nun_staff
+label: 'Remove the nun_staff role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: nun_staff

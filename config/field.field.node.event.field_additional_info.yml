@@ -1,0 +1,21 @@
+uuid: 4fbeaef3-4678-452f-b7d1-d48e1209b95a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_additional_info
+    - node.type.event
+  module:
+    - text
+id: node.event.field_additional_info
+field_name: field_additional_info
+entity_type: node
+bundle: event
+label: 'Additional Information'
+description: 'Add any additional info about the event (what to wear, bring, etc.)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

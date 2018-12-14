@@ -1,10 +1,14 @@
-uuid: fc2dcdf9-7472-4e64-931a-46bf036c0778
-langcode: en
+uuid: 8c8927be-34a9-4475-8513-11ecf05e475f
+langcode: und
 status: true
 dependencies:
   module:
+    - field_permissions
     - node
     - text
+third_party_settings:
+  field_permissions:
+    permission_type: public
 _core:
   default_config_hash: EBUo7qOWqaiZaQ_RC9sLY5IoDKphS34v77VIHSACmVY
 id: node.body

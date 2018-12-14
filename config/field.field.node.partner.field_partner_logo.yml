@@ -1,0 +1,38 @@
+uuid: dccea98f-fb96-4b66-b7e4-1ba5b4b71199
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_partner_logo
+    - node.type.partner
+  module:
+    - image
+id: node.partner.field_partner_logo
+field_name: field_partner_logo
+entity_type: node
+bundle: partner
+label: Logo
+description: 'Partner''s logo, mark or other graphic to display.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: partner_logos
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: 200x100
+  alt_field: true
+  title_field: true
+  default_image:
+    alt: ''
+    title: ''
+    width: null
+    height: null
+    uuid: ''
+  alt_field_required: true
+  title_field_required: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

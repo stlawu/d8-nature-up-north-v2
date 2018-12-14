@@ -1,0 +1,21 @@
+uuid: c7916142-afbd-4149-a840-7e8e99f4ade7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_difficulty
+    - node.type.trail
+  module:
+    - options
+id: node.trail.field_difficulty
+field_name: field_difficulty
+entity_type: node
+bundle: trail
+label: 'Difficulty Rating '
+description: "Please provide a rating for this hike: EASY ratings include short trips or mostly level terrain or both. MODERATE ratings include longer trips, rougher\r\nterrain and some climbing. DIFFICULT ratings include prolonged steep climbing or are longer and more remote, previous experience will be helpful."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

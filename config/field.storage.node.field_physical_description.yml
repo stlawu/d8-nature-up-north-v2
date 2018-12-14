@@ -1,0 +1,19 @@
+uuid: 9cd0aff3-0723-4c16-85b3-d5a4e221d05f
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_physical_description
+field_name: field_physical_description
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

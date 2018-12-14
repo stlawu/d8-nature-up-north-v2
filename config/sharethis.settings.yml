@@ -1,10 +1,20 @@
 button_option: stbc_button
 comments: 0
 late_load: 0
-location: content
+location: block
 node_types:
   article: article
   page: page
+  announcement_: null
+  blog: null
+  community_organization: null
+  educator_resource: null
+  encounter: null
+  event: null
+  partner: null
+  peel_away_image: null
+  trail: null
+  trail_head: null
 option_extras:
   'Google Plus One:plusone': 'Google Plus One:plusone'
   'Facebook Like:fblike': 'Facebook Like:fblike'
@@ -24,8 +34,89 @@ cns:
 sharethisnodes:
   article:
     full: full
+    rss: '0'
+    search_index: '0'
+    search_result: '0'
+    teaser: '0'
+    token: '0'
   page:
     full: full
+    rss: '0'
+    search_index: '0'
+    search_result: '0'
+    teaser: '0'
+    token: '0'
+  announcement_:
+    full: '0'
+    rss: '0'
+    search_index: '0'
+    search_result: '0'
+    teaser: '0'
+    token: '0'
+  blog:
+    full: '0'
+    rss: '0'
+    search_index: '0'
+    search_result: '0'
+    teaser: '0'
+    token: '0'
+  community_organization:
+    full: '0'
+    rss: '0'
+    search_index: '0'
+    search_result: '0'
+    teaser: '0'
+    token: '0'
+  educator_resource:
+    full: '0'
+    rss: '0'
+    search_index: '0'
+    search_result: '0'
+    teaser: '0'
+    token: '0'
+  encounter:
+    full: '0'
+    rss: '0'
+    search_index: '0'
+    search_result: '0'
+    teaser: '0'
+    token: '0'
+  event:
+    full: '0'
+    rss: '0'
+    search_index: '0'
+    search_result: '0'
+    teaser: '0'
+    token: '0'
+  partner:
+    full: '0'
+    rss: '0'
+    search_index: '0'
+    search_result: '0'
+    teaser: '0'
+    token: '0'
+  peel_away_image:
+    full: '0'
+    rss: '0'
+    search_index: '0'
+    search_result: '0'
+    teaser: '0'
+    token: '0'
+  trail:
+    full: '0'
+    rss: '0'
+    search_index: '0'
+    search_result: '0'
+    teaser: '0'
+    token: '0'
+  trail_head:
+    full: '0'
+    rss: '0'
+    search_index: '0'
+    search_result: '0'
+    teaser: '0'
+    token: '0'
 _core:
   default_config_hash: OUePCWmQ_tUOCD4VF7-AP0maPJi2Y18f0JvNTgThhRQ
-publisherID: dr-b748b12-296e-d437-ff75-8ff5574a82d1
+publisherID: dr-df7d1933-a9d7-1bfc-4657-165ccfc665db
+callesi: '0'

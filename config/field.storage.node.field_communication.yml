@@ -1,0 +1,19 @@
+uuid: dc94c3cc-db06-408f-aa2e-336a8506e5d1
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_communication
+field_name: field_communication
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,9 @@
+uuid: 7cfbbde9-9edf-4515-bd45-4a98a581cd26
+langcode: en
+status: true
+dependencies: {  }
+name: 'Educator Resources'
+vid: educator_resources
+description: 'vocabulary for tagging educator resources'
+hierarchy: 0
+weight: 0

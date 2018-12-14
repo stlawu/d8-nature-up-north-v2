@@ -1,0 +1,36 @@
+uuid: 123f78c1-0d3c-4ead-92b7-e9431e3ef566
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_appropriate_ages
+field_name: field_appropriate_ages
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Up to age 10'
+      label: 'Up to age 10'
+    -
+      value: 'Ages 10 - 13'
+      label: 'Ages 10 - 13'
+    -
+      value: 'Ages 13 - 18'
+      label: 'Ages 13 - 18'
+    -
+      value: 'Over age 18'
+      label: 'Over age 18'
+    -
+      value: 'Suitable for all ages'
+      label: 'Suitable for all ages'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 5
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: 14042fc1-bb81-4994-af43-498f87730a64
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_appropriate_ages
+    - node.type.event
+  module:
+    - options
+id: node.event.field_appropriate_ages
+field_name: field_appropriate_ages
+entity_type: node
+bundle: event
+label: 'Appropriate ages'
+description: 'If your event is targeted toward a specific age group, note it here.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

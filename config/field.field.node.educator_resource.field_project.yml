@@ -1,0 +1,21 @@
+uuid: db80c6a5-d936-4747-9bf1-5b39edc7e6d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_project
+    - node.type.educator_resource
+  module:
+    - options
+id: node.educator_resource.field_project
+field_name: field_project
+entity_type: node
+bundle: educator_resource
+label: Project
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

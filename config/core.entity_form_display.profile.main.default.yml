@@ -1,0 +1,61 @@
+uuid: 309efc19-325c-47ce-8810-517df2333e56
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.main.field_profile_activities
+    - field.field.profile.main.field_profile_current_location
+    - field.field.profile.main.field_profile_full_name
+    - field.field.profile.main.field_profile_hometown
+    - field.field.profile.main.field_profile_photo
+    - image.style.thumbnail
+    - profile.type.main
+  module:
+    - image
+id: profile.main.default
+targetEntityType: profile
+bundle: main
+mode: default
+content:
+  field_profile_activities:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_profile_current_location:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_profile_full_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_profile_hometown:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_profile_photo:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+hidden: {  }

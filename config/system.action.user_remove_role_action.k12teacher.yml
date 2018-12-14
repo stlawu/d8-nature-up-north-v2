@@ -1,0 +1,14 @@
+uuid: 437b4866-ef8e-45a1-9741-34a188ea3a02
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.k12teacher
+  module:
+    - user
+id: user_remove_role_action.k12teacher
+label: 'Remove the K12Teacher role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: k12teacher

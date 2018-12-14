@@ -1,0 +1,21 @@
+uuid: 768fea9a-4435-4ca5-af25-08fc20a0e8de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_trail_access
+    - node.type.trail_head
+  module:
+    - text
+id: node.trail_head.field_trail_access
+field_name: field_trail_access
+entity_type: node
+bundle: trail_head
+label: 'Getting There'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

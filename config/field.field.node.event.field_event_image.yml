@@ -1,0 +1,38 @@
+uuid: 6f73c676-6816-4d96-92f8-316a03e5fb63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_image
+    - node.type.event
+  module:
+    - image
+id: node.event.field_event_image
+field_name: field_event_image
+entity_type: node
+bundle: event
+label: Image
+description: 'Include an image to improve promotion of your event.   An image must be at least 500 pixels on its shortest side, and no more than 8 MB.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  alt_field: false
+  default_image:
+    alt: ''
+    title: ''
+    width: null
+    height: null
+    uuid: ''
+  file_directory: ''
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: 8MB
+  max_resolution: ''
+  min_resolution: 400x400
+  title_field: false
+  alt_field_required: true
+  title_field_required: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

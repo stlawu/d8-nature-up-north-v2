@@ -1,0 +1,21 @@
+uuid: ef1be26a-1aa1-4427-8f3e-62f1552d80a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_skill_level
+    - node.type.event
+  module:
+    - options
+id: node.event.field_skill_level
+field_name: field_skill_level
+entity_type: node
+bundle: event
+label: 'Skill level'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

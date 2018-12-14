@@ -1,0 +1,30 @@
+uuid: e55eb943-0f97-4ddc-9503-959e32733fec
+langcode: en
+status: true
+dependencies: {  }
+id: blogger
+label: blogger
+weight: 4
+is_admin: null
+permissions:
+  - 'create blog content'
+  - 'create encounter content'
+  - 'create event content'
+  - 'delete own blog content'
+  - 'delete own encounter content'
+  - 'delete revisions'
+  - 'edit own blog content'
+  - 'edit own blogger profile'
+  - 'edit own comments'
+  - 'edit own community_organization content'
+  - 'edit own encounter content'
+  - 'edit own event content'
+  - 'post comments'
+  - 'revert revisions'
+  - 'skip comment approval'
+  - 'use text format basic_html'
+  - 'use text format full_html'
+  - 'view any main profile'
+  - 'view own blogger profile'
+  - 'view own unpublished content'
+  - 'view revisions'

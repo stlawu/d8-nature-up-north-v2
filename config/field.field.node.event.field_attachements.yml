@@ -1,0 +1,27 @@
+uuid: 8b2f6855-f0e8-4101-80ff-d80b7991a214
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_attachements
+    - node.type.event
+  module:
+    - file
+id: node.event.field_attachements
+field_name: field_attachements
+entity_type: node
+bundle: event
+label: Attachments
+description: 'If you like, upload a document relevant to the event (e.g. map).  Acceptable formats are .txt, .doc, .docx, .jpg, .png and .pdf.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  description_field: false
+  file_directory: ''
+  file_extensions: 'txt pdf docx doc jpg jpeg png'
+  max_filesize: 50MB
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

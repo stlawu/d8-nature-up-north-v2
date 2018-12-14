@@ -1,0 +1,28 @@
+uuid: b0eca947-221f-4340-884e-0bf4f338a46b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.species_account_test.body
+    - node.type.species_account_test
+  module:
+    - text
+    - user
+id: node.species_account_test.default
+targetEntityType: node
+bundle: species_account_test
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

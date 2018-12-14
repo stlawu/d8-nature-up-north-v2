@@ -1,0 +1,18 @@
+uuid: f7092cec-c93d-4d30-823d-209825d916a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.announcement_
+id: node.announcement_.title
+field_name: title
+entity_type: node
+bundle: announcement_
+label: 'Announcement title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

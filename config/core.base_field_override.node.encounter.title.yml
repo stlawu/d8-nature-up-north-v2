@@ -1,0 +1,18 @@
+uuid: d0942d13-5dba-4eca-8cfd-d7ad682188f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.encounter
+id: node.encounter.title
+field_name: title
+entity_type: node
+bundle: encounter
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

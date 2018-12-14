@@ -1,0 +1,20 @@
+uuid: 07aa19c0-6c95-45df-8e6f-9ea93f5342c1
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_common_name
+field_name: field_common_name
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

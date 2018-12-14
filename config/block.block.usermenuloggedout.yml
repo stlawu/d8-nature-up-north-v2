@@ -1,0 +1,32 @@
+uuid: 5d3270d5-d421-4af6-99aa-218bd4b82808
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.user-menu-logged-out
+  module:
+    - system
+    - user
+  theme:
+    - nun
+id: usermenuloggedout
+theme: nun
+region: navigation_collapsible
+weight: -10
+provider: null
+plugin: 'system_menu_block:user-menu-logged-out'
+settings:
+  id: 'system_menu_block:user-menu-logged-out'
+  label: 'User Menu Logged Out'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      anonymous: anonymous
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

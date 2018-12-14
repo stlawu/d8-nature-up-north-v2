@@ -1,0 +1,29 @@
+uuid: ad428c41-5fab-459c-a7ba-4cbca9ae0ad6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_trail
+    - node.type.trail
+    - node.type.trail_head
+id: node.trail_head.field_trail
+field_name: field_trail
+entity_type: node
+bundle: trail_head
+label: Trail
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      trail: trail
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

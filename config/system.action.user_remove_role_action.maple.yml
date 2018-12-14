@@ -1,0 +1,14 @@
+uuid: 922894ad-3fcd-42cc-bc4b-e7175f9c6ad2
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.maple
+  module:
+    - user
+id: user_remove_role_action.maple
+label: 'Remove the Maple Monitor role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: maple

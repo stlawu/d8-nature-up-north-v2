@@ -1,0 +1,21 @@
+uuid: 9bef1b2e-07a6-4b67-aed8-b8ea1bb82186
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_trail_safety_recommendatio
+    - node.type.trail
+  module:
+    - text
+id: node.trail.field_trail_safety_recommendatio
+field_name: field_trail_safety_recommendatio
+entity_type: node
+bundle: trail
+label: 'Safety Recommendations'
+description: 'Provide information about any trail safety issues that users should be aware of and prepared for before using this trail.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,22 @@
+uuid: f6bb9061-8702-4e2d-bbc8-20c86d292dc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.community_organization
+  module:
+    - text
+id: node.community_organization.body
+field_name: body
+entity_type: node
+bundle: community_organization
+label: 'Brief description'
+description: 'A brief description about this community organization'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

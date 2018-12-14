@@ -1,0 +1,20 @@
+uuid: 44a81981-a814-4666-a1d8-49d94ab6652c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.blogger.field_bio
+    - profile.type.blogger
+id: profile.blogger.default
+targetEntityType: profile
+bundle: blogger
+mode: default
+content:
+  field_bio:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden: {  }

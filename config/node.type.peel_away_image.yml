@@ -1,0 +1,11 @@
+uuid: 8c51cdbd-6003-4dc6-b54c-97c552a8675d
+langcode: en
+status: true
+dependencies: {  }
+name: 'Peel Away Image'
+type: peel_away_image
+description: 'A piece of content (image), headline, link, description that will be grouped as a peel away header on the front page'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

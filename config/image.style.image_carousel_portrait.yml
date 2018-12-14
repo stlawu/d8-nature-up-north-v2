@@ -1,0 +1,23 @@
+uuid: f1ebf58f-6457-4f2c-af6d-ec7ed0f3a095
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: image_carousel_portrait
+label: 'Image Carousel Portrait'
+effects:
+  297b3d65-dd66-423f-83ac-a0587ac00e59:
+    uuid: 297b3d65-dd66-423f-83ac-a0587ac00e59
+    id: image_scale
+    weight: -9
+    data:
+      width: null
+      height: 600
+      upscale: true
+  e02f9036-7a56-48ad-bf6a-7a166c50c550:
+    uuid: e02f9036-7a56-48ad-bf6a-7a166c50c550
+    id: image_effects_auto_orient
+    weight: -10
+    data:
+      scan_exif: true

@@ -1,4 +1,4 @@
-uuid: 72fa3250-0d94-47dd-914a-ed098308b11c
+uuid: 6b73a705-3773-442a-aee6-8eb466679bc1
 langcode: en
 status: true
 dependencies: {  }
@@ -7,7 +7,7 @@ _core:
 id: feedback
 label: 'Website feedback'
 recipients:
-  - ncainaru@stlawu.edu
+  - info@natureupnorth.org
 reply: ''
 weight: 0
 message: 'Your message has been sent.'

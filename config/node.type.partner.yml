@@ -1,0 +1,11 @@
+uuid: ed201360-0875-4213-bea6-cf4974df3b26
+langcode: en
+status: true
+dependencies: {  }
+name: 'Partners & Sponsors'
+type: partner
+description: 'A partner or sponsor'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

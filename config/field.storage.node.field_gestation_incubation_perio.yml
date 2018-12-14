@@ -1,0 +1,20 @@
+uuid: 23422cd2-975c-434c-a7f7-40060013a621
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_gestation_incubation_perio
+field_name: field_gestation_incubation_perio
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

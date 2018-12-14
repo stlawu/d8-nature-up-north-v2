@@ -1,0 +1,18 @@
+uuid: cc74db5d-74ba-44a9-954c-0f22213de3d3
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: wqTmk5ceeYZrHtHS2N7jq6xGFjdcMH5WUCRH2gblNB4
+id: main
+label: Profile
+registration: true
+multiple: false
+roles:
+  authenticated: '0'
+  administrator: '0'
+  nun_staff: '0'
+  blogger: '0'
+  super_user: '0'
+  ee_class: '0'
+weight: 0

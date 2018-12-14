@@ -12,10 +12,33 @@ expire: 300
 form_settings:
   user_register_form: false
   user_pass: false
+  contact_message_contact_form: false
   contact_message_feedback_form: false
   contact_message_personal_form: false
+  node_announcement__form: false
   node_article_form: false
+  node_blog_form: false
+  node_community_organization_form: false
+  node_educator_resource_form: false
+  node_encounter_form: false
+  node_event_form: false
   node_page_form: false
+  node_partner_form: false
+  node_peel_away_image_form: false
+  node_species_account_test_form: false
+  node_trail_form: false
+  node_trail_head_form: false
   comment_comment_form: false
+  comment_comment_node_announcement__form: false
+  comment_comment_node_article_form: false
+  comment_comment_node_blog_form: false
+  comment_comment_node_educator_resource_form: false
+  comment_comment_node_encounter_form: false
+  comment_comment_node_event_form: false
+  comment_comment_node_page_form: false
+  comment_comment_node_partner_form: false
+  comment_comment_node_peel_away_image_form: false
+  comment_comment_node_trail_form: false
+  comment_comment_node_trail_head_form: false
 _core:
   default_config_hash: 9bVDfWSa_In6VzTXmy04jJ_3ZQobihKjO9isuuUCPaw

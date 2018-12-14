@@ -1,0 +1,30 @@
+uuid: 618e5d10-e9a1-42ae-9d2c-b7810dab7ca3
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_skill_level
+field_name: field_skill_level
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Easy
+      label: Easy
+    -
+      value: Medium
+      label: Medium
+    -
+      value: Strenuous
+      label: Strenuous
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

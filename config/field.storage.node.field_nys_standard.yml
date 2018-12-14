@@ -1,0 +1,20 @@
+uuid: 5c2fd39f-c735-43a2-a13d-94f506dd3848
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_nys_standard
+field_name: field_nys_standard
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 10
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

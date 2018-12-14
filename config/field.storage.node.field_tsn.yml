@@ -1,0 +1,20 @@
+uuid: 3661ba40-183e-4700-aa8a-edeb8e5112ed
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_tsn
+field_name: field_tsn
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

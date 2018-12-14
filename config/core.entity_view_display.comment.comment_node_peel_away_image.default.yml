@@ -1,0 +1,27 @@
+uuid: 272fccd4-fef7-460a-8e40-e420639fb2de
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_peel_away_image
+    - field.field.comment.comment_node_peel_away_image.comment_body
+  module:
+    - text
+id: comment.comment_node_peel_away_image.default
+targetEntityType: comment
+bundle: comment_node_peel_away_image
+mode: default
+content:
+  comment_body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

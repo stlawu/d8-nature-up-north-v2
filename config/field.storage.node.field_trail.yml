@@ -1,0 +1,19 @@
+uuid: f0fb6df0-a5a4-49ff-9ce7-1df4279d6833
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_trail
+field_name: field_trail
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

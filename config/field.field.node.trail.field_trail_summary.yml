@@ -1,0 +1,21 @@
+uuid: 7fce011b-bba4-45f2-bb9c-e375b07fc4fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_trail_summary
+    - node.type.trail
+  module:
+    - text
+id: node.trail.field_trail_summary
+field_name: field_trail_summary
+entity_type: node
+bundle: trail
+label: 'Trail Description'
+description: 'Please provide an engaging description of the trail, including important things to see, scenic places to stop along the way, etc.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

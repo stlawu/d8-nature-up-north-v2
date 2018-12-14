@@ -1,0 +1,27 @@
+uuid: c2935b5b-a355-4a51-8f72-249c654264a1
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_intern_type
+field_name: field_intern_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: DMI
+      label: 'Digital Media Intern'
+    -
+      value: Nat
+      label: 'Naturalist Intern'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

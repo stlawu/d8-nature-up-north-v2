@@ -1,5 +1,4 @@
-account: ''
-premium: false
+account: UA-1289367-51
 domain_mode: 0
 cross_domains: ''
 visibility:
@@ -17,12 +16,15 @@ track:
   linkid: false
   urlfragments: false
   userid: false
-  messages: {  }
+  messages:
+    status: '0'
+    warning: '0'
+    error: '0'
   site_search: false
   adsense: false
   displayfeatures: false
 privacy:
-  anonymizeip: true
+  anonymizeip: false
 custom:
   dimension: {  }
   metric: {  }
@@ -34,4 +36,4 @@ translation_set: false
 cache: false
 debug: false
 _core:
-  default_config_hash: SMk3vOyh4KT6rXnqkDcNQ51YGpJzRV5hyig5SSIfU6U
+  default_config_hash: 5YkLBJiAXgH9BDLkDIb1ozqfCXWwvZggf4XfcXgfjzc

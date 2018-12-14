@@ -1,35 +1,62 @@
-uuid: 58ec9413-016e-4cde-8053-ef2f8be2e21d
+uuid: f86470b4-cb81-4c67-945f-eeebdc955579
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.comment_node_page
+    - field.field.node.page.field_basic_page_attachment
+    - field.field.node.page.field_basic_page_image
+    - image.style.thumbnail
     - node.type.page
   module:
+    - file
+    - image
     - path
     - text
 _core:
-  default_config_hash: sb0qCkzU_8mNq29NehYAU8jCBXWPLeX0UN8sYFVGVcw
+  default_config_hash: sWCotip3wyA0CvZUxyo-StTDU8TyTAhx5fcfOiHS6s4
 id: node.page.default
 targetEntityType: node
 bundle: page
 mode: default
 content:
   body:
+    weight: -4
     type: text_textarea_with_summary
-    weight: 31
-    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
+    region: content
+  comment:
+    type: comment_default
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   created:
     type: datetime_timestamp
     weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_basic_page_attachment:
+    weight: 32
+    type: file_generic
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    region: content
+  field_basic_page_image:
+    weight: 31
+    type: image_image
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    region: content
   path:
     type: path
     weight: 30
@@ -47,9 +74,9 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
-    region: content
+    weight: 121
     third_party_settings: {  }
+    region: content
   sticky:
     type: boolean_checkbox
     settings:
@@ -74,4 +101,10 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  comment_node_page: true

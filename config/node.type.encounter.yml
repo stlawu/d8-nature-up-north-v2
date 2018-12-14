@@ -1,0 +1,11 @@
+uuid: a62e9880-36d5-4f90-9ecb-2c11d1fe5c15
+langcode: en
+status: true
+dependencies: {  }
+name: Encounter
+type: encounter
+description: 'An encounter, experience or observation'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

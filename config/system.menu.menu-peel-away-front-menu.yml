@@ -1,0 +1,8 @@
+uuid: c6dd9601-fa2c-44de-9882-10036e1360a6
+langcode: en
+status: true
+dependencies: {  }
+id: menu-peel-away-front-menu
+label: 'Peel Away Front Menu'
+description: ''
+locked: false

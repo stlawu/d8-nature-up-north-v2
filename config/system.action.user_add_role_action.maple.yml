@@ -1,0 +1,14 @@
+uuid: bf78d60a-a533-473b-acb5-4a7405862de6
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.maple
+  module:
+    - user
+id: user_add_role_action.maple
+label: 'Add the Maple Monitor role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: maple

@@ -1,0 +1,38 @@
+uuid: 6b53703d-b84e-402d-b8ea-38715b46654a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organization_logo
+    - node.type.community_organization
+  module:
+    - image
+id: node.community_organization.field_organization_logo
+field_name: field_organization_logo
+entity_type: node
+bundle: community_organization
+label: Logo
+description: 'Organization''s logo, mark, or other graphic to display'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: organization_logos
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: 500x500
+  alt_field: true
+  title_field: true
+  default_image:
+    alt: ''
+    title: ''
+    width: null
+    height: null
+    uuid: ''
+  alt_field_required: true
+  title_field_required: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

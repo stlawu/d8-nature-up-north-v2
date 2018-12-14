@@ -1,0 +1,14 @@
+uuid: 9c32630b-256d-484c-9376-f2d934398940
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user_account
+label: 'User account'
+type: 'canonical_entities:user'
+pattern: 'explorer/[user:name]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

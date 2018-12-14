@@ -1,0 +1,18 @@
+uuid: 00ec4693-631f-425f-bc42-2d411fb9bc5f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 6AeBpeWxser5ur4E-KDhPHDriQQF3y4ImKH0ArsJqFI
+id: blogger
+label: Blogger
+registration: false
+multiple: false
+roles:
+  authenticated: '0'
+  administrator: '0'
+  nun_staff: '0'
+  blogger: '0'
+  super_user: '0'
+  ee_class: '0'
+weight: 0

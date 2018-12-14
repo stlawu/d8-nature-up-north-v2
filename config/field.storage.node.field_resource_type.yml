@@ -1,0 +1,45 @@
+uuid: 3130a699-5421-4479-b9fc-f5daae2dbc36
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_resource_type
+field_name: field_resource_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Lesson Plan'
+      label: 'Lesson Plan'
+    -
+      value: 'Teacher Activity Guide'
+      label: 'Teacher Activity Guide'
+    -
+      value: 'Classroom Handout'
+      label: 'Classroom Handout'
+    -
+      value: Worksheet
+      label: Worksheet
+    -
+      value: 'Informational Text'
+      label: 'Informational Text'
+    -
+      value: 'Media Resource'
+      label: 'Media Resource'
+    -
+      value: Dataset
+      label: Dataset
+    -
+      value: Software
+      label: Software
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 7
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

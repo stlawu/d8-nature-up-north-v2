@@ -1,4 +1,4 @@
-uuid: db45a439-a829-4f44-a62b-122a6de558cf
+uuid: c2e3062b-5c7a-4848-876b-b4145cb6db54
 langcode: en
 status: true
 dependencies: {  }
@@ -6,10 +6,10 @@ _core:
   default_config_hash: j-rE9LRcHAh5WPmOIg9glR7GKLw1CkvVnJvKNe376vM
 id: daily_schedule
 label: 'Daily Schedule'
-enabled: null
+enabled: true
 keep: null
-period: null
+period: 86400
 cron: null
-source_id: null
-destination_id: null
-settings_profile_id: null
+source_id: default_db
+destination_id: private_files
+settings_profile_id: nun_backup

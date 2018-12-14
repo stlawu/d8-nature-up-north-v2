@@ -1,0 +1,14 @@
+uuid: 8bf0414f-3ea9-4dc6-80a7-11fe27762ff7
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.ee_class
+  module:
+    - user
+id: user_add_role_action.ee_class
+label: 'Add the EE_class role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: ee_class

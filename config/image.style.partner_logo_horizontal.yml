@@ -1,0 +1,20 @@
+uuid: f6f09690-798f-42dd-ac1c-8ab3ea473783
+langcode: en
+status: true
+dependencies: {  }
+name: partner_logo_horizontal
+label: partner_logo_horizontal
+effects:
+  d9a53294-7721-485a-bdd0-05aff1d729f9:
+    uuid: d9a53294-7721-485a-bdd0-05aff1d729f9
+    id: image_scale
+    weight: 1
+    data:
+      width: 100
+      height: null
+      upscale: false
+  de7a1fb9-800d-4c0a-8e5b-31e54370e74e:
+    uuid: de7a1fb9-800d-4c0a-8e5b-31e54370e74e
+    id: image_desaturate
+    weight: 2
+    data: {  }

@@ -1,0 +1,11 @@
+uuid: 36f5bf58-90f2-4594-874f-a5a093fe0c00
+langcode: en
+status: true
+dependencies: {  }
+name: Event
+type: event
+description: 'An environmentally-oriented event taking place within the NUN region'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

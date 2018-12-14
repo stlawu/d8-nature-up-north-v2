@@ -1,15 +1,15 @@
-uuid: 2ae6ba86-bfff-4790-9c4e-3863de2a98fe
+uuid: 49f2d6ff-d9d1-41c7-9893-3ed09246f292
 name: 'Nature Up North'
 mail: info@natureupnorth.org
 slogan: 'It''s just our Nature here in northern New York'
 page:
-  403: ''
-  404: ''
-  front: /node
+  403: /toboggan/denied
+  404: /node/12
+  front: /node/9
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en
 default_langcode: en
 _core:
-  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
 mail_notification: ''

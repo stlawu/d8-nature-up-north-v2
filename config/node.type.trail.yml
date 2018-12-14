@@ -1,0 +1,11 @@
+uuid: f9d3f896-ab6c-4e41-aaff-2ca104f227a9
+langcode: en
+status: true
+dependencies: {  }
+name: 'Trail Description'
+type: trail
+description: 'Information about local hiking, biking, skiing, etc. trails'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

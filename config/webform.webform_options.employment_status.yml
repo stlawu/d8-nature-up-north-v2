@@ -1,4 +1,4 @@
-uuid: 4fcbc421-6dcc-4b15-8dc1-c3d0db8527e5
+uuid: 0e2c4952-86bb-40df-a9a0-6c6677d5ae77
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     module:
       - webform
 _core:
-  default_config_hash: 8MCmsz_csdJkVItxI8g_s4zp2PM285YqCy_gWTzOLPw
+  default_config_hash: UwYYv-dY5rf8B_SKboHoj75nD5Gm9uB687vR5D-DnGI
 id: employment_status
 label: 'Employment status'
 category: Demographic

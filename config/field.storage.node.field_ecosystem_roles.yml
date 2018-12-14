@@ -1,0 +1,19 @@
+uuid: 8e737a0e-4cb9-4530-8d01-39f19da06c12
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_ecosystem_roles
+field_name: field_ecosystem_roles
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

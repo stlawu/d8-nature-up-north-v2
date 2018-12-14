@@ -1,0 +1,21 @@
+uuid: ce980399-a321-4db2-83bc-4b4078197e7e
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.field_profile_current_location
+field_name: field_profile_current_location
+entity_type: profile
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

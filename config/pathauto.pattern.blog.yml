@@ -1,0 +1,22 @@
+uuid: ce6249bc-29c5-4d11-b629-abe702696564
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: blog
+label: Blog
+type: 'canonical_entities:node'
+pattern: 'justmynature/[node:author]/[node:title]'
+selection_criteria:
+  bee2b374-5e63-42bf-9fc2-78ca0d181a59:
+    id: node_type
+    bundles:
+      blog: blog
+    negate: false
+    context_mapping:
+      node: node
+    uuid: bee2b374-5e63-42bf-9fc2-78ca0d181a59
+selection_logic: and
+weight: -5
+relationships: {  }

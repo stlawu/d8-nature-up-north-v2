@@ -1,4 +1,4 @@
-uuid: 07a1d040-5acc-47b8-91e8-7f13607c8eff
+uuid: d93d8377-d1e8-48b4-a758-864e3de5b109
 langcode: en
 status: true
 dependencies: {  }
@@ -12,18 +12,33 @@ filters:
     id: filter_html_escape
     provider: filter
     status: true
-    weight: -10
+    weight: -48
     settings: {  }
   filter_url:
     id: filter_url
     provider: filter
     status: true
-    weight: 0
+    weight: -47
     settings:
       filter_url_length: 72
   filter_autop:
     id: filter_autop
     provider: filter
     status: true
-    weight: 0
+    weight: -45
+    settings: {  }
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -50
+    settings:
+      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd>'
+      filter_html_help: false
+      filter_html_nofollow: true
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: -46
     settings: {  }

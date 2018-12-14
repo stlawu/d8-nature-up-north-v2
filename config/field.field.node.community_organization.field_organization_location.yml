@@ -1,0 +1,21 @@
+uuid: 99e39b8d-dbb3-4edb-a6ee-1cd063d373ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organization_location
+    - node.type.community_organization
+  module:
+    - geolocation
+id: node.community_organization.field_organization_location
+field_name: field_organization_location
+entity_type: node
+bundle: community_organization
+label: Location
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation
