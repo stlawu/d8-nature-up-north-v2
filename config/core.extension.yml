@@ -45,6 +45,7 @@ module:
   honeypot: 0
   image: 0
   image_effects: 0
+  inline_entity_form: 0
   kint: 0
   link: 0
   map_component: 0
