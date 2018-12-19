@@ -1,0 +1,29 @@
+uuid: 1d6df155-4ac2-4031-921b-53bb8f7e792f
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_browser_entity_form
+name: tree_specimen_browser
+label: 'Tree Specimen Browser'
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: 'Select Tree'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  7daa2307-aaec-43d8-b468-33f81fdc722b:
+    settings:
+      entity_type: node
+      bundle: tree_specimen
+      form_mode: default
+      submit_text: 'Add Tree'
+    uuid: 7daa2307-aaec-43d8-b468-33f81fdc722b
+    weight: 2
+    label: 'Add a Tree'
+    id: entity_form

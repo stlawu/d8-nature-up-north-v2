@@ -1,0 +1,24 @@
+uuid: eb7e4366-fae1-4085-b0ea-e0c03978d6d9
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - paragraphs
+    - taxonomy
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: paragraph.field_percent_of_changed_color
+field_name: field_percent_of_changed_color
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

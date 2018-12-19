@@ -1,0 +1,33 @@
+uuid: 42795c5b-8e64-4727-8aa5-d811fc95c800
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tree_specimen.field_tree_photo
+    - image.style.thumbnail
+    - node.type.tree_specimen
+  module:
+    - image
+    - user
+id: node.tree_specimen.teaser
+targetEntityType: node
+bundle: tree_specimen
+mode: teaser
+content:
+  field_tree_photo:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    third_party_settings: {  }
+  flag_tree_flag:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  links: true

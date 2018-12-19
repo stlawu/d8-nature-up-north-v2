@@ -1,0 +1,157 @@
+uuid: c6e5eeb2-404d-471f-9605-acb62f54dcdc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.tree_data.field_autumn_tree_data
+    - field.field.node.tree_data.field_date_of_observation
+    - field.field.node.tree_data.field_tree_data_season
+    - field.field.node.tree_data.field_tree_specimen
+    - node.type.tree_data
+  module:
+    - conditional_fields
+    - datetime
+    - paragraphs
+    - path
+id: node.tree_data.default
+targetEntityType: node
+bundle: tree_data
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 9
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_autumn_tree_data:
+    type: paragraphs
+    weight: 4
+    settings:
+      title: 'Autumn Data'
+      title_plural: 'Autumn Data'
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: autumn_tree_data
+    third_party_settings:
+      conditional_fields:
+        15eca7cf-bd47-4b89-aeea-612348832a18:
+          dependee: field_tree_data_season
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Autumn
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: tree_data
+    region: content
+  field_date_of_observation:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_tree_data_season:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_tree_specimen:
+    type: options_buttons
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields: {  }
+  field_tree_specimens:
+    weight: 0
+    settings:
+      entity_browser: tree_specimen_browser
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: true
+      open: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: teaser
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 7
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 7
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 10
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 8
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  url_redirects:
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,50 @@
+uuid: 1ece73ad-0b66-4033-a3b8-2b59d26f613a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.tree_data.field_autumn_tree_data
+    - field.field.node.tree_data.field_date_of_observation
+    - field.field.node.tree_data.field_tree_data_season
+    - field.field.node.tree_data.field_tree_specimen
+    - node.type.tree_data
+  module:
+    - datetime
+    - entity_reference_revisions
+    - options
+    - user
+id: node.tree_data.default
+targetEntityType: node
+bundle: tree_data
+mode: default
+content:
+  field_autumn_tree_data:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_date_of_observation:
+    weight: 101
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_tree_data_season:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_tree_specimen: true

@@ -1,0 +1,21 @@
+uuid: 8f64fc76-7450-4276-8346-f6aecfd23e88
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.autumn_tree_data.field_percent_of_changed_color
+    - paragraphs.paragraphs_type.autumn_tree_data
+id: paragraph.autumn_tree_data.default
+targetEntityType: paragraph
+bundle: autumn_tree_data
+mode: default
+content:
+  field_percent_of_changed_color:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }
