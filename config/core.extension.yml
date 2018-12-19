@@ -38,6 +38,7 @@ module:
   file_mdm_exif: 0
   file_mdm_font: 0
   filter: 0
+  flag: 0
   geolocation: 0
   google_analytics: 0
   help: 0
