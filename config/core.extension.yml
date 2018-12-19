@@ -63,6 +63,7 @@ module:
   page_cache: 0
   path: 0
   pathauto: 0
+  prepopulate: 0
   prlp: 0
   profile: 0
   quickedit: 0
