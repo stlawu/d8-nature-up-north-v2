@@ -19,5 +19,3 @@ default:
     Drupal\DrupalExtension:
       blackbox: ~
       api_driver: 'drush'
-      text:
-        username_field: 'E-mail or username'
