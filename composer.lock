@@ -72,10 +72,10 @@
         },
         {
             "name": "algolia/places",
-            "version": "1.13.0",
+            "version": "1.15.0",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/places.js/-/places.js-1.13.0.tgz",
+                "url": "https://registry.npmjs.org/places.js/-/places.js-1.15.0.tgz",
                 "reference": null,
                 "shasum": null
             },
@@ -179,10 +179,10 @@
         },
         {
             "name": "ckeditor/autogrow",
-            "version": "4.10.0",
+            "version": "4.10.1",
             "dist": {
                 "type": "zip",
-                "url": "https://download.ckeditor.com/autogrow/releases/autogrow_4.10.0.zip",
+                "url": "https://download.ckeditor.com/autogrow/releases/autogrow_4.10.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -213,10 +213,10 @@
         },
         {
             "name": "ckeditor/fakeobjects",
-            "version": "4.10.0",
+            "version": "4.10.1",
             "dist": {
                 "type": "zip",
-                "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.10.0.zip",
+                "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.10.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -230,10 +230,10 @@
         },
         {
             "name": "ckeditor/image",
-            "version": "4.10.0",
+            "version": "4.10.1",
             "dist": {
                 "type": "zip",
-                "url": "https://download.ckeditor.com/image/releases/image_4.10.0.zip",
+                "url": "https://download.ckeditor.com/image/releases/image_4.10.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -247,10 +247,10 @@
         },
         {
             "name": "ckeditor/link",
-            "version": "4.10.0",
+            "version": "4.10.1",
             "dist": {
                 "type": "zip",
-                "url": "https://download.ckeditor.com/link/releases/link_4.10.0.zip",
+                "url": "https://download.ckeditor.com/link/releases/link_4.10.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -316,10 +316,10 @@
         },
         {
             "name": "codemirror/codemirror",
-            "version": "5.41.0",
+            "version": "5.42.0",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/components/codemirror/archive/5.41.0.zip",
+                "url": "https://github.com/components/codemirror/archive/5.42.0.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -2361,16 +2361,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.6.6",
+            "version": "8.6.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "6736973f399a3a9ac8ecd41f3a159e1153f7ee39"
+                "reference": "e0a09bda1da7552204464894811a59387608c9f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/6736973f399a3a9ac8ecd41f3a159e1153f7ee39",
-                "reference": "6736973f399a3a9ac8ecd41f3a159e1153f7ee39",
+                "url": "https://api.github.com/repos/drupal/core/zipball/e0a09bda1da7552204464894811a59387608c9f9",
+                "reference": "e0a09bda1da7552204464894811a59387608c9f9",
                 "shasum": ""
             },
             "require": {
@@ -2596,7 +2596,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2019-01-15T17:41:52+00:00"
+            "time": "2019-01-16T23:30:03+00:00"
         },
         {
             "name": "drupal/ctools",
@@ -6123,10 +6123,10 @@
         },
         {
             "name": "jquery/inputmask",
-            "version": "4.0.2",
+            "version": "4.0.4",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/RobinHerbots/jquery.inputmask/archive/4.0.2.zip",
+                "url": "https://github.com/RobinHerbots/jquery.inputmask/archive/4.0.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -6140,10 +6140,10 @@
         },
         {
             "name": "jquery/intl-tel-input",
-            "version": "14.0.4",
+            "version": "14.0.6",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/jackocnr/intl-tel-input/archive/v14.0.4.zip",
+                "url": "https://github.com/jackocnr/intl-tel-input/archive/v14.0.6.zip",
                 "reference": null,
                 "shasum": null
             },
