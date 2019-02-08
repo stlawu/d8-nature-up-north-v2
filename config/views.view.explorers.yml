@@ -6,6 +6,7 @@ dependencies:
     - field.storage.profile.field_profile_full_name
     - field.storage.profile.field_profile_photo
     - image.style.100px_cropped_square
+    - user.role.approved_user
   module:
     - image
     - profile
@@ -297,8 +298,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: empty
-          value: {  }
+          operator: or
+          value:
+            approved_user: approved_user
           group: 1
           exposed: false
           expose:
