@@ -34,7 +34,7 @@
         "drupal/core": "^8",
         "drupal/ctools": "^3.0",
         "drupal/devel": "^1.2",
-        "drupal/email_registration": "^1.0",
+        "drupal/email_registration": "1.0.0-rc5",
         "drupal/entity": "^1.0",
         "drupal/entity_browser": "^2.0",
         "drupal/entity_reference_revisions": "^1.6",
