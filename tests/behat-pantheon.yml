@@ -20,4 +20,4 @@ default:
       blackbox: ~
       api_driver: 'drush'
       text:
-        username_field: 'Email or username'
+        username_field: 'E-mail or username'
