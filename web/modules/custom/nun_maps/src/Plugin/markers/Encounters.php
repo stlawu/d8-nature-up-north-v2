@@ -48,7 +48,7 @@ ORDER BY
         $query->join('node_field_data','data','data.vid=r.vid AND data.nid=r.nid AND data.status=1');
         $query->addField('data','title');
 
-        $query->join('node__field_encounter_description','descript','descript.entity_id=r.nid AND descript.revision_id=r.vid');
+        $query->leftJoin('node__field_encounter_description','descript','descript.entity_id=r.nid AND descript.revision_id=r.vid');
         $query->addField('descript','field_encounter_description_value','description');
 
         $query->rightJoin('node__field_encounter_location','loc','loc.entity_id=r.nid AND loc.revision_id=r.vid');
