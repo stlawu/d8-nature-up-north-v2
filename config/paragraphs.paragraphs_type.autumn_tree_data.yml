@@ -1,9 +1,0 @@
-uuid: 7de245c3-7cc7-4d75-853b-05085ed844b4
-langcode: en
-status: true
-dependencies: {  }
-id: autumn_tree_data
-label: 'Autumn Tree Data'
-icon_uuid: null
-description: 'Data to be collected for a tree only in the Autumn.'
-behavior_plugins: {  }
