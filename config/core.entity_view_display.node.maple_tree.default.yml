@@ -1,0 +1,28 @@
+uuid: da9e3622-5e5d-45a6-a619-7dfe95b94954
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.maple_tree.body
+    - node.type.maple_tree
+  module:
+    - text
+    - user
+id: node.maple_tree.default
+targetEntityType: node
+bundle: maple_tree
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

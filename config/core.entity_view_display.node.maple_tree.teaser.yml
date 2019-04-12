@@ -1,0 +1,30 @@
+uuid: 5d723ad1-49a3-4169-b7ae-a2d9220f59bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.maple_tree.body
+    - node.type.maple_tree
+  module:
+    - text
+    - user
+id: node.maple_tree.teaser
+targetEntityType: node
+bundle: maple_tree
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }
