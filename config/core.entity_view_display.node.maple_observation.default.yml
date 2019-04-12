@@ -1,0 +1,28 @@
+uuid: cc4e60f5-b8b8-4efc-9fe0-2171ff421a12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.maple_observation.body
+    - node.type.maple_observation
+  module:
+    - text
+    - user
+id: node.maple_observation.default
+targetEntityType: node
+bundle: maple_observation
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }
