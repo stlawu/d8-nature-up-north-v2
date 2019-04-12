@@ -4,8 +4,14 @@ status: true
 dependencies:
   config:
     - field.field.node.maple_observation.body
+    - field.field.node.maple_observation.field_maple_flowering
+    - field.field.node.maple_observation.field_maple_leaf_buds
+    - field.field.node.maple_observation.field_maple_leaves_unfolded
+    - field.field.node.maple_observation.field_maple_observation_date
     - node.type.maple_observation
   module:
+    - datetime
+    - options
     - text
     - user
 id: node.maple_observation.default
@@ -19,6 +25,36 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_maple_flowering:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_maple_leaf_buds:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_maple_leaves_unfolded:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_maple_observation_date:
+    weight: 105
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   links:
     weight: 100

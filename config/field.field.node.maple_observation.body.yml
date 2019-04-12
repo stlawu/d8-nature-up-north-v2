@@ -11,7 +11,7 @@ id: node.maple_observation.body
 field_name: body
 entity_type: node
 bundle: maple_observation
-label: Body
+label: 'Additional comments'
 description: ''
 required: false
 translatable: true

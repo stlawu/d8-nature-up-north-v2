@@ -1,0 +1,21 @@
+uuid: 1487d7d6-ec6f-4a92-b708-2954681f98f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_maple_location
+    - node.type.maple_tree
+  module:
+    - geolocation
+id: node.maple_tree.field_maple_location
+field_name: field_maple_location
+entity_type: node
+bundle: maple_tree
+label: Location
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

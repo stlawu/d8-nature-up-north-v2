@@ -1,0 +1,29 @@
+uuid: 547a9808-6af3-4d2b-b095-9f42e712a9ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_maple_habitat
+    - node.type.maple_data
+    - taxonomy.vocabulary.maple_habitat
+id: node.maple_data.field_maple_habitat
+field_name: field_maple_habitat
+entity_type: node
+bundle: maple_data
+label: 'What kind of habitat is your site?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      maple_habitat: maple_habitat
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
