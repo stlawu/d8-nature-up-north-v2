@@ -1,0 +1,30 @@
+uuid: 31183775-06bf-45bb-90df-c40a1a68e4ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.maple_data.body
+    - node.type.maple_data
+  module:
+    - text
+    - user
+id: node.maple_data.teaser
+targetEntityType: node
+bundle: maple_data
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

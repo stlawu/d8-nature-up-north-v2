@@ -1,0 +1,18 @@
+uuid: 44356692-7540-4c13-82dd-5bb4b191816d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Maple data'
+type: maple_data
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true
