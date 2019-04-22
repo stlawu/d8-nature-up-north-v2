@@ -27,4 +27,8 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_maple_flowering: true
+  field_maple_leaf_buds: true
+  field_maple_leaves_unfolded: true
+  field_maple_observation_date: true

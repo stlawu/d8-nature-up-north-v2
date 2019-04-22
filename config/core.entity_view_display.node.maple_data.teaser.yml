@@ -5,26 +5,36 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.maple_data.body
+    - field.field.node.maple_data.field_maple_circumference
+    - field.field.node.maple_data.field_maple_damages_diseases
+    - field.field.node.maple_data.field_maple_habitat
+    - field.field.node.maple_data.field_maple_near_structure
+    - field.field.node.maple_data.field_maple_shading
+    - field.field.node.maple_data.field_maple_tree
     - node.type.maple_data
   module:
-    - text
     - user
 id: node.maple_data.teaser
 targetEntityType: node
 bundle: maple_data
 mode: teaser
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
+  field_maple_circumference:
+    type: number_decimal
+    weight: 0
+    region: content
+    label: above
     settings:
-      trim_length: 600
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
     third_party_settings: {  }
-    region: content
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-hidden: {  }
+hidden:
+  body: true
+  field_maple_damages_diseases: true
+  field_maple_habitat: true
+  field_maple_near_structure: true
+  field_maple_shading: true
+  field_maple_tree: true
+  links: true
