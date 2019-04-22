@@ -1,0 +1,127 @@
+uuid: da9e3622-5e5d-45a6-a619-7dfe95b94954
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.maple_tree.body
+    - field.field.node.maple_tree.field_maple_location
+    - field.field.node.maple_tree.field_maple_species
+    - node.type.maple_tree
+  module:
+    - field_group
+    - geolocation
+    - user
+third_party_settings:
+  field_group:
+    group_column1:
+      children:
+        - group_col1
+        - group_col2
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: row
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Row
+      region: content
+    group_col1:
+      children:
+        - field_maple_species
+        - maple_tree_data_entity_view_1
+      parent_name: group_column1
+      weight: 20
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'col-xs-12 col-md-7'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: col1
+      region: content
+    group_col2:
+      children:
+        - field_maple_location
+      parent_name: group_column1
+      weight: 21
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'col-xs-12 col-md-5'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: col2
+      region: content
+id: node.maple_tree.default
+targetEntityType: node
+bundle: maple_tree
+mode: default
+content:
+  field_maple_location:
+    weight: 2
+    label: above
+    settings:
+      set_marker: '1'
+      title: ''
+      info_text: ''
+      google_map_settings:
+        height: 400px
+        width: 100%
+        type: ROADMAP
+        zoom: '10'
+        maxZoom: 18
+        minZoom: 0
+        mapTypeControl: 1
+        streetViewControl: 1
+        zoomControl: 1
+        scrollwheel: 1
+        gestureHandling: auto
+        draggable: 1
+        style: ''
+        info_auto_display: 1
+        marker_icon_path: ''
+        disableAutoPan: 1
+        rotateControl: 0
+        fullscreenControl: 0
+        preferScrollingToZooming: 0
+        disableDoubleClickZoom: 0
+      use_overridden_map_settings: 0
+      common_map: ''
+    third_party_settings: {  }
+    type: geolocation_map
+    region: content
+  field_maple_species:
+    weight: 1
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  maple_tree_data_entity_view_1:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  maple_tree_observations_entity_view_1:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  links: true

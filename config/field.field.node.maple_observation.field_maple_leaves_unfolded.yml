@@ -1,0 +1,21 @@
+uuid: 35326e3c-0970-497c-ae8f-e7c8604ffc01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_maple_leaves_unfolded
+    - node.type.maple_observation
+  module:
+    - options
+id: node.maple_observation.field_maple_leaves_unfolded
+field_name: field_maple_leaves_unfolded
+entity_type: node
+bundle: maple_observation
+label: 'Have leaves fully unfolded?'
+description: 'Mark "Yes" if one or more leaf has fully unfolded, so that you can see where the leaf stalk (petiole) attaches to the stem.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,34 @@
+uuid: 7468e7cf-92a6-4981-8280-50baa49778bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.maple_observation.body
+    - node.type.maple_observation
+  module:
+    - text
+    - user
+id: node.maple_observation.teaser
+targetEntityType: node
+bundle: maple_observation
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_maple_flowering: true
+  field_maple_leaf_buds: true
+  field_maple_leaves_unfolded: true
+  field_maple_observation_date: true

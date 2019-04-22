@@ -1,0 +1,7 @@
+status: '1'
+pattern: 'MMMObservation-[current-date:custom:Ymd]-[node:field_maple_tree]'
+php: 0
+escape: 0
+dependencies:
+  config:
+    - node.type.maple_observation

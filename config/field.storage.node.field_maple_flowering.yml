@@ -1,0 +1,34 @@
+uuid: e2c6aa9f-49e0-490f-ab57-33e200da05d1
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_maple_flowering
+field_name: field_maple_flowering
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'No'
+      label: 'No'
+    -
+      value: 'Flowers are visible'
+      label: 'Flowers are visible'
+    -
+      value: 'Flowers are visible and producing pollen'
+      label: 'Flowers are visible and producing pollen'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

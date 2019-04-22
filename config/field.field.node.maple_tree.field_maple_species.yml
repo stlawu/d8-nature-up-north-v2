@@ -1,0 +1,29 @@
+uuid: ec5eb643-34d0-4b6e-b02f-5ab5c938801f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_maple_species
+    - node.type.maple_tree
+    - taxonomy.vocabulary.maple_species
+id: node.maple_tree.field_maple_species
+field_name: field_maple_species
+entity_type: node
+bundle: maple_tree
+label: 'Maple Species'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      maple_species: maple_species
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

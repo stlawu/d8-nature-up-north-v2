@@ -1,0 +1,21 @@
+uuid: 905086e5-add6-4f2c-bea3-6af447a90b02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_maple_shading
+    - node.type.maple_data
+  module:
+    - options
+id: node.maple_data.field_maple_shading
+field_name: field_maple_shading
+entity_type: node
+bundle: maple_data
+label: 'Describe the shading at this site:'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

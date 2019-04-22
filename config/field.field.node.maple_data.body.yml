@@ -1,0 +1,22 @@
+uuid: 7c742f68-c55a-488c-8679-f5530c3d8bab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.maple_data
+  module:
+    - text
+id: node.maple_data.body
+field_name: body
+entity_type: node
+bundle: maple_data
+label: 'Other Notes'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary
