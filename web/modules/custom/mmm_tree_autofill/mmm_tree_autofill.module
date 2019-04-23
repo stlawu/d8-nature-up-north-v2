@@ -27,6 +27,7 @@ function maple_tree_default_value_callback(ContentEntityInterface $entity, Field
   }
 
   return [
-    ['value' => $default],
+//    ['value' => $default],
+    ['target_id' => $default],
   ];
 }
