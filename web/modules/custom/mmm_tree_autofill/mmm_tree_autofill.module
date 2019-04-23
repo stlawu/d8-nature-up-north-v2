@@ -1,0 +1,31 @@
+use Drupal\Core\Entity\ContentEntityInterface;
+use Drupal\Core\Field\FieldDefinitionInterface;
+/**
+ * Sets the default value for the maple tree field.
+ *
+ * @param \Drupal\Core\Entity\ContentEntityInterface $entity
+ *   The entity being created.
+ * @param \Drupal\Core\Field\FieldDefinitionInterface $definition
+ *   The field definition.
+ *
+ * @return array
+ *   An array of default value keys with each entry keyed with the “value” key.
+ * 
+ * @see \Drupal\Core\Field\FieldConfigBase::getDefaultValue()
+ */
+function mmm_tree_autofill_entity_bundle_field_info_alter(&$fields, \Drupal\Core\Entity\EntityTypeInterface $entity_type, $bundle) {
+  if (($bundle == 'maple_data' || $bundle == 'maple_observation') && !empty($fields['field_maple_tree'])) {
+    $fields['field_maple_tree']->setDefaultValueCallback('maple_tree_default_value_callback');
+  }
+}
+function maple_tree_default_value_callback(ContentEntityInterface $entity, FieldDefinitionInterface $definition) {
+  $default = '15905';
+  // Article nodes should default to center alignment.
+  if ($entity->bundle() == 'maple_data'||$entity->bundle() == 'maple_observation') {
+    $default = '15905';
+  }
+
+  return [
+    ['value' => $default],
+  ];
+}

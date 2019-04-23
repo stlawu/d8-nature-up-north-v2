@@ -1,0 +1,6 @@
+name: MMM Tree Autofill
+description: Autofills the Tree entity reference field on the Maple Data and Maple Observation content types if the Maple Tree NID is provided in the node creation page URL.
+package: MMM Custom
+type: module
+version: 1.0
+core: 8.x
