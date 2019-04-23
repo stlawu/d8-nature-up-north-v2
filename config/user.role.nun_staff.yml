@@ -22,6 +22,7 @@ permissions:
   - 'access toolbar'
   - 'administer campaignmonitor'
   - 'administer field permissions'
+  - 'bypass honeypot protection'
   - 'create announcement_ content'
   - 'create blog content'
   - 'create community_organization content'

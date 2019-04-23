@@ -7,6 +7,7 @@ label: K12Teacher
 weight: 7
 is_admin: null
 permissions:
+  - 'bypass honeypot protection'
   - 'create encounter content'
   - 'create event content'
   - 'delete own encounter content'

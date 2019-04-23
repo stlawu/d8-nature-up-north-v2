@@ -74,6 +74,7 @@ permissions:
   - 'administer wysiwyg templates'
   - 'administer xmlsitemap'
   - 'block IP addresses'
+  - 'bypass honeypot protection'
   - 'bypass mollom protection'
   - 'bypass node access'
   - 'bypass rules access'

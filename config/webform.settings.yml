@@ -80,7 +80,6 @@ assets:
 handler:
   excluded_handlers: {  }
 export:
-  temp_directory: ''
   exporter: delimited
   multiple_delimiter: ;
   header_format: label
@@ -98,9 +97,12 @@ export:
   likert_answers_format: label
   signature_format: status
   delimiter: ','
-  excel: false
-  excluded_exporters: {  }
-  file_name: 'submission-[webform_submission:serial]'
+  excel: true
+  excluded_exporters:
+    json: json
+    table: table
+    yaml: yaml
+  temp_directory: ''
 batch:
   default_batch_export_size: 500
   default_batch_update_size: 500

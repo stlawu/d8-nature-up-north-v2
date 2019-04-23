@@ -10,6 +10,7 @@ permissions:
   - 'access content'
   - 'access content overview'
   - 'access toolbar'
+  - 'bypass honeypot protection'
   - 'create encounter content'
   - 'create event content'
   - 'delete own encounter content'

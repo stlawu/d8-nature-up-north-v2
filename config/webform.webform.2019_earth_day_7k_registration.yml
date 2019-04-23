@@ -1,0 +1,169 @@
+uuid: 8f5df717-666e-4ab4-b63b-1813bd7ec65b
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+weight: 0
+uid: 738
+template: false
+archive: false
+id: 2019_earth_day_7k_registration
+title: '2019 Earth Day 7K Registration'
+description: 'Registration form for the 2019 Earth Day 7k Trail run/walk.'
+category: ''
+elements: "please_submit_once_for_each_person_registering_thank_you_:\n  '#type': label\n  '#title': 'Please submit once for each person registering. Thank you!'\nfirst_name:\n  '#type': textfield\n  '#title': 'First Name'\n  '#title_display': before\n  '#description_display': tooltip\n  '#minlength': '1'\n  '#maxlength': '25'\n  '#required': true\nlast_name:\n  '#type': textfield\n  '#title': 'Last Name'\n  '#title_display': before\n  '#description_display': tooltip\n  '#minlength': '1'\n  '#maxlength': '20'\n  '#required': true\nemail_address:\n  '#type': email\n  '#title': 'Email Address'\n  '#title_display': before\n  '#description_display': tooltip\n  '#required': true\nage_class:\n  '#type': select\n  '#title': 'Age Class'\n  '#options':\n    'Youth (12 and under)': 'Youth (12 and under)'\n    'Open (13-39)': 'Open (13-39)'\n    'Masters (40+)': 'Masters (40+)'\n  '#required': true\ndivision:\n  '#type': select\n  '#title': Division\n  '#options':\n    Women: Women\n    Men: Men\n    Non-binary: Non-binary\n    'Prefer not to say': 'Prefer not to say'\n  '#required': true\nt_shirt_size_unisex_:\n  '#type': select\n  '#title': 'T-shirt size (unisex)'\n  '#options':\n    'Youth S': 'Youth S'\n    'Youth M': 'Youth M'\n    'Youth L': 'Youth L'\n    'Youth XL': 'Youth XL'\n    'Adult S': 'Adult S'\n    'Adult M': 'Adult M'\n    'Adult L': 'Adult L'\n    'Adult XL': 'Adult XL'\n  '#required': true\nhow_did_you_hear_about_this_event_:\n  '#type': select\n  '#title': 'How did you hear about this event?'\n  '#options':\n    'Online Calendar': 'Online Calendar'\n    'Facebook ': 'Facebook '\n    Instagram: Instagram\n    'Newspaper ': 'Newspaper '\n    'From a friend': 'From a friend'\n    'I can''t remember': 'I can''t remember'\n    Other: Other\npayment:\n  '#type': select\n  '#title': Payment\n  '#options':\n    'General ($20)': 'General ($20)'\n    'Student ($10)': 'Student ($10)'\n    '12 and under (free)': '12 and under (free)'\npreferred_payment_option:\n  '#type': label\n  '#title': \"Payment may be made in person when you check in or by mailing a check. Please make checks out to \\\"Nature Up North, St. Lawrence University\\\" and send to: Nature Up North, Biology Dept. St. Lawrence University, 23 Romoda\\_Drive, Canton, NY 13617\"\nthanks_for_your_interest_and_registration_see_you_soon_:\n  '#type': label\n  '#title': 'Thanks for your interest and registration. See you soon!'\nactions:\n  '#type': webform_actions\n  '#title': Submit\n  '#submit__label': 'Submit '"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_title: both
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_remote_addr: true
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }

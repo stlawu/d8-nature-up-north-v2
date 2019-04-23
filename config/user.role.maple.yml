@@ -7,6 +7,7 @@ label: 'Maple Monitor'
 weight: 8
 is_admin: null
 permissions:
+  - 'bypass honeypot protection'
   - 'create encounter content'
   - 'create event content'
   - 'create fall_maple_tree_data content'
