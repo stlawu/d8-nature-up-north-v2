@@ -1,0 +1,28 @@
+uuid: ebe2813a-abc6-487d-a011-2165fbbd4fe9
+langcode: en
+status: true
+dependencies: {  }
+id: maple_admin
+label: 'Maple Admin'
+weight: 10
+is_admin: null
+permissions:
+  - 'access maple_tree_browser entity browser pages'
+  - 'create maple_data content'
+  - 'create maple_observation content'
+  - 'create maple_tree content'
+  - 'delete own maple_data content'
+  - 'delete own maple_observation content'
+  - 'delete own maple_tree content'
+  - 'edit any maple_data content'
+  - 'edit any maple_observation content'
+  - 'edit any maple_tree content'
+  - 'edit own maple_data content'
+  - 'edit own maple_observation content'
+  - 'edit own maple_tree content'
+  - 'revert maple_data revisions'
+  - 'revert maple_observation revisions'
+  - 'revert maple_tree revisions'
+  - 'view maple_data revisions'
+  - 'view maple_observation revisions'
+  - 'view maple_tree revisions'

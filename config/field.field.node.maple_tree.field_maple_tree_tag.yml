@@ -1,0 +1,19 @@
+uuid: 8463ba98-764f-4ae0-92df-8d62a993f4f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_maple_tree_tag
+    - node.type.maple_tree
+id: node.maple_tree.field_maple_tree_tag
+field_name: field_maple_tree_tag
+entity_type: node
+bundle: maple_tree
+label: 'Tree Tag'
+description: '(Optional) If this tree has a tree tag with an ID number, you can add that information here.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,14 @@
+uuid: 21415c2b-7b0e-4e32-9006-06f31e68c5f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.maple_admin
+  module:
+    - user
+id: user_add_role_action.maple_admin
+label: 'Add the Maple Admin role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: maple_admin

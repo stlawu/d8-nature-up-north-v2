@@ -12,7 +12,7 @@ field_name: field_maple_location
 entity_type: node
 bundle: maple_tree
 label: Location
-description: ''
+description: 'Please get as close to the tree as you can to prevent confusion with neighboring trees. (The satellite view can help narrow in on the tree.)'
 required: false
 translatable: false
 default_value: {  }

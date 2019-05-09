@@ -1,5 +1,5 @@
 status: '1'
-pattern: 'NUNMMM-[current-date:custom:Ymd]-[random:number]'
+pattern: 'MMM[node:created:custom:ymdB]'
 php: 0
 escape: 0
 dependencies:

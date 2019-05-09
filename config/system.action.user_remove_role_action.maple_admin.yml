@@ -1,0 +1,14 @@
+uuid: eed66d9e-a81a-47ec-9f6b-0b390d495197
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.maple_admin
+  module:
+    - user
+id: user_remove_role_action.maple_admin
+label: 'Remove the Maple Admin role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: maple_admin

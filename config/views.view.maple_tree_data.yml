@@ -192,7 +192,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_label
           settings:
-            link: true
+            link: false
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -398,7 +398,7 @@ display:
           group_type: group
           admin_label: ''
           label: 'Last Updated'
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -504,10 +504,10 @@ display:
           group_type: group
           admin_label: ''
           empty: false
-          tokenize: false
+          tokenize: true
           content:
-            value: '<a href="/node/add/maple_data">Update Tree Information</a>'
-            format: basic_html
+            value: "<hr><em>Last Updated: {{ created }}</em>\r\n<a class=\"btn btn-primary\" href=\"/node/add/maple_data\">Update Tree Information</a>"
+            format: full_html
           plugin_id: text
       empty:
         area:
@@ -520,8 +520,8 @@ display:
           empty: true
           tokenize: false
           content:
-            value: 'No Data: <a href="/node/add/tree_data">Add Data for this Tree.</a>'
-            format: basic_html
+            value: '<br><a class="btn btn-primary" href="/node/add/maple_data"><strong>Step 2:</strong> Tell us about this tree.</a>'
+            format: full_html
           plugin_id: text
       relationships: {  }
       arguments:
@@ -562,8 +562,8 @@ display:
           plugin_id: numeric
       display_extenders: {  }
       use_more: true
-      use_more_always: true
-      use_more_text: 'History of Updates'
+      use_more_always: false
+      use_more_text: 'View History of Updates'
     cache_metadata:
       max-age: -1
       contexts:
@@ -668,6 +668,7 @@ display:
       defaults:
         style: false
         row: false
+        pager: false
       row:
         type: fields
         options:
@@ -675,12 +676,31 @@ display:
           separator: ''
           hide_empty: false
           default_field_elements: true
+      pager:
+        type: mini
+        options:
+          items_per_page: 50
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:

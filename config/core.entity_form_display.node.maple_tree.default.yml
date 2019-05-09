@@ -5,10 +5,15 @@ dependencies:
   config:
     - field.field.node.maple_tree.body
     - field.field.node.maple_tree.field_maple_location
+    - field.field.node.maple_tree.field_maple_nickname
+    - field.field.node.maple_tree.field_maple_photo
     - field.field.node.maple_tree.field_maple_species
+    - field.field.node.maple_tree.field_maple_tree_tag
+    - image.style.thumbnail
     - node.type.maple_tree
   module:
     - geolocation
+    - image
     - path
 id: node.maple_tree.default
 targetEntityType: node
@@ -17,22 +22,22 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   field_maple_location:
-    weight: 2
+    weight: 4
     settings:
-      default_longitude: ''
-      default_latitude: ''
+      default_longitude: '-75'
+      default_latitude: '44'
       auto_client_location: '1'
       auto_client_location_marker: '1'
       google_map_settings:
         height: 400px
         width: 100%
         type: ROADMAP
-        zoom: '10'
+        zoom: '9'
         maxZoom: 18
         minZoom: 0
         mapTypeControl: 1
@@ -56,15 +61,39 @@ content:
     third_party_settings: {  }
     type: geolocation_googlegeocoder
     region: content
-  field_maple_species:
+  field_maple_nickname:
     weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_maple_photo:
+    weight: 5
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_maple_species:
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
+  field_maple_tree_tag:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   path:
     type: path
-    weight: 7
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -72,21 +101,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 5
+    weight: 8
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 12
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 9
     region: content
     third_party_settings: {  }
   title:
@@ -99,7 +128,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 6
     settings:
       match_operator: CONTAINS
       size: 60
@@ -107,7 +136,7 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 8
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
