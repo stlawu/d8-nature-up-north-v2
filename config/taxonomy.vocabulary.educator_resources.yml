@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Educator Resources'
 vid: educator_resources
 description: 'vocabulary for tagging educator resources'
-hierarchy: 0
 weight: 0

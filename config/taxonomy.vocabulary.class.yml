@@ -5,5 +5,4 @@ dependencies: {  }
 name: Class
 vid: class
 description: ''
-hierarchy: 0
 weight: -5

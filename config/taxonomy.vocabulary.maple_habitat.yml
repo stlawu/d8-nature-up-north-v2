@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Maple habitat'
 vid: maple_habitat
 description: 'Use for setting the habitat of maple trees.'
-hierarchy: 0
 weight: 0

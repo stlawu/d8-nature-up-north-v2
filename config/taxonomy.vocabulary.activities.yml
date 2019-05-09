@@ -5,5 +5,4 @@ dependencies: {  }
 name: Activities
 vid: activities
 description: 'Nature engagement activities'
-hierarchy: 0
 weight: -7
