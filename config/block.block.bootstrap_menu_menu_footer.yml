@@ -2,10 +2,6 @@ uuid: 228bc6b7-6fc8-4721-9a68-34adea17ad70
 langcode: en
 status: true
 dependencies:
-  config:
-    - system.menu.menu-footer
-  module:
-    - system
   theme:
     - bootstrap
 id: bootstrap_menu_menu_footer
@@ -21,5 +17,4 @@ settings:
   label_display: visible
   level: 1
   depth: 0
-  expand_all_items: false
 visibility: {  }

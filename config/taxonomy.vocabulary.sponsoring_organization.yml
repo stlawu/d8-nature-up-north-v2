@@ -5,4 +5,5 @@ dependencies: {  }
 name: 'Sponsoring organization'
 vid: sponsoring_organization
 description: 'Event sponsoring organizations - used by Event content type'
+hierarchy: 0
 weight: -3

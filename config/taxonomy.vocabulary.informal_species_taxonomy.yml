@@ -5,4 +5,5 @@ dependencies: {  }
 name: 'Informal species taxonomy'
 vid: informal_species_taxonomy
 description: 'Informal species taxonomy'
+hierarchy: 1
 weight: -4

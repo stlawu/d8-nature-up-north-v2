@@ -5,4 +5,5 @@ dependencies: {  }
 name: 'Encounter free form tags'
 vid: encounter_free_form_tags
 description: 'For use in collecting free form tags in encounters'
+hierarchy: 0
 weight: -9

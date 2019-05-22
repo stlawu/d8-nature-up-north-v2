@@ -5,4 +5,5 @@ dependencies: {  }
 name: 'Encounter category'
 vid: encounter_category
 description: 'Encounter category'
+hierarchy: 0
 weight: -8

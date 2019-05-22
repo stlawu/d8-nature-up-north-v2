@@ -59,7 +59,7 @@ class Marker {
 
     public function description($n = NULL) {
         if(func_num_args()) {
-            $this->description = $n;
+            $this->description = strip_tags($n);
             return $this;
         }
         return $this->description;
