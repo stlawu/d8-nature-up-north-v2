@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'NYS Standards'
 vid: nys_standards
 description: 'taxonomy for NYS school standards'
-hierarchy: 0
 weight: 0

@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Blog category'
 vid: blog_category
 description: 'Blog category'
-hierarchy: 0
 weight: -6
