@@ -20,10 +20,10 @@ function mmm_tree_autofill_entity_bundle_field_info_alter(&$fields, \Drupal\Core
   }
 }
 function maple_tree_default_value_callback(ContentEntityInterface $entity, FieldDefinitionInterface $definition) {
-  $default = '15905';
-  // Article nodes should default to center alignment.
   if ($entity->bundle() == 'maple_data'||$entity->bundle() == 'maple_observation') {
-    $default = '15905';
+    if((int)$_GET["tree"] && is_integer((int)$_GET["tree"])){
+      $default = $_GET["tree"];
+    }
   }
 
   return [
