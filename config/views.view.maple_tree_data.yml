@@ -506,7 +506,7 @@ display:
           empty: false
           tokenize: true
           content:
-            value: "<hr><em>Last Updated: {{ created }}</em>\r\n<a class=\"btn btn-primary\" href=\"/node/add/maple_data\">Update Tree Information</a>"
+            value: "<hr><em>Last Updated: {{ created }}</em>\r\n<a class=\"btn btn-primary\" href=\"/node/add/maple_data?tree={{ arguments.field_maple_tree_target_id }}\">Update Tree Information</a>"
             format: full_html
           plugin_id: text
       empty:
@@ -518,10 +518,10 @@ display:
           group_type: group
           admin_label: ''
           empty: true
-          tokenize: false
+          tokenize: true
           content:
-            value: '<br><a class="btn btn-primary" href="/node/add/maple_data"><strong>Step 2:</strong> Tell us about this tree.</a>'
-            format: full_html
+            value: '<br><a class="btn btn-primary" href="/node/add/maple_data?tree={{ arguments.field_maple_tree_target_id }}"><strong>Step 2:</strong> Tell us about this tree.</a>'
+            format: pure_html
           plugin_id: text
       relationships: {  }
       arguments:

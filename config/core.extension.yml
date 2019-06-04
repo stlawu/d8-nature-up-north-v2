@@ -52,6 +52,7 @@ module:
   map_component: 0
   markup: 0
   menu_ui: 0
+  mmm_tree_autofill: 0
   node: 0
   nun_helper: 0
   nun_maps: 0

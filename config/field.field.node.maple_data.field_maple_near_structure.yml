@@ -13,7 +13,7 @@ entity_type: node
 bundle: maple_data
 label: 'Is your tree within 100 feet of buildings, concrete, or asphalt?'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

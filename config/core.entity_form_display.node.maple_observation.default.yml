@@ -40,19 +40,19 @@ content:
     weight: 5
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+    type: options_buttons
     region: content
   field_maple_leaf_buds:
     weight: 3
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+    type: options_buttons
     region: content
   field_maple_leaves_unfolded:
     weight: 4
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+    type: options_buttons
     region: content
   field_maple_observation_date:
     weight: 2
@@ -65,13 +65,13 @@ content:
     settings:
       entity_browser: maple_tree_browser
       field_widget_display: rendered_entity
-      field_widget_edit: true
-      field_widget_remove: true
       field_widget_replace: true
       open: true
       selection_mode: selection_append
       field_widget_display_settings:
         view_mode: teaser
+      field_widget_edit: false
+      field_widget_remove: false
     third_party_settings: {  }
     type: entity_browser_entity_reference
     region: content

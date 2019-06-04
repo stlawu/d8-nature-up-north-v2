@@ -12,7 +12,7 @@ entity_type: node
 bundle: maple_data
 label: 'What kind of habitat is your site?'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

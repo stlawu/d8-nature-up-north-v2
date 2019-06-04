@@ -47,6 +47,7 @@ third_party_settings:
         id: ''
         classes: 'group-age-skill field-group-fieldset'
       label: 'Age and Skill Level'
+      region: content
     group_event_details:
       children:
         - field_event_address
@@ -66,6 +67,7 @@ third_party_settings:
         open: true
         required_fields: false
       label: 'Event Details'
+      region: content
     group_sponsoring_organization:
       children:
         - field_add_your_organization
@@ -78,6 +80,7 @@ third_party_settings:
         open: true
         required_fields: false
       label: 'Sponsoring Organization'
+      region: content
 id: node.event.default
 targetEntityType: node
 bundle: event

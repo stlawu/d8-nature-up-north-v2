@@ -535,10 +535,10 @@ display:
           group_type: group
           admin_label: ''
           empty: true
-          tokenize: false
+          tokenize: true
           content:
-            value: "<h2>Observations</h2>\r\n<a class=\"btn btn-primary\">Add an Observation for this tree</a>"
-            format: full_html
+            value: "<h2>Observations</h2>\r\n<a class=\"btn btn-primary\" href=\"/node/add/maple_observation?tree={{ arguments.field_maple_tree_target_id }}\">Add an Observation for this tree</a>"
+            format: pure_html
           plugin_id: text
       defaults:
         header: false

@@ -1,0 +1,18 @@
+uuid: 500841f2-d56f-4f6e-9a3a-aba05aa17b14
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.maple_tree
+id: node.maple_tree.title
+field_name: title
+entity_type: node
+bundle: maple_tree
+label: 'Tree Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

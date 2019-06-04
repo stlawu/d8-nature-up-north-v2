@@ -13,7 +13,7 @@ entity_type: node
 bundle: maple_observation
 label: 'Have leaves fully unfolded?'
 description: 'Mark "Yes" if one or more leaf has fully unfolded, so that you can see where the leaf stalk (petiole) attaches to the stem.'
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
