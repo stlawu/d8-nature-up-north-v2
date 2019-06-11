@@ -131,3 +131,23 @@
 #block-sharethis {
   margin-bottom: 15px;
 }
+#block-monitormymaple {
+  background: #ffd79b;
+  &:after {
+    content:"";
+    display: block;
+    clear:both;
+  }
+  h2 {
+    display: inline-block;
+    float: left;
+    margin:5px 10px;
+  }
+  .menu {
+    display: inline-block;
+    float: right;
+    li {
+      display: inline-block;
+    }
+  }
+}
