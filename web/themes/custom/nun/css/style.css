@@ -7417,7 +7417,11 @@ img {
   #block-monitormymaple h2 {
     display: inline-block;
     float: left;
-    margin: 5px 10px; }
+    margin: 5px 10px;
+    padding-left: 2em;
+    background: url("../images/mmm-logo.png");
+    background-repeat: no-repeat;
+    background-size: auto 1.4em; }
   #block-monitormymaple .menu {
     display: inline-block;
     float: right; }
