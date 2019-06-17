@@ -132,7 +132,11 @@
   margin-bottom: 15px;
 }
 #block-monitormymaple {
-  background: #ffd79b;
+  padding-left: 3.5em;
+  background: url(/themes/custom/nun/images/mmm-logo.png);
+  background-repeat: no-repeat;
+  background-size: auto 3em;
+  border-bottom: 1px solid orange;
   &:after {
     content:"";
     display: block;
@@ -142,10 +146,6 @@
     display: inline-block;
     float: left;
     margin:5px 10px;
-    padding-left: 2em;
-    background: url("../images/mmm-logo.png");
-    background-repeat: no-repeat;
-    background-size: auto 1.4em;
   }
   .menu {
     display: inline-block;
