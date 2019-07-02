@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.body
     - field.storage.node.field_encounter_date
     - field.storage.node.field_encounter_description
     - field.storage.node.field_encounter_image
@@ -11,12 +12,19 @@ dependencies:
     - image.style.square_encounter_thumbnail
     - node.type.encounter
     - profile.type.main
+    - taxonomy.vocabulary.tags
+  content:
+    - 'taxonomy_term:tags:02333c1c-7491-46d4-9c3e-d5923ae78ca7'
+    - 'taxonomy_term:tags:1f7255d2-a96f-4c01-9a62-40dbde402383'
+    - 'taxonomy_term:tags:41ef2223-9619-4549-b9c4-d559fedf8b66'
+    - 'taxonomy_term:tags:b32dbd37-0deb-4f8d-84a4-5fc2d807a4e6'
   module:
     - datetime
     - geolocation
     - image
     - node
     - profile
+    - taxonomy
     - text
     - user
 id: encounters
@@ -52,7 +60,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Search
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -535,6 +543,68 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: geolocation_field
+        body:
+          id: body
+          table: node__body
+          field: body
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
       filters:
         status:
           value: '1'
@@ -556,6 +626,60 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          group: 1
+        combine_1:
+          id: combine_1
+          table: views
+          field: combine
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: combine_1_op
+            label: Search
+            description: ''
+            use_operator: false
+            operator: combine_1_op
+            identifier: search
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              nun_staff: '0'
+              blogger: '0'
+              super_user: '0'
+              ee_class: '0'
+              k12teacher: '0'
+              maple: '0'
+              approved_user: '0'
+              maple_admin: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          fields:
+            title: title
+            name: name
+            field_profile_full_name: field_profile_full_name
+            field_encounter_description: field_encounter_description
+            body: body
+          plugin_id: combine
         combine:
           id: combine
           table: views
@@ -569,7 +693,7 @@ display:
           exposed: true
           expose:
             operator_id: combine_op
-            label: 'Search by Explorer'
+            label: Explorer
             description: ''
             use_operator: false
             operator: combine_op
@@ -585,6 +709,10 @@ display:
               blogger: '0'
               super_user: '0'
               ee_class: '0'
+              k12teacher: '0'
+              maple: '0'
+              approved_user: '0'
+              maple_admin: '0'
             placeholder: ''
           is_grouped: false
           group_info:
@@ -642,6 +770,186 @@ display:
           entity_type: profile
           entity_field: type
           plugin_id: bundle
+        field_encounter_date_value:
+          id: field_encounter_date_value
+          table: node__field_encounter_date
+          field: field_encounter_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_encounter_date_value_op
+            label: 'Date (field_encounter_date)'
+            description: null
+            use_operator: false
+            operator: field_encounter_date_value_op
+            identifier: field_encounter_date_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: null
+            min_placeholder: null
+            max_placeholder: null
+          is_grouped: true
+          group_info:
+            label: Year
+            description: ''
+            identifier: year
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: '2019'
+                operator: between
+                value:
+                  type: date
+                  value: ''
+                  min: '2019-01-01 00:00:00'
+                  max: '2019-12-31 23:59:59'
+              2:
+                title: '2018'
+                operator: between
+                value:
+                  type: date
+                  value: ''
+                  min: '2018-01-01 00:00:00'
+                  max: '2018-12-31 23:59:59'
+              3:
+                title: '2017'
+                operator: between
+                value:
+                  type: date
+                  value: ''
+                  min: '2017-01-01 00:00:00'
+                  max: '2017-12-31 23:59:59'
+              4:
+                title: '2016'
+                operator: between
+                value:
+                  type: date
+                  value: ''
+                  min: '2016-01-01 00:00:00'
+                  max: '2016-12-31 23:59:59'
+              5:
+                title: '2015'
+                operator: between
+                value:
+                  type: date
+                  value: ''
+                  min: '2015-01-01 00:00:00'
+                  max: '2015-12-31 23:59:59'
+              6:
+                title: '2014'
+                operator: between
+                value:
+                  type: date
+                  value: ''
+                  min: '2014-01-01 00:00:00'
+                  max: '2014-12-31 23:59:59'
+              7:
+                title: '2013'
+                operator: between
+                value:
+                  type: date
+                  value: ''
+                  min: '2013-01-01 00:00:00'
+                  max: '2013-12-31 23:59:59'
+              8:
+                title: '2012'
+                operator: between
+                value:
+                  type: date
+                  value: ''
+                  min: '2012-01-01 00:00:00'
+                  max: '2012-12-31 23:59:59'
+              9:
+                title: '2011'
+                operator: between
+                value:
+                  type: date
+                  value: ''
+                  min: '2011-01-01 00:00:00'
+                  max: '2011-12-31 23:59:59'
+              11:
+                title: Older
+                operator: '<'
+                value:
+                  type: date
+                  value: '2011-01-01 00:00:00'
+                  min: ''
+                  max: ''
+          plugin_id: datetime
+        field_hidden_tags_target_id:
+          id: field_hidden_tags_target_id
+          table: node__field_hidden_tags
+          field: field_hidden_tags_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            615: 615
+            613: 613
+            614: 614
+            612: 612
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_hidden_tags_target_id_op
+            label: Season
+            description: ''
+            use_operator: false
+            operator: field_hidden_tags_target_id_op
+            identifier: season
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              nun_staff: '0'
+              blogger: '0'
+              super_user: '0'
+              ee_class: '0'
+              k12teacher: '0'
+              maple: '0'
+              approved_user: '0'
+              maple_admin: '0'
+            reduce: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: tags
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
       sorts:
         field_encounter_date_value:
           id: field_encounter_date_value
@@ -692,6 +1000,10 @@ display:
           relationship: profile
       arguments: {  }
       display_extenders: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
@@ -699,9 +1011,11 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_encounter_date'
         - 'config:field.storage.node.field_encounter_description'
         - 'config:field.storage.node.field_encounter_image'
@@ -722,9 +1036,11 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_encounter_date'
         - 'config:field.storage.node.field_encounter_description'
         - 'config:field.storage.node.field_encounter_image'
@@ -948,6 +1264,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_encounter_date'
         - 'config:field.storage.node.field_encounter_description'
         - 'config:field.storage.node.field_encounter_image'
@@ -1063,9 +1380,11 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_encounter_date'
         - 'config:field.storage.node.field_encounter_description'
         - 'config:field.storage.node.field_encounter_image'

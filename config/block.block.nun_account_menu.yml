@@ -14,7 +14,7 @@ _core:
 id: nun_account_menu
 theme: nun
 region: navigation_collapsible
-weight: -9
+weight: -10
 provider: null
 plugin: 'system_menu_block:account'
 settings:

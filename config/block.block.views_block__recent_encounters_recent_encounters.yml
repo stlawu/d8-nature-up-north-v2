@@ -5,6 +5,7 @@ dependencies:
   config:
     - views.view.recent_encounters
   module:
+    - ctools
     - system
     - views
   theme:
@@ -28,3 +29,19 @@ visibility:
     pages: "/node/add/*\r\n/feedback\r\n/encounter/*\r\n/encounters-map\r\n<front>\r\n/node/11705"
     negate: true
     context_mapping: {  }
+  'entity_bundle:webform_submission':
+    id: 'entity_bundle:webform_submission'
+    bundles:
+      contact: contact
+    negate: true
+    context_mapping:
+      webform_submission: '@webform.webform_submission_route_context:webform_submission'
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      maple_data: maple_data
+      maple_observation: maple_observation
+      maple_tree: maple_tree
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'

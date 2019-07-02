@@ -9,7 +9,7 @@ dependencies:
     - field.field.node.maple_tree.field_maple_photo
     - field.field.node.maple_tree.field_maple_species
     - field.field.node.maple_tree.field_maple_tree_tag
-    - image.style.square_encounter_large
+    - image.style.large
     - node.type.maple_tree
   module:
     - field_group
@@ -46,15 +46,15 @@ third_party_settings:
       weight: 20
       format_type: html_element
       format_settings:
-        label: col1
         element: div
         show_label: false
         label_element: h3
+        label_element_classes: ''
         attributes: ''
         effect: none
         speed: fast
         id: ''
-        classes: 'col-xs-12 col-md-8'
+        classes: 'col-xs-12 col-md-7'
       label: col1
       region: content
     group_col2:
@@ -65,15 +65,15 @@ third_party_settings:
       weight: 21
       format_type: html_element
       format_settings:
-        label: col2
         element: div
         show_label: false
         label_element: h3
+        label_element_classes: ''
         attributes: ''
         effect: none
         speed: fast
         id: ''
-        classes: 'col-xs-12 col-md-4'
+        classes: 'col-xs-12 col-md-5'
       label: col2
       region: content
 id: node.maple_tree.default
@@ -91,8 +91,8 @@ content:
       google_map_settings:
         height: 400px
         width: 100%
-        type: ROADMAP
-        zoom: '10'
+        type: SATELLITE
+        zoom: '18'
         maxZoom: 18
         minZoom: 0
         mapTypeControl: 1
@@ -116,7 +116,7 @@ content:
     region: content
   field_maple_nickname:
     weight: 24
-    label: inline
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -126,14 +126,14 @@ content:
     weight: 22
     label: hidden
     settings:
-      image_style: square_encounter_large
+      image_style: large
       image_link: ''
     third_party_settings: {  }
     type: image
     region: content
   field_maple_species:
     weight: 26
-    label: inline
+    label: above
     settings:
       link: false
     third_party_settings: {  }
@@ -141,7 +141,7 @@ content:
     region: content
   field_maple_tree_tag:
     weight: 25
-    label: inline
+    label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }

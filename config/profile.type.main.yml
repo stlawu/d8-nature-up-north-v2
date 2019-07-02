@@ -16,3 +16,5 @@ roles:
   super_user: '0'
   ee_class: '0'
 weight: 0
+use_revisions: false
+description: null

@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - sharethis
+    - system
   theme:
     - nun
 id: sharethis
@@ -17,4 +18,9 @@ settings:
   label: Sharethis
   provider: sharethis
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "/node/*\r\n/form/*"
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,97 @@
+uuid: bd667bb3-2e8a-448a-9fdb-5e1b2851dcbe
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.reference_preview
+    - field.field.node.maple_tree.body
+    - field.field.node.maple_tree.field_maple_location
+    - field.field.node.maple_tree.field_maple_nickname
+    - field.field.node.maple_tree.field_maple_photo
+    - field.field.node.maple_tree.field_maple_species
+    - field.field.node.maple_tree.field_maple_tree_tag
+    - node.type.maple_tree
+  module:
+    - field_group
+    - user
+third_party_settings:
+  field_group:
+    group_column1:
+      children: {  }
+      parent_name: ''
+      weight: 9
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: row
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Row
+      region: hidden
+    group_col1:
+      children: {  }
+      parent_name: ''
+      weight: 10
+      format_type: html_element
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'col-xs-12 col-md-7'
+      label: col1
+      region: hidden
+    group_col2:
+      children: {  }
+      parent_name: ''
+      weight: 11
+      format_type: html_element
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'col-xs-12 col-md-5'
+      label: col2
+      region: hidden
+id: node.maple_tree.reference_preview
+targetEntityType: node
+bundle: maple_tree
+mode: reference_preview
+content:
+  field_maple_species:
+    type: entity_reference_label
+    weight: 0
+    region: content
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_maple_tree_tag:
+    type: string
+    weight: 1
+    region: content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_maple_location: true
+  field_maple_nickname: true
+  field_maple_photo: true
+  links: true
+  maple_tree_data_entity_view_1: true
+  maple_tree_observations_entity_view_1: true

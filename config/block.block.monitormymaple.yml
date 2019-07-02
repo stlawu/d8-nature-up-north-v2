@@ -1,0 +1,35 @@
+uuid: a3e0c993-17f6-4d4b-82c7-36c65fd7ba7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.monitor-my-maple
+  module:
+    - ctools
+    - system
+  theme:
+    - nun
+id: monitormymaple
+theme: nun
+region: header
+weight: -9
+provider: null
+plugin: 'system_menu_block:monitor-my-maple'
+settings:
+  id: 'system_menu_block:monitor-my-maple'
+  label: 'Monitor My Maple'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      maple_data: maple_data
+      maple_observation: maple_observation
+      maple_tree: maple_tree
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

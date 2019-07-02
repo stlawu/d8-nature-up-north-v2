@@ -12,7 +12,7 @@ dependencies:
 id: usermenuloggedout
 theme: nun
 region: navigation_collapsible
-weight: -10
+weight: -11
 provider: null
 plugin: 'system_menu_block:user-menu-logged-out'
 settings:

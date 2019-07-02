@@ -1,23 +1,19 @@
-uuid: 64eec228-01de-4905-9f61-0838cd64b8a2
+uuid: 5fd9399d-6b50-44ee-a804-f0e4196fd256
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.body
-    - field.storage.node.field_maple_flowering
-    - field.storage.node.field_maple_leaf_buds
-    - field.storage.node.field_maple_leaves_unfolded
-    - field.storage.node.field_maple_observation_date
-    - node.type.maple_observation
+    - field.storage.node.field_maple_photo
+    - field.storage.node.field_maple_species
+    - field.storage.node.field_maple_tree_tag
+    - image.style.100px_cropped_square
+    - node.type.maple_tree
   module:
-    - datetime
-    - eva
+    - image
     - node
-    - options
-    - text
     - user
-id: maple_tree_observations
-label: 'Maple Tree Observations'
+id: monitor_my_maple
+label: 'Monitor My Maple'
 module: views
 description: ''
 tag: ''
@@ -59,13 +55,10 @@ display:
       pager:
         type: mini
         options:
-          items_per_page: 5
+          items_per_page: 50
           offset: 0
           id: 0
           total_pages: null
-          tags:
-            previous: ‹‹
-            next: ››
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -74,6 +67,9 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          tags:
+            previous: ‹‹
+            next: ››
       style:
         type: table
         options:
@@ -87,32 +83,59 @@ display:
           description: ''
           columns:
             title: title
+            field_maple_tree_tag: field_maple_tree_tag
+            field_maple_species: title
+            created: created
+            field_maple_photo: field_maple_photo
           info:
             title:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: '<br>'
+              empty_column: false
+              responsive: ''
+            field_maple_tree_tag:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-          default: '-1'
+            field_maple_species:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            created:
+              sortable: true
+              default_sort_order: desc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_maple_photo:
+              sortable: false
+              default_sort_order: asc
+              align: views-align-right
+              separator: ''
+              empty_column: false
+              responsive: ''
+          default: created
           empty_table: false
       row:
         type: fields
-        options:
-          inline: {  }
-          separator: ''
-          hide_empty: false
-          default_field_elements: true
       fields:
-        field_maple_observation_date:
-          id: field_maple_observation_date
-          table: node__field_maple_observation_date
-          field: field_maple_observation_date
+        title:
+          id: title
+          table: node_field_data
+          field: title
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Observation date'
+          label: Tree
           exclude: false
           alter:
             alter_text: false
@@ -132,8 +155,8 @@ display:
             target: ''
             nl2br: false
             max_length: 0
-            word_boundary: true
-            ellipsis: true
+            word_boundary: false
+            ellipsis: false
             more_link: false
             more_link_text: ''
             more_link_path: ''
@@ -154,10 +177,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: datetime_default
+          type: string
           settings:
-            timezone_override: ''
-            format_type: day_only
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -168,203 +190,145 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          entity_type: node
+          entity_field: title
           plugin_id: field
-        field_maple_leaf_buds:
-          id: field_maple_leaf_buds
-          table: node__field_maple_leaf_buds
-          field: field_maple_leaf_buds
+        field_maple_tree_tag:
+          id: field_maple_tree_tag
+          table: node__field_maple_tree_tag
+          field: field_maple_tree_tag
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Leaf buds'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: list_default
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_maple_leaves_unfolded:
-          id: field_maple_leaves_unfolded
-          table: node__field_maple_leaves_unfolded
-          field: field_maple_leaves_unfolded
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Leaves
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: list_default
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_maple_flowering:
-          id: field_maple_flowering
-          table: node__field_maple_flowering
-          field: field_maple_flowering
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Flowering
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: list_default
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        body:
-          id: body
-          table: node__body
-          field: body
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Notes
+          label: ''
           exclude: true
           alter:
+            alter_text: true
+            text: ' ({{ field_maple_tree_tag }})'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: false
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_maple_species:
+          id: field_maple_species
+          table: node__field_maple_species
+          field: field_maple_species
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '{{ field_maple_species }}{{ field_maple_tree_tag }}'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Added on'
+          exclude: false
+          alter:
             alter_text: false
             text: ''
             make_link: false
@@ -404,9 +368,78 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: text_default
-          settings: {  }
+          type: timestamp
+          settings:
+            date_format: day_only
+            custom_date_format: ''
+            timezone: ''
           group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: node
+          entity_field: created
+          plugin_id: field
+        field_maple_photo:
+          id: field_maple_photo
+          table: node__field_maple_photo
+          field: field_maple_photo
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image
+          settings:
+            image_style: 100px_cropped_square
+            image_link: ''
+          group_column: ''
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -434,57 +467,104 @@ display:
           table: node_field_data
           field: type
           value:
-            maple_observation: maple_observation
+            maple_tree: maple_tree
           entity_type: node
           entity_field: type
           plugin_id: bundle
       sorts:
-        field_maple_observation_date_value:
-          id: field_maple_observation_date_value
-          table: node__field_maple_observation_date
-          field: field_maple_observation_date_value
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
           relationship: none
           group_type: group
           admin_label: ''
-          order: DESC
           exposed: false
           expose:
             label: ''
           granularity: second
-          plugin_id: datetime
+      title: 'Monitor My Maple'
       header: {  }
       footer: {  }
-      empty:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: true
-          tokenize: true
-          content: "<h2>Observations</h2>\r\n<a class=\"btn btn-primary\" href=\"/node/add/maple_observation?destination=node/{{ arguments.field_maple_tree_target_id }}&tree={{ arguments.field_maple_tree_target_id }}\">Add an Observation for this tree</a>"
-          plugin_id: text_custom
+      empty: {  }
       relationships: {  }
+      arguments: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_maple_photo'
+        - 'config:field.storage.node.field_maple_species'
+        - 'config:field.storage.node.field_maple_tree_tag'
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: Page
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: monitor-my-maple/all
+      menu:
+        type: 'default tab'
+        title: 'All Trees'
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
+      tab_options:
+        type: normal
+        title: Trees
+        description: ''
+        weight: 0
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_maple_photo'
+        - 'config:field.storage.node.field_maple_species'
+        - 'config:field.storage.node.field_maple_tree_tag'
+  page_2:
+    display_plugin: page
+    id: page_2
+    display_title: 'Page 2'
+    position: 2
+    display_options:
+      display_extenders: {  }
+      path: monitor-my-maple/my-trees
       arguments:
-        field_maple_tree_target_id:
-          id: field_maple_tree_target_id
-          table: node__field_maple_tree
-          field: field_maple_tree_target_id
+        uid:
+          id: uid
+          table: node_field_data
+          field: uid
           relationship: none
           group_type: group
           admin_label: ''
-          default_action: empty
+          default_action: default
           exception:
             value: all
             title_enable: false
             title: All
           title_enable: false
           title: ''
-          default_argument_type: fixed
-          default_argument_options:
-            argument: ''
+          default_argument_type: current_user
+          default_argument_options: {  }
           default_argument_skip_url: false
           summary_options:
             base_path: ''
@@ -502,14 +582,20 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
+          entity_type: node
+          entity_field: uid
           plugin_id: numeric
-      display_extenders: {  }
-      use_more: true
-      use_more_always: false
-      use_more_text: 'View all Observations'
-      link_url: ''
-      link_display: '0'
-      title: Observations
+      defaults:
+        arguments: false
+      menu:
+        type: tab
+        title: 'My Trees'
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
     cache_metadata:
       max-age: -1
       contexts:
@@ -517,102 +603,10 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_maple_flowering'
-        - 'config:field.storage.node.field_maple_leaf_buds'
-        - 'config:field.storage.node.field_maple_leaves_unfolded'
-        - 'config:field.storage.node.field_maple_observation_date'
-  entity_view_1:
-    display_plugin: entity_view
-    id: entity_view_1
-    display_title: EVA
-    position: 1
-    display_options:
-      display_extenders: {  }
-      entity_type: node
-      bundles:
-        - maple_tree
-      title: 'Observations:'
-      show_title: false
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: false
-          tokenize: true
-          content:
-            value: "<h2>Observations</h2>\r\n<a class=\"btn btn-primary\" href=\"/node/add/maple_observation?destination=node/{{ arguments.field_maple_tree_target_id }}&tree={{ arguments.field_maple_tree_target_id }}\">Add an Observation for this tree</a>"
-            format: pure_html
-          plugin_id: text
-      defaults:
-        header: false
-        pager: false
-      pager:
-        type: some
-        options:
-          items_per_page: 5
-          offset: 0
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_maple_flowering'
-        - 'config:field.storage.node.field_maple_leaf_buds'
-        - 'config:field.storage.node.field_maple_leaves_unfolded'
-        - 'config:field.storage.node.field_maple_observation_date'
-  page_1:
-    display_plugin: page
-    id: page_1
-    display_title: Page
-    position: 2
-    display_options:
-      display_extenders: {  }
-      path: node/%/observations
-      pager:
-        type: mini
-        options:
-          items_per_page: 50
-          offset: 0
-          id: 0
-          total_pages: null
-          tags:
-            previous: ‹‹
-            next: ››
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-      defaults:
-        pager: false
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-        - url.query_args
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_maple_flowering'
-        - 'config:field.storage.node.field_maple_leaf_buds'
-        - 'config:field.storage.node.field_maple_leaves_unfolded'
-        - 'config:field.storage.node.field_maple_observation_date'
+        - 'config:field.storage.node.field_maple_photo'
+        - 'config:field.storage.node.field_maple_species'
+        - 'config:field.storage.node.field_maple_tree_tag'
