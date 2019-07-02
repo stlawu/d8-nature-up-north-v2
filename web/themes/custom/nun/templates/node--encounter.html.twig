@@ -106,7 +106,7 @@
     <div id="big-map" style="display:none;"></div>
     <div id="mini-map"></div>
 
-    <div id="encounter-body"><strong>{{ date }}</strong> &mdash; {{ content.field_encounter_description }} </div>
+    <div id="encounter-body"><strong>{{ node.field_encounter_date.value|date('U')|format_date('day_only') }}</strong> &mdash; {{ content.field_encounter_description }} </div>
 
     {#if we have at least two images, see preprocess_node to see where blog_image_data is created #}
     {% if encounter_image_data[1] is defined %}
