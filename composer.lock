@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "828ed1059cff51c0454fea72bd86ec91",
+    "content-hash": "6fea4c79cbff2c36fc7d29bccc52f392",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -5742,17 +5742,11 @@
         },
         {
             "name": "drupal/views_data_export",
-            "version": "1.0.0-beta1",
+            "version": "dev-1.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/views_data_export.git",
-                "reference": "8.x-1.0-beta1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/views_data_export-8.x-1.0-beta1.zip",
-                "reference": "8.x-1.0-beta1",
-                "shasum": "f698c1072169017f28e58a4b026d3f3cff904c96"
+                "reference": "05bd75f39d15f214728e40600aed6fbdffc8295e"
             },
             "require": {
                 "drupal/core": "*",
@@ -5764,11 +5758,11 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta1",
-                    "datestamp": "1525280285",
+                    "version": "8.x-1.0-beta1+15-dev",
+                    "datestamp": "1552327381",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -5806,7 +5800,8 @@
             "homepage": "https://www.drupal.org/project/views_data_export",
             "support": {
                 "source": "https://git.drupalcode.org/project/views_data_export"
-            }
+            },
+            "time": "2019-03-11T17:58:52+00:00"
         },
         {
             "name": "drupal/webform",
@@ -12519,7 +12514,7 @@
     "stability-flags": {
         "drupal/select_or_other": 15,
         "drupal/simple_block": 10,
-        "drupal/views_data_export": 10
+        "drupal/views_data_export": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

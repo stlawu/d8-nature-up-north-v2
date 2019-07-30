@@ -76,7 +76,7 @@
         "drupal/twig_tweak": "^2.1",
         "drupal/typed_data": "^1.0",
         "drupal/vardumper": "^1.4",
-        "drupal/views_data_export": "^1.0@beta",
+        "drupal/views_data_export": "1.x-dev",
         "drupal/webform": "^5.0",
         "drush-ops/behat-drush-endpoint": "^8",
         "drush/drush": "~8",
