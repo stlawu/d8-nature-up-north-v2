@@ -1,0 +1,6 @@
+name: MMM Registration
+description: Grant role(s) on successful registration webform submission
+package: MMM Custom
+type: module
+version: 1.0
+core: 8.x
