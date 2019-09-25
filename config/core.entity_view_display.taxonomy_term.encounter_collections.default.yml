@@ -1,0 +1,46 @@
+uuid: 9962c5d9-ca4a-4cca-be92-98980e4bdff6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.encounter_collections.field_encounter_collection_icon
+    - field.field.taxonomy_term.encounter_collections.field_more_info_link
+    - taxonomy.vocabulary.encounter_collections
+  module:
+    - image
+    - link
+    - text
+id: taxonomy_term.encounter_collections.default
+targetEntityType: taxonomy_term
+bundle: encounter_collections
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_encounter_collection_icon:
+    weight: 2
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_more_info_link:
+    weight: 1
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

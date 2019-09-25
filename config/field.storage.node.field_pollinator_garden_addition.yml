@@ -1,0 +1,23 @@
+uuid: bd55a899-1493-4bfc-99aa-6e50d056dcd7
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_pollinator_garden_addition
+field_name: field_pollinator_garden_addition
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

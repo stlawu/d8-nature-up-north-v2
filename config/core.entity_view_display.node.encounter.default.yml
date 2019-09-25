@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_display.comment.comment_node_encounter.default
     - field.field.node.encounter.comment_node_encounter
     - field.field.node.encounter.field_common_species_name
+    - field.field.node.encounter.field_encounter_collection
     - field.field.node.encounter.field_encounter_date
     - field.field.node.encounter.field_encounter_description
     - field.field.node.encounter.field_encounter_image
@@ -30,7 +31,7 @@ content:
   comment_node_encounter:
     label: above
     type: comment_default
-    weight: 20
+    weight: 6
     settings:
       view_mode: default
       pager_id: 0
@@ -38,11 +39,19 @@ content:
     region: content
   field_common_species_name:
     label: above
-    weight: 16
+    weight: 5
     type: entity_reference_label
     settings:
       link: true
     third_party_settings: {  }
+    region: content
+  field_encounter_collection:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_encounter_date:
     label: hidden
@@ -55,14 +64,14 @@ content:
     region: content
   field_encounter_description:
     label: hidden
-    weight: 2
+    weight: 1
     type: text_default
     settings: {  }
     third_party_settings: {  }
     region: content
   field_encounter_image:
     label: hidden
-    weight: 3
+    weight: 2
     type: image
     settings:
       image_style: ''
@@ -70,7 +79,7 @@ content:
     third_party_settings: {  }
     region: content
   field_encounter_location:
-    weight: 101
+    weight: 8
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -78,14 +87,14 @@ content:
     region: content
   field_hidden_tags:
     label: above
-    weight: 15
+    weight: 4
     type: entity_reference_label
     settings:
       link: true
     third_party_settings: {  }
     region: content
   links:
-    weight: 100
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }

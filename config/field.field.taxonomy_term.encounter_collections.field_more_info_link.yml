@@ -1,0 +1,23 @@
+uuid: 2e955cd6-7b1b-444a-82f3-287130d1f51b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_more_info_link
+    - taxonomy.vocabulary.encounter_collections
+  module:
+    - link
+id: taxonomy_term.encounter_collections.field_more_info_link
+field_name: field_more_info_link
+entity_type: taxonomy_term
+bundle: encounter_collections
+label: 'More Info Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

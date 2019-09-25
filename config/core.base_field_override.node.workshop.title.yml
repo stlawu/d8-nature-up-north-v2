@@ -1,0 +1,18 @@
+uuid: e07345ac-ad27-4eb5-b6a3-dec1a98af295
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.workshop
+id: node.workshop.title
+field_name: title
+entity_type: node
+bundle: workshop
+label: Workshop
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

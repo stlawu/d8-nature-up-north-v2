@@ -1,0 +1,30 @@
+uuid: 3bbc0c22-f41b-4f85-bddc-87926faed20e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.workshop_follow_up.body
+    - node.type.workshop_follow_up
+  module:
+    - text
+    - user
+id: node.workshop_follow_up.teaser
+targetEntityType: node
+bundle: workshop_follow_up
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

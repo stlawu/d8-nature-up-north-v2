@@ -1,0 +1,37 @@
+uuid: f0cfabcc-05b0-4c5f-ae2b-b5df8799cd53
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_maple_fruit
+field_name: field_maple_fruit
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: None
+      label: 'None: Tree is not fruiting this year'
+    -
+      value: Early
+      label: 'Early: Only a few ripe fruits are visible (less than 10%)'
+    -
+      value: Middle
+      label: 'Middle: Many fruits are ripe'
+    -
+      value: Late
+      label: 'Late: Most or all fruits or seeds have been dispersed from tree (over 90%)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

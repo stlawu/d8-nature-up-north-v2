@@ -1,0 +1,23 @@
+uuid: 968a71a6-5861-4b48-9a14-f4e0dfce2229
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pollinator_garden_day
+    - node.type.pollinator_garden
+id: node.pollinator_garden.field_pollinator_garden_day
+field_name: field_pollinator_garden_day
+entity_type: node
+bundle: pollinator_garden
+label: Day
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: 31
+  prefix: ''
+  suffix: ''
+field_type: integer

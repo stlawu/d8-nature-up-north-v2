@@ -1,0 +1,20 @@
+uuid: 8f99d491-03ad-4df4-8c0e-d4d5c4200e99
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: pollinator_garden
+label: 'Pollinator Garden'
+code: ".page-header,\r\n#block-sharethis {\r\n  display: none;\r\n}"
+media: all
+preprocess: true
+conditions:
+  node_type:
+    id: node_type
+    bundles:
+      pollinator_garden: pollinator_garden
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+conditions_require_all: true

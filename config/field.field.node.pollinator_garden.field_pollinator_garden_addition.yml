@@ -1,0 +1,19 @@
+uuid: 48c05887-7d34-4417-b6ee-ee01d3ab8aea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pollinator_garden_addition
+    - node.type.pollinator_garden
+id: node.pollinator_garden.field_pollinator_garden_addition
+field_name: field_pollinator_garden_addition
+entity_type: node
+bundle: pollinator_garden
+label: 'Please share additional observations, information, feedback.'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

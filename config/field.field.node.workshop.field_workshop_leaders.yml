@@ -1,0 +1,21 @@
+uuid: 4c0107f6-5639-4e88-aa29-1d7836c94a5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_workshop_leaders
+    - node.type.workshop
+  module:
+    - options
+id: node.workshop.field_workshop_leaders
+field_name: field_workshop_leaders
+entity_type: node
+bundle: workshop
+label: 'workshop leaders'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

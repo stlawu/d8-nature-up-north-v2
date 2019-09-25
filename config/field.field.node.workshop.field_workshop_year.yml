@@ -1,0 +1,23 @@
+uuid: 8154f241-68de-403b-a3e8-175ba7f2ad2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_workshop_year
+    - node.type.workshop
+  module:
+    - options
+id: node.workshop.field_workshop_year
+field_name: field_workshop_year
+entity_type: node
+bundle: workshop
+label: 'workshop year'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 2019
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

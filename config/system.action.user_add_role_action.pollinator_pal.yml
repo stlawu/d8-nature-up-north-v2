@@ -1,0 +1,14 @@
+uuid: 88b2281e-aa96-4f0e-8d4e-2c74ddd10e8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.pollinator_pal
+  module:
+    - user
+id: user_add_role_action.pollinator_pal
+label: 'Add the Pollinator Pal role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: pollinator_pal

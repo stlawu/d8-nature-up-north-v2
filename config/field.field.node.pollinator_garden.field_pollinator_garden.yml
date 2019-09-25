@@ -1,0 +1,21 @@
+uuid: 1acaa4b3-c12f-4e1e-8f78-1042974fd835
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pollinator_garden
+    - node.type.pollinator_garden
+  module:
+    - options
+id: node.pollinator_garden.field_pollinator_garden
+field_name: field_pollinator_garden
+entity_type: node
+bundle: pollinator_garden
+label: 'Did you plant a wildflower pollinator garden? '
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

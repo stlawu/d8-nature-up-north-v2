@@ -1,0 +1,23 @@
+uuid: e1a4b9c4-9261-4b70-b735-a9b0cbd6b0f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_workshop_type
+    - node.type.workshop
+  module:
+    - options
+id: node.workshop.field_workshop_type
+field_name: field_workshop_type
+entity_type: node
+bundle: workshop
+label: 'Workshop type'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: Workshop
+default_value_callback: ''
+settings: {  }
+field_type: list_string

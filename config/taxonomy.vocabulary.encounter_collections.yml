@@ -1,0 +1,8 @@
+uuid: 2d20b594-de4c-4189-b3ec-5b9e654c10a8
+langcode: en
+status: true
+dependencies: {  }
+name: 'Encounter Collections'
+vid: encounter_collections
+description: 'Collections of encounters that share a common theme.'
+weight: 0

@@ -1,0 +1,11 @@
+uuid: 4772bc77-3b16-41ff-af27-a151e15f4a66
+langcode: en
+status: true
+dependencies: {  }
+id: pollinator_pal
+label: 'Pollinator Pal'
+weight: 11
+is_admin: null
+permissions:
+  - 'create pollinator_garden content'
+  - 'edit own pollinator_garden content'

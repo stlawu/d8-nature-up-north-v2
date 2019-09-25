@@ -11,7 +11,7 @@ id: node.encounter.field_encounter_date
 field_name: field_encounter_date
 entity_type: node
 bundle: encounter
-label: Date
+label: 'Date of your encounter (may not be today)'
 description: ''
 required: false
 translatable: false

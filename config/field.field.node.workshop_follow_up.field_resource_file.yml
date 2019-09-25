@@ -1,0 +1,27 @@
+uuid: 5e09d3ca-2358-46d1-9ab5-b8293ad5194a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_file
+    - node.type.workshop_follow_up
+  module:
+    - file
+id: node.workshop_follow_up.field_resource_file
+field_name: field_resource_file
+entity_type: node
+bundle: workshop_follow_up
+label: 'Resource file'
+description: 'Upload the file'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt csv doc docx pdf xls xlsx ppt pptx'
+  max_filesize: '100 mb'
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

@@ -1,19 +1,23 @@
-uuid: 5c2fd39f-c735-43a2-a13d-94f506dd3848
-langcode: und
+uuid: f81a2d85-5888-4859-96c8-17e347f5abdd
+langcode: en
 status: true
 dependencies:
   module:
+    - field_permissions
     - node
     - taxonomy
-id: node.field_nys_standard
-field_name: field_nys_standard
+third_party_settings:
+  field_permissions:
+    permission_type: custom
+id: node.field_encounter_collection
+field_name: field_encounter_collection
 entity_type: node
 type: entity_reference
 settings:
   target_type: taxonomy_term
 module: core
 locked: false
-cardinality: 10
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

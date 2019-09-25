@@ -27,6 +27,9 @@ settings:
     -
       value: 'Monitor Change'
       label: 'Monitor Change'
+    -
+      value: 'Ash Mapping'
+      label: 'Ash Mapping'
   allowed_values_function: ''
 module: options
 locked: false

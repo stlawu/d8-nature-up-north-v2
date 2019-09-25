@@ -1,0 +1,43 @@
+uuid: 5b6a1c58-630d-4521-804e-9add126ffa70
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_pollinator_garden_space
+field_name: field_pollinator_garden_space
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Existing garden'
+      label: 'Existing garden (Is this an addition, a part of, or replacing one or more of your current gardens?)'
+    -
+      value: 'Converted from Lawn'
+      label: 'Converted from Lawn (Did you convert a section of mowed lawn into a pollinator garden?)'
+    -
+      value: 'Unused Yard Space'
+      label: 'Unused Yard Space (Is your pollinator garden in a place that was never a garden or mowed lawn?)'
+    -
+      value: Containers
+      label: 'Containers (Is your pollinator garden planted in flower pots, window baskets, raised beds, or other containers?)'
+    -
+      value: 'Open field/Meadow'
+      label: 'Open field/Meadow (Did you plant where there was an existing meadow or open field?)'
+    -
+      value: Other
+      label: 'Other: (Please specify.)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

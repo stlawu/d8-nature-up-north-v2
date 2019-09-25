@@ -9,7 +9,7 @@ dependencies:
     - field.field.node.educator_resource.field_file_s_
     - field.field.node.educator_resource.field_grade_level
     - field.field.node.educator_resource.field_link
-    - field.field.node.educator_resource.field_nys_standard
+    - field.field.node.educator_resource.field_nys_standards
     - field.field.node.educator_resource.field_project
     - field.field.node.educator_resource.field_resource_type
     - field.field.node.educator_resource.field_subject_s_
@@ -76,11 +76,11 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     region: content
-  field_nys_standard:
-    weight: 8
-    type: options_buttons
+  field_nys_standards:
+    weight: 122
     settings: {  }
     third_party_settings: {  }
+    type: options_select
     region: content
   field_project:
     weight: 3

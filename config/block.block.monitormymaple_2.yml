@@ -1,0 +1,30 @@
+uuid: 55932866-3ae0-4793-ae51-43baae22c309
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.monitor-my-maple
+  module:
+    - system
+  theme:
+    - nun
+id: monitormymaple_2
+theme: nun
+region: header
+weight: 0
+provider: null
+plugin: 'system_menu_block:monitor-my-maple'
+settings:
+  id: 'system_menu_block:monitor-my-maple'
+  label: 'Monitor My Maple'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    pages: "/monitor-my-maple/data\r\n/monitor-my-maple/data/all\r\n/monitor-my-maple/data/my-trees\r\n/monitor-my-maple/data-export"
+    negate: false
+    context_mapping: {  }

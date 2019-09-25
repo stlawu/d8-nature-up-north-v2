@@ -4,18 +4,25 @@ status: true
 dependencies:
   config:
     - field.storage.node.body
+    - field.storage.node.field_maple_changing_colors
     - field.storage.node.field_maple_flowering
+    - field.storage.node.field_maple_fruit
     - field.storage.node.field_maple_leaf_buds
+    - field.storage.node.field_maple_leaves_dropping
     - field.storage.node.field_maple_leaves_unfolded
     - field.storage.node.field_maple_observation_date
     - node.type.maple_observation
   module:
+    - csv_serialization
     - datetime
     - eva
     - node
     - options
+    - rest
+    - serialization
     - text
     - user
+    - views_data_export
 id: maple_tree_observations
 label: 'Maple Tree Observations'
 module: views
@@ -213,7 +220,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: ''
+          empty: '-'
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -275,7 +282,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: ''
+          empty: '-'
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
@@ -337,12 +344,12 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: ''
+          empty: '-'
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: list_default
+          type: list_key
           settings: {  }
           group_column: value
           group_columns: {  }
@@ -405,6 +412,192 @@ display:
           hide_alter_empty: true
           click_sort_column: value
           type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_maple_changing_colors:
+          id: field_maple_changing_colors
+          table: node__field_maple_changing_colors
+          field: field_maple_changing_colors
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Changing
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: '-'
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_key
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_maple_leaves_dropping:
+          id: field_maple_leaves_dropping
+          table: node__field_maple_leaves_dropping
+          field: field_maple_leaves_dropping
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Dropping
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: '-'
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_key
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_maple_fruit:
+          id: field_maple_fruit
+          table: node__field_maple_fruit
+          field: field_maple_fruit
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Fruit
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: '-'
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_key
           settings: {  }
           group_column: value
           group_columns: {  }
@@ -505,10 +698,10 @@ display:
           plugin_id: numeric
       display_extenders: {  }
       use_more: true
-      use_more_always: false
+      use_more_always: true
       use_more_text: 'View all Observations'
       link_url: ''
-      link_display: '0'
+      link_display: page_1
       title: Observations
     cache_metadata:
       max-age: -1
@@ -521,8 +714,69 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_maple_changing_colors'
         - 'config:field.storage.node.field_maple_flowering'
+        - 'config:field.storage.node.field_maple_fruit'
         - 'config:field.storage.node.field_maple_leaf_buds'
+        - 'config:field.storage.node.field_maple_leaves_dropping'
+        - 'config:field.storage.node.field_maple_leaves_unfolded'
+        - 'config:field.storage.node.field_maple_observation_date'
+  data_export_1:
+    display_plugin: data_export
+    id: data_export_1
+    display_title: 'Data export'
+    position: 3
+    display_options:
+      display_extenders: {  }
+      displays:
+        page_1: page_1
+        default: '0'
+      path: node/%/observations/export/csv
+      filename: 'monitor-my-maple_[view:total-rows]-observations.csv'
+      style:
+        type: data_export
+        options:
+          formats:
+            csv: csv
+          csv_settings:
+            delimiter: ','
+            enclosure: '"'
+            escape_char: \
+            strip_tags: true
+            trim: true
+            encoding: utf8
+          xls_settings:
+            xls_format: Excel2007
+            metadata:
+              creator: ''
+              last_modified_by: ''
+              title: ''
+              description: ''
+              subject: ''
+              keywords: ''
+              category: ''
+              manager: ''
+              company: ''
+      pager:
+        type: none
+        options:
+          offset: 0
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - request_format
+        - url
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_maple_changing_colors'
+        - 'config:field.storage.node.field_maple_flowering'
+        - 'config:field.storage.node.field_maple_fruit'
+        - 'config:field.storage.node.field_maple_leaf_buds'
+        - 'config:field.storage.node.field_maple_leaves_dropping'
         - 'config:field.storage.node.field_maple_leaves_unfolded'
         - 'config:field.storage.node.field_maple_observation_date'
   entity_view_1:
@@ -569,8 +823,11 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_maple_changing_colors'
         - 'config:field.storage.node.field_maple_flowering'
+        - 'config:field.storage.node.field_maple_fruit'
         - 'config:field.storage.node.field_maple_leaf_buds'
+        - 'config:field.storage.node.field_maple_leaves_dropping'
         - 'config:field.storage.node.field_maple_leaves_unfolded'
         - 'config:field.storage.node.field_maple_observation_date'
   page_1:
@@ -601,6 +858,12 @@ display:
             offset_label: Offset
       defaults:
         pager: false
+        use_more: false
+        use_more_always: false
+        use_more_text: false
+      use_more: false
+      use_more_always: true
+      use_more_text: 'View all Observations'
     cache_metadata:
       max-age: -1
       contexts:
@@ -612,7 +875,10 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_maple_changing_colors'
         - 'config:field.storage.node.field_maple_flowering'
+        - 'config:field.storage.node.field_maple_fruit'
         - 'config:field.storage.node.field_maple_leaf_buds'
+        - 'config:field.storage.node.field_maple_leaves_dropping'
         - 'config:field.storage.node.field_maple_leaves_unfolded'
         - 'config:field.storage.node.field_maple_observation_date'

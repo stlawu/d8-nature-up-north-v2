@@ -1390,3 +1390,117 @@ display:
         - 'config:field.storage.node.field_encounter_image'
         - 'config:field.storage.node.field_encounter_location'
         - 'config:field.storage.profile.field_profile_full_name'
+  page_4:
+    display_plugin: page
+    id: page_4
+    display_title: 'Collection Page'
+    position: 4
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      path: encounters/collection
+      relationships:
+        uid:
+          id: uid
+          table: node_field_data
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: author
+          required: false
+          entity_type: node
+          entity_field: uid
+          plugin_id: standard
+        profile:
+          id: profile
+          table: users_field_data
+          field: profile
+          relationship: uid
+          group_type: group
+          admin_label: Profile
+          required: false
+          entity_type: user
+          plugin_id: standard
+        uid_1:
+          id: uid_1
+          table: profile
+          field: uid
+          entity_type: profile
+          entity_field: uid
+          plugin_id: standard
+          relationship: profile
+        field_encounter_collection:
+          id: field_encounter_collection
+          table: node__field_encounter_collection
+          field: field_encounter_collection
+          relationship: none
+          group_type: group
+          admin_label: 'field_encounter_collection: Taxonomy term'
+          required: true
+          plugin_id: standard
+      defaults:
+        relationships: false
+        arguments: false
+        title: false
+      arguments:
+        name:
+          id: name
+          table: taxonomy_term_field_data
+          field: name
+          relationship: field_encounter_collection
+          group_type: group
+          admin_label: ''
+          default_action: summary
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: true
+          title: '{{ arguments.name }} Collection'
+          default_argument_type: fixed
+          default_argument_options:
+            argument: ''
+          default_argument_skip_url: false
+          summary_options:
+            base_path: ''
+            count: true
+            items_per_page: 25
+            override: false
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          glossary: false
+          limit: 0
+          case: ucwords
+          path_case: lower
+          transform_dash: false
+          break_phrase: false
+          add_table: false
+          require_value: false
+          entity_type: taxonomy_term
+          entity_field: name
+          plugin_id: string
+      title: Collections
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_encounter_date'
+        - 'config:field.storage.node.field_encounter_description'
+        - 'config:field.storage.node.field_encounter_image'
+        - 'config:field.storage.node.field_encounter_location'
+        - 'config:field.storage.profile.field_profile_full_name'

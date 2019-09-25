@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.encounter.comment_node_encounter
     - field.field.node.encounter.field_common_species_name
+    - field.field.node.encounter.field_encounter_collection
     - field.field.node.encounter.field_encounter_date
     - field.field.node.encounter.field_encounter_description
     - field.field.node.encounter.field_encounter_image
@@ -17,6 +18,7 @@ dependencies:
     - node.type.encounter
   module:
     - datetime
+    - entity_reference_views_select
     - geolocation
     - image
     - markup
@@ -35,18 +37,24 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
   field_common_species_name:
-    weight: 101
+    weight: 16
     type: entity_reference_autocomplete
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
+  field_encounter_collection:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_buttons
     region: content
   field_encounter_date:
     weight: 5
@@ -112,13 +120,13 @@ content:
     third_party_settings: {  }
     region: content
   field_hidden_tags:
-    weight: 100
+    weight: 15
     type: options_buttons
     settings: {  }
     third_party_settings: {  }
     region: content
   field_tags_other:
-    weight: 7
+    weight: 8
     type: entity_reference_autocomplete
     settings:
       match_operator: CONTAINS
@@ -134,7 +142,7 @@ content:
     region: content
   path:
     type: path
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -142,21 +150,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 10
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 121
+    weight: 17
     third_party_settings: {  }
     region: content
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 11
     region: content
     third_party_settings: {  }
   title:
@@ -169,7 +177,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 14
+    weight: 13
     settings:
       match_operator: CONTAINS
       size: 60
@@ -177,7 +185,7 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 50
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
