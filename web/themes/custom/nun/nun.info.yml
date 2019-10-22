@@ -19,6 +19,10 @@ regions:
   page_top: 'Page top'
   page_bottom: 'Page bottom'
 
+libraries-extend:
+  bootstrap/framework:
+    - nun/framework
+
 libraries:
   - 'nun/global-styling'
   - 'nun/bootstrap-scripts'
