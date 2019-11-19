@@ -72,6 +72,7 @@
         "drupal/simple_block": "^1.0@beta",
         "drupal/simple_fb_connect": "^3.1",
         "drupal/sitemap": "^1.5",
+        "drupal/slick_views": "^2.0",
         "drupal/token": "^1.5",
         "drupal/twig_tweak": "^2.1",
         "drupal/typed_data": "^1.0",
