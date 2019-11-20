@@ -1,0 +1,19 @@
+uuid: 6689fef7-fa97-4d20-bca6-2634a071f7c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_favorite_outdoor_activity
+    - node.type.profile
+id: node.profile.field_favorite_outdoor_activity
+field_name: field_favorite_outdoor_activity
+entity_type: node
+bundle: profile
+label: 'Favorite Outdoor Activity'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

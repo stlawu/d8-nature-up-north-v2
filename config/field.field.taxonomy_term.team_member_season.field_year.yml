@@ -1,0 +1,23 @@
+uuid: e467fd3e-1368-40e4-acde-86e612f5e81d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_year
+    - taxonomy.vocabulary.team_member_season
+id: taxonomy_term.team_member_season.field_year
+field_name: field_year
+entity_type: taxonomy_term
+bundle: team_member_season
+label: Year
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,19 @@
+uuid: 8cc4b3ee-fbb5-449a-9b0a-0d589580e0eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title_role
+    - node.type.profile
+id: node.profile.field_title_role
+field_name: field_title_role
+entity_type: node
+bundle: profile
+label: 'Text-based Title/Role'
+description: "Example:\r\nDigital Media Intern (Fall 2018 - Current)"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

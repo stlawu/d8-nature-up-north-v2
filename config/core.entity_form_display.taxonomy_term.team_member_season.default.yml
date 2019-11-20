@@ -1,0 +1,37 @@
+uuid: 5a9f4aa4-04b5-49e7-ac75-af8bfa6b7d74
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.team_member_season.field_season
+    - field.field.taxonomy_term.team_member_season.field_year
+    - taxonomy.vocabulary.team_member_season
+id: taxonomy_term.team_member_season.default
+targetEntityType: taxonomy_term
+bundle: team_member_season
+mode: default
+content:
+  field_season:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_year:
+    weight: 1
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
