@@ -1,0 +1,8 @@
+uuid: f0a9e044-0ec8-46dd-928b-f69583686517
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_educator_resource
+label: 'Educator Resource comment'
+target_entity_type_id: node
+description: null

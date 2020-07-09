@@ -1,0 +1,19 @@
+uuid: df46e134-baa0-47a4-bb09-b73ada003eaa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_maple_nickname
+    - node.type.maple_tree
+id: node.maple_tree.field_maple_nickname
+field_name: field_maple_nickname
+entity_type: node
+bundle: maple_tree
+label: Nickname
+description: '(Optional) If you have a name that you use to refer to this tree, you can add it here.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

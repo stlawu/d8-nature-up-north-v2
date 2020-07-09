@@ -1,0 +1,30 @@
+uuid: 46c481d3-1805-4b06-a48a-f7112ae71a15
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.north_country_trails
+  module:
+    - system
+    - views
+  theme:
+    - nun
+id: views_block__north_country_trails_block_1
+theme: nun
+region: content
+weight: -3
+provider: null
+plugin: 'views_block:north_country_trails-block_1'
+settings:
+  id: 'views_block:north_country_trails-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /trails
+    negate: false
+    context_mapping: {  }

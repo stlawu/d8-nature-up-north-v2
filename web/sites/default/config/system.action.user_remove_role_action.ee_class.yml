@@ -1,0 +1,14 @@
+uuid: ebf40c4f-5cb2-444f-b9b0-1a3ecf9844d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.ee_class
+  module:
+    - user
+id: user_remove_role_action.ee_class
+label: 'Remove the EE_class role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: ee_class

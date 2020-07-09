@@ -1,0 +1,41 @@
+uuid: 10537065-4179-432f-a882-c0cf0bbb7ed1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.maple_tree_selector
+  module:
+    - views
+name: maple_tree_browser
+label: 'Maple Tree Browser'
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select Tree'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  529ff464-d05c-4314-8c22-c28a374d68ce:
+    settings:
+      view: maple_tree_selector
+      view_display: entity_browser_2
+      submit_text: 'Attach Tree'
+      auto_select: false
+    uuid: 529ff464-d05c-4314-8c22-c28a374d68ce
+    weight: 1
+    label: 'My Trees'
+    id: view
+  7855add7-c7d0-4b77-9164-75d32d587148:
+    settings:
+      view: maple_tree_selector
+      view_display: entity_browser_1
+      submit_text: 'Attach Tree'
+      auto_select: false
+    uuid: 7855add7-c7d0-4b77-9164-75d32d587148
+    weight: 2
+    label: 'All Trees'
+    id: view

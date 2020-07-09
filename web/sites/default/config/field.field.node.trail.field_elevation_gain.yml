@@ -1,0 +1,23 @@
+uuid: 029ec0f4-5e4f-4ede-8739-2c8391243f3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_elevation_gain
+    - node.type.trail
+id: node.trail.field_elevation_gain
+field_name: field_elevation_gain
+entity_type: node
+bundle: trail
+label: 'Elevation Gain'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ft
+field_type: integer

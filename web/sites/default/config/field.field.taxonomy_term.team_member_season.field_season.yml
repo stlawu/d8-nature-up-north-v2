@@ -1,0 +1,21 @@
+uuid: 87044450-1119-42fb-a293-61125797035a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_season
+    - taxonomy.vocabulary.team_member_season
+  module:
+    - options
+id: taxonomy_term.team_member_season.field_season
+field_name: field_season
+entity_type: taxonomy_term
+bundle: team_member_season
+label: Season
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

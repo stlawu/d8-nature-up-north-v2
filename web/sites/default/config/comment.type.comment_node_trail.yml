@@ -1,0 +1,8 @@
+uuid: de7a9840-d839-425b-a981-0017e824b195
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_trail
+label: 'Trail Description comment'
+target_entity_type_id: node
+description: null

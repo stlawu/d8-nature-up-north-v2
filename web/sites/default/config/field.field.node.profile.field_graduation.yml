@@ -1,0 +1,19 @@
+uuid: a70a1153-69e0-4ae3-a1eb-aad3fedcd420
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_graduation
+    - node.type.profile
+id: node.profile.field_graduation
+field_name: field_graduation
+entity_type: node
+bundle: profile
+label: Graduation
+description: "Examples:\r\nSt. Lawrence University 2010\r\nClarkson 2011\r\nSUNY Potsdam M.Ed 2012"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

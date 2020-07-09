@@ -1,0 +1,20 @@
+uuid: 16fb550d-142d-4e93-8be5-7a4fc44c3b1d
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_division
+field_name: field_division
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

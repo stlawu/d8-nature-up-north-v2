@@ -1,0 +1,39 @@
+uuid: 5b33d8c6-ddb0-4ec6-810a-321857ca3f4e
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_nys_status
+field_name: field_nys_status
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: extinct
+      label: Extinct
+    -
+      value: extirpated
+      label: Extirpated
+    -
+      value: endangered
+      label: Endangered
+    -
+      value: threatened
+      label: Threatened
+    -
+      value: special_concern
+      label: 'Special concern'
+    -
+      value: not_listed
+      label: 'Not listed'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

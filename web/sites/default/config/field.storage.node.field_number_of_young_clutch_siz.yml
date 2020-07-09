@@ -1,0 +1,20 @@
+uuid: 8db645b6-6a1b-48ab-a090-291e43040aff
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_number_of_young_clutch_siz
+field_name: field_number_of_young_clutch_siz
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

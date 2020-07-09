@@ -1,0 +1,23 @@
+uuid: c44fdc96-6bec-4fdd-887f-dc1c26041d03
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: front_featured
+label: 'Front Featured'
+effects:
+  e2f9bd17-5391-44f5-8380-9141d98910df:
+    uuid: e2f9bd17-5391-44f5-8380-9141d98910df
+    id: image_effects_auto_orient
+    weight: 1
+    data:
+      scan_exif: true
+  174d2c29-c160-4463-b179-a0ef4f3d2113:
+    uuid: 174d2c29-c160-4463-b179-a0ef4f3d2113
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 380
+      height: 200
+      anchor: center-center

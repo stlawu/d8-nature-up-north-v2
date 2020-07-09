@@ -1,0 +1,25 @@
+uuid: 285f7f2b-1520-4215-881a-ed400df47d0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_participation
+    - node.type.profile
+id: node.profile.field_participation
+field_name: field_participation
+entity_type: node
+bundle: profile
+label: Participation
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: term_team_member_season
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

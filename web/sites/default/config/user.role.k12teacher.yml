@@ -1,0 +1,20 @@
+uuid: 8f1735c9-b5e4-4e12-8e4e-31c891d9239d
+langcode: en
+status: true
+dependencies: {  }
+id: k12teacher
+label: K12Teacher
+weight: 7
+is_admin: null
+permissions:
+  - 'bypass honeypot protection'
+  - 'create encounter content'
+  - 'create event content'
+  - 'delete own encounter content'
+  - 'edit own comments'
+  - 'edit own community_organization content'
+  - 'edit own encounter content'
+  - 'edit own event content'
+  - 'post comments'
+  - 'skip comment approval'
+  - 'view any main profile'

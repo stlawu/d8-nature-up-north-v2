@@ -1,0 +1,28 @@
+uuid: 148d7cf0-7f91-421c-bd90-f1bbf07f7c00
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_existing_resource
+    - node.type.educator_resource
+    - node.type.workshop_follow_up
+id: node.workshop_follow_up.field_existing_resource
+field_name: field_existing_resource
+entity_type: node
+bundle: workshop_follow_up
+label: 'Existing resource'
+description: 'Link to an existing educator or other website resource'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      educator_resource: educator_resource
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

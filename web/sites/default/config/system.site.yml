@@ -1,0 +1,15 @@
+uuid: 49f2d6ff-d9d1-41c7-9893-3ed09246f292
+name: 'Nature Up North'
+mail: info@natureupnorth.org
+slogan: 'It''s just our Nature here in northern New York'
+page:
+  403: /toboggan/denied
+  404: /node/12
+  front: /node/9
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
+mail_notification: ''

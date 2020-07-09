@@ -1,0 +1,18 @@
+uuid: 1d3fe5d6-59ae-412b-a760-8c05725e08b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.community_organization
+id: node.community_organization.title
+field_name: title
+entity_type: node
+bundle: community_organization
+label: 'Organization name'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

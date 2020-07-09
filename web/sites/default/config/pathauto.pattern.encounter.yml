@@ -1,0 +1,22 @@
+uuid: 07e0a582-cf3b-4991-8044-f2d6d64b131c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: encounter
+label: Encounter
+type: 'canonical_entities:node'
+pattern: 'encounter/[node:author]/[node:title]'
+selection_criteria:
+  8d1f15fc-8611-4cfd-b666-7b71aa793146:
+    id: node_type
+    bundles:
+      encounter: encounter
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 8d1f15fc-8611-4cfd-b666-7b71aa793146
+selection_logic: and
+weight: -5
+relationships: {  }

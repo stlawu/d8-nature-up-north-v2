@@ -1,0 +1,21 @@
+uuid: 086716c5-964d-44f0-b0ff-7ec7496b2c90
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_encounter_location
+    - node.type.encounter
+  module:
+    - geolocation
+id: node.encounter.field_encounter_location
+field_name: field_encounter_location
+entity_type: node
+bundle: encounter
+label: Location
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

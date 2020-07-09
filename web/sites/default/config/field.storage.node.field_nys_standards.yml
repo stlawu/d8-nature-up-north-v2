@@ -1,0 +1,61 @@
+uuid: 38eb2aef-078a-4b97-bf64-6c3c4f27ee78
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_nys_standards
+field_name: field_nys_standards
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: MS-SL1
+      label: 'MS-SL1, Comprehension and collaboration'
+    -
+      value: MS-SL6
+      label: 'MS-SL6, Presentation of knowledge and ideas'
+    -
+      value: MS-LS1-5
+      label: 'MS-LS1-5, Influence of environment on growth'
+    -
+      value: MS-LS1-6
+      label: 'MS-LS1-6, Role of photosynthesis in energy cycle'
+    -
+      value: MS-LS2-1
+      label: 'MS-LS2-1, Ecosystems: cause and effect relationships'
+    -
+      value: MS-LS2-3
+      label: 'MS-LS2-3, Ecosystems: cycling and flow of matter'
+    -
+      value: MS-LS2-4
+      label: 'MS-LS2-4, Ecosystems: Impact of change on populations'
+    -
+      value: HS-LS1-5
+      label: 'HS-LS1-5, Use a model...photosynthesis transforms light energy'
+    -
+      value: HS-LS2-2
+      label: 'HS-LS2-2, Use mathematical representations...'
+    -
+      value: HS-LS4-5
+      label: 'HS-LS4-5, Evaluate the evidences supporting claims...'
+    -
+      value: HS-LS4-6
+      label: 'HS-LS4-6, Create or revise a simulation to test a solution...'
+    -
+      value: HS-LS4-7
+      label: 'HS-LS4-7, Design, evaluate and refine a solution...'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

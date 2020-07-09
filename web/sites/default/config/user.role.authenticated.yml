@@ -1,0 +1,32 @@
+uuid: 02cb364f-9e47-4043-b2b9-9d7f595ff723
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access archive'
+  - 'access campaign monitor registration'
+  - 'access campaign monitor user'
+  - 'access comments'
+  - 'access content'
+  - 'access own webform results'
+  - 'access own webform submissions'
+  - 'access site-wide contact form'
+  - 'access user profiles'
+  - 'cancel account'
+  - 'change own username'
+  - 'delete own webform submissions'
+  - 'edit own main profile'
+  - 'edit own webform submissions'
+  - 'flag northworthy'
+  - 'join newsletter'
+  - 'search content'
+  - 'subscribe to comments'
+  - 'unflag northworthy'
+  - 'view date repeats'
+  - 'view own main profile'

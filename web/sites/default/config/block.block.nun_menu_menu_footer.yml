@@ -1,0 +1,25 @@
+uuid: bd37eb0f-d4e5-4227-8567-7accae459456
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-footer
+  module:
+    - system
+  theme:
+    - nun
+id: nun_menu_menu_footer
+theme: nun
+region: footer
+weight: -6
+provider: null
+plugin: 'system_menu_block:menu-footer'
+settings:
+  id: broken
+  label: 'Footer Menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

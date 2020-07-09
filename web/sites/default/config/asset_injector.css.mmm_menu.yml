@@ -1,0 +1,11 @@
+uuid: eaddfccd-e82d-4056-8b66-a27974f40167
+langcode: en
+status: true
+dependencies: {  }
+id: mmm_menu
+label: 'MMM Menu'
+code: "#block-monitormymaple-2 {\r\n    padding-left: 3.5em;\r\n    background: url(/themes/custom/nun/images/mmm-logo.png);\r\n    background-repeat: no-repeat;\r\n    background-size: auto 3em;\r\n    border-bottom: 1px solid orange;\r\n    min-height: 3em;\r\n}\r\n#block-monitormymaple-2 h2 {\r\n    display: inline-block;\r\n    float: left;\r\n    margin: 5px 10px;\r\n}\r\n#block-monitormymaple-2 .menu {\r\n    display: inline-block;\r\n    float: right;\r\n}\r\n#block-monitormymaple-2 .menu li {\r\n    display: inline-block;\r\n}\r\n#block-monitormymaple-2 .menu li.active {\r\n    background: #eee;\r\n}\r\n#block-monitormymaple-2 .menu li.active a {\r\n    color: #333;\r\n}"
+media: all
+preprocess: true
+conditions: {  }
+conditions_require_all: true

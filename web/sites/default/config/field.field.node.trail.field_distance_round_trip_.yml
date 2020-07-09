@@ -1,0 +1,23 @@
+uuid: b12f2b9a-04c3-42c4-8084-1a3d6cffa109
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_distance_round_trip_
+    - node.type.trail
+id: node.trail.field_distance_round_trip_
+field_name: field_distance_round_trip_
+entity_type: node
+bundle: trail
+label: 'Distance (round trip)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

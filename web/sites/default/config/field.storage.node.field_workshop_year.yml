@@ -1,0 +1,52 @@
+uuid: c1595b5c-fdb9-4ed2-998a-953872f771d4
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_workshop_year
+field_name: field_workshop_year
+entity_type: node
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 2012
+      label: '2012'
+    -
+      value: 2013
+      label: '2013'
+    -
+      value: 2014
+      label: '2014'
+    -
+      value: 2015
+      label: '2015'
+    -
+      value: 2016
+      label: '2016'
+    -
+      value: 2017
+      label: '2017'
+    -
+      value: 2018
+      label: '2018'
+    -
+      value: 2019
+      label: '2019'
+    -
+      value: 2020
+      label: '2020'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

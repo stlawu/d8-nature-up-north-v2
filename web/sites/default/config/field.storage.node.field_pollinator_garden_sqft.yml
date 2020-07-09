@@ -1,0 +1,24 @@
+uuid: 148af2f8-7a6f-44e8-99d2-f8c9bf63aa5e
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_pollinator_garden_sqft
+field_name: field_pollinator_garden_sqft
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

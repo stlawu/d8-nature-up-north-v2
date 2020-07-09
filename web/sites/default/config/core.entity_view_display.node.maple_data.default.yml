@@ -1,0 +1,83 @@
+uuid: 9e80896b-16e8-4a4e-bcb5-755fe038653b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.maple_data.body
+    - field.field.node.maple_data.field_maple_circumference
+    - field.field.node.maple_data.field_maple_damages_diseases
+    - field.field.node.maple_data.field_maple_habitat
+    - field.field.node.maple_data.field_maple_near_structure
+    - field.field.node.maple_data.field_maple_shading
+    - field.field.node.maple_data.field_maple_tree
+    - node.type.maple_data
+  module:
+    - options
+    - text
+    - user
+id: node.maple_data.default
+targetEntityType: node
+bundle: maple_data
+mode: default
+content:
+  body:
+    label: above
+    type: text_default
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_maple_circumference:
+    weight: 4
+    label: inline
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_maple_damages_diseases:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_maple_habitat:
+    weight: 2
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_maple_near_structure:
+    weight: 1
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_maple_shading:
+    weight: 3
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_maple_tree:
+    weight: 0
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

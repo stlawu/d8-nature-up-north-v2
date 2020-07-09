@@ -1,0 +1,19 @@
+uuid: 7598b1bf-9722-48e7-8d9c-05ce9e1d40ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_area_of_study
+    - node.type.profile
+id: node.profile.field_area_of_study
+field_name: field_area_of_study
+entity_type: node
+bundle: profile
+label: 'Area of Study'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

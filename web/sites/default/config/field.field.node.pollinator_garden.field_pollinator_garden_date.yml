@@ -1,0 +1,21 @@
+uuid: b6760a8c-5e82-4044-977f-d275311a4cef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pollinator_garden_date
+    - node.type.pollinator_garden
+  module:
+    - datetime
+id: node.pollinator_garden.field_pollinator_garden_date
+field_name: field_pollinator_garden_date
+entity_type: node
+bundle: pollinator_garden
+label: 'Approximately when did you plant your pollinator garden?'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

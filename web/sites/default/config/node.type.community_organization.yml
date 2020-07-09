@@ -1,0 +1,11 @@
+uuid: 08358660-3b47-4573-bab8-9ecb8cc6ba74
+langcode: en
+status: true
+dependencies: {  }
+name: 'Community Organization'
+type: community_organization
+description: 'A community organization that does something environmental/place based;'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

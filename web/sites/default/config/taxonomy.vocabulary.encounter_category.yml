@@ -1,0 +1,8 @@
+uuid: 60b6df0f-64fb-4bfa-bf56-5066ed6042d4
+langcode: en
+status: true
+dependencies: {  }
+name: 'Encounter category'
+vid: encounter_category
+description: 'Encounter category'
+weight: -8

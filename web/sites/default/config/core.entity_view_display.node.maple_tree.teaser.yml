@@ -1,0 +1,31 @@
+uuid: 5d723ad1-49a3-4169-b7ae-a2d9220f59bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.maple_tree.body
+    - field.field.node.maple_tree.field_maple_location
+    - field.field.node.maple_tree.field_maple_species
+    - node.type.maple_tree
+  module:
+    - user
+id: node.maple_tree.teaser
+targetEntityType: node
+bundle: maple_tree
+mode: teaser
+content:
+  field_maple_species:
+    type: entity_reference_label
+    weight: 0
+    region: content
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_maple_location: true
+  links: true
+  maple_tree_data_entity_view_1: true
+  maple_tree_observations_entity_view_1: true

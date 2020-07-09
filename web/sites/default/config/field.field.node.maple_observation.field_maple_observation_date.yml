@@ -1,0 +1,21 @@
+uuid: 0f5c2f3e-2343-499d-9c21-ef1e2c89997b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_maple_observation_date
+    - node.type.maple_observation
+  module:
+    - datetime
+id: node.maple_observation.field_maple_observation_date
+field_name: field_maple_observation_date
+entity_type: node
+bundle: maple_observation
+label: 'Observation date'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

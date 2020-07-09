@@ -1,0 +1,22 @@
+uuid: 089c78d2-052a-47bd-86d8-de72ede41023
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - nun
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: nun_breadcrumbs
+theme: nun
+region: header
+weight: -8
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

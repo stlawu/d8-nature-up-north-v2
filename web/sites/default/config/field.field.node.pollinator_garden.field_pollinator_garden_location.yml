@@ -1,0 +1,21 @@
+uuid: 8ee5cba7-7719-4a6d-93f7-f8a5fae77a61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pollinator_garden_location
+    - node.type.pollinator_garden
+  module:
+    - geolocation
+id: node.pollinator_garden.field_pollinator_garden_location
+field_name: field_pollinator_garden_location
+entity_type: node
+bundle: pollinator_garden
+label: 'Pollinator Garden Map Location'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

@@ -1,0 +1,19 @@
+uuid: affe038e-93be-4f77-9337-0c3e457fc6d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pollinator_other_space
+    - node.type.pollinator_garden
+id: node.pollinator_garden.field_pollinator_other_space
+field_name: field_pollinator_other_space
+entity_type: node
+bundle: pollinator_garden
+label: 'Other Space'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

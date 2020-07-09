@@ -1,0 +1,11 @@
+uuid: 5443a917-c5d3-4f06-b848-88cb262954ce
+langcode: en
+status: true
+dependencies: {  }
+id: export_button
+label: 'Export Button'
+code: ".csv-feed .feed-icon {\r\n    min-width: 3em;\r\n    background-size: 3em;\r\n}"
+media: all
+preprocess: true
+conditions: {  }
+conditions_require_all: true

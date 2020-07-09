@@ -1,0 +1,47 @@
+unprotected_forms:
+  - user_login_form
+  - search_form
+  - search_block_form
+  - views_exposed_form
+  - honeypot_settings_form
+protect_all_forms: false
+log: true
+element_name: url
+time_limit: 2
+expire: 300
+form_settings:
+  user_register_form: true
+  user_pass: true
+  contact_message_contact_form: true
+  contact_message_feedback_form: true
+  contact_message_personal_form: true
+  node_announcement__form: false
+  node_article_form: false
+  node_blog_form: false
+  node_community_organization_form: false
+  node_educator_resource_form: false
+  node_encounter_form: true
+  node_event_form: false
+  node_maple_data_form: false
+  node_maple_observation_form: false
+  node_maple_tree_form: false
+  node_page_form: false
+  node_partner_form: false
+  node_peel_away_image_form: false
+  node_species_account_test_form: false
+  node_trail_form: false
+  node_trail_head_form: false
+  comment_comment_form: true
+  comment_comment_node_announcement__form: true
+  comment_comment_node_article_form: true
+  comment_comment_node_blog_form: true
+  comment_comment_node_educator_resource_form: true
+  comment_comment_node_encounter_form: true
+  comment_comment_node_event_form: true
+  comment_comment_node_page_form: true
+  comment_comment_node_partner_form: true
+  comment_comment_node_peel_away_image_form: true
+  comment_comment_node_trail_form: true
+  comment_comment_node_trail_head_form: true
+_core:
+  default_config_hash: 9bVDfWSa_In6VzTXmy04jJ_3ZQobihKjO9isuuUCPaw

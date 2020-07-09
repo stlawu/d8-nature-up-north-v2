@@ -1,0 +1,20 @@
+uuid: c981cf91-2722-4dfd-b878-7a10e91d6170
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_young_born
+field_name: field_young_born
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

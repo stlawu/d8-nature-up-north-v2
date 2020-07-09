@@ -1,0 +1,21 @@
+uuid: 2db44e08-47c3-4743-8664-68d9d4e52129
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pollinator_garden_space
+    - node.type.pollinator_garden
+  module:
+    - options
+id: node.pollinator_garden.field_pollinator_garden_space
+field_name: field_pollinator_garden_space
+entity_type: node
+bundle: pollinator_garden
+label: 'What space is being used for your pollinator garden? (Select all that apply)'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

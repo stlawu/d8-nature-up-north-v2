@@ -1,0 +1,28 @@
+uuid: 09fee064-66c2-4f44-9169-4d61a8a41faa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_maple_tree
+    - node.type.maple_observation
+    - node.type.maple_tree
+id: node.maple_observation.field_maple_tree
+field_name: field_maple_tree
+entity_type: node
+bundle: maple_observation
+label: Tree
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      maple_tree: maple_tree
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,22 @@
+uuid: d59553ea-1047-4275-99a2-d914cfc18d07
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: educator_resource
+label: 'Educator Resource'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  287db9ac-88a7-4fbf-b167-3de7d98ddaab:
+    id: node_type
+    bundles:
+      educator_resource: educator_resource
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 287db9ac-88a7-4fbf-b167-3de7d98ddaab
+selection_logic: and
+weight: -5
+relationships: {  }

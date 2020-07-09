@@ -1,0 +1,21 @@
+uuid: be0698ff-5bcb-4427-81c3-45329517d634
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_class_reference
+    - node.type.blog
+id: node.blog.field_class_reference
+field_name: field_class_reference
+entity_type: node
+bundle: blog
+label: Class
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference

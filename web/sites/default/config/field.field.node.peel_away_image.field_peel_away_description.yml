@@ -1,0 +1,21 @@
+uuid: c2587bce-3f8b-41a6-8615-d1574bcbac11
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_peel_away_description
+    - node.type.peel_away_image
+  module:
+    - text
+id: node.peel_away_image.field_peel_away_description
+field_name: field_peel_away_description
+entity_type: node
+bundle: peel_away_image
+label: Description
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

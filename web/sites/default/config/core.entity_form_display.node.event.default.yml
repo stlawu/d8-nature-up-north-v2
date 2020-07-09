@@ -1,0 +1,408 @@
+uuid: 087c7344-7222-4ea2-bca9-10dc2af0a120
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.event.body
+    - field.field.node.event.comment_node_event
+    - field.field.node.event.field_add_your_organization
+    - field.field.node.event.field_additional_info
+    - field.field.node.event.field_appropriate_ages
+    - field.field.node.event.field_attachements
+    - field.field.node.event.field_contact_person
+    - field.field.node.event.field_event_address
+    - field.field.node.event.field_event_category
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_email
+    - field.field.node.event.field_event_image
+    - field.field.node.event.field_event_location
+    - field.field.node.event.field_event_telephone
+    - field.field.node.event.field_hidden_content_theme
+    - field.field.node.event.field_instructions
+    - field.field.node.event.field_more_info_url
+    - field.field.node.event.field_skill_level
+    - image.style.thumbnail
+    - node.type.event
+  module:
+    - address
+    - datetime_range
+    - field_group
+    - file
+    - geolocation
+    - image
+    - link
+    - markup
+    - path
+    - telephone
+    - text
+third_party_settings:
+  field_group:
+    group_instructions_group:
+      children:
+        - group_instructions
+      parent_name: ''
+      weight: 0
+      format_type: accordion
+      format_settings:
+        id: ''
+        classes: 'group-instructions-group field-group-accordion'
+        effect: none
+      label: 'Instructions group'
+      region: content
+    group_event_group:
+      children:
+        - group_event_description
+        - group_event_category
+        - group_event_image
+        - group_sponsoring_org
+        - group_participation
+        - group_event_details
+        - group_more_information
+      parent_name: ''
+      weight: 1
+      format_type: accordion
+      format_settings:
+        id: ''
+        classes: ' group-event-group field-group-accordion'
+        effect: none
+      label: 'Event group'
+      region: content
+    group_event_description:
+      children:
+        - title
+        - body
+      parent_name: group_event_group
+      weight: 5
+      format_type: accordion_item
+      format_settings:
+        id: ''
+        classes: ' group-event-description field-group-accordion-item'
+        formatter: open
+        required_fields: true
+        description: ''
+      label: 'Event description'
+      region: content
+    group_event_category:
+      children:
+        - field_event_category
+      parent_name: group_event_group
+      weight: 6
+      format_type: accordion_item
+      format_settings:
+        id: ''
+        classes: ' group-event-information field-group-accordion-item'
+        formatter: closed
+        required_fields: true
+        description: ''
+      label: 'Event category'
+      region: content
+    group_event_image:
+      children:
+        - field_event_image
+      parent_name: group_event_group
+      weight: 7
+      format_type: accordion_item
+      format_settings:
+        id: ''
+        classes: ' group-event-image field-group-accordion-item'
+        formatter: closed
+        required_fields: true
+        description: ''
+      label: 'Event image'
+      region: content
+    group_sponsoring_org:
+      children:
+        - field_add_your_organization
+      parent_name: group_event_group
+      weight: 8
+      format_type: accordion_item
+      format_settings:
+        id: ''
+        classes: ' group-sponsor-org field-group-accordion-item'
+        formatter: closed
+        required_fields: true
+        description: ''
+      label: 'Sponsoring organization'
+      region: content
+    group_participation:
+      children:
+        - field_appropriate_ages
+        - field_skill_level
+      parent_name: group_event_group
+      weight: 9
+      format_type: accordion_item
+      format_settings:
+        id: ''
+        classes: ' group-participation field-group-accordion-item'
+        formatter: closed
+        required_fields: true
+        description: ''
+      label: 'Who may participate?'
+      region: content
+    group_event_details:
+      children:
+        - field_event_location
+        - field_event_address
+        - field_event_email
+        - field_event_telephone
+        - field_event_date
+        - field_contact_person
+        - field_additional_info
+      parent_name: group_event_group
+      weight: 10
+      format_type: accordion_item
+      format_settings:
+        formatter: open
+        required_fields: true
+        id: ''
+        classes: ' group-eventdetails field-group-accordion-item'
+      label: 'Event details'
+      region: content
+    group_more_information:
+      children:
+        - field_more_info_url
+        - field_attachements
+      parent_name: group_event_group
+      weight: 11
+      format_type: accordion_item
+      format_settings:
+        id: ''
+        classes: ' group-more-information field-group-accordion-item'
+        formatter: closed
+        required_fields: true
+        description: ''
+      label: 'For more information'
+      region: content
+    group_instructions:
+      children:
+        - field_instructions
+      parent_name: group_instructions_group
+      weight: 10
+      format_type: details
+      format_settings:
+        open: true
+        required_fields: true
+        id: ''
+        classes: ''
+      label: Instructions
+      region: content
+id: node.event.default
+targetEntityType: node
+bundle: event
+mode: default
+content:
+  body:
+    weight: 2
+    type: text_textarea_with_summary
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  comment:
+    type: comment_default
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_add_your_organization:
+    weight: 4
+    type: entity_reference_autocomplete
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    region: content
+  field_additional_info:
+    weight: 41
+    type: text_textfield
+    settings:
+      size: 255
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_appropriate_ages:
+    weight: 45
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_attachements:
+    weight: 54
+    type: file_generic
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    region: content
+  field_contact_person:
+    weight: 40
+    type: text_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_event_address:
+    weight: 35
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_event_category:
+    weight: 9
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_event_date:
+    weight: 39
+    type: daterange_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_event_email:
+    weight: 36
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_event_image:
+    weight: 11
+    type: image_image
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    region: content
+  field_event_location:
+    weight: 34
+    settings:
+      default_longitude: '-74.331616'
+      default_latitude: '43.850214'
+      populate_address_field: '1'
+      target_address_field: field_event_address
+      explicite_actions_address_field: '1'
+      google_map_settings:
+        height: 400px
+        width: 100%
+        type: ROADMAP
+        zoom: '8'
+        maxZoom: 18
+        minZoom: 0
+        mapTypeControl: 1
+        streetViewControl: 1
+        zoomControl: 1
+        scrollwheel: 1
+        gestureHandling: auto
+        draggable: 1
+        style: ''
+        info_auto_display: 1
+        marker_icon_path: ''
+        disableAutoPan: 1
+        rotateControl: 0
+        fullscreenControl: 0
+        preferScrollingToZooming: 0
+        disableDoubleClickZoom: 0
+      auto_client_location: '0'
+      auto_client_location_marker: '0'
+      allow_override_map_settings: 0
+    third_party_settings: {  }
+    type: geolocation_googlegeocoder
+    region: content
+  field_event_telephone:
+    weight: 37
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_hidden_content_theme:
+    weight: 122
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_instructions:
+    weight: 62
+    type: markup
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_more_info_url:
+    weight: 53
+    type: link_default
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    region: content
+  field_skill_level:
+    weight: 47
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  path:
+    type: path
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 121
+    third_party_settings: {  }
+    region: content
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 6
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  comment_node_event: true

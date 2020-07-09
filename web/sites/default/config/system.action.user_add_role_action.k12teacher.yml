@@ -1,0 +1,14 @@
+uuid: 62df60ed-88af-4344-bff1-b4753c079b9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.k12teacher
+  module:
+    - user
+id: user_add_role_action.k12teacher
+label: 'Add the K12Teacher role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: k12teacher

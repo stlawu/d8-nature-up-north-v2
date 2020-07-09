@@ -1,0 +1,20 @@
+uuid: dd2200f4-3ecb-4b87-a93e-49a07c041282
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_domain
+field_name: field_domain
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

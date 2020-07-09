@@ -1,0 +1,46 @@
+uuid: 787d8be9-0f86-4cc1-b8c6-651ca1baa9c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.pollinator_garden.field_first_name
+    - field.field.node.pollinator_garden.field_last_name
+    - field.field.node.pollinator_garden.field_pollinator_garden
+    - field.field.node.pollinator_garden.field_pollinator_garden_date
+    - field.field.node.pollinator_garden.field_pollinator_garden_day
+    - field.field.node.pollinator_garden.field_pollinator_garden_image
+    - field.field.node.pollinator_garden.field_pollinator_garden_location
+    - field.field.node.pollinator_garden.field_pollinator_garden_month
+    - field.field.node.pollinator_garden.field_pollinator_garden_seeds
+    - field.field.node.pollinator_garden.field_pollinator_garden_space
+    - field.field.node.pollinator_garden.field_pollinator_garden_sqft
+    - field.field.node.pollinator_garden.field_pollinator_garden_year
+    - field.field.node.pollinator_garden.field_pollinator_other_seed_src
+    - node.type.pollinator_garden
+  module:
+    - user
+id: node.pollinator_garden.teaser
+targetEntityType: node
+bundle: pollinator_garden
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_first_name: true
+  field_last_name: true
+  field_pollinator_garden: true
+  field_pollinator_garden_date: true
+  field_pollinator_garden_day: true
+  field_pollinator_garden_image: true
+  field_pollinator_garden_location: true
+  field_pollinator_garden_month: true
+  field_pollinator_garden_seeds: true
+  field_pollinator_garden_space: true
+  field_pollinator_garden_sqft: true
+  field_pollinator_garden_year: true
+  field_pollinator_other_seed_src: true

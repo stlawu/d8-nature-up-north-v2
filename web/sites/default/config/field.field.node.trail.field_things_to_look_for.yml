@@ -1,0 +1,21 @@
+uuid: 55c1503d-33b6-4d4c-abab-61607d7b5ec9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_things_to_look_for
+    - node.type.trail
+  module:
+    - text
+id: node.trail.field_things_to_look_for
+field_name: field_things_to_look_for
+entity_type: node
+bundle: trail
+label: 'Things to Look For'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

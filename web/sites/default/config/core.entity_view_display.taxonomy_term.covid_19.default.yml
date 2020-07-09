@@ -1,0 +1,21 @@
+uuid: 70728d51-2922-4ae8-831c-b284838bd468
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.covid_19
+  module:
+    - text
+id: taxonomy_term.covid_19.default
+targetEntityType: taxonomy_term
+bundle: covid_19
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

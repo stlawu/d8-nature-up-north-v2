@@ -1,0 +1,47 @@
+uuid: 243c40d7-4660-428f-b33b-6e1d837a8e3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.recent_encounters
+  module:
+    - ctools
+    - system
+    - views
+  theme:
+    - nun
+id: views_block__recent_encounters_recent_encounters
+theme: nun
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:recent_encounters-recent_encounters'
+settings:
+  id: 'views_block:recent_encounters-recent_encounters'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "/node/add/*\r\n/feedback\r\n/encounter/*\r\n/encounters-map\r\n<front>\r\n/node/11705"
+    negate: true
+    context_mapping: {  }
+  'entity_bundle:webform_submission':
+    id: 'entity_bundle:webform_submission'
+    bundles:
+      contact: contact
+    negate: true
+    context_mapping:
+      webform_submission: '@webform.webform_submission_route_context:webform_submission'
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      maple_data: maple_data
+      maple_observation: maple_observation
+      maple_tree: maple_tree
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'

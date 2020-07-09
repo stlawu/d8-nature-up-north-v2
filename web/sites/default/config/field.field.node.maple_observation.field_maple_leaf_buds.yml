@@ -1,0 +1,21 @@
+uuid: b82d56f5-8d94-4463-b28a-c65d63a13c23
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_maple_leaf_buds
+    - node.type.maple_observation
+  module:
+    - options
+id: node.maple_observation.field_maple_leaf_buds
+field_name: field_maple_leaf_buds
+entity_type: node
+bundle: maple_observation
+label: 'Do you see breaking leaf buds?'
+description: 'Mark "Yes" if one or more of the buds has broken so that you can see its green tip.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

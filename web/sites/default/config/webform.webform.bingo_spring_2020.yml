@@ -1,0 +1,191 @@
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+weight: 0
+uid: 17621
+template: false
+archive: false
+id: bingo_spring_2020
+title: 'Love Your Mother Bingo'
+description: ''
+category: ''
+elements: "heading:\n  '#type': processed_text\n  '#text': |\n    <p><em><strong>50 Years of Earth Day</strong></em></p>\n    \n  '#format': full_html\nthank_you_for_playing_:\n  '#type': item\n  '#title': \"Thank you for playing! Check off the tasks you completed on the bingo grid below\\_and attach your photos. Those who get bingo and input their mailing address\\_will win Nature Up North merchandise.\\_Good luck and happy Earth Month!\"\nbingo_message:\n  '#type': container\n  bingo_horizontally_1:\n    '#type': webform_markup\n    '#states':\n      visible:\n        ':input[name=\"1_1\"]':\n          checked: true\n        ':input[name=\"1_2\"]':\n          checked: true\n        ':input[name=\"1_3\"]':\n          checked: true\n        ':input[name=\"1_4\"]':\n          checked: true\n        ':input[name=\"1_5\"]':\n          checked: true\n    '#markup': '<p><em><strong>BINGO!</strong></em> - Row 1</p>'\n  bingo_horizontally_2:\n    '#type': webform_markup\n    '#states':\n      visible:\n        ':input[name=\"2_1\"]':\n          checked: true\n        ':input[name=\"2_2\"]':\n          checked: true\n        ':input[name=\"2_3\"]':\n          checked: true\n        ':input[name=\"2_4\"]':\n          checked: true\n        ':input[name=\"2_5\"]':\n          checked: true\n    '#markup': '<p><em><strong>BINGO!</strong></em>&nbsp;- Row 2</p>'\n  bingo_horizontally_3:\n    '#type': webform_markup\n    '#states':\n      visible:\n        ':input[name=\"3_1\"]':\n          checked: true\n        ':input[name=\"3_2\"]':\n          checked: true\n        ':input[name=\"3_4\"]':\n          checked: true\n        ':input[name=\"3_5\"]':\n          checked: true\n    '#markup': '<p><em><strong>BINGO!</strong></em>&nbsp;- Row 3</p>'\n  bingo_horizontally_4:\n    '#type': webform_markup\n    '#states':\n      visible:\n        ':input[name=\"4_1\"]':\n          checked: true\n        ':input[name=\"4_2\"]':\n          checked: true\n        ':input[name=\"4_3\"]':\n          checked: true\n        ':input[name=\"4_4\"]':\n          checked: true\n        ':input[name=\"4_5\"]':\n          checked: true\n    '#markup': '<p><em><strong>BINGO!</strong></em> - Row 4</p>'\n  bingo_horizontally_5:\n    '#type': webform_markup\n    '#states':\n      visible:\n        ':input[name=\"5_1\"]':\n          checked: true\n        ':input[name=\"5_2\"]':\n          checked: true\n        ':input[name=\"5_3\"]':\n          checked: true\n        ':input[name=\"5_4\"]':\n          checked: true\n        ':input[name=\"5_5\"]':\n          checked: true\n    '#markup': '<p><em><strong>BINGO!</strong></em> - Row 5</p>'\n  bingo_vertically_1:\n    '#type': webform_markup\n    '#states':\n      visible:\n        ':input[name=\"1_1\"]':\n          checked: true\n        ':input[name=\"2_1\"]':\n          checked: true\n        ':input[name=\"3_1\"]':\n          checked: true\n        ':input[name=\"4_1\"]':\n          checked: true\n        ':input[name=\"5_1\"]':\n          checked: true\n    '#markup': '<p><em><strong>BINGO!</strong></em> - Column 1</p>'\n  bingo_vertically_2:\n    '#type': webform_markup\n    '#states':\n      visible:\n        ':input[name=\"1_2\"]':\n          checked: true\n        ':input[name=\"2_2\"]':\n          checked: true\n        ':input[name=\"3_2\"]':\n          checked: true\n        ':input[name=\"4_2\"]':\n          checked: true\n        ':input[name=\"5_2\"]':\n          checked: true\n    '#markup': '<p><em><strong>BINGO!</strong></em> - Column 2</p>'\n  bingo_vertically_3:\n    '#type': webform_markup\n    '#states':\n      visible:\n        ':input[name=\"1_3\"]':\n          checked: true\n        ':input[name=\"2_3\"]':\n          checked: true\n        ':input[name=\"4_3\"]':\n          checked: true\n        ':input[name=\"5_3\"]':\n          checked: true\n    '#markup': '<p><em><strong>BINGO!</strong></em> - Column 3</p>'\n  bingo_vertically_4:\n    '#type': webform_markup\n    '#states':\n      visible:\n        ':input[name=\"1_4\"]':\n          checked: true\n        ':input[name=\"2_4\"]':\n          checked: true\n        ':input[name=\"3_4\"]':\n          checked: true\n        ':input[name=\"4_4\"]':\n          checked: true\n        ':input[name=\"5_4\"]':\n          checked: true\n    '#markup': '<p><em><strong>BINGO!</strong></em> - Column 4</p>'\n  bingo_vertically_5:\n    '#type': webform_markup\n    '#states':\n      visible:\n        ':input[name=\"1_5\"]':\n          checked: true\n        ':input[name=\"2_5\"]':\n          checked: true\n        ':input[name=\"3_5\"]':\n          checked: true\n        ':input[name=\"4_5\"]':\n          checked: true\n        ':input[name=\"5_5\"]':\n          checked: true\n    '#markup': '<p><em><strong>BINGO!</strong></em> - Column 5</p>'\n  bingo_diagonally_1:\n    '#type': webform_markup\n    '#states':\n      visible:\n        ':input[name=\"1_1\"]':\n          checked: true\n        ':input[name=\"2_2\"]':\n          checked: true\n        ':input[name=\"4_4\"]':\n          checked: true\n        ':input[name=\"5_5\"]':\n          checked: true\n    '#markup': '<p><em><strong>BINGO!</strong></em> - Diagonally</p>'\n  bingo_diagonally_2:\n    '#type': webform_markup\n    '#states':\n      visible:\n        ':input[name=\"5_1\"]':\n          checked: true\n        ':input[name=\"4_2\"]':\n          checked: true\n        ':input[name=\"2_4\"]':\n          checked: true\n        ':input[name=\"1_5\"]':\n          checked: true\n    '#markup': '<p><em><strong>BINGO!</strong></em> - Diagonally</p>'\nbingo:\n  '#type': container\n  row_1:\n    '#type': webform_flexbox\n    '1_1':\n      '#type': checkbox\n      '#title': 'Identify a Tree'\n    '1_2':\n      '#type': checkbox\n      '#title': 'Post an Encounter on natureupnorth.org'\n      '#description': 'To share a photo, <a href=\"https://www.natureupnorth.org/encounters\">visit this page</a>'\n    '1_3':\n      '#type': checkbox\n      '#title': 'Meatless Monday'\n    '1_4':\n      '#type': checkbox\n      '#title': 'Read a Nature Up North blog'\n      '#description': 'To read a blog, <a href=\"https://www.natureupnorth.org/blogs\">visit this page</a>'\n    '1_5':\n      '#type': checkbox\n      '#title': 'Go on a Nature Walk'\n      '#description': 'To find a trail near you, <a href=\"https://www.natureupnorth.org/trails\">visit this page</a>'\n  row_2:\n    '#type': webform_flexbox\n    '2_1':\n      '#type': checkbox\n      '#title': 'Start a Nature Journal'\n    '2_2':\n      '#type': checkbox\n      '#title': 'Cook a zero waste meal'\n    '2_3':\n      '#type': checkbox\n      '#title': 'Take part in the Virtual 5th Annual Earth Day 7k Walk/Run'\n      '#description': 'To find out more and register, <a href=\"https://www.natureupnorth.org/justmynature/mposhe14/earth-day-7k-has-gone-virtual\">visit this page</a>'\n    '2_4':\n      '#type': checkbox\n      '#title': 'Visit a North Country waterfall'\n    '2_5':\n      '#type': checkbox\n      '#title': 'Turn the faucet off while brushing your teeth'\n  row_3:\n    '#type': webform_flexbox\n    '3_1':\n      '#type': checkbox\n      '#title': 'Record data on a maple tree for Monitor My Maple'\n      '#description': 'To learn how, <a href=\"https://www.natureupnorth.org/monitor-my-maple-project\">visit this page</a>'\n    '3_2':\n      '#type': checkbox\n      '#title': 'Plant a new plant in your yard'\n    '3_3':\n      '#type': checkbox\n      '#title': 'Free space'\n    '3_4':\n      '#type': checkbox\n      '#title': 'Find a NUN fairy house and pose a question for a fairy'\n      '#description': 'To find clues to the houses, <a href=\"https://www.natureupnorth.org/justmynature/thimble-hickory-and-blossom-dewdrop/fairies-are-back-spring-2020\">visit this page</a>'\n    '3_5':\n      '#type': checkbox\n      '#title': 'Watch a NUN live-stream reading of The Lorax by Dr. Seuss'\n  row_4:\n    '#type': webform_flexbox\n    '4_1':\n      '#type': checkbox\n      '#title': 'Go plastic free for at least one day'\n    '4_2':\n      '#type': checkbox\n      '#title': 'Make a bird feeder (instructions can be found at natureupnorth.org/blogs)'\n      '#description': 'For instructions, <a href=\"https://www.natureupnorth.org/justmynature/kathryn-jepson/easy-bird-feeder-designs-you-can-make-home\">visit this blog</a>'\n    '4_3':\n      '#type': checkbox\n      '#title': 'Cancel unwanted mail subscriptions'\n    '4_4':\n      '#type': checkbox\n      '#title': 'Record data on a maple tree for Monitor My Maple'\n      '#description': 'To learn how, <a href=\"https://www.natureupnorth.org/monitor-my-maple-project\">visit this page</a>'\n    '4_5':\n      '#type': checkbox\n      '#title': 'Use a reusable water bottle'\n  row_5:\n    '#type': webform_flexbox\n    '5_1':\n      '#type': checkbox\n      '#title': 'Sign up for Nature Up North''s newsletter (email info@natureupnorth.org to sign up)'\n      '#description': 'To sign up, email info@natureupnorth.org'\n    '5_2':\n      '#type': checkbox\n      '#title': 'Take part in one of Nature Up North''s de-stress Monday activities'\n    '5_3':\n      '#type': checkbox\n      '#title': 'Turn off electronics when they are not in use'\n    '5_4':\n      '#type': checkbox\n      '#title': 'Listen to an audiobook'\n    '5_5':\n      '#type': checkbox\n      '#title': 'Post an encounter on natureupnorth.org'\n      '#description': 'To share a photo, <a href=\"https://www.natureupnorth.org/encounters\">visit this page</a>'\nphotos_of_your_activities:\n  '#type': webform_image_file\n  '#title': 'Photos of your activities'\n  '#multiple': 25\n  '#required': true\nname:\n  '#type': textfield\n  '#title': Name\n  '#required': true\nemail:\n  '#type': email\n  '#title': Email\n  '#required': true\nmailing_address:\n  '#type': webform_address\n  '#title': 'Mailing Address'\n  '#description': 'Please share your mailing address so that we may send you Nature Up North merchandise.'\n  '#address_2__access': false\n  '#country__access': false"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: ''
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: both
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_remote_addr: true
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_auto_forward: true
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }
+uuid: df3cb721-d153-4515-b9fb-9f491056b12a

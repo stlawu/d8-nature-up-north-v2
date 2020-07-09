@@ -1,0 +1,21 @@
+uuid: 49eb858d-02f4-414a-ac1d-95e30104ffb8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_encounter_date
+    - node.type.encounter
+  module:
+    - datetime
+id: node.encounter.field_encounter_date
+field_name: field_encounter_date
+entity_type: node
+bundle: encounter
+label: 'Date of your encounter (may not be today)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

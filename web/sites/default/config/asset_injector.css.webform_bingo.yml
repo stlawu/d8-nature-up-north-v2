@@ -1,0 +1,11 @@
+uuid: a78f5c96-320a-4bd2-bb6d-befd81839bbb
+langcode: en
+status: true
+dependencies: {  }
+id: webform_bingo
+label: 'Webform Bingo'
+code: "#edit-bingo .webform-flexbox {\r\n  margin: 0;\r\n  border-bottom: 2px solid green;\r\n}\r\n#edit-bingo .webform-flexbox:first-child {\r\n  border-top: 2px solid green;\r\n}\r\n#edit-bingo .webform-flexbox > div,\r\n#edit-bingo .webform-flexbox > div > div {\r\n  margin: 0;\r\n}\r\n#edit-bingo .webform-flex {\r\n  border-right: 2px solid green;\r\n}\r\n#edit-bingo .webform-flex:first-child {\r\n  border-left: 2px solid green;\r\n}\r\n\r\n#edit-bingo .form-item .option {\r\n  display: flex;\r\n  padding: 5px;\r\n  padding-left: 25px;\r\n  min-height: 100px;\r\n  white-space: break-spaces;\r\n  text-align: center;\r\n  vertical-align: middle;\r\n  border:1px solid white;\r\n  background: lightyellow;\r\n}"
+media: all
+preprocess: true
+conditions: {  }
+conditions_require_all: true

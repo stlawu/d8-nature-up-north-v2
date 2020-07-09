@@ -1,0 +1,21 @@
+uuid: 4d9cea83-d382-45d8-b990-d252de56726c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pollinator_garden_month
+    - node.type.pollinator_garden
+  module:
+    - options
+id: node.pollinator_garden.field_pollinator_garden_month
+field_name: field_pollinator_garden_month
+entity_type: node
+bundle: pollinator_garden
+label: Month
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,23 @@
+uuid: 8d363304-662d-4ad2-8e06-6c34994e46c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_maple_circumference
+    - node.type.maple_data
+id: node.maple_data.field_maple_circumference
+field_name: field_maple_circumference
+entity_type: node
+bundle: maple_data
+label: 'Tree Circumference (inches)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ' inches'
+field_type: decimal

@@ -1,0 +1,32 @@
+uuid: eab47057-210f-4dda-a7a9-40742e72f393
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_associated_workshop
+    - node.type.workshop
+    - node.type.workshop_follow_up
+  content:
+    - 'node:workshop:62fc74c0-83fa-4f4d-874d-0f1de0d3a5ca'
+id: node.workshop_follow_up.field_associated_workshop
+field_name: field_associated_workshop
+entity_type: node
+bundle: workshop_follow_up
+label: 'Associated workshop'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: 62fc74c0-83fa-4f4d-874d-0f1de0d3a5ca
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      workshop: workshop
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

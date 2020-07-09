@@ -1,0 +1,11 @@
+uuid: fac7d71b-a012-4af6-b09b-5c95243d5147
+langcode: en
+status: true
+dependencies: {  }
+name: Announcement
+type: announcement_
+description: 'Announcements, updates, etc. about the Nature Up North website and other on-going events'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

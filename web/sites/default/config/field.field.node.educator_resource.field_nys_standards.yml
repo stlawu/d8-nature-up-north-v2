@@ -1,0 +1,21 @@
+uuid: 82c8df60-2527-4797-b12a-3c5a5e660a39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nys_standards
+    - node.type.educator_resource
+  module:
+    - options
+id: node.educator_resource.field_nys_standards
+field_name: field_nys_standards
+entity_type: node
+bundle: educator_resource
+label: 'NYS Standards'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

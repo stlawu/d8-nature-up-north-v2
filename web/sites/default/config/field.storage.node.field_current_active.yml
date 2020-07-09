@@ -1,0 +1,31 @@
+uuid: d1a73b6e-6857-43f6-9bca-b905233b5754
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_current_active
+field_name: field_current_active
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: Current/Active
+    -
+      value: '0'
+      label: Retired/Inactive
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

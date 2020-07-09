@@ -1,0 +1,109 @@
+uuid: 4b85963c-57b7-45a4-957c-b32b184bd2d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.event.body
+    - field.field.node.event.comment_node_event
+    - field.field.node.event.field_add_your_organization
+    - field.field.node.event.field_additional_info
+    - field.field.node.event.field_appropriate_ages
+    - field.field.node.event.field_attachements
+    - field.field.node.event.field_contact_person
+    - field.field.node.event.field_event_address
+    - field.field.node.event.field_event_category
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_email
+    - field.field.node.event.field_event_image
+    - field.field.node.event.field_event_location
+    - field.field.node.event.field_event_telephone
+    - field.field.node.event.field_instructions
+    - field.field.node.event.field_more_info_url
+    - field.field.node.event.field_skill_level
+    - image.style.medium
+    - node.type.event
+  module:
+    - address
+    - image
+    - nun_helper
+    - telephone
+    - text
+    - user
+id: node.event.teaser
+targetEntityType: node
+bundle: event
+mode: teaser
+content:
+  body:
+    label: visually_hidden
+    weight: 6
+    type: text_summary_or_trimmed
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_event_address:
+    type: address_default
+    weight: 2
+    region: content
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_event_date:
+    label: visually_hidden
+    weight: 1
+    type: nun_daterange_custom
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_event_email:
+    type: basic_string
+    weight: 3
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_event_image:
+    label: hidden
+    weight: 0
+    type: image
+    settings:
+      image_style: medium
+      image_link: content
+    third_party_settings: {  }
+    region: content
+  field_event_location:
+    type: nun_geolocation_maplink
+    weight: 5
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_event_telephone:
+    type: telephone_link
+    weight: 4
+    region: content
+    label: inline
+    settings:
+      title: ''
+    third_party_settings: {  }
+  links:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sharethis:
+    weight: 10
+    region: content
+hidden:
+  comment_node_event: true
+  field_add_your_organization: true
+  field_additional_info: true
+  field_appropriate_ages: true
+  field_attachements: true
+  field_contact_person: true
+  field_event_category: true
+  field_instructions: true
+  field_more_info_url: true
+  field_skill_level: true

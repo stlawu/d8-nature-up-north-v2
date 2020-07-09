@@ -1,0 +1,25 @@
+uuid: b3f30813-31a1-4d68-a3f2-157a4cdc6ac0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_garden_size
+    - node.type.pollinator_garden
+  module:
+    - markup
+id: node.pollinator_garden.field_garden_size
+field_name: field_garden_size
+entity_type: node
+bundle: pollinator_garden
+label: 'Garden Size'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p><em>Note: Each Pollinator Pal seed packet covers approximately a 2 foot by 9 foot (18 square foot) area.</em></p>\r\n"
+    format: basic_html
+field_type: markup

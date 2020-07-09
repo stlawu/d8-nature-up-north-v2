@@ -1,0 +1,11 @@
+uuid: 512637c4-92dc-4580-b68c-84916e68f617
+langcode: en
+status: true
+dependencies: {  }
+name: 'Trail Head'
+type: trail_head
+description: 'An access point to a trail.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

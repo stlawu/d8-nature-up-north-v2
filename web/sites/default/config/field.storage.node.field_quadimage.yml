@@ -1,0 +1,26 @@
+uuid: ec893d16-95bb-4092-9884-cb2cf9f2af70
+langcode: und
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - node
+id: node.field_quadimage
+field_name: field_quadimage
+entity_type: node
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

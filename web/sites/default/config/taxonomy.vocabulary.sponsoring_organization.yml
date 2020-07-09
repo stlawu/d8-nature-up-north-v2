@@ -1,0 +1,8 @@
+uuid: b111514b-f015-4059-8a1e-b37f992e2ae1
+langcode: en
+status: true
+dependencies: {  }
+name: 'Sponsoring organization'
+vid: sponsoring_organization
+description: 'Event sponsoring organizations - used by Event content type'
+weight: -3

@@ -1,0 +1,20 @@
+uuid: cc327d47-14ae-4fd5-854d-2409f23b6594
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_home_state
+field_name: field_home_state
+entity_type: node
+type: text
+settings:
+  max_length: 20
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

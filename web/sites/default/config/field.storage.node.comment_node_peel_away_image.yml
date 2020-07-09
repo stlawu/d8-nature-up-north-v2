@@ -1,0 +1,20 @@
+uuid: 5ea7cd90-8a55-4b3e-8299-c9c1ba3017b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - node
+id: node.comment_node_peel_away_image
+field_name: comment_node_peel_away_image
+entity_type: node
+type: comment
+settings:
+  comment_type: comment_node_peel_away_image
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

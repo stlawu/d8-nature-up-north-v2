@@ -1,0 +1,10 @@
+uuid: 6813abb7-8ae4-4e39-bac7-210a862ce843
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.reference_preview
+label: 'Reference Preview'
+targetEntityType: node
+cache: true

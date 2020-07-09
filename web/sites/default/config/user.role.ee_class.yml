@@ -1,0 +1,28 @@
+uuid: 2c0cddc5-5e5d-4415-8cd4-9b9c5909a36b
+langcode: en
+status: true
+dependencies: {  }
+id: ee_class
+label: EE_class
+weight: 6
+is_admin: null
+permissions:
+  - 'access content'
+  - 'access content overview'
+  - 'access toolbar'
+  - 'bypass honeypot protection'
+  - 'create encounter content'
+  - 'create event content'
+  - 'delete own encounter content'
+  - 'delete own event content'
+  - 'edit own comments'
+  - 'edit own community_organization content'
+  - 'edit own encounter content'
+  - 'edit own event content'
+  - 'post comments'
+  - 'skip comment approval'
+  - 'view advanced help index'
+  - 'view advanced help popup'
+  - 'view advanced help topic'
+  - 'view any main profile'
+  - 'view own unpublished content'

@@ -1,0 +1,18 @@
+uuid: 9d872477-1903-4c4e-9b51-e1b072285f2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.pollinator_garden
+id: node.pollinator_garden.title
+field_name: title
+entity_type: node
+bundle: pollinator_garden
+label: 'Garden Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

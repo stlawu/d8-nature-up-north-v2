@@ -1,0 +1,21 @@
+uuid: 2c708215-ed1e-478c-9bf7-35b3f4308fce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_maple_damages_diseases
+    - node.type.maple_data
+  module:
+    - text
+id: node.maple_data.field_maple_damages_diseases
+field_name: field_maple_damages_diseases
+entity_type: node
+bundle: maple_data
+label: Damages/Diseases
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

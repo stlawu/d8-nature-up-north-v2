@@ -1,0 +1,54 @@
+uuid: 1c418230-746a-48f3-a162-0b4a537d116a
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_usfws_status
+field_name: field_usfws_status
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: endangered
+      label: Endangered
+    -
+      value: threatened
+      label: Threatened
+    -
+      value: EmE
+      label: 'Emergency listing, Endangered'
+    -
+      value: EmT
+      label: 'Emergency listing, Threatened'
+    -
+      value: expe
+      label: 'Experimental population, Essential'
+    -
+      value: expn
+      label: 'Experimental population, Non-essential'
+    -
+      value: sae
+      label: 'Similarity of appearance to an endangered taxon'
+    -
+      value: sat
+      label: 'Similarity of appearance to a threatened taxon'
+    -
+      value: pe
+      label: 'Proposed endangered'
+    -
+      value: pt
+      label: 'Proposed threatened'
+    -
+      value: not_listed
+      label: 'Not listed'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

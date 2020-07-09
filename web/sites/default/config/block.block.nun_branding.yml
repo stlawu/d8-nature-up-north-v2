@@ -1,0 +1,25 @@
+uuid: 4093fa3e-1ed6-4a99-87cb-6c60adc2f30e
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - nun
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: nun_branding
+theme: nun
+region: header
+weight: -7
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

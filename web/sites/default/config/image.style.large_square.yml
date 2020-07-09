@@ -1,0 +1,23 @@
+uuid: 4ed7a359-7b43-4bcf-9c61-6957f9f4489f
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: large_square
+label: 'Large Square'
+effects:
+  3b3bcdba-d4aa-487c-88b8-3af1018e8f57:
+    uuid: 3b3bcdba-d4aa-487c-88b8-3af1018e8f57
+    id: image_scale_and_crop
+    weight: -9
+    data:
+      width: 600
+      height: 600
+      anchor: center-center
+  4bf14c7f-5cc7-4175-901d-217844a4b238:
+    uuid: 4bf14c7f-5cc7-4175-901d-217844a4b238
+    id: image_effects_auto_orient
+    weight: -10
+    data:
+      scan_exif: true

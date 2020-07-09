@@ -1,0 +1,27 @@
+uuid: 08f6bb4b-a370-465f-bbdc-fb05996e24eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file_s_
+    - node.type.educator_resource
+  module:
+    - file
+id: node.educator_resource.field_file_s_
+field_name: field_file_s_
+entity_type: node
+bundle: educator_resource
+label: File(s)
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: ''
+  file_extensions: 'txt doc docx xls xlsx pdf ppt pptx jpg png jar zip'
+  max_filesize: '5 mb'
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

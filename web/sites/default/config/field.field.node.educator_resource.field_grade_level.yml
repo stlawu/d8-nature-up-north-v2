@@ -1,0 +1,21 @@
+uuid: 523aff9a-ca7e-4d40-a2f1-6502ebedc8f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_grade_level
+    - node.type.educator_resource
+  module:
+    - options
+id: node.educator_resource.field_grade_level
+field_name: field_grade_level
+entity_type: node
+bundle: educator_resource
+label: 'Grade level'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

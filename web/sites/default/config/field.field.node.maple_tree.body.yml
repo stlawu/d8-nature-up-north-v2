@@ -1,0 +1,23 @@
+uuid: f10b2206-c1d1-447b-80d0-83c76642778a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.maple_tree
+  module:
+    - text
+id: node.maple_tree.body
+field_name: body
+entity_type: node
+bundle: maple_tree
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

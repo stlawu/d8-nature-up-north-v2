@@ -1,0 +1,29 @@
+uuid: d5d8cf3a-7e0a-44ab-aee7-543028fd9d99
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hidden_content_theme
+    - node.type.page
+    - taxonomy.vocabulary.covid_19
+id: node.page.field_hidden_content_theme
+field_name: field_hidden_content_theme
+entity_type: node
+bundle: page
+label: Hidden_content_theme
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      covid_19: covid_19
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

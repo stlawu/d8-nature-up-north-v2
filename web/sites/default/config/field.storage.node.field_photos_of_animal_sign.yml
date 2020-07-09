@@ -1,0 +1,26 @@
+uuid: a727d2a5-1d52-44a5-8ee2-46e1297a5456
+langcode: und
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - node
+id: node.field_photos_of_animal_sign
+field_name: field_photos_of_animal_sign
+entity_type: node
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

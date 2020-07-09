@@ -1,0 +1,27 @@
+uuid: 320e03e3-2eb9-4233-b649-6b5a73ac1285
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_basic_page_attachment
+    - node.type.page
+  module:
+    - file
+id: node.page.field_basic_page_attachment
+field_name: field_basic_page_attachment
+entity_type: node
+bundle: page
+label: Attachment(s)
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: ''
+  file_extensions: 'txt doc pdf jpg png jpeg gif docx xls csv zip xlsx'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

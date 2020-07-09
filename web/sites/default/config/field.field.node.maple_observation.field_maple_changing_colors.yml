@@ -1,0 +1,21 @@
+uuid: 416f6972-cb79-4bde-8393-f974fa8802e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_maple_changing_colors
+    - node.type.maple_observation
+  module:
+    - options
+id: node.maple_observation.field_maple_changing_colors
+field_name: field_maple_changing_colors
+entity_type: node
+bundle: maple_observation
+label: 'Leaves Changing Colors'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

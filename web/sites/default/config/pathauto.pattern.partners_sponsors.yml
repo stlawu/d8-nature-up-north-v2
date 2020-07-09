@@ -1,0 +1,22 @@
+uuid: 6435d4f8-e962-4668-b9b3-8410c0274dc8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: partners_sponsors
+label: 'Partners & Sponsors'
+type: 'canonical_entities:node'
+pattern: 'partner/[node:title]'
+selection_criteria:
+  b00b178d-43b2-467d-bf13-2879f5aed197:
+    id: node_type
+    bundles:
+      partner: partner
+    negate: false
+    context_mapping:
+      node: node
+    uuid: b00b178d-43b2-467d-bf13-2879f5aed197
+selection_logic: and
+weight: -5
+relationships: {  }

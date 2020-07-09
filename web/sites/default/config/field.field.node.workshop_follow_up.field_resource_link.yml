@@ -1,0 +1,23 @@
+uuid: 301d4fab-8222-4eee-8bf2-c42588f3e717
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_link
+    - node.type.workshop_follow_up
+  module:
+    - link
+id: node.workshop_follow_up.field_resource_link
+field_name: field_resource_link
+entity_type: node
+bundle: workshop_follow_up
+label: 'Resource link'
+description: 'URL for a particular resource'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

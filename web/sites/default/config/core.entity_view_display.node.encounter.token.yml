@@ -1,0 +1,68 @@
+uuid: 7be371e8-07ad-48b6-84ab-5a6609bb4ed7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.token
+    - field.field.node.encounter.comment_node_encounter
+    - field.field.node.encounter.field_common_species_name
+    - field.field.node.encounter.field_encounter_date
+    - field.field.node.encounter.field_encounter_description
+    - field.field.node.encounter.field_encounter_image
+    - field.field.node.encounter.field_encounter_location
+    - field.field.node.encounter.field_encounter_map_label
+    - field.field.node.encounter.field_hidden_tags
+    - field.field.node.encounter.field_tags_other
+    - field.field.node.encounter.field_trail_reference
+    - node.type.encounter
+  module:
+    - datetime
+    - image
+    - text
+    - user
+id: node.encounter.token
+targetEntityType: node
+bundle: encounter
+mode: token
+content:
+  field_encounter_date:
+    label: hidden
+    weight: 1
+    type: datetime_default
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  field_encounter_description:
+    label: hidden
+    weight: 2
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_encounter_image:
+    label: hidden
+    weight: 0
+    type: image
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sharethis:
+    weight: 10
+    region: content
+hidden:
+  comment_node_encounter: true
+  field_common_species_name: true
+  field_encounter_location: true
+  field_encounter_map_label: true
+  field_hidden_tags: true
+  field_tags_other: true
+  field_trail_reference: true

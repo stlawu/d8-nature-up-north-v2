@@ -1,0 +1,53 @@
+uuid: 6ec06267-5e60-48d7-af9d-5d8d267b3d45
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.register
+    - field.field.user.user.user_picture
+  module:
+    - path
+    - profile
+    - user
+_core:
+  default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
+id: user.user.register
+targetEntityType: user
+bundle: user
+mode: register
+content:
+  account:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  google_analytics:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  language:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  main_profiles:
+    type: profile_form
+    weight: 91
+    settings:
+      form_mode: default
+    third_party_settings: {  }
+    region: content
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  timezone:
+    weight: 6
+    region: content
+hidden:
+  blogger_profiles: true
+  contact: true
+  user_picture: true

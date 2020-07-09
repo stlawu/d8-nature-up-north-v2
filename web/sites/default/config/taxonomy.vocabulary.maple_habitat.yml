@@ -1,0 +1,8 @@
+uuid: a9543bf2-31a7-4dde-96c2-fd09f9739bbe
+langcode: en
+status: true
+dependencies: {  }
+name: 'Maple habitat'
+vid: maple_habitat
+description: 'Use for setting the habitat of maple trees.'
+weight: 0

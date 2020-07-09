@@ -1,0 +1,41 @@
+uuid: 7ef4ac8d-5b27-4a4e-855f-ce6594ae108e
+langcode: en
+status: true
+dependencies: {  }
+id: maple
+label: 'Maple Monitor'
+weight: 8
+is_admin: null
+permissions:
+  - 'access maple_tree_browser entity browser pages'
+  - 'bypass honeypot protection'
+  - 'create encounter content'
+  - 'create event content'
+  - 'create fall_maple_tree_data content'
+  - 'create maple_data content'
+  - 'create maple_observation content'
+  - 'create maple_tree content'
+  - 'create spring_maple_tree_data content'
+  - 'delete own encounter content'
+  - 'delete own fall_maple_tree_data content'
+  - 'delete own maple_data content'
+  - 'delete own maple_observation content'
+  - 'delete own maple_tree content'
+  - 'delete own spring_maple_tree_data content'
+  - 'edit own comments'
+  - 'edit own community_organization content'
+  - 'edit own encounter content'
+  - 'edit own event content'
+  - 'edit own fall_maple_tree_data content'
+  - 'edit own maple_data content'
+  - 'edit own maple_observation content'
+  - 'edit own maple_tree content'
+  - 'edit own spring_maple_tree_data content'
+  - 'post comments'
+  - 'skip comment approval'
+  - 'view any main profile'
+  - 'view fall_maple_tree_data revisions'
+  - 'view maple_data revisions'
+  - 'view maple_observation revisions'
+  - 'view maple_tree revisions'
+  - 'view spring_maple_tree_data revisions'

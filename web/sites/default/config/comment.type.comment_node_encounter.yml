@@ -1,0 +1,8 @@
+uuid: 5680cb21-65e2-4f14-b818-39bcadfe5a7e
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_encounter
+label: 'Encounter comment'
+target_entity_type_id: node
+description: null

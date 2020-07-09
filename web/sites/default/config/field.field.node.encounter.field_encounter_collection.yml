@@ -1,0 +1,25 @@
+uuid: 014751fc-72f1-423f-998e-c91f3606f682
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_encounter_collection
+    - node.type.encounter
+id: node.encounter.field_encounter_collection
+field_name: field_encounter_collection
+entity_type: node
+bundle: encounter
+label: Collection
+description: '<em>You can add your encounter to one or more of these collection pages if they match the provided theme. A link to the collection landing page will appear on your encounter.</em>'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: encounter_collections
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

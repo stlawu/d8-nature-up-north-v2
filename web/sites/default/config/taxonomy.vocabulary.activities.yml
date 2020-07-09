@@ -1,0 +1,8 @@
+uuid: a7ad8550-0edb-4e08-9b19-6518a306202e
+langcode: en
+status: true
+dependencies: {  }
+name: Activities
+vid: activities
+description: 'Nature engagement activities'
+weight: -7

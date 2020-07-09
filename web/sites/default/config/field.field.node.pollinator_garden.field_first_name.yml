@@ -1,0 +1,19 @@
+uuid: 826ef03c-7fd5-4103-808e-ef3ab9b290a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_first_name
+    - node.type.pollinator_garden
+id: node.pollinator_garden.field_first_name
+field_name: field_first_name
+entity_type: node
+bundle: pollinator_garden
+label: 'First Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

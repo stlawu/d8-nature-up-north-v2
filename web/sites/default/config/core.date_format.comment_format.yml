@@ -1,0 +1,8 @@
+uuid: 4eaf71ff-d51d-4f52-870e-950649815f3d
+langcode: en
+status: true
+dependencies: {  }
+id: comment_format
+label: 'Comment Format'
+locked: false
+pattern: 'F j, Y - g:ia'

@@ -1,0 +1,8 @@
+uuid: c502ef31-84d6-4d52-938a-f24e22068b47
+langcode: en
+status: true
+dependencies: {  }
+name: 'Encounter free form tags'
+vid: encounter_free_form_tags
+description: 'For use in collecting free form tags in encounters'
+weight: -9

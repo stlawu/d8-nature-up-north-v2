@@ -1,0 +1,20 @@
+uuid: 972571fe-57d6-4c4d-9ea1-fc4f9e2402c4
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_stride
+field_name: field_stride
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

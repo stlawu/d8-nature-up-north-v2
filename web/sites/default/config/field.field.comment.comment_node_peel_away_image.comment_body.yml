@@ -1,0 +1,21 @@
+uuid: 6c8653ac-52f6-48a5-a819-8ea896aba4d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_peel_away_image
+    - field.storage.comment.comment_body
+  module:
+    - text
+id: comment.comment_node_peel_away_image.comment_body
+field_name: comment_body
+entity_type: comment
+bundle: comment_node_peel_away_image
+label: Comment
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

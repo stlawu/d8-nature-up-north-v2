@@ -1,0 +1,39 @@
+uuid: d2bee2d0-042f-4b22-b7e6-5a8a11b5e48c
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_subject_s_
+field_name: field_subject_s_
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Living Environment'
+      label: 'Living Environment'
+    -
+      value: Science
+      label: Science
+    -
+      value: ELA
+      label: ELA
+    -
+      value: 'Social Studies'
+      label: 'Social Studies'
+    -
+      value: Math
+      label: Math
+    -
+      value: Other
+      label: Other
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 6
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,38 @@
+uuid: fa65cb34-9b39-47b3-b4ac-1a4182f61f39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_encounter_collection_icon
+    - taxonomy.vocabulary.encounter_collections
+  module:
+    - image
+id: taxonomy_term.encounter_collections.field_encounter_collection_icon
+field_name: field_encounter_collection_icon
+entity_type: taxonomy_term
+bundle: encounter_collections
+label: 'Collection Icon'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: encounter-collection-icon
+  file_extensions: 'png gif jpg jpeg svg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

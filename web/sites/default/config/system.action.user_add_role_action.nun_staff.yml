@@ -1,0 +1,14 @@
+uuid: aefc336c-cf8f-4b22-94b5-189986a16bcc
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.nun_staff
+  module:
+    - user
+id: user_add_role_action.nun_staff
+label: 'Add the nun_staff role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: nun_staff

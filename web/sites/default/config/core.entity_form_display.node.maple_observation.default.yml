@@ -1,0 +1,276 @@
+uuid: 462ca62c-b468-4717-9318-827735a51991
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.maple_tree_browser
+    - field.field.node.maple_observation.body
+    - field.field.node.maple_observation.field_maple_changing_colors
+    - field.field.node.maple_observation.field_maple_flowering
+    - field.field.node.maple_observation.field_maple_fruit
+    - field.field.node.maple_observation.field_maple_image
+    - field.field.node.maple_observation.field_maple_leaf_buds
+    - field.field.node.maple_observation.field_maple_leaves_dropping
+    - field.field.node.maple_observation.field_maple_leaves_unfolded
+    - field.field.node.maple_observation.field_maple_observation_date
+    - field.field.node.maple_observation.field_maple_observation_season
+    - field.field.node.maple_observation.field_maple_tree
+    - image.style.thumbnail
+    - node.type.maple_observation
+  module:
+    - datetime
+    - entity_browser
+    - image
+    - path
+    - text
+id: node.maple_observation.default
+targetEntityType: node
+bundle: maple_observation
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 10
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_maple_changing_colors:
+    weight: 7
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        f09a6931-4369-4477-bee2-e8209d9d189d:
+          dependee: field_maple_observation_season
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Fall
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: maple_observation
+    type: options_buttons
+    region: content
+  field_maple_flowering:
+    weight: 6
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        a3846041-2c80-478d-885f-1d780e465226:
+          dependee: field_maple_observation_season
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Spring
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: maple_observation
+    type: options_buttons
+    region: content
+  field_maple_fruit:
+    weight: 9
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        8db17775-b92a-40c6-a52f-86d63bb485be:
+          dependee: field_maple_observation_season
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Fall
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: maple_observation
+    type: options_buttons
+    region: content
+  field_maple_image:
+    weight: 26
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_maple_leaf_buds:
+    weight: 4
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        9234ab59-f151-43a0-beb5-9ea32e3914ae:
+          dependee: field_maple_observation_season
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Spring
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: maple_observation
+    type: options_buttons
+    region: content
+  field_maple_leaves_dropping:
+    weight: 8
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        faf9e838-5188-4806-a2a2-be06c15b6301:
+          dependee: field_maple_observation_season
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Fall
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: maple_observation
+    type: options_buttons
+    region: content
+  field_maple_leaves_unfolded:
+    weight: 5
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        29eeb887-e9cc-412f-a698-739e7ef882aa:
+          dependee: field_maple_observation_season
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Spring
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: maple_observation
+    type: options_buttons
+    region: content
+  field_maple_observation_date:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_maple_observation_season:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_maple_tree:
+    weight: 0
+    settings:
+      entity_browser: maple_tree_browser
+      field_widget_display: rendered_entity
+      field_widget_replace: true
+      open: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: reference_preview
+      field_widget_edit: false
+      field_widget_remove: false
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
+  path:
+    type: path
+    weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 13
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 17
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 14
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 11
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+  url_redirects:
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

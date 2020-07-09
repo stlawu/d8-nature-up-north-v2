@@ -1,0 +1,25 @@
+uuid: 9d28e301-e90d-4a02-af23-06c1ab10ed8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_note
+    - node.type.pollinator_garden
+  module:
+    - markup
+id: node.pollinator_garden.field_note
+field_name: field_note
+entity_type: node
+bundle: pollinator_garden
+label: Note
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<h1>Get your garden on the map!</h1>\r\n\r\n<p>&nbsp;</p>\r\n"
+    format: full_html
+field_type: markup

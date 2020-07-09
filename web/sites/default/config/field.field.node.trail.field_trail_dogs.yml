@@ -1,0 +1,23 @@
+uuid: b5144aca-c07d-441d-b51b-1175a39bdfd5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_trail_dogs
+    - node.type.trail
+id: node.trail.field_trail_dogs
+field_name: field_trail_dogs
+entity_type: node
+bundle: trail
+label: 'Dogs allowed'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

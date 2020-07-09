@@ -1,0 +1,8 @@
+uuid: 72657b6c-3ce1-4c3f-8b1a-8701b812f2a0
+langcode: en
+status: true
+dependencies: {  }
+name: 'NYS Standards'
+vid: nys_standards
+description: 'taxonomy for NYS school standards'
+weight: 0

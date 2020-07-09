@@ -1,0 +1,31 @@
+uuid: b3ad0b0c-6a29-4e3a-b11e-d3ac1c8ab402
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_maple_near_structure
+field_name: field_maple_near_structure
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 100feet
+      label: 'Yes'
+    -
+      value: none
+      label: 'No'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

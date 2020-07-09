@@ -1,0 +1,14 @@
+uuid: 8189390f-ce88-417c-8b94-56dee9eb1bf2
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.pollinator_pal
+  module:
+    - user
+id: user_remove_role_action.pollinator_pal
+label: 'Remove the Pollinator Pal role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: pollinator_pal

@@ -1,0 +1,23 @@
+uuid: 8b20177d-3c7f-472f-a49d-ee215e1c7312
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pollinator_garden_year
+    - node.type.pollinator_garden
+id: node.pollinator_garden.field_pollinator_garden_year
+field_name: field_pollinator_garden_year
+entity_type: node
+bundle: pollinator_garden
+label: Year
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1990
+  max: 2050
+  prefix: ''
+  suffix: ''
+field_type: integer

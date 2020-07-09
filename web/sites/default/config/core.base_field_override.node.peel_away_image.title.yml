@@ -1,0 +1,18 @@
+uuid: 422caae5-69dd-4cbc-91cf-643b6208d765
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.peel_away_image
+id: node.peel_away_image.title
+field_name: title
+entity_type: node
+bundle: peel_away_image
+label: Headline
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

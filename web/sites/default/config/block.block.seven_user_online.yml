@@ -1,0 +1,24 @@
+uuid: 1040c4bb-32b4-4830-9e2c-5156a5dfb731
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.who_s_online
+  module:
+    - views
+  theme:
+    - seven
+id: seven_user_online
+theme: seven
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:who_s_online-who_s_online_block'
+settings:
+  id: 'views_block:who_s_online-who_s_online_block'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: '10'
+visibility: {  }

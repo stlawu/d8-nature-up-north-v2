@@ -1,0 +1,27 @@
+uuid: e407e44d-a146-4c07-b91e-28a00e031056
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_partner_type
+field_name: field_partner_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: partner
+      label: Partner
+    -
+      value: sponsor
+      label: Sponsor
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

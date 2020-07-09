@@ -1,0 +1,21 @@
+uuid: 77300ba7-805f-447f-98d4-fa98d1bff653
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_current_active
+    - node.type.profile
+  module:
+    - options
+id: node.profile.field_current_active
+field_name: field_current_active
+entity_type: node
+bundle: profile
+label: Current/Active
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

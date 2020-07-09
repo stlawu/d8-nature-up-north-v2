@@ -1,0 +1,127 @@
+uuid: dde9864b-d7a5-4592-adf9-fb007326a588
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_educator_resource.default
+    - field.field.node.educator_resource.comment_node_educator_resource
+    - field.field.node.educator_resource.field_description
+    - field.field.node.educator_resource.field_ed_res_image
+    - field.field.node.educator_resource.field_file_s_
+    - field.field.node.educator_resource.field_grade_level
+    - field.field.node.educator_resource.field_hidden_content_theme
+    - field.field.node.educator_resource.field_link
+    - field.field.node.educator_resource.field_nys_standards
+    - field.field.node.educator_resource.field_project
+    - field.field.node.educator_resource.field_resource_type
+    - field.field.node.educator_resource.field_subject_s_
+    - node.type.educator_resource
+  module:
+    - comment
+    - file
+    - image
+    - link
+    - options
+    - text
+    - user
+id: node.educator_resource.default
+targetEntityType: node
+bundle: educator_resource
+mode: default
+content:
+  comment_node_educator_resource:
+    label: hidden
+    type: comment_default
+    weight: 9
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  field_description:
+    label: above
+    weight: 1
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_ed_res_image:
+    label: above
+    weight: 0
+    type: image
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+  field_file_s_:
+    label: above
+    weight: 7
+    type: file_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_grade_level:
+    label: above
+    weight: 2
+    type: list_key
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_hidden_content_theme:
+    weight: 12
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_link:
+    label: above
+    weight: 8
+    type: link
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    region: content
+  field_nys_standards:
+    weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_project:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_resource_type:
+    label: above
+    weight: 4
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_subject_s_:
+    label: above
+    weight: 5
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sharethis:
+    weight: 10
+    region: content
+hidden: {  }

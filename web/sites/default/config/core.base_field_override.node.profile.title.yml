@@ -1,0 +1,18 @@
+uuid: c8f1849f-428c-455e-99ef-2f52f2d92096
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.profile
+id: node.profile.title
+field_name: title
+entity_type: node
+bundle: profile
+label: 'Display Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

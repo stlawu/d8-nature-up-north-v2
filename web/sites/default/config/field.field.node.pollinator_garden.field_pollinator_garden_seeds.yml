@@ -1,0 +1,21 @@
+uuid: ac8b76bb-3d7d-45c4-a8eb-e31f7f5bbbf7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pollinator_garden_seeds
+    - node.type.pollinator_garden
+  module:
+    - options
+id: node.pollinator_garden.field_pollinator_garden_seeds
+field_name: field_pollinator_garden_seeds
+entity_type: node
+bundle: pollinator_garden
+label: 'Where did you source the seeds and/or plants for your pollinator garden? (Select all that apply)'
+description: '<em>Pollinator Pals is run as part of the Pollinator Protection Project.</em>'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

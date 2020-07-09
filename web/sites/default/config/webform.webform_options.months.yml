@@ -1,0 +1,14 @@
+uuid: 1dc18f25-5b3c-486f-bd4d-7ea18d362cc6
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: 5VMrRfGXjK2HbORvpA_8j4-uBsAK_VSK6TS-NrGOBEg
+id: months
+label: Months
+category: 'Date and time'
+likert: false
+options: "January: January\nFebruary: February\nMarch: March\nApril: April\nMay: May\nJune: June\nJuly: July\nAugust: August\nSeptember: September\nOctober: October\nNovember: November\nDecember: December\n"

@@ -1,0 +1,21 @@
+uuid: efc2992c-07d2-4819-b6ef-b8762c539102
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tips
+    - node.type.trail
+  module:
+    - text
+id: node.trail.field_tips
+field_name: field_tips
+entity_type: node
+bundle: trail
+label: Tips
+description: 'Any miscellaneous information about the trail, access point, etc.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

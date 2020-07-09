@@ -1,0 +1,182 @@
+uuid: bc517ff3-ea83-4ede-92bb-4a8347cc724b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.trail.comment_node_trail
+    - field.field.node.trail.field_difficulty
+    - field.field.node.trail.field_distance_round_trip_
+    - field.field.node.trail.field_elevation_gain
+    - field.field.node.trail.field_image
+    - field.field.node.trail.field_things_to_look_for
+    - field.field.node.trail.field_tips
+    - field.field.node.trail.field_trail_dogs
+    - field.field.node.trail.field_trail_map_image
+    - field.field.node.trail.field_trail_pdf
+    - field.field.node.trail.field_trail_safety_recommendatio
+    - field.field.node.trail.field_trail_summary
+    - field.field.node.trail.field_type
+    - image.style.thumbnail
+    - node.type.trail
+  module:
+    - file
+    - image
+    - path
+    - text
+id: node.trail.default
+targetEntityType: node
+bundle: trail
+mode: default
+content:
+  comment:
+    type: comment_default
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_difficulty:
+    weight: 6
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_distance_round_trip_:
+    weight: 7
+    type: number
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_elevation_gain:
+    weight: 8
+    type: number
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_image:
+    weight: 1
+    type: image_image
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    region: content
+  field_things_to_look_for:
+    weight: 3
+    type: text_textarea
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_tips:
+    weight: 5
+    type: text_textarea
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_trail_dogs:
+    weight: 10
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    region: content
+  field_trail_map_image:
+    weight: 11
+    type: image_image
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    region: content
+  field_trail_pdf:
+    weight: 12
+    type: file_generic
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    region: content
+  field_trail_safety_recommendatio:
+    weight: 4
+    type: text_textarea
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_trail_summary:
+    weight: 2
+    type: text_textarea
+    settings:
+      rows: 20
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_type:
+    weight: 9
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 121
+    third_party_settings: {  }
+    region: content
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  comment_node_trail: true

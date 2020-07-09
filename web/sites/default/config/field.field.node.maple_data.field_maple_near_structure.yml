@@ -1,0 +1,21 @@
+uuid: 7cc4eb39-77d1-44e2-8d13-c5824bad6531
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_maple_near_structure
+    - node.type.maple_data
+  module:
+    - options
+id: node.maple_data.field_maple_near_structure
+field_name: field_maple_near_structure
+entity_type: node
+bundle: maple_data
+label: 'Is your tree within 100 feet of buildings, concrete, or asphalt?'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

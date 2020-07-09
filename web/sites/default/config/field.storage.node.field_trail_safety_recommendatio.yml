@@ -1,0 +1,19 @@
+uuid: 923b47bb-d2d3-48fc-9a68-a29d8d78ad1e
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_trail_safety_recommendatio
+field_name: field_trail_safety_recommendatio
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

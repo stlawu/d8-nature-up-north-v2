@@ -1,0 +1,26 @@
+uuid: 8b16decb-0586-438d-bce8-522c31c9b509
+langcode: en
+status: true
+dependencies:
+  module:
+    - sharethis
+    - system
+  theme:
+    - nun
+id: sharethis
+theme: nun
+region: content
+weight: -6
+provider: null
+plugin: sharethis_block
+settings:
+  id: sharethis_block
+  label: Sharethis
+  provider: sharethis
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/node/*\r\n/form/*"
+    negate: false
+    context_mapping: {  }

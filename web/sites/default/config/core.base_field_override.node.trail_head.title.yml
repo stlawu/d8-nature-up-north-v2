@@ -1,0 +1,18 @@
+uuid: 37aef04d-2df2-4ed0-8aed-5f90a518b358
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.trail_head
+id: node.trail_head.title
+field_name: title
+entity_type: node
+bundle: trail_head
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

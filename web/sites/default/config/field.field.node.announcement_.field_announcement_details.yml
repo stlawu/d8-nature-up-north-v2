@@ -1,0 +1,23 @@
+uuid: a50234d8-628a-45a9-a312-8e3f56296278
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_announcement_details
+    - node.type.announcement_
+  module:
+    - text
+id: node.announcement_.field_announcement_details
+field_name: field_announcement_details
+entity_type: node
+bundle: announcement_
+label: 'Announcement Details'
+description: 'Please provide details about the announcement here.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,20 @@
+uuid: 1402c75e-2e03-414e-a479-de365fe5747a
+langcode: en
+status: true
+dependencies: {  }
+id: approved_user
+label: 'approved user'
+weight: 9
+is_admin: null
+permissions:
+  - 'bypass honeypot protection'
+  - 'create encounter content'
+  - 'create event content'
+  - 'delete own encounter content'
+  - 'edit own comments'
+  - 'edit own community_organization content'
+  - 'edit own encounter content'
+  - 'edit own event content'
+  - 'post comments'
+  - 'skip comment approval'
+  - 'view any main profile'
