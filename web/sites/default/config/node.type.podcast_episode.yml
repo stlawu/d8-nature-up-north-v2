@@ -1,0 +1,17 @@
+uuid: d72ee63f-3180-47b8-a3ce-17e60e6fd3f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Podcast episode'
+type: podcast_episode
+description: 'Content type for podcast episodes'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

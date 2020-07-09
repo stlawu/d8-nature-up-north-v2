@@ -1,19 +1,19 @@
-uuid: 37197c8d-376f-4be0-aeb3-e314430a4a9b
+uuid: 82c76bcd-a48d-45cb-a0af-d7fcc3ba52e8
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.species_account_test
+    - node.type.podcast_episode
   module:
     - text
-id: node.species_account_test.body
+id: node.podcast_episode.body
 field_name: body
 entity_type: node
-bundle: species_account_test
-label: Body
+bundle: podcast_episode
+label: 'Episode description'
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''

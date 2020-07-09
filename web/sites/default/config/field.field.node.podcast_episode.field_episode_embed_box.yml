@@ -1,0 +1,21 @@
+uuid: 504a084b-7295-4ed6-a9e8-087d601fdb90
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_episode_embed_box
+    - node.type.podcast_episode
+  module:
+    - text
+id: node.podcast_episode.field_episode_embed_box
+field_name: field_episode_embed_box
+entity_type: node
+bundle: podcast_episode
+label: 'Episode embed box'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

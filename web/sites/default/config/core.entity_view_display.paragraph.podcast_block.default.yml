@@ -1,0 +1,21 @@
+uuid: 79de7c70-0da9-4a8a-860c-8435a1751d41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.podcast_block.field_podcast_title
+    - paragraphs.paragraphs_type.podcast_block
+id: paragraph.podcast_block.default
+targetEntityType: paragraph
+bundle: podcast_block
+mode: default
+content:
+  field_podcast_title:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

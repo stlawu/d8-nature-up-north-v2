@@ -1,14 +1,14 @@
-uuid: bdc5503a-21f5-4b00-a614-1470733c7f31
+uuid: e9891423-a4a7-40f2-a75a-9accc056008d
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.species_account_test
-id: node.species_account_test.title
+    - node.type.podcast_episode
+id: node.podcast_episode.title
 field_name: title
 entity_type: node
-bundle: species_account_test
-label: 'Species Name'
+bundle: podcast_episode
+label: 'Episode title'
 description: ''
 required: true
 translatable: true

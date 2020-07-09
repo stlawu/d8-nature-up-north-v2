@@ -1,0 +1,103 @@
+uuid: b4b7a4cd-d4ac-45f4-9495-59fde58a6fb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.podcast_episode.body
+    - field.field.node.podcast_episode.field_episode_date
+    - field.field.node.podcast_episode.field_episode_embed_box
+    - field.field.node.podcast_episode.field_episode_hosts
+    - field.field.node.podcast_episode.field_episode_image
+    - field.field.node.podcast_episode.field_episode_number
+    - field.field.node.podcast_episode.field_episode_transcript
+    - field.field.node.podcast_episode.field_episode_type
+    - field.field.node.podcast_episode.field_season_number
+    - node.type.podcast_episode
+  module:
+    - datetime
+    - image
+    - options
+    - text
+    - user
+id: node.podcast_episode.default
+targetEntityType: node
+bundle: podcast_episode
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_episode_date:
+    weight: 107
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_episode_embed_box:
+    weight: 108
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_episode_hosts:
+    weight: 106
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_episode_image:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_episode_number:
+    weight: 110
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_episode_transcript:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_episode_type:
+    weight: 111
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_season_number:
+    weight: 109
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

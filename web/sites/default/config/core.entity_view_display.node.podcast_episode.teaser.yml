@@ -1,17 +1,17 @@
-uuid: 2b4809e1-c700-4fef-a3c9-59619fbe6ece
+uuid: 81e14a0f-5444-4323-9239-ba2e0a8d1322
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.species_account_test.body
-    - node.type.species_account_test
+    - field.field.node.podcast_episode.body
+    - node.type.podcast_episode
   module:
     - text
     - user
-id: node.species_account_test.teaser
+id: node.podcast_episode.teaser
 targetEntityType: node
-bundle: species_account_test
+bundle: podcast_episode
 mode: teaser
 content:
   body:
@@ -24,7 +24,7 @@ content:
     region: content
   links:
     weight: 100
-    region: content
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden: {  }
