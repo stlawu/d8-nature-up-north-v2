@@ -6,19 +6,91 @@ dependencies:
     - field.field.node.podcast_episode.body
     - field.field.node.podcast_episode.field_episode_date
     - field.field.node.podcast_episode.field_episode_embed_box
+    - field.field.node.podcast_episode.field_episode_files
     - field.field.node.podcast_episode.field_episode_hosts
     - field.field.node.podcast_episode.field_episode_image
     - field.field.node.podcast_episode.field_episode_number
     - field.field.node.podcast_episode.field_episode_transcript
     - field.field.node.podcast_episode.field_episode_type
+    - field.field.node.podcast_episode.field_related_links
     - field.field.node.podcast_episode.field_season_number
     - image.style.thumbnail
     - node.type.podcast_episode
   module:
     - datetime
+    - field_group
+    - file
     - image
+    - link
     - path
     - text
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_episode_inforamtion
+        - group_embed
+        - group_transcript
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: Tabs
+    group_episode_inforamtion:
+      children:
+        - title
+        - field_episode_date
+        - field_season_number
+        - field_episode_number
+        - field_episode_type
+        - field_episode_image
+        - field_related_links
+        - field_episode_files
+        - field_episode_hosts
+      parent_name: group_tabs
+      weight: 20
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Episode Information'
+    group_embed:
+      children:
+        - field_episode_embed_box
+      parent_name: group_tabs
+      weight: 21
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Embed
+    group_transcript:
+      children:
+        - body
+        - field_episode_transcript
+      parent_name: group_tabs
+      weight: 22
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Transcript
 id: node.podcast_episode.default
 targetEntityType: node
 bundle: podcast_episode
@@ -26,7 +98,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 6
+    weight: 8
     settings:
       rows: 9
       summary_rows: 3
@@ -36,32 +108,44 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   field_episode_date:
-    weight: 8
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_episode_embed_box:
-    weight: 5
+    weight: 6
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings:
+      allowed_formats:
+        hide_help: '0'
+        hide_guidelines: '0'
+    type: text_textarea
+    region: content
+  field_episode_files:
+    weight: 10
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_episode_hosts:
+    weight: 26
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
     region: content
-  field_episode_hosts:
-    weight: 7
-    settings: {  }
-    third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_episode_image:
-    weight: 1
+    weight: 7
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -69,7 +153,7 @@ content:
     type: image_image
     region: content
   field_episode_number:
-    weight: 3
+    weight: 4
     settings:
       placeholder: ''
     third_party_settings: {  }
@@ -78,19 +162,29 @@ content:
   field_episode_transcript:
     weight: 9
     settings:
-      rows: 5
+      rows: 9
+      summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
-    type: text_textarea
+    type: text_textarea_with_summary
     region: content
   field_episode_type:
-    weight: 4
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
+  field_related_links:
+    weight: 9
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
   field_season_number:
-    weight: 2
+    weight: 3
     settings:
       placeholder: ''
     third_party_settings: {  }
@@ -98,7 +192,7 @@ content:
     region: content
   path:
     type: path
-    weight: 14
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -106,26 +200,26 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 12
+    weight: 13
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 17
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 13
+    weight: 14
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60
@@ -133,7 +227,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 11
+    weight: 12
     settings:
       match_operator: CONTAINS
       size: 60
@@ -142,7 +236,7 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 15
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }

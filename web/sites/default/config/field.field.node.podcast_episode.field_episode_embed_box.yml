@@ -6,7 +6,17 @@ dependencies:
     - field.storage.node.field_episode_embed_box
     - node.type.podcast_episode
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    embed: embed
+    basic_html: '0'
+    filtered_html: '0'
+    pure_html: '0'
+    restricted_html: '0'
+    full_html: '0'
+    plain_text: '0'
 id: node.podcast_episode.field_episode_embed_box
 field_name: field_episode_embed_box
 entity_type: node

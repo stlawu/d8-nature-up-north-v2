@@ -6,19 +6,162 @@ dependencies:
     - field.field.node.podcast_episode.body
     - field.field.node.podcast_episode.field_episode_date
     - field.field.node.podcast_episode.field_episode_embed_box
+    - field.field.node.podcast_episode.field_episode_files
     - field.field.node.podcast_episode.field_episode_hosts
     - field.field.node.podcast_episode.field_episode_image
     - field.field.node.podcast_episode.field_episode_number
     - field.field.node.podcast_episode.field_episode_transcript
     - field.field.node.podcast_episode.field_episode_type
+    - field.field.node.podcast_episode.field_related_links
     - field.field.node.podcast_episode.field_season_number
+    - image.style.large
     - node.type.podcast_episode
   module:
     - datetime
+    - field_group
+    - file
     - image
-    - options
+    - link
     - text
     - user
+third_party_settings:
+  field_group:
+    group_row:
+      children:
+        - group_column_1
+        - group_column_2
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: row
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Row
+    group_column_1:
+      children:
+        - field_episode_image
+        - field_episode_files
+        - field_related_links
+      parent_name: group_row
+      weight: 20
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: 'col-sm-4 float-sm-right'
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Column 1'
+    group_column_2:
+      children:
+        - group_embed
+        - group_episode_information
+      parent_name: group_row
+      weight: 22
+      format_type: html_element
+      region: content
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'col-sm-8 float-sm-right'
+      label: 'Column 2'
+    group_embed:
+      children:
+        - field_episode_embed_box
+      parent_name: group_column_2
+      weight: 2
+      format_type: html_element
+      region: content
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'bg-secondary mx-auto my-2'
+      label: Embed
+    group_tabs:
+      children:
+        - group_episode_description
+        - group_episode_transcript
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      region: content
+      format_settings:
+        direction: horizontal
+        id: ''
+        classes: ''
+      label: Tabs
+    group_episode_transcript:
+      children:
+        - field_episode_transcript
+      parent_name: group_tabs
+      weight: 3
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+      label: ' Episode Transcript'
+    group_episode_description:
+      children:
+        - body
+      parent_name: group_tabs
+      weight: 1
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+      label: 'Episode Description'
+    group_episode_information:
+      children:
+        - field_episode_date
+        - field_season_number
+        - field_episode_number
+        - field_episode_hosts
+      parent_name: group_column_2
+      weight: 3
+      format_type: html_element
+      region: content
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: em
+      label: 'Episode information'
 id: node.podcast_episode.default
 targetEntityType: node
 bundle: podcast_episode
@@ -27,45 +170,53 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 21
     settings: {  }
     third_party_settings: {  }
     region: content
   field_episode_date:
-    weight: 107
-    label: above
+    weight: 3
+    label: hidden
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: day_only
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_episode_embed_box:
-    weight: 108
-    label: above
+    weight: 21
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
+  field_episode_files:
+    weight: 22
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
   field_episode_hosts:
-    weight: 106
-    label: above
+    weight: 24
+    label: inline
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    type: text_default
     region: content
   field_episode_image:
-    weight: 102
-    label: above
+    type: image
+    weight: 21
+    region: content
+    label: hidden
     settings:
-      image_style: ''
+      image_style: large
       image_link: ''
     third_party_settings: {  }
-    type: image
-    region: content
   field_episode_number:
-    weight: 110
-    label: above
+    weight: 5
+    label: inline
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -73,22 +224,27 @@ content:
     type: number_integer
     region: content
   field_episode_transcript:
-    weight: 104
+    weight: 25
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_episode_type:
-    weight: 111
-    label: above
-    settings: {  }
+  field_related_links:
+    weight: 23
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
     third_party_settings: {  }
-    type: list_default
+    type: link
     region: content
   field_season_number:
-    weight: 109
-    label: above
+    weight: 4
+    label: inline
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -96,8 +252,9 @@ content:
     type: number_integer
     region: content
   links:
-    weight: 100
+    weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
-hidden: {  }
+hidden:
+  field_episode_type: true

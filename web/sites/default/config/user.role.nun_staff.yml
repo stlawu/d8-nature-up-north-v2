@@ -185,6 +185,7 @@ permissions:
   - 'update own main profile'
   - 'use advanced search'
   - 'use text format basic_html'
+  - 'use text format embed'
   - 'use text format filtered_html'
   - 'use text format full_html'
   - 'view advanced help index'

@@ -1,0 +1,17 @@
+uuid: 4abac5b8-78ac-4a23-8c6b-a38cdd617fe6
+langcode: en
+status: true
+dependencies: {  }
+name: Embed
+format: embed
+weight: 0
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<iframe srcdoc height width name referrerpolicy sandbox allow allowfullscreen frameborder scrolling src> <div>'
+      filter_html_help: true
+      filter_html_nofollow: false

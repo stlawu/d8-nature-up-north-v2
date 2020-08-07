@@ -1,4 +1,4 @@
-uuid: fdaf9cad-1916-4e4d-af21-196baa76df61
+uuid: 494b32d3-bac7-4052-a56b-e9d504107af8
 langcode: en
 status: true
 dependencies:
@@ -12,7 +12,7 @@ third_party_settings:
 id: node.field_episode_transcript
 field_name: field_episode_transcript
 entity_type: node
-type: text_long
+type: text_with_summary
 settings: {  }
 module: text
 locked: false

@@ -9,7 +9,7 @@ id: node.podcast_episode.field_episode_number
 field_name: field_episode_number
 entity_type: node
 bundle: podcast_episode
-label: 'Episode number'
+label: Episode
 description: ''
 required: false
 translatable: false

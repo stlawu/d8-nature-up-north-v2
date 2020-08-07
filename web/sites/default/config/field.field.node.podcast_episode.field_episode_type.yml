@@ -11,7 +11,7 @@ id: node.podcast_episode.field_episode_type
 field_name: field_episode_type
 entity_type: node
 bundle: podcast_episode
-label: 'Episode type'
+label: Type
 description: 'What type of audio file are you putting up? A regular episode? Trailer for an episode? Bonus material? Choose the answer frm the list.'
 required: true
 translatable: false

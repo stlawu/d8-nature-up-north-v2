@@ -5,6 +5,16 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.podcast_episode.body
+    - field.field.node.podcast_episode.field_episode_date
+    - field.field.node.podcast_episode.field_episode_embed_box
+    - field.field.node.podcast_episode.field_episode_files
+    - field.field.node.podcast_episode.field_episode_hosts
+    - field.field.node.podcast_episode.field_episode_image
+    - field.field.node.podcast_episode.field_episode_number
+    - field.field.node.podcast_episode.field_episode_transcript
+    - field.field.node.podcast_episode.field_episode_type
+    - field.field.node.podcast_episode.field_related_links
+    - field.field.node.podcast_episode.field_season_number
     - node.type.podcast_episode
   module:
     - text
@@ -27,4 +37,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_episode_date: true
+  field_episode_embed_box: true
+  field_episode_files: true
+  field_episode_hosts: true
+  field_episode_image: true
+  field_episode_number: true
+  field_episode_transcript: true
+  field_episode_type: true
+  field_related_links: true
+  field_season_number: true

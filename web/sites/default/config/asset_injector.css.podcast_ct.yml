@@ -1,0 +1,12 @@
+uuid: 30ddaef4-f321-4476-b9dc-28cde72de6e5
+langcode: en
+status: true
+dependencies: {  }
+id: podcast_ct
+label: 'Podcast CT'
+code: ".field--name-field-episode-embed-box {\n  margin-top:1.2rem;\n}"
+conditions_require_all: true
+conditions: {  }
+contexts: {  }
+media: all
+preprocess: true

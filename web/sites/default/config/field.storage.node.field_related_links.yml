@@ -1,22 +1,22 @@
-uuid: 715127ae-0b5b-4a31-a76b-4d60076484f9
+uuid: 99f68b99-b9ba-477c-977d-679236ba6a6f
 langcode: en
 status: true
 dependencies:
   module:
     - field_permissions
+    - link
     - node
-    - text
 third_party_settings:
   field_permissions:
     permission_type: public
-id: node.field_episode_hosts
-field_name: field_episode_hosts
+id: node.field_related_links
+field_name: field_related_links
 entity_type: node
-type: text_long
+type: link
 settings: {  }
-module: text
+module: link
 locked: false
-cardinality: 1
+cardinality: 5
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

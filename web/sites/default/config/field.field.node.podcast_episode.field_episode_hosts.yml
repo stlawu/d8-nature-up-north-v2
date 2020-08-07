@@ -1,4 +1,4 @@
-uuid: d50d4ec0-ad28-4a78-bea9-ae0007e8059f
+uuid: 358a515f-4646-4e91-b615-2be38e64e26a
 langcode: en
 status: true
 dependencies:
@@ -6,16 +6,26 @@ dependencies:
     - field.storage.node.field_episode_hosts
     - node.type.podcast_episode
   module:
-    - options
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    basic_html: basic_html
+    full_html: full_html
+    plain_text: plain_text
+    embed: '0'
+    filtered_html: '0'
+    pure_html: '0'
+    restricted_html: '0'
 id: node.podcast_episode.field_episode_hosts
 field_name: field_episode_hosts
 entity_type: node
 bundle: podcast_episode
 label: 'Episode hosts'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: list_string
+field_type: text_long

@@ -9,7 +9,7 @@ id: node.podcast_episode.field_season_number
 field_name: field_season_number
 entity_type: node
 bundle: podcast_episode
-label: 'Season number'
+label: Season
 description: 'The season in which the podcast airs'
 required: true
 translatable: false
