@@ -1,18 +1,18 @@
-uuid: 42705d82-5819-43db-8d88-b0c7757f9f5a
+uuid: 7509cf1c-c56d-4e88-ac86-17679ef4df9a
 langcode: en
 status: open
 dependencies: {  }
 open: null
 close: null
 weight: 0
-uid: 19466
+uid: 19178
 template: false
 archive: false
-id: virtual_campfire_creatures_of_th
-title: 'Virtual Campfire: Creatures Of The Night'
+id: virtual_campfire_
+title: 'Virtual Campfire: '
 description: ''
 category: ''
-elements: "event_details:\n  '#type': item\n  '#title': event-details\n  '#title_display': invisible\n  '#markup': 'Join us at 7 pm on Thursday, July 16th for a creatures of the night-themed virtual campfire!'\nname_of_participants:\n  '#type': textarea\n  '#title': 'Name of Participants'\n  '#required': true\nage_groups_of_the_participants:\n  '#type': checkboxes\n  '#title': 'Age Groups of the Participants'\n  '#options':\n    Youth: Youth\n    Teen: Teen\n    Adult: Adult\nemail_address:\n  '#type': textfield\n  '#title': 'Email Address'\n  '#required': true\n  '#format_items': comma\noptional_donation_pass_the_hat_:\n  '#type': item\n  '#title': 'Optional Donation (Pass the Hat)'\n  '#description': |\n    <h4>Nature Up North&#39;s mission is to foster a deeper connection to and appreciation for nature in the North Country. We are committed to providing free environmental education opportunities to the community. All donations are appreciated!</h4>\n    \n    <h4>To make a donation, please visit the following link:&nbsp;<a href=\"http://alumni.stlawu.edu/nature-up-north-7k\">http://alumni.stlawu.edu/nature-up-north-7k</a></h4>\nthank_you_for_registering_:\n  '#type': item\n  '#title': 'Thank You For Registering!'"
+elements: null
 css: ''
 javascript: ''
 settings:
