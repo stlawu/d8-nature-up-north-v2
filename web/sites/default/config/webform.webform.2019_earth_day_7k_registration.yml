@@ -1,8 +1,12 @@
+uuid: 8f5df717-666e-4ab4-b63b-1813bd7ec65b
 langcode: en
 status: closed
 dependencies:
   module:
     - honeypot
+third_party_settings:
+  honeypot:
+    time_restriction: true
 open: null
 close: null
 weight: 0
@@ -86,6 +90,8 @@ settings:
   wizard_progress_link: false
   wizard_progress_states: false
   wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
   wizard_start_label: ''
   wizard_preview_link: false
   wizard_confirmation: true
@@ -141,6 +147,8 @@ settings:
   results_customize: false
   token_view: false
   token_update: false
+  token_delete: false
+  serial_disabled: false
 access:
   create:
     roles:
@@ -190,7 +198,3 @@ access:
     permissions: {  }
 handlers: {  }
 variants: {  }
-uuid: 8f5df717-666e-4ab4-b63b-1813bd7ec65b
-third_party_settings:
-  honeypot:
-    time_restriction: true

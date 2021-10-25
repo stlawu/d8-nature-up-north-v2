@@ -11,6 +11,8 @@ dependencies:
     - field.field.node.blog.field_blog_image
     - field.field.node.blog.field_blog_related_content
     - field.field.node.blog.field_class_reference
+    - field.field.node.blog.field_hidden_content_theme
+    - field.field.node.blog.field_hidden_tag_check
     - node.type.blog
   module:
     - file
@@ -66,3 +68,5 @@ hidden:
   comment_node_blog: true
   field_blog_category: true
   field_blog_related_content: true
+  field_hidden_content_theme: true
+  field_hidden_tag_check: true

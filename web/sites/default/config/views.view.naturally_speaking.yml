@@ -11,6 +11,9 @@ dependencies:
     - field.storage.node.field_season_number
     - image.style.medium
     - node.type.podcast_episode
+    - system.menu.main
+  content:
+    - 'block_content:basic:2c1faf60-75c2-4897-9d9d-d9b3435e90d2'
   module:
     - colorbox
     - datetime
@@ -581,8 +584,21 @@ display:
           expose:
             label: ''
           granularity: second
-      title: 'Naturally Speaking'
-      header: {  }
+      title: ''
+      header:
+        entity_block_content:
+          id: entity_block_content
+          table: views
+          field: entity_block_content
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: true
+          target: 2c1faf60-75c2-4897-9d9d-d9b3435e90d2
+          view_mode: default
+          bypass_access: false
+          plugin_id: entity
       footer: {  }
       empty: {  }
       relationships: {  }
@@ -615,6 +631,15 @@ display:
     display_options:
       display_extenders: {  }
       path: naturally-speaking
+      menu:
+        type: normal
+        title: 'Naturally Speaking Podcast'
+        description: 'A podcast on people and nature in the North Country'
+        expanded: false
+        parent: 'menu_link_content:1c680874-99ab-4541-8a6e-27afa032d8b7'
+        weight: 0
+        context: '0'
+        menu_name: main
     cache_metadata:
       max-age: -1
       contexts:

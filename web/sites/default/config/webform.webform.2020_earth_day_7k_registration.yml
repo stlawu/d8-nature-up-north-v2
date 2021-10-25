@@ -1,8 +1,12 @@
+uuid: 0e6e39ee-2ed5-4262-9e1c-d1d5dd29bf08
 langcode: en
-status: open
+status: closed
 dependencies:
   module:
     - honeypot
+third_party_settings:
+  honeypot:
+    honeypot: true
 open: null
 close: null
 weight: 0
@@ -13,7 +17,7 @@ id: 2020_earth_day_7k_registration
 title: '2020 Earth Day 7K Registration'
 description: 'Registration form for the 2020 Earth Day 7k Trail run/walk.'
 category: ''
-elements: "please_submit_once_for_each_person_registering_thank_you_:\n  '#type': label\n  '#title': 'Please submit once for each person registering. Thank you!'\nfirst_name:\n  '#type': textfield\n  '#title': 'First Name'\n  '#title_display': before\n  '#description_display': tooltip\n  '#minlength': 1\n  '#maxlength': 25\n  '#required': true\nlast_name:\n  '#type': textfield\n  '#title': 'Last Name'\n  '#title_display': before\n  '#description_display': tooltip\n  '#minlength': 1\n  '#maxlength': 20\n  '#required': true\nemail_address:\n  '#type': email\n  '#title': 'Email Address'\n  '#title_display': before\n  '#description_display': tooltip\n  '#required': true\nwhen_do_you_plan_to_run_your_7k_:\n  '#type': date\n  '#title': 'When do you plan to run your 7K?'\n  '#date_date_min': 'Apr 22 2020'\n  '#date_date_max': 'May 22 2020'\n  '#datepicker': true\nage_class:\n  '#type': select\n  '#title': 'Age Class'\n  '#options':\n    'Youth (12 and under)': 'Youth (12 and under)'\n    'Open (13-39)': 'Open (13-39)'\n    'Masters (40+)': 'Masters (40+)'\n  '#required': true\ndivision:\n  '#type': select\n  '#title': Division\n  '#options':\n    Women: Women\n    Men: Men\n    'Gender Nonconforming / Non-binary': 'Gender Nonconforming / Non-binary'\n    'Prefer not to say': 'Prefer not to say'\n  '#required': true\nwould_you_like_a_t_shirt_:\n  '#type': select\n  '#title': 'Would you like a T-Shirt?'\n  '#options':\n    'Yes': 'Yes'\n    'No': 'No'\n  '#required': true\nt_shirt_size_unisex_:\n  '#type': select\n  '#title': 'T-shirt size (unisex)'\n  '#options':\n    'Youth S': 'Youth S'\n    'Youth M': 'Youth M'\n    'Youth L': 'Youth L'\n    'Youth XL': 'Youth XL'\n    'Adult S': 'Adult S'\n    'Adult M': 'Adult M'\n    'Adult L': 'Adult L'\n    'Adult XL': 'Adult XL'\nyour_mailing_address:\n  '#type': webform_address\n  '#title': 'Your mailing address'\n  '#address__required': true\n  '#address_2__required': true\n  '#city__required': true\n  '#state_province__required': true\n  '#postal_code__required': true\n  '#country__required': true\nmailing_address:\n  '#type': textarea\n  '#title': 'Mailing Address'\n  '#description': 'Please provide your mailing address so that we may mail you your T-Shirt and participation medal!'\n  '#access_create_roles': {  }\nhow_did_you_hear_about_this_event_:\n  '#type': select\n  '#title': 'How did you hear about this event?'\n  '#options':\n    'Online Calendar': 'Online Calendar'\n    'Facebook ': 'Facebook '\n    Instagram: Instagram\n    'Newspaper ': 'Newspaper '\n    'From a friend': 'From a friend'\n    'I can''t remember': 'I can''t remember'\n    Other: Other\npayment:\n  '#type': item\n  '#title': Payment\n  '#description': \"<h3>All net proceeds from this event will be donated to United Way of Northern New York to support the COVID-19 response in the North Country.</h3>\\n\\n<h4>To complete your payment, please visit the following link:&nbsp;<a href=\\\"http://alumni.stlawu.edu/nature-up-north-7k\\\">http://alumni.stlawu.edu/nature-up-north-7k</a></h4>\\n\"\nthank_you_for_registering_:\n  '#type': item\n  '#title': 'Thank you for registering!'\nactions:\n  '#type': webform_actions\n  '#title': Submit\n  '#submit__label': 'Submit '\n"
+elements: "please_submit_once_for_each_person_registering_thank_you_:\n  '#type': label\n  '#title': 'Please submit once for each person registering. Thank you!'\nfirst_name:\n  '#type': textfield\n  '#title': 'First Name'\n  '#title_display': before\n  '#description_display': tooltip\n  '#minlength': 1\n  '#maxlength': 25\n  '#required': true\nlast_name:\n  '#type': textfield\n  '#title': 'Last Name'\n  '#title_display': before\n  '#description_display': tooltip\n  '#minlength': 1\n  '#maxlength': 20\n  '#required': true\nemail_address:\n  '#type': email\n  '#title': 'Email Address'\n  '#title_display': before\n  '#description_display': tooltip\n  '#required': true\nwhen_do_you_plan_to_run_your_7k_:\n  '#type': date\n  '#title': 'When do you plan to run your 7K?'\n  '#date_date_min': 'Apr 22 2020'\n  '#date_date_max': 'May 22 2020'\n  '#datepicker': true\nage_class:\n  '#type': select\n  '#title': 'Age Class'\n  '#options':\n    'Youth (12 and under)': 'Youth (12 and under)'\n    'Open (13-39)': 'Open (13-39)'\n    'Masters (40+)': 'Masters (40+)'\n  '#required': true\ndivision:\n  '#type': select\n  '#title': Division\n  '#options':\n    Women: Women\n    Men: Men\n    'Gender Nonconforming / Non-binary': 'Gender Nonconforming / Non-binary'\n    'Prefer not to say': 'Prefer not to say'\n  '#required': true\nwould_you_like_a_t_shirt_:\n  '#type': select\n  '#title': 'Would you like a T-Shirt?'\n  '#options':\n    'Yes': 'Yes'\n    'No': 'No'\n  '#required': true\nt_shirt_size_unisex_:\n  '#type': select\n  '#title': 'T-shirt size (unisex)'\n  '#options':\n    'Youth S': 'Youth S'\n    'Youth M': 'Youth M'\n    'Youth L': 'Youth L'\n    'Youth XL': 'Youth XL'\n    'Adult S': 'Adult S'\n    'Adult M': 'Adult M'\n    'Adult L': 'Adult L'\n    'Adult XL': 'Adult XL'\nyour_mailing_address:\n  '#type': webform_address\n  '#title': 'Your mailing address'\n  '#address__required': true\n  '#address_2__required': true\n  '#city__required': true\n  '#state_province__required': true\n  '#postal_code__required': true\n  '#country__required': true\nmailing_address:\n  '#type': textarea\n  '#title': 'Mailing Address'\n  '#description': 'Please provide your mailing address so that we may mail you your T-Shirt and participation medal!'\n  '#access_create_roles': {  }\nhow_did_you_hear_about_this_event_:\n  '#type': select\n  '#title': 'How did you hear about this event?'\n  '#options':\n    'Online Calendar': 'Online Calendar'\n    'Facebook ': 'Facebook '\n    Instagram: Instagram\n    'Newspaper ': 'Newspaper '\n    'From a friend': 'From a friend'\n    'I can''t remember': 'I can''t remember'\n    Other: Other\npayment:\n  '#type': item\n  '#title': Payment\n  '#description': |\n    <h3>All net proceeds from this event will be donated to United Way of Northern New York to support the COVID-19 response in the North Country.</h3>\n    \n    <h4>To complete your payment, please visit the following link:&nbsp;<a href=\"http://alumni.stlawu.edu/nature-up-north-7k\">http://alumni.stlawu.edu/nature-up-north-7k</a></h4>\n    \nthank_you_for_registering_:\n  '#type': item\n  '#title': 'Thank you for registering!'\nactions:\n  '#type': webform_actions\n  '#title': Submit\n  '#submit__label': 'Submit '"
 css: ''
 javascript: ''
 settings:
@@ -86,6 +90,8 @@ settings:
   wizard_progress_link: false
   wizard_progress_states: false
   wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
   wizard_start_label: ''
   wizard_preview_link: false
   wizard_confirmation: true
@@ -93,7 +99,7 @@ settings:
   wizard_track: ''
   wizard_prev_button_label: ''
   wizard_next_button_label: ''
-  wizard_toggle: false
+  wizard_toggle: true
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
   preview: 0
@@ -141,6 +147,8 @@ settings:
   results_customize: false
   token_view: false
   token_update: false
+  token_delete: false
+  serial_disabled: false
 access:
   create:
     roles:
@@ -190,7 +198,3 @@ access:
     permissions: {  }
 handlers: {  }
 variants: {  }
-uuid: 0e6e39ee-2ed5-4262-9e1c-d1d5dd29bf08
-third_party_settings:
-  honeypot:
-    honeypot: true

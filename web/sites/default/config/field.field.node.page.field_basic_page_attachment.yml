@@ -19,7 +19,7 @@ default_value: {  }
 default_value_callback: ''
 settings:
   file_directory: ''
-  file_extensions: 'txt doc pdf jpg png jpeg gif docx xls csv zip xlsx'
+  file_extensions: 'txt doc pdf jpg png jpeg gif docx xls csv zip xlsx jar'
   max_filesize: ''
   description_field: false
   handler: 'default:file'

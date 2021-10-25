@@ -1,18 +1,18 @@
-uuid: 2d072874-e8b5-47ba-9f2f-c8acfb965ae7
+uuid: ff1a838c-c431-4f5f-8519-7cb5cb4632c3
 langcode: en
 status: open
 dependencies: {  }
 open: null
 close: null
 weight: 0
-uid: 19178
+uid: 85
 template: false
 archive: false
-id: virtual_campfire_the_lorax_by_dr
-title: 'Virtual Campfire: The Lorax by Dr. Seuss'
-description: ''
+id: questions_about_bats
+title: 'Questions about bats'
+description: 'Form for folks to submit questions about bats prior to podcast interview.'
 category: ''
-elements: "event_details:\n  '#type': item\n  '#title': event-details\n  '#title_display': invisible\n  '#markup': 'Join us at 7 pm on Thursday, June 18th for a Lorax-themed virtual campfire'\nnames_of_the_participants_:\n  '#type': textarea\n  '#title': 'Names of the participants '\n  '#format_items': comma\n  '#required': true\nage_groups_of_the_participants:\n  '#type': checkboxes\n  '#title': 'Age groups of the participants'\n  '#options':\n    Youth: Youth\n    Teen: Teen\n    Adult: Adult\nemail_address:\n  '#type': textfield\n  '#title': 'Email address'\n  '#description': 'Please share your email address with us so that we may send you the Zoom link to the virtual campfire.'\n  '#required': true\n  '#format_items': comma\noptional_donation_pass_the_hat_:\n  '#type': item\n  '#title': 'Optional Donation (Pass the Hat)'\n  '#description': |\n    <h4>Nature Up North&#39;s mission is to foster a deeper connection to and appreciation for nature in the North Country. We are committed to providing free environmental education opportunities to the community. All donations are appreciated!</h4>\n    \n    <h4>To make a donation, please visit the following link:&nbsp;<a href=\"http://alumni.stlawu.edu/nature-up-north-7k\">http://alumni.stlawu.edu/nature-up-north-7k</a></h4>\n    \nthank_you_for_registering_:\n  '#type': item\n  '#title': 'Thank you for registering!'"
+elements: "processed_text:\n  '#type': processed_text\n  '#text': |\n    <p>Got a question about bats in the North Country? Submit your question here, and we'll try to get it answered for the bats episode of our Naturally Speaking podcast!</p>\n    \n  '#format': basic_html\nsubmit_your_question_about_bats_here:\n  '#type': textarea\n  '#title': 'Submit your question about bats here'\n  '#help_title': 'Type your question about bats in the box'\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'"
 css: ''
 javascript: ''
 settings:
@@ -113,8 +113,8 @@ settings:
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
   confirmation_type: page
-  confirmation_title: ''
-  confirmation_message: ''
+  confirmation_title: Thanks!
+  confirmation_message: 'Thanks for submitting your question. Watch for the bats episode of <a href="https://www.natureupnorth.org/naturally-speaking">Naturally Speaking</a> to drop just before Halloween.'
   confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: true

@@ -1,18 +1,18 @@
-uuid: 2d072874-e8b5-47ba-9f2f-c8acfb965ae7
+uuid: 898bf944-1b7c-4b70-8cee-663681431d09
 langcode: en
 status: open
 dependencies: {  }
 open: null
 close: null
 weight: 0
-uid: 19178
+uid: 19466
 template: false
 archive: false
-id: virtual_campfire_the_lorax_by_dr
-title: 'Virtual Campfire: The Lorax by Dr. Seuss'
-description: ''
+id: ask_a_fairy_fall_2021_edition
+title: 'Ask a fairy Fall 2021 edition'
+description: 'Because COVID is so wishy-washy right now, and the webform worked well last year, keeping the virtual design'
 category: ''
-elements: "event_details:\n  '#type': item\n  '#title': event-details\n  '#title_display': invisible\n  '#markup': 'Join us at 7 pm on Thursday, June 18th for a Lorax-themed virtual campfire'\nnames_of_the_participants_:\n  '#type': textarea\n  '#title': 'Names of the participants '\n  '#format_items': comma\n  '#required': true\nage_groups_of_the_participants:\n  '#type': checkboxes\n  '#title': 'Age groups of the participants'\n  '#options':\n    Youth: Youth\n    Teen: Teen\n    Adult: Adult\nemail_address:\n  '#type': textfield\n  '#title': 'Email address'\n  '#description': 'Please share your email address with us so that we may send you the Zoom link to the virtual campfire.'\n  '#required': true\n  '#format_items': comma\noptional_donation_pass_the_hat_:\n  '#type': item\n  '#title': 'Optional Donation (Pass the Hat)'\n  '#description': |\n    <h4>Nature Up North&#39;s mission is to foster a deeper connection to and appreciation for nature in the North Country. We are committed to providing free environmental education opportunities to the community. All donations are appreciated!</h4>\n    \n    <h4>To make a donation, please visit the following link:&nbsp;<a href=\"http://alumni.stlawu.edu/nature-up-north-7k\">http://alumni.stlawu.edu/nature-up-north-7k</a></h4>\n    \nthank_you_for_registering_:\n  '#type': item\n  '#title': 'Thank you for registering!'"
+elements: "processed_text:\n  '#type': processed_text\n  '#text': |\n    <p>Great job! You found the fairy house! Ask your question in the box below and stay tuned to http://www.natureupnorth.org to find a fairy's answer!</p>\n    \n  '#format': basic_html\nname:\n  '#type': textfield\n  '#title': Name\nage:\n  '#type': textfield\n  '#title': Age\nwhat_is_your_question_for_the_fairies_:\n  '#type': textarea\n  '#title': 'What is your question for the fairies? '\n  '#help_title': 'Type your question in the box'\ndo_you_want_to_share_a_picture_of_you_at_the_fairy_house_for_the:\n  '#type': webform_image_file\n  '#title': 'Do you want to share a picture of you at the fairy house for the fairies to see?'"
 css: ''
 javascript: ''
 settings:

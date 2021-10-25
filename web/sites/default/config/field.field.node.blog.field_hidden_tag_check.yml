@@ -1,0 +1,23 @@
+uuid: 6e06cd84-ebbe-43e9-934b-34c223ff6298
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hidden_tag_check
+    - node.type.blog
+id: node.blog.field_hidden_tag_check
+field_name: field_hidden_tag_check
+entity_type: node
+bundle: blog
+label: hidden_tags
+description: 'Check box if blog has been properly tagged'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

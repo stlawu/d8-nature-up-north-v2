@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.blog.field_blog_related_content
     - field.field.node.blog.field_class_reference
     - field.field.node.blog.field_hidden_content_theme
+    - field.field.node.blog.field_hidden_tag_check
     - node.type.blog
   module:
     - comment
@@ -43,7 +44,8 @@ content:
     label: hidden
     weight: 1
     type: file_table
-    settings: {  }
+    settings:
+      use_description_as_link_text: true
     third_party_settings: {  }
     region: content
   field_hidden_content_theme:
@@ -53,6 +55,16 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_hidden_tag_check:
+    weight: 102
+    label: above
+    settings:
+      format: unicode-yes-no
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   links:
     weight: 100

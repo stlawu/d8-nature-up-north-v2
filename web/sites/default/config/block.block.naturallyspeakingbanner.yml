@@ -1,0 +1,31 @@
+uuid: ddc4e63c-2942-45a6-aa11-1e4682376c88
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:image_block:9fa003b7-9600-4d01-b8ff-bf45483882cc'
+  module:
+    - block_content
+    - system
+  theme:
+    - nun
+id: naturallyspeakingbanner
+theme: nun
+region: highlighted
+weight: 0
+provider: null
+plugin: 'block_content:9fa003b7-9600-4d01-b8ff-bf45483882cc'
+settings:
+  id: 'block_content:9fa003b7-9600-4d01-b8ff-bf45483882cc'
+  label: 'Naturally speaking banner'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /naturally-speaking
+    negate: false
+    context_mapping: {  }
