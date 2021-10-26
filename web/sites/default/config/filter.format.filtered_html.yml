@@ -1,7 +1,9 @@
 uuid: 2a6fdb24-4f53-424c-87ce-5ae0efb4f38e
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - media
 name: 'Filtered HTML'
 format: filtered_html
 weight: 0
@@ -18,7 +20,7 @@ filters:
     status: true
     weight: 1
     settings:
-      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <img src alt data-entity-type data-entity-uuid>'
+      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <img src alt data-entity-type data-entity-uuid> <drupal-media data-entity-type, data-entity-uuid>'
       filter_html_help: true
       filter_html_nofollow: false
   filter_htmlcorrector:
@@ -34,3 +36,12 @@ filters:
     weight: 0
     settings:
       filter_url_length: 72
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_media_types: {  }
+      allowed_view_modes: {  }

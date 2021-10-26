@@ -23,3 +23,4 @@ permissions:
   - 'join newsletter'
   - 'search content'
   - 'view date repeats'
+  - 'view media'

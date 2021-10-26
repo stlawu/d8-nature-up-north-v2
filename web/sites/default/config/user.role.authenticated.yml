@@ -29,4 +29,5 @@ permissions:
   - 'subscribe to comments'
   - 'unflag northworthy'
   - 'view date repeats'
+  - 'view media'
   - 'view own main profile'

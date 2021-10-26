@@ -30,8 +30,10 @@ module:
   dynamic_page_cache: 0
   editor: 0
   email_registration: 0
+  embed: 0
   entity: 0
   entity_browser: 0
+  entity_embed: 0
   entity_reference_revisions: 0
   entity_reference_views_select: 0
   eva: 0
@@ -52,9 +54,14 @@ module:
   image: 0
   image_effects: 0
   kint: 0
+  layout_builder: 0
+  layout_builder_styles: 0
+  layout_discovery: 0
   link: 0
   map_component: 0
   markup: 0
+  media: 0
+  media_library: 0
   menu_ui: 0
   mmm_registration: 0
   mmm_tree_autofill: 0
