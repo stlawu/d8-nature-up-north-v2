@@ -64,3 +64,9 @@ encounter:
 encounter_mod:
   js:
     js/encounter_mod.js: {}
+
+media_library:
+  version: VERSION
+  css:
+    theme:
+      css/theme/media-library.css: {}

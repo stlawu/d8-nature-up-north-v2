@@ -22,6 +22,10 @@ regions:
 libraries-extend:
   bootstrap/framework:
     - nun/framework
+  media_library/view:
+    - nun/media_library
+  media_library/widget:
+    - nun/media_library
 
 libraries:
   - 'nun/global-styling'
