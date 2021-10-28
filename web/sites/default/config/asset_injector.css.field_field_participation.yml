@@ -1,0 +1,12 @@
+uuid: e58807c9-a647-46c8-bce6-6e8edb271362
+langcode: en
+status: true
+dependencies: {  }
+id: field_field_participation
+label: 'Field: field-participation'
+code: "#edit-field-participation {\n  max-height: 13rem;\n  overflow-y: scroll;\n  display: inline-block;\n  border: 1px solid gray;\n  padding-left: 5px;\n  min-width: 200px;\n}"
+conditions_require_all: true
+conditions: {  }
+contexts: {  }
+media: all
+preprocess: true

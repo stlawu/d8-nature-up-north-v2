@@ -1,0 +1,12 @@
+uuid: 5e213dcc-b855-468c-b16b-d5007bbe366b
+langcode: en
+status: true
+dependencies: {  }
+id: field_user_account_on_the_site
+label: 'Field: user-account-on-the-site'
+code: ".field--name-field-user-account-on-the-site .item-container {\n  color: black;\n}\n.field--name-field-user-account-on-the-site .item-container button {\n  margin-left: 1rem;\n}"
+conditions_require_all: true
+conditions: {  }
+contexts: {  }
+media: all
+preprocess: true

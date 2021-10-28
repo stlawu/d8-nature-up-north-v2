@@ -29,5 +29,7 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  blogger_profiles: true
+  main_profiles: true
   profile_blogger: true
   profile_main: true

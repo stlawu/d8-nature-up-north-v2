@@ -33,6 +33,7 @@ module:
   embed: 0
   entity: 0
   entity_browser: 0
+  entity_browser_entity_form: 0
   entity_embed: 0
   entity_reference_revisions: 0
   entity_reference_views_select: 0
@@ -53,6 +54,7 @@ module:
   honeypot: 0
   image: 0
   image_effects: 0
+  inline_entity_form: 0
   kint: 0
   layout_builder: 0
   layout_builder_styles: 0

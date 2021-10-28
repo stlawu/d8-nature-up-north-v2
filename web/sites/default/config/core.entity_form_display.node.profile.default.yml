@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.user_browser
     - field.field.node.profile.body
     - field.field.node.profile.field_area_of_study
     - field.field.node.profile.field_current_active
@@ -20,6 +21,7 @@ dependencies:
     - image.style.thumbnail
     - node.type.profile
   module:
+    - entity_browser
     - field_group
     - image
     - link
@@ -118,13 +120,9 @@ content:
     region: content
   field_participation:
     weight: 4
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_buttons
     region: content
   field_portrait:
     weight: 12
@@ -159,12 +157,16 @@ content:
   field_user_account_on_the_site:
     weight: 13
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      entity_browser: user_browser
+      field_widget_display: label
+      field_widget_remove: true
+      open: true
+      selection_mode: selection_append
+      field_widget_edit: false
+      field_widget_replace: false
+      field_widget_display_settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: entity_browser_entity_reference
     region: content
   path:
     type: path

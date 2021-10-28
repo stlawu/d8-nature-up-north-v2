@@ -1,0 +1,31 @@
+uuid: 07b5358b-b67e-47b7-96eb-7ce34eb552f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.entity_browser_users
+  module:
+    - views
+name: user_browser
+label: 'User Browser'
+display: modal
+display_configuration:
+  width: ''
+  height: ''
+  link_text: 'Select user'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  bed122f6-5294-472f-9ebf-53e82492fb62:
+    settings:
+      view: entity_browser_users
+      view_display: entity_browser_1
+      submit_text: 'Select user'
+      auto_select: false
+    uuid: bed122f6-5294-472f-9ebf-53e82492fb62
+    weight: 1
+    label: Browse
+    id: view

@@ -1,0 +1,28 @@
+uuid: 3c465274-fb9f-49f1-9ac1-0503ca0cc8d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.token
+    - field.field.user.user.user_picture
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+_core:
+  default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
+id: user.user.token
+targetEntityType: user
+bundle: user
+mode: token
+content: {  }
+hidden:
+  blogger_profiles: true
+  main_profiles: true
+  member_for: true
+  profile_blogger: true
+  profile_main: true
+  user_picture: true
