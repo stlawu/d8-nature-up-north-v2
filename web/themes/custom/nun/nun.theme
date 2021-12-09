@@ -46,20 +46,22 @@ use Drupal\views\ViewExecutable;
       $user = \Drupal\user\Entity\User::load($vars['node']->getOwnerId());
       $profile = \Drupal::entityManager()->getStorage('profile')->loadByUser($user, 'main');
 
-      $photo_field = $profile->get('field_profile_photo');
-      if(!$photo_field->isEmpty()) {
+      if (!empty($profile)) {
+        $photo_field = $profile->get('field_profile_photo');
+        if(!$photo_field->isEmpty()) {
           $photo_field_value = $photo_field->getValue();
           $profile_data['image_url'] = ImageStyle::load('square_encounter_large')->buildUrl($photo_field->entity->uri->value);
           $profile_data['image_title'] = $photo_field_value['title'];
           $profile_data['image_alt'] = $photo_field_value['alt'];
-      } else {
+        } else {
           $default_image = $photo_field->getSetting('default_image');
           if($default_image && $default_image['uuid']) {
-              $default_photo_file = \Drupal::service('entity.repository')->loadEntityByUuid('file',$default_image['uuid']);
-              if($default_photo_file) {
-                  $profile_data['image_url'] = ImageStyle::load('medium')->buildUrl($default_photo_file->getFileUri());
-              }
+            $default_photo_file = \Drupal::service('entity.repository')->loadEntityByUuid('file',$default_image['uuid']);
+            if($default_photo_file) {
+              $profile_data['image_url'] = ImageStyle::load('medium')->buildUrl($default_photo_file->getFileUri());
+            }
           }
+        }
       }
 
       $profile_data['full_name'] = $profile->get('field_profile_full_name')->value;
