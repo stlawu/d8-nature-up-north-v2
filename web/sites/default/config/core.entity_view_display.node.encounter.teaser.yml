@@ -6,17 +6,18 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.encounter.comment_node_encounter
     - field.field.node.encounter.field_common_species_name
+    - field.field.node.encounter.field_encounter_collection
     - field.field.node.encounter.field_encounter_date
     - field.field.node.encounter.field_encounter_description
     - field.field.node.encounter.field_encounter_image
     - field.field.node.encounter.field_encounter_location
     - field.field.node.encounter.field_encounter_map_label
+    - field.field.node.encounter.field_hidden_content_theme
     - field.field.node.encounter.field_hidden_tags
     - field.field.node.encounter.field_tags_other
     - field.field.node.encounter.field_trail_reference
     - node.type.encounter
   module:
-    - image
     - text
     - user
 id: node.encounter.teaser
@@ -25,24 +26,15 @@ bundle: encounter
 mode: teaser
 content:
   field_encounter_description:
-    label: hidden
-    weight: 2
     type: text_trimmed
+    weight: 0
+    region: content
+    label: hidden
     settings:
       trim_length: 600
     third_party_settings: {  }
-    region: content
-  field_encounter_image:
-    label: hidden
-    weight: 0
-    type: image
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    region: content
   links:
-    weight: 100
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -52,9 +44,12 @@ content:
 hidden:
   comment_node_encounter: true
   field_common_species_name: true
+  field_encounter_collection: true
   field_encounter_date: true
+  field_encounter_image: true
   field_encounter_location: true
   field_encounter_map_label: true
+  field_hidden_content_theme: true
   field_hidden_tags: true
   field_tags_other: true
   field_trail_reference: true

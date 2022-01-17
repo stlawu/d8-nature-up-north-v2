@@ -1,0 +1,22 @@
+uuid: 57d546a1-5e2f-40ef-bc55-5ef461d392f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.media_block
+    - field.field.block_content.media_block.field_media
+id: block_content.media_block.default
+targetEntityType: block_content
+bundle: media_block
+mode: default
+content:
+  field_media:
+    type: entity_reference_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden: {  }

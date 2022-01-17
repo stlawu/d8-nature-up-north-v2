@@ -1,0 +1,12 @@
+uuid: 73aaa1d2-cf43-4a9b-91ec-88a590a6eb94
+langcode: en
+status: true
+dependencies: {  }
+id: ui_dialog_tweaks
+label: 'Off-canvas Tweaks'
+code: "#drupal-off-canvas .panel-default > .panel-heading {\n  margin: 0;\n}\n#drupal-off-canvas .links a {\n  color: #6291bd;\n  background-color: #fafafa;\n  border-radius: 15px;\n  padding: 5px 10px;\n  line-height: 2em;\n}\n#drupal-off-canvas .inline-block-list {\n  margin: 10px;\n}\n#drupal-off-canvas .inline-block-list li{\n  margin: 5px;\n}"
+conditions_require_all: true
+conditions: {  }
+contexts: {  }
+media: all
+preprocess: true

@@ -7,9 +7,11 @@ label: 'approved user'
 weight: 9
 is_admin: null
 permissions:
+  - 'access entity_embed_image_media entity browser pages'
   - 'bypass honeypot protection'
   - 'create encounter content'
   - 'create event content'
+  - 'create media'
   - 'delete own encounter content'
   - 'edit own comments'
   - 'edit own community_organization content'

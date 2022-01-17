@@ -9,10 +9,12 @@ is_admin: null
 permissions:
   - 'access content'
   - 'access content overview'
+  - 'access entity_embed_image_media entity browser pages'
   - 'access toolbar'
   - 'bypass honeypot protection'
   - 'create encounter content'
   - 'create event content'
+  - 'create media'
   - 'delete own encounter content'
   - 'delete own event content'
   - 'edit own comments'

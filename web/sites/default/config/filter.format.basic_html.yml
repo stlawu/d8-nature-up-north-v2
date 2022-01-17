@@ -1,7 +1,14 @@
 uuid: 6bf024ff-c1f0-4243-ad1c-b1688d970cf8
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - core.entity_view_mode.media.full
+    - core.entity_view_mode.media.media_library
+  module:
+    - editor
+    - entity_embed
+    - media
 _core:
   default_config_hash: P8ddpAIKtawJDi5SzOwCzVnnNYqONewSTJ6Xn0dW_aQ
 name: 'Basic HTML'
@@ -14,7 +21,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<a href hreflang target> <em> <strong> <ul type> <ol start type> <li> <blockquote> <img src alt data-entity-type data-entity-uuid> <p>'
+      allowed_html: '<a href hreflang target> <em> <strong> <ul type> <ol start type> <li> <blockquote> <p> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt title> <img src alt data-entity-type data-entity-uuid data-align data-caption> <drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button data-langcode alt title>'
       filter_html_help: true
       filter_html_nofollow: true
   filter_htmlcorrector:
@@ -32,6 +39,41 @@ filters:
       filter_url_length: 72
   filter_autop:
     id: filter_autop
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: true
+    weight: 0
+    settings: {  }
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: 100
+    settings:
+      default_view_mode: full
+      allowed_media_types: {  }
+      allowed_view_modes:
+        full: full
+        media_library: media_library
+  entity_embed:
+    id: entity_embed
+    provider: entity_embed
+    status: true
+    weight: 100
+    settings: {  }
+  filter_caption:
+    id: filter_caption
     provider: filter
     status: true
     weight: 0

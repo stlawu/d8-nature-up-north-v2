@@ -7,10 +7,12 @@ label: 'Maple Admin'
 weight: 10
 is_admin: null
 permissions:
+  - 'access entity_embed_image_media entity browser pages'
   - 'access maple_tree_browser entity browser pages'
   - 'create maple_data content'
   - 'create maple_observation content'
   - 'create maple_tree content'
+  - 'create media'
   - 'delete any maple_data content'
   - 'delete any maple_observation content'
   - 'delete any maple_tree content'

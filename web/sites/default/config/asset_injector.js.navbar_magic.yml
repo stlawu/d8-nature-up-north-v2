@@ -1,0 +1,22 @@
+uuid: a55c205d-badd-47ea-9875-442b8f97251f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: navbar_magic
+label: 'Navbar Magic'
+code: "(function ($) {\n  // Hide Header on on scroll down\n  var didScroll;\n  var lastScrollTop = 0;\n  var delta = 5;\n  var navbarHeight = $('header').outerHeight();\n\n  $(window).scroll(function(event){\n    didScroll = true;\n  });\n\n  setInterval(function() {\n    if (didScroll) {\n      hasScrolled();\n      didScroll = false;\n    }\n  }, 250);\n\n  function hasScrolled() {\n    var st = $(this).scrollTop();\n\n    // Make sure they scroll more than delta\n    if(Math.abs(lastScrollTop - st) <= delta)\n      return;\n    \n    // If they scrolled down and are past the navbar, add class .nav-up.\n    // This is necessary so you never see what is \"behind\" the navbar.\n    if (st > lastScrollTop && st > navbarHeight){\n      // Scroll Down\n      $('header').removeClass('nav-down').addClass('nav-up');\n    } else {\n      // Scroll Up\n      if(st + $(window).height() < $(document).height()) {\n        $('header').removeClass('nav-up').addClass('nav-down');\n      }\n    }\n\n    lastScrollTop = st;\n  }\n}(jQuery));"
+conditions_require_all: true
+conditions:
+  current_theme:
+    id: current_theme
+    theme:
+      nun: nun
+    negate: false
+contexts: {  }
+header: false
+preprocess: true
+jquery: true
+noscript: ''
+noscriptRegion: {  }

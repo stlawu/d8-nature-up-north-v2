@@ -1,0 +1,26 @@
+uuid: 99a640c5-8ea4-4288-84dc-9506f8982e10
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.content_reference_block
+    - field.storage.block_content.field_content_display_mode
+  module:
+    - entity_reference_display
+id: block_content.content_reference_block.field_content_display_mode
+field_name: field_content_display_mode
+entity_type: block_content
+bundle: content_reference_block
+label: 'Display Mode'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  exclude:
+    default: default
+    full: full
+    teaser: teaser
+  negate: 1
+field_type: entity_reference_display

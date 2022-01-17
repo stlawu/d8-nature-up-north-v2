@@ -7,6 +7,7 @@ label: 'Maple Monitor'
 weight: 8
 is_admin: null
 permissions:
+  - 'access entity_embed_image_media entity browser pages'
   - 'access maple_tree_browser entity browser pages'
   - 'bypass honeypot protection'
   - 'create encounter content'
@@ -15,6 +16,7 @@ permissions:
   - 'create maple_data content'
   - 'create maple_observation content'
   - 'create maple_tree content'
+  - 'create media'
   - 'create spring_maple_tree_data content'
   - 'delete own encounter content'
   - 'delete own fall_maple_tree_data content'

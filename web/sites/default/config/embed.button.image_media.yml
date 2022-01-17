@@ -1,0 +1,30 @@
+uuid: a5338a92-81c3-4c60-9e07-f9ee3e06cd87
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full
+    - core.entity_view_mode.media.media_library
+    - entity_browser.browser.entity_embed_image_media
+    - media.type.image
+  module:
+    - entity_embed
+    - media
+label: 'Image Media'
+id: image_media
+type_id: entity
+type_settings:
+  entity_type: media
+  bundles:
+    - image
+  display_plugins:
+    - 'entity_reference:media_thumbnail'
+    - 'view_mode:media.full'
+    - 'view_mode:media.media_library'
+  entity_browser: entity_embed_image_media
+  entity_browser_settings:
+    display_review: true
+icon:
+  data: iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAA2FBMVEUAAAAAAAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8AAAAAAAAGBgYAAAAAAABaWlpgYGAHBwcODg4KCgoAAAAAAAAdHR0JCQn///8VFRUZGRkZGRn///8mJiYAAAAMDAwODg4PDw8SEhITExMUFBQXFxcaGhocHBweHh4fHx8iIiIjIyMlJSUpKSkqKiotLS02NjY4ODg5OTk7Ozs8PDw+Pj5AQEBBQUFCQkJERERHR0dJSUlKSkpLS0tMTExOTk5PT09QUFBRUVFSUlJVVVVZWVl33uIHAAAAIHRSTlMACAgKFSEqTFBVYHR2fpygqq2tztXb5ebm6urv8vX4/sE9S38AAACNSURBVBgZhcFXF4FgAIDhV7bskc0XKrIyS1b2//9HnKMLXXke+E8EAIvODwuYSOlqWvKNABNlr+AzAINirYBPA/rIDZmPeAZ0QOUr2uwmMAEVUvkIodLz1YrNAY1Ye11PZg+P+7ViAeNw2bt50+XldDxvZ4CZ27jOznUd27ZXQ0AIQ9e+Bj0BdAIAKYA3G08S5VN3OnoAAAAASUVORK5CYII=
+  uri: 'public://embed_buttons/image.png'
+icon_uuid: null

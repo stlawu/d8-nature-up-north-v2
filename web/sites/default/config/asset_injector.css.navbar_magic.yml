@@ -1,0 +1,12 @@
+uuid: cb62e4ab-653c-4b54-9fe1-3b6e523e044e
+langcode: en
+status: true
+dependencies: {  }
+id: navbar_magic
+label: 'Navbar Magic'
+code: "body.toolbar-fixed.toolbar-horizontal.toolbar-tray-open .navbar-fixed-top {\n  transition: top 0.2s ease-in-out;\n}\nbody.toolbar-fixed.toolbar-horizontal.toolbar-tray-open .navbar-fixed-top.nav-up {\n  top: -10px;\n}\nbody.toolbar-fixed.toolbar-horizontal.toolbar-tray-open .navbar-fixed-top.nav-down {\n  top: 79px;\n}"
+conditions_require_all: true
+conditions: {  }
+contexts: {  }
+media: all
+preprocess: true
