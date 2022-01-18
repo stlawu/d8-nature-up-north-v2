@@ -1,0 +1,11 @@
+uuid: 87cb1d70-33bb-48d4-8806-b9eaedae9f50
+langcode: en
+status: true
+dependencies: {  }
+id: margin_x_axis_3
+label: 'Margin X-axis: 3'
+classes: mx-3
+type: component
+weight: 0
+block_restrictions: {  }
+layout_restrictions: {  }

@@ -1,0 +1,11 @@
+uuid: 83fa28d8-f3e5-4b59-bf01-82491e0e0bf7
+langcode: en
+status: true
+dependencies: {  }
+id: margin_x_axis_5
+label: 'Margin X-axis: 5'
+classes: mx-5
+type: component
+weight: 0
+block_restrictions: {  }
+layout_restrictions: {  }

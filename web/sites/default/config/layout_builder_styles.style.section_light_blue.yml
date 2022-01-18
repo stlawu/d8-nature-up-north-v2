@@ -1,0 +1,11 @@
+uuid: 80eba69b-5fcc-468d-a048-3f56cadae7a3
+langcode: en
+status: true
+dependencies: {  }
+id: section_light_blue
+label: 'Section Light Blue'
+classes: section-light-blue
+type: section
+weight: 0
+block_restrictions: {  }
+layout_restrictions: {  }

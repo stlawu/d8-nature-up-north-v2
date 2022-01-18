@@ -26,6 +26,7 @@
         "drupal/auto_entitylabel": "^2.1",
         "drupal/backup_migrate": "^4.0",
         "drupal/bootstrap": "^3.15",
+        "drupal/bootstrap_layouts": "^5.2",
         "drupal/captcha": "^1.0",
         "drupal/coffee": "^1.0",
         "drupal/colorbox": "^1.4",
@@ -130,7 +131,6 @@
         ],
         "post-update-cmd": [
             "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-            "find .circleci/scripts/pantheon/ -type f | xargs chmod 755",
             "find tests/scripts/ -type f | xargs chmod 755"
         ],
         "post-create-project-cmd": [

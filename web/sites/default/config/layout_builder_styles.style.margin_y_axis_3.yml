@@ -1,0 +1,11 @@
+uuid: 976301aa-741a-4fbe-9a8a-8544ee396540
+langcode: en
+status: true
+dependencies: {  }
+id: margin_y_axis_3
+label: 'Margin Y-axis: 3'
+classes: my-3
+type: component
+weight: 0
+block_restrictions: {  }
+layout_restrictions: {  }

@@ -1,0 +1,12 @@
+uuid: a2fb9893-a08f-46c6-883d-68c7f14c2cbc
+langcode: en
+status: true
+dependencies: {  }
+id: layout_template_tweaks
+label: 'Layout Template Tweaks'
+code: ".layout .layout__region {\n  padding-right: 1rem;\n}\n\n.layout .layout__region--first {\n  padding-left: 1rem;\n}"
+conditions_require_all: true
+conditions: {  }
+contexts: {  }
+media: all
+preprocess: true

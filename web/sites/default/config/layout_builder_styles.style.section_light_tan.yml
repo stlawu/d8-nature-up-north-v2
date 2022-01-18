@@ -1,0 +1,11 @@
+uuid: 60c2a0e4-0dd8-47b8-89dd-1367ae0fea4a
+langcode: en
+status: true
+dependencies: {  }
+id: section_light_tan
+label: 'Section Light Tan'
+classes: section-light-tan
+type: section
+weight: 0
+block_restrictions: {  }
+layout_restrictions: {  }
