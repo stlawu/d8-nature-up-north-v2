@@ -120,13 +120,9 @@ content:
     region: content
   field_participation:
     weight: 4
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_buttons
     region: content
   field_portrait:
     weight: 12
@@ -148,7 +144,7 @@ content:
     weight: 3
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+    type: options_buttons
     region: content
   field_title_role:
     weight: 5
@@ -208,9 +204,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
   uid:
-    type: options_select
+    type: entity_reference_autocomplete
     weight: 14
-    settings: {  }
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     region: content
     third_party_settings: {  }
   url_redirects:
