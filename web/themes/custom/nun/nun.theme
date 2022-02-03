@@ -40,7 +40,14 @@ use Drupal\views\ViewExecutable;
     elseif($vars['node']->getType() === 'encounter') {
       $date = $vars['node']->getCreatedTime();
       $vars['date'] = \Drupal::service('date.formatter')->format($date, 'custom', 'F j, Y');
-      $vars['encounter_image_data'] = getImageCarouselData($vars['node'], 'field_encounter_image');
+
+      // If the encounter doesn't images in the media field, look to the legacy image field instead
+      if (count($vars['node']->get('field_encounter_media')) > 0) {
+        $vars['encounter_image_data'] = getImageCarouselData($vars['node'], 'field_encounter_media');
+      }
+      else {
+        $vars['encounter_image_data'] = getImageCarouselData($vars['node'], 'field_encounter_image');
+      }
 
       $profile_data = array();
       $user = \Drupal\user\Entity\User::load($vars['node']->getOwnerId());
@@ -103,7 +110,10 @@ use Drupal\views\ViewExecutable;
      if(count($images) > 1) {
        $i = 0;
        foreach($images as $image) {
-
+         // if the field is a media field, look at it's image field
+         if ($image->entity->getEntityTypeId() == 'media' && $image->entity->bundle() == 'image') {
+           $image = $image->entity->get('field_media_image');
+         }
          $uri = $image->entity->uri->value;
          $properties[$i]['title'] = $image->getValue()['title'];
          $properties[$i]['alt'] = $image->getValue()['alt'];

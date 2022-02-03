@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.media.media_library
     - field.field.node.encounter.comment_node_encounter
     - field.field.node.encounter.field_common_species_name
     - field.field.node.encounter.field_encounter_collection
@@ -11,6 +12,7 @@ dependencies:
     - field.field.node.encounter.field_encounter_image
     - field.field.node.encounter.field_encounter_location
     - field.field.node.encounter.field_encounter_map_label
+    - field.field.node.encounter.field_encounter_media
     - field.field.node.encounter.field_hidden_content_theme
     - field.field.node.encounter.field_hidden_tags
     - field.field.node.encounter.field_tags_other
@@ -19,12 +21,33 @@ dependencies:
     - node.type.encounter
   module:
     - datetime
+    - entity_browser_entity_form
     - entity_reference_views_select
+    - field_group
     - geolocation
     - image
+    - inline_entity_form
     - markup
     - path
     - text
+third_party_settings:
+  field_group:
+    group_legacy_fields:
+      children:
+        - field_encounter_image
+      parent_name: ''
+      weight: 19
+      format_type: details_sidebar
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: 'These field should no longer be used as they have new equivalents on the form. They are made available for updating legacy content.'
+        open: false
+        required_fields: true
+        weight: 0
+      label: 'Legacy Fields'
 id: node.encounter.default
 targetEntityType: node
 bundle: encounter
@@ -73,13 +96,13 @@ content:
     third_party_settings: {  }
     region: content
   field_encounter_image:
-    weight: 1
     type: image_image
+    weight: 1
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    region: content
   field_encounter_location:
     weight: 3
     settings:
@@ -121,8 +144,27 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_encounter_media:
+    type: inline_entity_form_complex
+    weight: 1
+    settings:
+      form_mode: media_library
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      revision: false
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: existing_image_media
+    region: content
   field_hidden_content_theme:
-    weight: 26
+    weight: 18
     settings: {  }
     third_party_settings: {  }
     type: options_buttons

@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.encounter.field_encounter_image
     - field.field.node.encounter.field_encounter_location
     - field.field.node.encounter.field_encounter_map_label
+    - field.field.node.encounter.field_encounter_media
     - field.field.node.encounter.field_hidden_content_theme
     - field.field.node.encounter.field_hidden_tags
     - field.field.node.encounter.field_tags_other
@@ -22,6 +23,7 @@ dependencies:
     - datetime
     - geolocation
     - image
+    - media
     - text
     - user
 id: node.encounter.default
@@ -32,7 +34,7 @@ content:
   comment_node_encounter:
     label: above
     type: comment_default
-    weight: 6
+    weight: 7
     settings:
       view_mode: default
       pager_id: 0
@@ -40,14 +42,14 @@ content:
     region: content
   field_common_species_name:
     label: above
-    weight: 5
+    weight: 6
     type: entity_reference_label
     settings:
       link: true
     third_party_settings: {  }
     region: content
   field_encounter_collection:
-    weight: 3
+    weight: 4
     label: above
     settings:
       link: true
@@ -72,7 +74,7 @@ content:
     region: content
   field_encounter_image:
     label: hidden
-    weight: 2
+    weight: 3
     type: image
     settings:
       image_style: ''
@@ -80,14 +82,23 @@ content:
     third_party_settings: {  }
     region: content
   field_encounter_location:
-    weight: 8
+    weight: 9
     label: above
     settings: {  }
     third_party_settings: {  }
     type: geolocation_latlng
     region: content
+  field_encounter_media:
+    type: media_thumbnail
+    weight: 2
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
   field_hidden_content_theme:
-    weight: 11
+    weight: 10
     label: above
     settings:
       link: true
@@ -96,14 +107,14 @@ content:
     region: content
   field_hidden_tags:
     label: above
-    weight: 4
+    weight: 5
     type: entity_reference_label
     settings:
       link: true
     third_party_settings: {  }
     region: content
   links:
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }

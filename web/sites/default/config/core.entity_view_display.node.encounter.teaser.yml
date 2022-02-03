@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.encounter.field_encounter_image
     - field.field.node.encounter.field_encounter_location
     - field.field.node.encounter.field_encounter_map_label
+    - field.field.node.encounter.field_encounter_media
     - field.field.node.encounter.field_hidden_content_theme
     - field.field.node.encounter.field_hidden_tags
     - field.field.node.encounter.field_tags_other
@@ -49,6 +50,7 @@ hidden:
   field_encounter_image: true
   field_encounter_location: true
   field_encounter_map_label: true
+  field_encounter_media: true
   field_hidden_content_theme: true
   field_hidden_tags: true
   field_tags_other: true
