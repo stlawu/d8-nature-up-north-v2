@@ -3,11 +3,13 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.media.media_library
     - field.field.node.blog.body
     - field.field.node.blog.comment_node_blog
     - field.field.node.blog.field_blog_attachment
     - field.field.node.blog.field_blog_category
     - field.field.node.blog.field_blog_image
+    - field.field.node.blog.field_blog_media
     - field.field.node.blog.field_blog_related_content
     - field.field.node.blog.field_class_reference
     - field.field.node.blog.field_hidden_content_theme
@@ -15,10 +17,31 @@ dependencies:
     - image.style.thumbnail
     - node.type.blog
   module:
+    - entity_browser_entity_form
+    - field_group
     - file
     - image
+    - inline_entity_form
     - path
     - text
+third_party_settings:
+  field_group:
+    group_legacy_fields:
+      children:
+        - field_blog_image
+      parent_name: ''
+      weight: 10
+      format_type: details_sidebar
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: 'These field should no longer be used as they have new equivalents on the form. They are made available for updating legacy content.'
+        open: false
+        required_fields: true
+        weight: 0
+      label: 'Legacy Fields'
 id: node.blog.default
 targetEntityType: node
 bundle: blog
@@ -42,12 +65,12 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 8
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   field_blog_attachment:
-    weight: 5
+    weight: 6
     type: file_generic
     settings:
       progress_indicator: throbber
@@ -60,16 +83,35 @@ content:
     third_party_settings: {  }
     region: content
   field_blog_image:
-    weight: 3
+    weight: 4
     type: image_image
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     region: content
+  field_blog_media:
+    type: inline_entity_form_complex
+    weight: 3
+    settings:
+      form_mode: media_library
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      revision: false
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: existing_image_media
+    region: content
   field_blog_related_content:
     type: entity_reference_autocomplete
-    weight: 7
+    weight: 8
     region: content
     settings:
       match_operator: CONTAINS
@@ -78,7 +120,7 @@ content:
       match_limit: 10
     third_party_settings: {  }
   field_class_reference:
-    weight: 6
+    weight: 7
     type: entity_reference_autocomplete
     settings:
       match_operator: CONTAINS
@@ -88,13 +130,13 @@ content:
     third_party_settings: {  }
     region: content
   field_hidden_content_theme:
-    weight: 122
+    weight: 17
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_hidden_tag_check:
-    weight: 123
+    weight: 9
     settings:
       display_label: true
     third_party_settings: {  }
@@ -102,7 +144,7 @@ content:
     region: content
   path:
     type: path
-    weight: 11
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -110,21 +152,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 12
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 121
+    weight: 16
     third_party_settings: {  }
     region: content
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 13
     region: content
     third_party_settings: {  }
   title:
@@ -137,7 +179,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 5
     settings:
       match_operator: CONTAINS
       size: 60
@@ -146,7 +188,7 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 50
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }

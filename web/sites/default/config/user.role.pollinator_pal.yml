@@ -8,6 +8,7 @@ weight: 11
 is_admin: null
 permissions:
   - 'access entity_embed_image_media entity browser pages'
+  - 'access existing_image_media entity browser pages'
   - 'create media'
   - 'create pollinator_garden content'
   - 'edit own pollinator_garden content'

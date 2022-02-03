@@ -33,8 +33,14 @@ use Drupal\views\ViewExecutable;
       $date = $vars['node']->getCreatedTime();
       $vars['date'] = \Drupal::service('date.formatter')->format($date, 'custom', 'F j, Y');
 
+      // If the encounter doesn't images in the media field, look to the legacy image field instead
+      if (count($vars['node']->get('field_blog_media')) > 0) {
+        $vars['blog_image_data'] = getImageCarouselData($vars['node'], 'field_blog_media');
+      }
+      else {
+        $vars['blog_image_data'] = getImageCarouselData($vars['node'], 'field_blog_image');
+      }
 
-      $vars['blog_image_data'] = getImageCarouselData($vars['node'], 'field_blog_image');
       $vars['blog_author_block'] = \Drupal::service('plugin.manager.block')->createInstance('blog_author')->build();
     }
     elseif($vars['node']->getType() === 'encounter') {

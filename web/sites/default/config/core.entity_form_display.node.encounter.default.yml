@@ -37,7 +37,7 @@ third_party_settings:
         - field_encounter_image
       parent_name: ''
       weight: 19
-      format_type: details_sidebar
+      format_type: details
       region: content
       format_settings:
         show_empty_fields: false

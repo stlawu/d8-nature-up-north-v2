@@ -11,7 +11,7 @@ label: 'Existing Image Media'
 display: modal
 display_configuration:
   width: ''
-  height: ''
+  height: '600'
   link_text: 'Select images'
   auto_open: false
 selection_display: no_display

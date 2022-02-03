@@ -8,6 +8,7 @@ weight: 7
 is_admin: null
 permissions:
   - 'access entity_embed_image_media entity browser pages'
+  - 'access existing_image_media entity browser pages'
   - 'bypass honeypot protection'
   - 'create encounter content'
   - 'create event content'

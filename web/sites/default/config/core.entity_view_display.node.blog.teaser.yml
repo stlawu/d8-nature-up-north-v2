@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.blog.field_blog_attachment
     - field.field.node.blog.field_blog_category
     - field.field.node.blog.field_blog_image
+    - field.field.node.blog.field_blog_media
     - field.field.node.blog.field_blog_related_content
     - field.field.node.blog.field_class_reference
     - field.field.node.blog.field_hidden_content_theme
@@ -52,6 +53,7 @@ hidden:
   comment_node_blog: true
   field_blog_attachment: true
   field_blog_category: true
+  field_blog_media: true
   field_blog_related_content: true
   field_class_reference: true
   field_hidden_content_theme: true
