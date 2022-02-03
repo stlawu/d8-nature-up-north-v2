@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 name: 'Pure HTML'
 format: pure_html
-weight: 0
+weight: -5
 filters:
   filter_url:
     id: filter_url

@@ -6,7 +6,18 @@ dependencies:
     - field.storage.node.field_encounter_description
     - node.type.encounter
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    simple_html: simple_html
+    plain_text: '0'
+    basic_html: '0'
+    embed: '0'
+    filtered_html: '0'
+    pure_html: '0'
+    restricted_html: '0'
+    full_html: '0'
 id: node.encounter.field_encounter_description
 field_name: field_encounter_description
 entity_type: node

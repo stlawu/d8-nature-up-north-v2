@@ -28,6 +28,7 @@ permissions:
   - 'search content'
   - 'subscribe to comments'
   - 'unflag northworthy'
+  - 'use text format simple_html'
   - 'view date repeats'
   - 'view media'
   - 'view own main profile'

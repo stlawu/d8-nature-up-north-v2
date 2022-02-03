@@ -22,5 +22,6 @@ permissions:
   - 'create photo_post_from_eastside_element content'
   - 'join newsletter'
   - 'search content'
+  - 'use text format simple_html'
   - 'view date repeats'
   - 'view media'
