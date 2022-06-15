@@ -1,0 +1,46 @@
+{#
+/**
+ * @file
+ * Template for a Node.
+ */
+#}
+{%
+  set classes = [
+  'node',
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  node.bundle|clean_class,
+  node.bundle|clean_class ~ '--' ~ view_mode|clean_class,
+  'w-100',
+  'm-1',
+]
+%}
+{% if node.field_blog_media %}
+  {% set image = {
+    '#theme':      'image_style',
+    '#style_name': 'large',
+    '#attributes': { class: 'rounded-top w-100' },
+    '#uri':        node.field_blog_media.entity.field_media_image.entity.uri.value,
+    '#alt':        node.field_blog_media.entity.field_media_image.entity.alt,
+  } %}
+{% endif %}
+{% set type = type ?: node.type.entity.label %}
+
+<article{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  {% block content %}
+    <div class="border-bottom rounded-top bg-dark" style="min-height:1rem">{{ image }}</div>
+    <div class="border rounded-bottom text-center p-1">
+      <div class="text-uppercase small">{{ type }}</div>
+      <div{{ title_attributes }}>
+        <a class="font-weight-bold" href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </div>
+      <div{{ content_attributes }}>
+        {{ content|without('field_blog_media') }}
+      </div>
+    </div>
+  {% endblock %}
+</article>

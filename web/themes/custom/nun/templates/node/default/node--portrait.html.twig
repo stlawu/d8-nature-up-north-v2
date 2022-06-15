@@ -1,0 +1,54 @@
+{#
+/**
+ * @file
+ * Template for a Node.
+ */
+#}
+{%
+  set classes = [
+  'node',
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  node.bundle|clean_class,
+  node.bundle|clean_class ~ '--' ~ view_mode|clean_class,
+  'display-portrait',
+  'd-inline-block',
+  'w-100',
+  'm-1',
+]
+%}
+{% set image = "TEMP" %}
+
+{% set type = type ?: node.type.entity.label %}
+
+<article{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  <a class="portrait-container display-card color-black" href="{{ url }}" rel="bookmark">
+  {% block content %}
+    <div class="portrait-top bg-dark">{{ image }}</div>
+    <div class="portrait-middle">
+      <div class="portrait-middle-wrapper">
+        <div class="portrait-middle-content border rounded bg-black">
+          {{ type }}
+        </div>
+      </div>
+    </div>
+    <div class="portrait-bottom p-2 d-flex flex-column text-black">
+      <div{{ title_attributes.addClass('font-weight-bold') }}>
+        {{ label }}
+      </div>
+      {% if content %}
+        <div class="small">
+          {{ content }}
+        </div>
+      {% endif %}
+      <div class="d-flex text-uppercase small mt-auto text-dark">
+        {{ type }}
+        <span class="ml-auto">></span>
+      </div>
+    </div>
+  {% endblock %}
+  </a>
+</article>

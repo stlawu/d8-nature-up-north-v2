@@ -6,10 +6,12 @@ dependencies:
     - field.storage.node.body
     - field.storage.node.field_blog_category
     - field.storage.node.field_blog_image
+    - field.storage.node.field_blog_media
     - image.style.front_featured
     - node.type.blog
   module:
     - image
+    - media
     - node
     - text
     - user
@@ -133,10 +135,10 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: true
-            text: "<div class=\"front-page-blog-image\">\n{{field_blog_image}}\n{{field_blog_category}}\n</div>"
+            text: "<div class=\"front-page-blog-image\">\r\n{{field_blog_image}}\r\n{{field_blog_category}}\r\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -179,6 +181,70 @@ display:
             image_style: front_featured
             image_link: content
           group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 1
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_blog_media:
+          id: field_blog_media
+          table: node__field_blog_media
+          field: field_blog_media
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: "<div class=\"front-page-blog-image\">\r\n{{ field_blog_media }}\r\n{{field_blog_category}}\r\n</div>"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: '{{ field_blog_image }}'
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: media_thumbnail
+          settings:
+            image_style: front_featured
+            image_link: content
+          group_column: target_id
           group_columns: {  }
           group_rows: true
           delta_limit: 1
@@ -525,6 +591,7 @@ display:
         - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_blog_category'
         - 'config:field.storage.node.field_blog_image'
+        - 'config:field.storage.node.field_blog_media'
   home_page_block:
     display_plugin: block
     id: home_page_block
@@ -544,3 +611,4 @@ display:
         - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_blog_category'
         - 'config:field.storage.node.field_blog_image'
+        - 'config:field.storage.node.field_blog_media'

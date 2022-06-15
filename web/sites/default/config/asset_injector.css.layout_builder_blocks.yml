@@ -1,0 +1,12 @@
+uuid: 34e02e8a-3092-421c-ba3b-f45cbcb6f91d
+langcode: en
+status: true
+dependencies: {  }
+id: layout_builder_blocks
+label: 'Layout Builder Blocks'
+code: ".block-inline-blockmedia-block .field--name-field-media-oembed-video {\n    position: relative;\n    padding-top: 53%;\n    margin: 1rem 0;\n}\n.block-inline-blockmedia-block .field--name-field-media-oembed-video > iframe {\n    position: absolute;\n    width: 100%;\n    height: 100%;\n    top: 0;\n}"
+conditions_require_all: true
+conditions: {  }
+contexts: {  }
+media: all
+preprocess: true

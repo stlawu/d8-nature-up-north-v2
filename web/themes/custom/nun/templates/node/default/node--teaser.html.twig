@@ -1,0 +1,13 @@
+{#
+/**
+ * @file
+ * Template for a Node.
+ */
+#}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+</div>

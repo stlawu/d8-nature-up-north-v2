@@ -1,0 +1,12 @@
+uuid: 3c361aef-8c5c-46a5-9560-101456e4fdf8
+langcode: en
+status: true
+dependencies: {  }
+id: bootstrap_utility_classes
+label: 'Bootstrap Utility classes'
+code: ".float-left {float:left;}\n.float-right {float:right;}\n.mx-1 {margin-left: 1rem;margin-right: 1rem;}\n.my-1 {margin-top: 1rem;margin-bottom: 1rem;}\n.ml-1 {margin-left: 1rem;}\n.mr-1 {margin-right: 1rem;}\n.mt-1 {margin-top: 1rem;}\n.mb-1 {margin-bottom: 1rem;}"
+conditions_require_all: true
+conditions: {  }
+contexts: {  }
+media: all
+preprocess: true

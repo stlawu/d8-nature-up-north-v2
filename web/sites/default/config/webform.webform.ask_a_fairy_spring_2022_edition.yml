@@ -1,6 +1,6 @@
-uuid: 898bf944-1b7c-4b70-8cee-663681431d09
+uuid: 1fecaf40-2614-4e19-9322-8fa563221ca8
 langcode: en
-status: closed
+status: open
 dependencies: {  }
 open: null
 close: null
@@ -8,11 +8,11 @@ weight: 0
 uid: 19466
 template: false
 archive: false
-id: ask_a_fairy_fall_2021_edition
-title: 'Ask a fairy Fall 2021 edition'
-description: 'Because COVID is so wishy-washy right now, and the webform worked well last year, keeping the virtual design'
+id: ask_a_fairy_spring_2022_edition
+title: 'Ask A Fairy Spring 2022 edition'
+description: 'Where North Country explorers submit their fairy questions!'
 category: ''
-elements: "processed_text:\n  '#type': processed_text\n  '#text': |\n    <p>Great job! You found the fairy house! Ask your question in the box below and stay tuned to http://www.natureupnorth.org to find a fairy's answer!</p>\n    \n  '#format': basic_html\nname:\n  '#type': textfield\n  '#title': Name\nage:\n  '#type': textfield\n  '#title': Age\nwhat_is_your_question_for_the_fairies_:\n  '#type': textarea\n  '#title': 'What is your question for the fairies? '\n  '#help_title': 'Type your question in the box'\ndo_you_want_to_share_a_picture_of_you_at_the_fairy_house_for_the:\n  '#type': webform_image_file\n  '#title': 'Do you want to share a picture of you at the fairy house for the fairies to see?'"
+elements: "processed_text:\n  '#type': processed_text\n  '#text': |\n    <p>Great job! You found the fairy house! Ask your question in the box below and stay tuned to http://www.natureupnorth.org to find a fairy's answer!</p>\n    \n  '#format': basic_html\nname:\n  '#type': textfield\n  '#title': Name\nage:\n  '#type': textfield\n  '#title': Age\nwhat_is_your_question_for_the_fairies_:\n  '#type': textarea\n  '#title': 'What is your question for the fairies? '\n  '#help_title': 'Type your question in the box'\ndo_you_want_to_share_a_picture_of_you_at_the_fairy_house_for_the:\n  '#type': webform_image_file\n  '#title': 'Do you want to share a picture of you at the fairy house for the fairies to see?'\nwhich_trail_did_you_find_the_fairy_s_house_on_:\n  '#type': radios\n  '#title': 'Which trail did you find the fairy''s house on? '\n  '#options':\n    'Maple City Trail, Ogdensburg': 'Maple City Trail, Ogdensburg'\n    'Stone Valley Trail, Colton': 'Stone Valley Trail, Colton'\n    'Edwards Nature Trail, Edwards': 'Edwards Nature Trail, Edwards'"
 css: ''
 javascript: ''
 settings:
