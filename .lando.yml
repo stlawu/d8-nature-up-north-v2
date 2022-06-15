@@ -4,6 +4,7 @@ config:
   framework: drupal8
   site: d8-nature-up-north-v2
   id: f696edcc-8347-415d-baeb-c4c23d243ebe
+  php: '7.4'
 tooling:
   drupal:
     cmd:

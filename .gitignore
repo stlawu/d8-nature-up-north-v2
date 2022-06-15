@@ -102,3 +102,4 @@ Thumbs.db
 # SASS #
 ##########
 .sass-cache
+/.gitattributes

@@ -10,14 +10,9 @@ dependencies:
     - text
 third_party_settings:
   allowed_formats:
-    basic_html: basic_html
-    full_html: full_html
-    plain_text: '0'
-    simple_html: '0'
-    embed: '0'
-    filtered_html: '0'
-    pure_html: '0'
-    restricted_html: '0'
+    allowed_formats:
+      - basic_html
+      - full_html
 id: node.blog.body
 field_name: body
 entity_type: node

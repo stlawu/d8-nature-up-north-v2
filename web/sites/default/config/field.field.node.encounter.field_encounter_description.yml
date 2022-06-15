@@ -10,14 +10,8 @@ dependencies:
     - text
 third_party_settings:
   allowed_formats:
-    simple_html: simple_html
-    plain_text: '0'
-    basic_html: '0'
-    embed: '0'
-    filtered_html: '0'
-    pure_html: '0'
-    restricted_html: '0'
-    full_html: '0'
+    allowed_formats:
+      - simple_html
 id: node.encounter.field_encounter_description
 field_name: field_encounter_description
 entity_type: node

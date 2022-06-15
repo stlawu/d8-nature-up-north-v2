@@ -10,13 +10,9 @@ dependencies:
     - text
 third_party_settings:
   allowed_formats:
-    basic_html: basic_html
-    full_html: full_html
-    embed: '0'
-    filtered_html: '0'
-    pure_html: '0'
-    restricted_html: '0'
-    plain_text: '0'
+    allowed_formats:
+      - basic_html
+      - full_html
 id: node.podcast_episode.field_episode_transcript
 field_name: field_episode_transcript
 entity_type: node
