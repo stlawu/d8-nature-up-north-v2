@@ -47,7 +47,7 @@ use Drupal\views\ViewExecutable;
       $date = $vars['node']->getCreatedTime();
       $vars['date'] = \Drupal::service('date.formatter')->format($date, 'custom', 'F j, Y');
 
-      // If the encounter doesn't images in the media field, look to the legacy image field instead
+      // If the encounter doesn't have images in the media field, look to the legacy image field instead
       if (count($vars['node']->get('field_encounter_media')) > 0) {
         $vars['encounter_image_data'] = getImageCarouselData($vars['node'], 'field_encounter_media');
       }
@@ -137,7 +137,11 @@ use Drupal\views\ViewExecutable;
        }
      } else {
        //use a different image style when there is only one image
-       $uri = $images[0]->entity->uri->value;
+       $image = $images[0];
+       if ($image->entity->getEntityTypeId() == 'media' && $image->entity->bundle() == 'image') {
+         $image = $image->entity->get('field_media_image');
+       }
+       $uri = $image->entity->uri->value;
        $properties['title'] = $images[0]->getValue()['title'];
        $properties['alt'] = $images[0]->getValue()['alt'];
        $properties['uri'] = ImageStyle::load('width_800')->buildUrl($uri);
