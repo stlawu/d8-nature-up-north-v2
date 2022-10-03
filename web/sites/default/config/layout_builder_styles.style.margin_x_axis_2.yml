@@ -6,6 +6,7 @@ id: margin_x_axis_2
 label: 'Margin X-axis: 2'
 classes: mx-2
 type: component
+group: default
 weight: 0
 block_restrictions: {  }
 layout_restrictions: {  }

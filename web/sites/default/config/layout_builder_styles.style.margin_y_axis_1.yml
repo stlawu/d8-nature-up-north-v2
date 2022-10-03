@@ -6,6 +6,7 @@ id: margin_y_axis_1
 label: 'Margin Y-axis: 1'
 classes: my-1
 type: component
+group: default
 weight: 0
 block_restrictions: {  }
 layout_restrictions: {  }
