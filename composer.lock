@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "04052a9fa3062abb624cbece32810e81",
+    "content-hash": "aa568fb033f96b3d406dca115877cb66",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2211,29 +2211,26 @@
         },
         {
             "name": "drupal/admin_toolbar",
-            "version": "3.1.1",
+            "version": "1.27.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/admin_toolbar.git",
-                "reference": "3.1.1"
+                "reference": "8.x-1.27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-3.1.1.zip",
-                "reference": "3.1.1",
-                "shasum": "a66ce69cd7e56f1cc43797dc2a58d6eab367d353"
+                "url": "https://ftp.drupal.org/files/projects/admin_toolbar-8.x-1.27.zip",
+                "reference": "8.x-1.27",
+                "shasum": "fed1fbbdf8f805b1da63d73e7e2c54750f354d61"
             },
             "require": {
-                "drupal/core": "^8.8.0 || ^9.0 || ^10.0"
-            },
-            "require-dev": {
-                "drupal/admin_toolbar_tools": "*"
+                "drupal/core": "^8"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.1.1",
-                    "datestamp": "1658802262",
+                    "version": "8.x-1.27",
+                    "datestamp": "1558553350",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2242,7 +2239,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -2286,7 +2283,7 @@
                 "Toolbar"
             ],
             "support": {
-                "source": "https://git.drupalcode.org/project/admin_toolbar",
+                "source": "http://cgit.drupalcode.org/admin_toolbar",
                 "issues": "https://www.drupal.org/project/issues/admin_toolbar"
             }
         },
@@ -6835,35 +6832,35 @@
         },
         {
             "name": "drupal/sitemap",
-            "version": "2.0.0-beta3",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/sitemap.git",
-                "reference": "8.x-2.0-beta3"
+                "reference": "8.x-1.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/sitemap-8.x-2.0-beta3.zip",
-                "reference": "8.x-2.0-beta3",
-                "shasum": "06df1e03058c4e42336a726edacfd53bca00a28d"
+                "url": "https://ftp.drupal.org/files/projects/sitemap-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "aa6f0189eba189c9f6c1a1e24505f1ce802eeea1"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "~8.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.0-beta3",
-                    "datestamp": "1646936820",
+                    "version": "8.x-1.5",
+                    "datestamp": "1541693881",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
