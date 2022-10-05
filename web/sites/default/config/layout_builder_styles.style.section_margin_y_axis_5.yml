@@ -6,7 +6,6 @@ id: section_margin_y_axis_5
 label: 'Margin Y-axis: 5'
 classes: my-5
 type: section
-group: default
 weight: 0
 block_restrictions: {  }
 layout_restrictions: {  }

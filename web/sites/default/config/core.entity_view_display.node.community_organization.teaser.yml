@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.community_organization.body
+    - field.field.node.community_organization.field_hidden_content_theme
     - field.field.node.community_organization.field_organization_address
     - field.field.node.community_organization.field_organization_email
     - field.field.node.community_organization.field_organization_location
@@ -47,6 +48,7 @@ content:
     weight: 10
     region: content
 hidden:
+  field_hidden_content_theme: true
   field_organization_address: true
   field_organization_email: true
   field_organization_location: true

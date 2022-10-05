@@ -38,3 +38,12 @@ function nun_helper_registration_submit(&$form, FormStateInterface $form_state) 
   // set redirect to the node about account creation
   $form_state->setRedirect('entity.node.canonical', ['node' => 11705]);
 }
+
+function nun_helper_update_8002() {
+  /** @var \Drupal\Core\KeyValueStore\KeyValueFactoryInterface $key_value_factory */
+  $key_value_factory = \Drupal::service('keyvalue');
+  $field_map_kv_store = $key_value_factory->get('entity.definitions.bundle_field_map');
+  $comment_map = $field_map_kv_store->get('comment');
+  unset($comment_map['comment_body']['bundles']['comment_node_community_organization']);
+  $field_map_kv_store->set('comment', $comment_map);
+}
