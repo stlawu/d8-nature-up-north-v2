@@ -18,6 +18,7 @@ dependencies:
   module:
     - csv_serialization
     - geolocation
+    - geolocation_google_maps
     - image
     - node
     - rest
@@ -672,23 +673,28 @@ display:
             boundary_filter_field_maple_location_boundary:
               enable: true
               weight: -10
+              map_center_id: views_boundary_filter
             fit_bounds:
               enable: true
               weight: -9
+              map_center_id: fit_bounds
             first_row:
               enable: true
               weight: -8
+              map_center_id: first_row
             client_location:
               enable: true
               weight: -7
               settings:
                 update_map: '0'
+              map_center_id: client_location
             fixed_value:
               weight: -6
               settings:
-                latitude: ''
-                longitude: ''
+                latitude: null
+                longitude: null
               enable: false
+              map_center_id: location_plugins
           show_raw_locations: 0
           even_empty: 0
           icon_field: none
@@ -697,17 +703,18 @@ display:
           marker_clusterer: 0
           marker_clusterer_image_path: ''
           marker_clusterer_styles: ''
-          google_map_settings:
+          map_provider_id: google_maps
+          map_provider_settings:
             height: 400px
             width: 100%
             type: ROADMAP
-            zoom: '10'
+            zoom: 10
             maxZoom: 18
             minZoom: 0
             mapTypeControl: 1
             streetViewControl: 1
             zoomControl: 1
-            rotateControl: 0
+            rotateControl: false
             fullscreenControl: 0
             scrollwheel: 1
             gestureHandling: auto
@@ -769,23 +776,28 @@ display:
             fit_bounds:
               enable: true
               weight: 0
+              map_center_id: fit_bounds
             first_row:
               enable: true
               weight: 0
+              map_center_id: first_row
             fixed_value:
               enable: true
               weight: 0
               settings:
-                latitude: ''
-                longitude: ''
+                latitude: null
+                longitude: null
+              map_center_id: location_plugins
             client_location:
               enable: true
               weight: 0
               settings:
                 update_map: '0'
+              map_center_id: client_location
             boundary_filter_field_maple_location_boundary:
               enable: true
               weight: 0
+              map_center_id: views_boundary_filter
           show_raw_locations: 0
           even_empty: 0
           icon_field: none
@@ -794,17 +806,18 @@ display:
           marker_clusterer: 0
           marker_clusterer_image_path: ''
           marker_clusterer_styles: ''
-          google_map_settings:
+          map_provider_id: google_maps
+          map_provider_settings:
             height: 400px
             width: 100%
             type: ROADMAP
-            zoom: '10'
+            zoom: 10
             maxZoom: 18
             minZoom: 0
             mapTypeControl: 1
             streetViewControl: 1
             zoomControl: 1
-            rotateControl: 0
+            rotateControl: false
             fullscreenControl: 0
             scrollwheel: 1
             gestureHandling: auto

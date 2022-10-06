@@ -22,6 +22,7 @@ dependencies:
   module:
     - datetime
     - geolocation
+    - geolocation_google_maps
     - image
     - media
     - node
@@ -1294,20 +1295,24 @@ display:
             fit_bounds:
               enable: true
               weight: 0
+              map_center_id: fit_bounds
             first_row:
               weight: 0
               enable: false
+              map_center_id: first_row
             fixed_value:
               weight: 0
               settings:
-                latitude: ''
-                longitude: ''
+                latitude: null
+                longitude: null
               enable: false
+              map_center_id: location_plugins
             client_location:
               weight: 0
               enable: false
               settings:
                 update_map: '0'
+              map_center_id: client_location
           show_raw_locations: 0
           even_empty: 0
           icon_field: none
@@ -1316,17 +1321,18 @@ display:
           marker_clusterer: 0
           marker_clusterer_image_path: ''
           marker_clusterer_styles: ''
-          google_map_settings:
+          map_provider_id: google_maps
+          map_provider_settings:
             height: 400px
             width: 100%
             type: ROADMAP
-            zoom: '10'
+            zoom: 10
             maxZoom: 18
             minZoom: 0
             mapTypeControl: 1
             streetViewControl: 1
             zoomControl: 1
-            rotateControl: 0
+            rotateControl: false
             fullscreenControl: 0
             scrollwheel: 1
             gestureHandling: auto

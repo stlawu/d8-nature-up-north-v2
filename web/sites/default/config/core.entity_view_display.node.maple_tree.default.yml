@@ -85,14 +85,17 @@ content:
     weight: 23
     label: above
     settings:
-      set_marker: '1'
+      set_marker: true
       title: ''
       info_text: ''
-      google_map_settings:
+      use_overridden_map_settings: false
+      common_map: false
+      map_provider_id: google_maps
+      map_provider_settings:
         height: 400px
         width: 100%
         type: SATELLITE
-        zoom: '18'
+        zoom: 18
         maxZoom: 18
         minZoom: 0
         mapTypeControl: 1
@@ -105,12 +108,10 @@ content:
         info_auto_display: 1
         marker_icon_path: ''
         disableAutoPan: 1
-        rotateControl: 0
+        rotateControl: false
         fullscreenControl: 0
         preferScrollingToZooming: 0
         disableDoubleClickZoom: 0
-      use_overridden_map_settings: 0
-      common_map: ''
     third_party_settings: {  }
     type: geolocation_map
     region: content
