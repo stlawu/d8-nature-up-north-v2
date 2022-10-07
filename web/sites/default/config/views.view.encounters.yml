@@ -1301,13 +1301,6 @@ display:
               weight: 0
               enable: false
               map_center_id: client_location
-            fit_bounds:
-              enable: true
-              settings:
-                min_zoom: null
-                reset_zoom: false
-              weight: 0
-              map_center_id: fit_bounds
             fixed_boundaries:
               settings:
                 north: ''
@@ -1317,6 +1310,13 @@ display:
               weight: 0
               enable: false
               map_center_id: fixed_boundaries
+            ipstack:
+              settings:
+                access_key: ''
+                location_option_id: ipstack
+              weight: 0
+              enable: false
+              map_center_id: location_plugins
             first_row:
               weight: 0
               enable: false
@@ -1331,25 +1331,25 @@ display:
               weight: 0
               enable: false
               map_center_id: location_plugins
-            freeogeoip:
-              weight: 0
-              enable: false
-              map_center_id: location_plugins
-              settings:
-                location_option_id: freeogeoip
-            ipstack:
-              settings:
-                access_key: ''
-                location_option_id: ipstack
-              weight: 0
-              enable: false
-              map_center_id: location_plugins
             views_proximity_filter:
               weight: 0
               enable: false
               map_center_id: location_plugins
               settings:
                 location_option_id: field_encounter_location_proximity
+            freeogeoip:
+              weight: 0
+              enable: false
+              map_center_id: location_plugins
+              settings:
+                location_option_id: freeogeoip
+            fit_bounds:
+              enable: true
+              settings:
+                min_zoom: null
+                reset_zoom: false
+              weight: 0
+              map_center_id: fit_bounds
           even_empty: 1
           map_provider_id: leaflet
           map_provider_settings:
@@ -1361,7 +1361,7 @@ display:
                   cluster_settings:
                     zoom_to_bounds_on_click: true
                     show_coverage_on_hover: false
-                  disable_clustering_at_zoom: 20
+                  disable_clustering_at_zoom: 17
                   custom_marker_settings: ''
               leaflet_control_scale:
                 weight: -9
@@ -1839,7 +1839,7 @@ display:
             width: 100%
             zoom: '10'
             minZoom: '0'
-            maxZoom: '10'
+            maxZoom: '18'
             maxBounds:
               north_east_bound:
                 lat: null
