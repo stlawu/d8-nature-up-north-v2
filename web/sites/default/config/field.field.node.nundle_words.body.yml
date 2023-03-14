@@ -1,0 +1,23 @@
+uuid: e6252298-e978-46f3-9e78-3e2bd744e70c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.nundle_words
+  module:
+    - text
+id: node.nundle_words.body
+field_name: body
+entity_type: node
+bundle: nundle_words
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

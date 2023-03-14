@@ -13,29 +13,12 @@ dependencies:
     - node.type.partner
   module:
     - image
-    - link
-    - text
     - user
 id: node.partner.default
 targetEntityType: node
 bundle: partner
 mode: default
 content:
-  body:
-    label: hidden
-    weight: 1
-    type: text_default
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  field_hidden_content_theme:
-    weight: 11
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_partner_logo:
     label: hidden
     weight: 0
@@ -45,22 +28,13 @@ content:
       image_link: ''
     third_party_settings: {  }
     region: content
-  field_partner_web_site:
-    label: hidden
-    weight: 2
-    type: link
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    region: content
   sharethis:
     weight: 10
     region: content
 hidden:
+  body: true
   comment_node_partner: true
+  field_hidden_content_theme: true
   field_partner_type: true
+  field_partner_web_site: true
   links: true

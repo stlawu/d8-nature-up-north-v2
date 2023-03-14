@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment_node_blog.default
     - field.field.node.blog.body
     - field.field.node.blog.comment_node_blog
     - field.field.node.blog.field_blog_attachment
@@ -14,78 +13,36 @@ dependencies:
     - field.field.node.blog.field_class_reference
     - field.field.node.blog.field_hidden_content_theme
     - field.field.node.blog.field_hidden_tag_check
+    - image.style.large
     - node.type.blog
   module:
-    - comment
-    - file
-    - text
+    - media
     - user
 id: node.blog.default
 targetEntityType: node
 bundle: blog
 mode: default
 content:
-  body:
-    label: hidden
-    weight: 0
-    type: text_default
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  comment_node_blog:
-    label: above
-    type: comment_default
-    weight: 20
-    settings:
-      view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
-    region: content
-  field_blog_attachment:
-    label: hidden
-    weight: 1
-    type: file_table
-    settings:
-      use_description_as_link_text: true
-    third_party_settings: {  }
-    region: content
   field_blog_media:
-    type: entity_reference_entity_view
-    weight: 103
-    label: above
+    type: media_thumbnail
+    weight: 0
+    label: hidden
     settings:
-      view_mode: default
-      link: false
+      image_style: large
+      image_link: content
     third_party_settings: {  }
     region: content
-  field_hidden_content_theme:
-    weight: 101
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_hidden_tag_check:
-    weight: 102
-    label: above
-    settings:
-      format: unicode-yes-no
-      format_custom_true: ''
-      format_custom_false: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
-  links:
-    weight: 100
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   sharethis:
     weight: 10
     region: content
 hidden:
+  body: true
+  comment_node_blog: true
+  field_blog_attachment: true
   field_blog_category: true
   field_blog_image: true
   field_blog_related_content: true
   field_class_reference: true
+  field_hidden_content_theme: true
+  field_hidden_tag_check: true
+  links: true

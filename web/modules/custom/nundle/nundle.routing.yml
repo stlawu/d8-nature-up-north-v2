@@ -1,0 +1,18 @@
+nundle.game:
+  path: '/nundle'
+  defaults:
+    _controller: '\Drupal\nundle\Controller\Nundle::game'
+  requirements:
+    _permission: 'access content'
+nundle.backend:
+  path: '/nundle/backend'
+  defaults:
+    _controller: '\Drupal\nundle\Controller\Nundle::backend'
+  requirements:
+    _permission: 'access content'
+nundle.return:
+  path: '/nundle/return'
+  defaults:
+    _controller: '\Drupal\nundle\Controller\Nundle::return'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,89 @@
+uuid: 1e6f4d81-25e0-4f64-a011-3d746a98b3de
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.maple_data.body
+    - field.field.node.maple_data.field_maple_circumference
+    - field.field.node.maple_data.field_maple_damages_diseases
+    - field.field.node.maple_data.field_maple_habitat
+    - field.field.node.maple_data.field_maple_near_structure
+    - field.field.node.maple_data.field_maple_shading
+    - field.field.node.maple_data.field_maple_tree
+    - node.type.maple_data
+  module:
+    - layout_builder
+    - options
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.maple_data.full
+targetEntityType: node
+bundle: maple_data
+mode: full
+content:
+  body:
+    label: above
+    type: text_default
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_maple_circumference:
+    weight: 4
+    label: inline
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_maple_damages_diseases:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_maple_habitat:
+    weight: 2
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_maple_near_structure:
+    weight: 1
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_maple_shading:
+    weight: 3
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_maple_tree:
+    weight: 0
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

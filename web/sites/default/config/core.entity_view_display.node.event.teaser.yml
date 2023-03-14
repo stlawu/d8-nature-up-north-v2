@@ -18,16 +18,13 @@ dependencies:
     - field.field.node.event.field_event_image
     - field.field.node.event.field_event_location
     - field.field.node.event.field_event_telephone
+    - field.field.node.event.field_hidden_content_theme
     - field.field.node.event.field_instructions
     - field.field.node.event.field_more_info_url
     - field.field.node.event.field_skill_level
-    - image.style.medium
     - node.type.event
   module:
-    - address
-    - image
     - nun_helper
-    - telephone
     - text
     - user
 id: node.event.teaser
@@ -36,63 +33,20 @@ bundle: event
 mode: teaser
 content:
   body:
-    label: visually_hidden
-    weight: 6
     type: text_summary_or_trimmed
+    weight: 1
+    region: content
+    label: visually_hidden
     settings:
       trim_length: 600
     third_party_settings: {  }
-    region: content
-  field_event_address:
-    type: address_default
-    weight: 2
-    region: content
-    label: visually_hidden
-    settings: {  }
-    third_party_settings: {  }
   field_event_date:
     label: visually_hidden
-    weight: 1
+    weight: 0
     type: nun_daterange_custom
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_event_email:
-    type: basic_string
-    weight: 3
-    region: content
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-  field_event_image:
-    label: hidden
-    weight: 0
-    type: image
-    settings:
-      image_style: medium
-      image_link: content
-    third_party_settings: {  }
-    region: content
-  field_event_location:
-    type: nun_geolocation_maplink
-    weight: 5
-    region: content
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-  field_event_telephone:
-    type: telephone_link
-    weight: 4
-    region: content
-    label: inline
-    settings:
-      title: ''
-    third_party_settings: {  }
-  links:
-    weight: 7
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   sharethis:
     weight: 10
     region: content
@@ -103,7 +57,14 @@ hidden:
   field_appropriate_ages: true
   field_attachements: true
   field_contact_person: true
+  field_event_address: true
   field_event_category: true
+  field_event_email: true
+  field_event_image: true
+  field_event_location: true
+  field_event_telephone: true
+  field_hidden_content_theme: true
   field_instructions: true
   field_more_info_url: true
   field_skill_level: true
+  links: true

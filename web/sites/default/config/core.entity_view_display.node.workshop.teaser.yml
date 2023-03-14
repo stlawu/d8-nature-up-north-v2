@@ -5,6 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.workshop.body
+    - field.field.node.workshop.field_dates_of_event
+    - field.field.node.workshop.field_hidden_content_theme
+    - field.field.node.workshop.field_workshop_leaders
+    - field.field.node.workshop.field_workshop_type
+    - field.field.node.workshop.field_workshop_year
     - node.type.workshop
   module:
     - text
@@ -17,14 +22,19 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    weight: 0
     settings:
       trim_length: 600
     third_party_settings: {  }
     region: content
   links:
-    weight: 100
+    weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
-hidden: {  }
+hidden:
+  field_dates_of_event: true
+  field_hidden_content_theme: true
+  field_workshop_leaders: true
+  field_workshop_type: true
+  field_workshop_year: true

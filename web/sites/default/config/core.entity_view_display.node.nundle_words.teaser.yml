@@ -1,0 +1,32 @@
+uuid: 2204d964-fd16-4682-b6d5-798735a696ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.nundle_words.body
+    - field.field.node.nundle_words.field_nundle_csv_data
+    - node.type.nundle_words
+  module:
+    - text
+    - user
+id: node.nundle_words.teaser
+targetEntityType: node
+bundle: nundle_words
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_nundle_csv_data: true

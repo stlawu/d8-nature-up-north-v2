@@ -1,0 +1,32 @@
+uuid: 0d67257c-6b45-414f-a2ca-265890a12a46
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.token
+    - field.field.node.trail_head.comment_node_trail_head
+    - field.field.node.trail_head.field_location
+    - field.field.node.trail_head.field_trail
+    - field.field.node.trail_head.field_trail_access
+    - node.type.trail_head
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.trail_head.token
+targetEntityType: node
+bundle: trail_head
+mode: token
+content:
+  sharethis:
+    weight: 10
+    region: content
+hidden:
+  comment_node_trail_head: true
+  field_location: true
+  field_trail: true
+  field_trail_access: true
+  links: true

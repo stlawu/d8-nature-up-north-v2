@@ -1,0 +1,119 @@
+uuid: 15e81def-590f-4245-ab7b-e2d924c8d1f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.species.body
+    - field.field.node.species.field_link_eol_org
+    - field.field.node.species.field_media
+    - node.type.species
+  module:
+    - field_group
+    - layout_builder
+    - link
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_row:
+      children:
+        - group_column_1
+        - group_column_2
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: row
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Row
+    group_column_1:
+      children:
+        - body
+      parent_name: group_row
+      weight: 20
+      format_type: html_element
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: 'col col-md-8'
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Column 1'
+    group_column_2:
+      children:
+        - field_media
+        - field_link_eol_org
+      parent_name: group_row
+      weight: 21
+      format_type: html_element
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: 'col col-md-4'
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Column 2'
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.species.full
+targetEntityType: node
+bundle: species
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_link_eol_org:
+    weight: 24
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_media:
+    type: entity_reference_entity_view
+    weight: 23
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

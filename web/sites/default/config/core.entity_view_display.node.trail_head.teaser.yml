@@ -1,0 +1,51 @@
+uuid: 94447004-25bf-4939-adfa-57ac52efd941
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.trail_head.comment_node_trail_head
+    - field.field.node.trail_head.field_location
+    - field.field.node.trail_head.field_trail
+    - field.field.node.trail_head.field_trail_access
+    - node.type.trail_head
+  module:
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.trail_head.teaser
+targetEntityType: node
+bundle: trail_head
+mode: teaser
+content:
+  field_trail:
+    type: entity_reference_label
+    weight: 0
+    region: content
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_trail_access:
+    label: hidden
+    weight: 1
+    type: text_trimmed
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sharethis:
+    weight: 10
+    region: content
+hidden:
+  comment_node_trail_head: true
+  field_location: true

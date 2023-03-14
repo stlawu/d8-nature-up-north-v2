@@ -1,0 +1,35 @@
+uuid: efe5845f-aa6d-400a-a029-a92e3fb199e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.token
+    - field.field.node.maple_data.body
+    - field.field.node.maple_data.field_maple_circumference
+    - field.field.node.maple_data.field_maple_damages_diseases
+    - field.field.node.maple_data.field_maple_habitat
+    - field.field.node.maple_data.field_maple_near_structure
+    - field.field.node.maple_data.field_maple_shading
+    - field.field.node.maple_data.field_maple_tree
+    - node.type.maple_data
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.maple_data.token
+targetEntityType: node
+bundle: maple_data
+mode: token
+content: {  }
+hidden:
+  body: true
+  field_maple_circumference: true
+  field_maple_damages_diseases: true
+  field_maple_habitat: true
+  field_maple_near_structure: true
+  field_maple_shading: true
+  field_maple_tree: true
+  links: true

@@ -1205,77 +1205,6 @@ display:
           entity_type: profile
           entity_field: type
           plugin_id: bundle
-        field_encounter_location_proximity:
-          proximity_source: exposed
-          proximity_lat: ''
-          proximity_lng: ''
-          proximity_units: mile
-          proximity_argument: ''
-          entity_id_argument: ''
-          boundary_filter: field_encounter_location_boundary
-          client_location: false
-          id: field_encounter_location_proximity
-          table: node__field_encounter_location
-          field: field_encounter_location_proximity
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '<='
-          value:
-            min: ''
-            max: ''
-            value: '.5'
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_encounter_location_proximity_op
-            label: Proximity
-            description: ''
-            use_operator: false
-            operator: field_encounter_location_proximity_op
-            identifier: proximity
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              nun_staff: '0'
-              blogger: '0'
-              super_user: '0'
-              ee_class: '0'
-              k12teacher: '0'
-              maple: '0'
-              approved_user: '0'
-            placeholder: ''
-            min_placeholder: ''
-            max_placeholder: ''
-            input_by_geocoding_widget: 0
-            geocoder_plugin_settings:
-              plugin_id: google_geocoding_api
-              settings:
-                components:
-                  route: ''
-                  locality: ''
-                  administrativeArea: ''
-                  postalCode: ''
-                  country: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          plugin_id: geolocation_filter_proximity
       defaults:
         filters: false
         filter_groups: false
@@ -1297,59 +1226,53 @@ display:
           marker_icon_path: ''
           marker_row_number: 0
           centre:
-            client_location:
-              weight: 0
-              enable: false
-              map_center_id: client_location
+            fixed_value:
+              enable: true
+              settings:
+                latitude: !!float 44
+                longitude: !!float -75
+                location_option_id: fixed_value
+              weight: -10
+              map_center_id: location_plugins
+            fit_bounds:
+              enable: true
+              settings:
+                min_zoom: 17
+                reset_zoom: false
+              weight: -9
+              map_center_id: fit_bounds
             fixed_boundaries:
               settings:
                 north: ''
                 east: ''
                 south: ''
                 west: ''
-              weight: 0
+              weight: -8
               enable: false
               map_center_id: fixed_boundaries
             ipstack:
               settings:
                 access_key: ''
                 location_option_id: ipstack
-              weight: 0
+              weight: -7
               enable: false
               map_center_id: location_plugins
             first_row:
-              weight: 0
+              weight: -6
               enable: false
               map_center_id: location_plugins
               settings:
                 location_option_id: first_row
-            fixed_value:
-              settings:
-                latitude: null
-                longitude: null
-                location_option_id: fixed_value
-              weight: 0
-              enable: false
-              map_center_id: location_plugins
-            views_proximity_filter:
-              weight: 0
-              enable: false
-              map_center_id: location_plugins
-              settings:
-                location_option_id: field_encounter_location_proximity
             freeogeoip:
-              weight: 0
+              weight: -5
               enable: false
               map_center_id: location_plugins
               settings:
                 location_option_id: freeogeoip
-            fit_bounds:
-              enable: true
-              settings:
-                min_zoom: null
-                reset_zoom: false
-              weight: 0
-              map_center_id: fit_bounds
+            client_location:
+              weight: -4
+              enable: false
+              map_center_id: client_location
           even_empty: 1
           map_provider_id: leaflet
           map_provider_settings:
@@ -1835,9 +1758,9 @@ display:
                   transparent: false
                   identify: false
                 enabled: false
-            height: 400px
+            height: 600px
             width: 100%
-            zoom: '10'
+            zoom: '8'
             minZoom: '0'
             maxZoom: '18'
             maxBounds:
@@ -1887,7 +1810,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - 'user.node_grants:view'
         - user.permissions
       tags:

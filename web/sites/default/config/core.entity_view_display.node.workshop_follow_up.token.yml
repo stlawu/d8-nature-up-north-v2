@@ -1,0 +1,46 @@
+uuid: 2831e138-073a-4932-a4f1-f15eb0fbd8d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.token
+    - field.field.node.workshop_follow_up.body
+    - field.field.node.workshop_follow_up.field_associated_workshop
+    - field.field.node.workshop_follow_up.field_existing_resource
+    - field.field.node.workshop_follow_up.field_hidden_content_theme
+    - field.field.node.workshop_follow_up.field_resource_file
+    - field.field.node.workshop_follow_up.field_resource_image
+    - field.field.node.workshop_follow_up.field_resource_link
+    - field.field.node.workshop_follow_up.field_workshop_type
+    - field.field.node.workshop_follow_up.field_workshop_year
+    - node.type.workshop_follow_up
+  module:
+    - layout_builder
+    - options
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.workshop_follow_up.token
+targetEntityType: node
+bundle: workshop_follow_up
+mode: token
+content:
+  field_workshop_year:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden:
+  body: true
+  field_associated_workshop: true
+  field_existing_resource: true
+  field_hidden_content_theme: true
+  field_resource_file: true
+  field_resource_image: true
+  field_resource_link: true
+  field_workshop_type: true
+  links: true

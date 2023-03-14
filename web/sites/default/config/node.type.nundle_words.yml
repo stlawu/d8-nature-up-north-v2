@@ -1,0 +1,18 @@
+uuid: 3e562358-1c35-44f7-a674-0c6e0be0c229
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Nundle Words'
+type: nundle_words
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

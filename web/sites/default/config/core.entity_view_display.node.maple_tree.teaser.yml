@@ -6,7 +6,10 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.maple_tree.body
     - field.field.node.maple_tree.field_maple_location
+    - field.field.node.maple_tree.field_maple_nickname
+    - field.field.node.maple_tree.field_maple_photo
     - field.field.node.maple_tree.field_maple_species
+    - field.field.node.maple_tree.field_maple_tree_tag
     - node.type.maple_tree
   module:
     - user
@@ -23,9 +26,16 @@ content:
     settings:
       link: false
     third_party_settings: {  }
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   body: true
   field_maple_location: true
-  links: true
+  field_maple_nickname: true
+  field_maple_photo: true
+  field_maple_tree_tag: true
   maple_tree_data_entity_view_1: true
   maple_tree_observations_entity_view_1: true

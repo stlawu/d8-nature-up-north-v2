@@ -17,96 +17,37 @@ dependencies:
     - node.type.maple_observation
   module:
     - datetime
-    - image
-    - options
-    - text
     - user
 id: node.maple_observation.default
 targetEntityType: node
 bundle: maple_observation
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 5
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  field_maple_changing_colors:
-    weight: 6
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_maple_flowering:
-    weight: 4
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_maple_fruit:
-    weight: 8
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_maple_image:
-    weight: 10
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
-  field_maple_leaf_buds:
-    weight: 2
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_maple_leaves_dropping:
-    weight: 7
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_maple_leaves_unfolded:
-    weight: 3
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
   field_maple_observation_date:
     weight: 1
-    label: above
+    label: inline
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: day_only
     third_party_settings: {  }
     type: datetime_default
     region: content
-  field_maple_observation_season:
-    weight: 9
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
   field_maple_tree:
     weight: 0
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
 hidden:
+  body: true
+  field_maple_changing_colors: true
+  field_maple_flowering: true
+  field_maple_fruit: true
+  field_maple_image: true
+  field_maple_leaf_buds: true
+  field_maple_leaves_dropping: true
+  field_maple_leaves_unfolded: true
+  field_maple_observation_season: true
   links: true

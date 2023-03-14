@@ -1,0 +1,47 @@
+uuid: aff54505-21d5-4787-93a1-fdfe23f6325f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.token
+    - field.field.node.community_organization.body
+    - field.field.node.community_organization.field_hidden_content_theme
+    - field.field.node.community_organization.field_organization_address
+    - field.field.node.community_organization.field_organization_email
+    - field.field.node.community_organization.field_organization_location
+    - field.field.node.community_organization.field_organization_logo
+    - field.field.node.community_organization.field_organization_telephone
+    - field.field.node.community_organization.field_organization_web_site
+    - node.type.community_organization
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.community_organization.token
+targetEntityType: node
+bundle: community_organization
+mode: token
+content:
+  comment_node_community_organization:
+    label: hidden
+    type: comment_default
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  sharethis:
+    weight: 10
+    region: content
+hidden:
+  body: true
+  field_hidden_content_theme: true
+  field_organization_address: true
+  field_organization_email: true
+  field_organization_location: true
+  field_organization_logo: true
+  field_organization_telephone: true
+  field_organization_web_site: true
+  links: true

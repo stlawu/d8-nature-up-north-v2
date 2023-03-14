@@ -27,6 +27,9 @@ settings:
     -
       value: Trailer
       label: Trailer
+    -
+      value: 'Nature Nugget'
+      label: 'Nature Nugget'
   allowed_values_function: ''
 module: options
 locked: false

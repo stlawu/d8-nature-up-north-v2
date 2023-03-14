@@ -23,11 +23,7 @@ dependencies:
     - field.field.node.pollinator_garden.field_pollinator_other_space
     - node.type.pollinator_garden
   module:
-    - address
     - field_group
-    - geolocation
-    - image
-    - options
     - user
 third_party_settings:
   field_group:
@@ -49,18 +45,18 @@ third_party_settings:
         effect: none
         speed: fast
       label: Row
-      region: content
+      region: hidden
     group_col1:
       children:
         - field_first_name
         - field_last_name
+        - field_pollinator_garden_addition
         - field_pollinator_garden_address
         - field_pollinator_garden_seeds
-        - field_pollinator_other_seed_src
         - field_pollinator_garden_space
-        - field_pollinator_other_space
         - field_pollinator_garden_sqft
-        - field_pollinator_garden_addition
+        - field_pollinator_other_seed_src
+        - field_pollinator_other_space
       parent_name: group_row
       weight: 20
       format_type: html_element
@@ -75,14 +71,14 @@ third_party_settings:
         effect: none
         speed: fast
       label: Col1
-      region: content
+      region: hidden
     group_col2:
       children:
-        - field_pollinator_garden_year
-        - field_pollinator_garden_month
         - field_pollinator_garden_day
         - field_pollinator_garden_image
         - field_pollinator_garden_location
+        - field_pollinator_garden_month
+        - field_pollinator_garden_year
       parent_name: group_row
       weight: 21
       format_type: html_element
@@ -97,153 +93,29 @@ third_party_settings:
         effect: none
         speed: fast
       label: Col2
-      region: content
+      region: hidden
 id: node.pollinator_garden.default
 targetEntityType: node
 bundle: pollinator_garden
 mode: default
-content:
-  field_first_name:
-    weight: 1
-    label: inline
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_last_name:
-    weight: 2
-    label: inline
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_pollinator_garden_addition:
-    weight: 10
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
-    region: content
-  field_pollinator_garden_address:
-    weight: 3
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: address_default
-    region: content
-  field_pollinator_garden_day:
-    weight: 6
-    label: inline
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
-  field_pollinator_garden_image:
-    weight: 7
-    label: hidden
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
-  field_pollinator_garden_location:
-    weight: 8
-    label: hidden
-    settings:
-      title: ''
-      set_marker: true
-      common_map: false
-      info_text: ''
-      use_overridden_map_settings: false
-      map_provider_id: google_maps
-      map_provider_settings:
-        type: ROADMAP
-        zoom: 10
-        minZoom: 0
-        maxZoom: 18
-        rotateControl: false
-        mapTypeControl: 1
-        streetViewControl: 1
-        zoomControl: 1
-        fullscreenControl: 0
-        scrollwheel: 1
-        disableDoubleClickZoom: 0
-        draggable: 1
-        height: 400px
-        width: 100%
-        info_auto_display: 1
-        marker_icon_path: ''
-        disableAutoPan: 1
-        style: ''
-        preferScrollingToZooming: 0
-        gestureHandling: auto
-    third_party_settings: {  }
-    type: geolocation_map
-    region: content
-  field_pollinator_garden_month:
-    weight: 5
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_pollinator_garden_seeds:
-    weight: 5
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_pollinator_garden_space:
-    weight: 7
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_pollinator_garden_sqft:
-    weight: 9
-    label: above
-    settings:
-      thousand_separator: ''
-      decimal_separator: .
-      scale: 2
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_decimal
-    region: content
-  field_pollinator_garden_year:
-    weight: 4
-    label: inline
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
-  field_pollinator_other_seed_src:
-    weight: 6
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
-    region: content
-  field_pollinator_other_space:
-    weight: 8
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
+content: {  }
 hidden:
+  field_first_name: true
   field_garden_size: true
+  field_last_name: true
   field_note: true
   field_pollinator_garden: true
+  field_pollinator_garden_addition: true
+  field_pollinator_garden_address: true
   field_pollinator_garden_date: true
+  field_pollinator_garden_day: true
+  field_pollinator_garden_image: true
+  field_pollinator_garden_location: true
+  field_pollinator_garden_month: true
+  field_pollinator_garden_seeds: true
+  field_pollinator_garden_space: true
+  field_pollinator_garden_sqft: true
+  field_pollinator_garden_year: true
+  field_pollinator_other_seed_src: true
+  field_pollinator_other_space: true
   links: true

@@ -13,60 +13,20 @@ dependencies:
     - field.field.node.community_organization.field_organization_web_site
     - node.type.community_organization
   module:
-    - address
     - image
     - link
-    - nun_helper
-    - telephone
-    - text
     - user
 id: node.community_organization.default
 targetEntityType: node
 bundle: community_organization
 mode: default
 content:
-  body:
-    label: hidden
-    weight: 1
-    type: text_default
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   comment_node_community_organization:
     label: hidden
     type: comment_default
     weight: 20
     settings: {  }
     third_party_settings: {  }
-    region: content
-  field_hidden_content_theme:
-    weight: 21
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_organization_address:
-    weight: 4
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: address_default
-    region: content
-  field_organization_email:
-    weight: 5
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
-    region: content
-  field_organization_location:
-    weight: 7
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-    type: nun_geolocation_maplink
     region: content
   field_organization_logo:
     label: hidden
@@ -77,17 +37,9 @@ content:
       image_link: ''
     third_party_settings: {  }
     region: content
-  field_organization_telephone:
-    weight: 6
-    label: inline
-    settings:
-      title: ''
-    third_party_settings: {  }
-    type: telephone_link
-    region: content
   field_organization_web_site:
     label: hidden
-    weight: 2
+    weight: 1
     type: link
     settings:
       trim_length: 80
@@ -97,12 +49,14 @@ content:
       target: ''
     third_party_settings: {  }
     region: content
-  links:
-    weight: 3
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   sharethis:
     weight: 10
     region: content
-hidden: {  }
+hidden:
+  body: true
+  field_hidden_content_theme: true
+  field_organization_address: true
+  field_organization_email: true
+  field_organization_location: true
+  field_organization_telephone: true
+  links: true

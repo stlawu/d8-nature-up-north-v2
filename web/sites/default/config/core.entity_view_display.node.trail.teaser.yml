@@ -1,0 +1,62 @@
+uuid: 6b6933ae-fed2-4759-96d9-8eef55a0b8f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.trail.comment_node_trail
+    - field.field.node.trail.field_difficulty
+    - field.field.node.trail.field_distance_round_trip_
+    - field.field.node.trail.field_elevation_gain
+    - field.field.node.trail.field_image
+    - field.field.node.trail.field_things_to_look_for
+    - field.field.node.trail.field_tips
+    - field.field.node.trail.field_trail_dogs
+    - field.field.node.trail.field_trail_map_image
+    - field.field.node.trail.field_trail_pdf
+    - field.field.node.trail.field_trail_safety_recommendatio
+    - field.field.node.trail.field_trail_summary
+    - field.field.node.trail.field_type
+    - node.type.trail
+  module:
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.trail.teaser
+targetEntityType: node
+bundle: trail
+mode: teaser
+content:
+  field_trail_summary:
+    label: hidden
+    weight: 0
+    type: text_trimmed
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sharethis:
+    weight: 10
+    region: content
+hidden:
+  comment_node_trail: true
+  field_difficulty: true
+  field_distance_round_trip_: true
+  field_elevation_gain: true
+  field_image: true
+  field_things_to_look_for: true
+  field_tips: true
+  field_trail_dogs: true
+  field_trail_map_image: true
+  field_trail_pdf: true
+  field_trail_safety_recommendatio: true
+  field_type: true
