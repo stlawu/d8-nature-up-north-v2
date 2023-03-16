@@ -43,7 +43,7 @@ packages:
     doctrine/collections: v1.4.0
     doctrine/common: v2.7.3
     doctrine/inflector: v1.2.0
-    doctrine/instantiator: 1.4.1
+    doctrine/instantiator: 1.5.0
     doctrine/lexer: 1.0.2
     drupal/address: 1.9.0
     drupal/admin_toolbar: 1.27.0
@@ -51,10 +51,10 @@ packages:
     drupal/asset_injector: 2.10.0
     drupal/auto_entitylabel: 2.1.0-beta1
     drupal/backup_migrate: 4.2.0
-    drupal/blazy: 2.13.0
+    drupal/blazy: 2.14.0
     drupal/bootstrap: 3.24.0
     drupal/bootstrap_layouts: 5.2.0
-    drupal/captcha: 1.5.0
+    drupal/captcha: 1.9.0
     drupal/coffee: 1.2.0
     drupal/colorbox: 1.10.0
     drupal/conditional_fields: 1.0.0-alpha10
@@ -93,7 +93,7 @@ packages:
     drupal/google_analytics: 2.5.0
     drupal/honeypot: 1.31.0
     drupal/image_effects: 2.3.0
-    drupal/inline_entity_form: 1.0.0-rc14
+    drupal/inline_entity_form: 1.0.0-rc15
     drupal/layout_builder_styles: 1.0.0-beta4
     drupal/mailgun: 1.1.0
     drupal/mailsystem: 4.3.0
@@ -105,27 +105,27 @@ packages:
     drupal/nice_menus: 1.0.0-beta2
     drupal/paragraphs: 1.13.0
     drupal/pathauto: 1.10.0
-    drupal/prepopulate: 2.3.0
-    drupal/prlp: 1.7.0
+    drupal/prepopulate: 2.4.0
+    drupal/prlp: 1.10.0
     drupal/profile: 1.4.0
     drupal/recaptcha: 2.5.0
     drupal/redirect: 1.7.0
     drupal/rules: 3.0.0-alpha7
     drupal/search_kint: 1.0.0
     drupal/select_or_other: 1.0.0-alpha4
-    drupal/sharethis: 2.0.0-beta5
-    drupal/simple_block: 1.3.0
+    drupal/sharethis: 2.0.0
+    drupal/simple_block: 1.4.0
     drupal/simple_fb_connect: 3.2.0
     drupal/sitemap: 1.5.0
-    drupal/slick: 2.6.0
+    drupal/slick: 2.7.0
     drupal/slick_views: 2.6.0
     drupal/token: 1.10.0
     drupal/twig_tweak: 2.10.0
     drupal/typed_data: 1.0.0-beta1
-    drupal/upgrade_status: 3.17.0
+    drupal/upgrade_status: 3.19.0
     drupal/vardumper: 1.6.0
     drupal/views_data_export: 1.1.0
-    drupal/webform: 6.1.3
+    drupal/webform: 6.1.4
     drush-ops/behat-drush-endpoint: 8.2.2
     drush/drush: 10.3.6
     easyrdf/easyrdf: 0.9.1
@@ -140,7 +140,7 @@ packages:
     guzzlehttp/promises: v1.3.1
     guzzlehttp/psr7: 1.6.1
     html2text/html2text: 4.3.1
-    instaclick/php-webdriver: 1.4.15
+    instaclick/php-webdriver: 1.4.16
     jcalderonzumba/gastonjs: v1.2.0
     jcalderonzumba/mink-phantomjs-driver: v0.3.3
     joachim-n/composer-manifest: 1.1.5
@@ -166,13 +166,13 @@ packages:
     league/container: 2.5.0
     league/csv: 9.8.0
     lsolesen/pel: 0.9.12
-    mailgun/mailgun-php: v3.5.4
+    mailgun/mailgun-php: v3.5.5
     masterminds/html5: 2.3.0
     mathieuviossat/arraytotexttable: v1.0.8
-    mglaman/phpstan-drupal: 1.1.25
+    mglaman/phpstan-drupal: 1.1.29
     mikey179/vfsstream: v1.6.11
     myclabs/deep-copy: 1.10.2
-    nikic/php-parser: v4.15.1
+    nikic/php-parser: v4.15.4
     nyholm/psr7: 1.5.1
     oomphinc/composer-installers-extender: 2.0.1
     pantheon-systems/quicksilver-pushback: 1.0.1
@@ -185,7 +185,7 @@ packages:
     phar-io/version: 3.2.1
     phenx/php-font-lib: 0.5.4
     php-http/client-common: 2.6.0
-    php-http/discovery: 1.14.3
+    php-http/discovery: 1.15.2
     php-http/guzzle6-adapter: v2.0.2
     php-http/httplug: 2.3.0
     php-http/message: 1.13.0
@@ -194,21 +194,21 @@ packages:
     php-http/promise: 1.1.0
     phpfastcache/riak-client: 3.4.3
     phpmailer/phpmailer: v6.6.4
-    phpstan/phpstan: 1.8.7
-    phpstan/phpstan-deprecation-rules: 1.0.0
-    phpunit/php-code-coverage: 9.2.17
+    phpstan/phpstan: 1.10.6
+    phpstan/phpstan-deprecation-rules: 1.1.2
+    phpunit/php-code-coverage: 9.2.26
     phpunit/php-file-iterator: 3.0.6
     phpunit/php-invoker: 3.1.1
     phpunit/php-text-template: 2.0.4
     phpunit/php-timer: 5.0.3
-    phpunit/phpunit: 9.5.25
+    phpunit/phpunit: 9.6.5
     progress-tracker/progress-tracker: 2.0.7
     psr/container: 1.0.0
     psr/http-client: 1.0.1
     psr/http-factory: 1.0.1
     psr/http-message: 1.0.1
     psr/log: 1.1.3
-    psy/psysh: v0.11.8
+    psy/psysh: v0.11.12
     ralouphie/getallheaders: 3.0.3
     robrichards/xmlseclibs: 3.1.1
     rvtraveller/qs-composer-installer: '1.2'
@@ -218,15 +218,15 @@ packages:
     sebastian/comparator: 4.0.8
     sebastian/complexity: 2.0.2
     sebastian/diff: 4.0.4
-    sebastian/environment: 5.1.4
+    sebastian/environment: 5.1.5
     sebastian/exporter: 4.0.5
     sebastian/global-state: 5.0.5
     sebastian/lines-of-code: 1.0.3
     sebastian/object-enumerator: 4.0.4
     sebastian/object-reflector: 2.0.4
-    sebastian/recursion-context: 4.0.4
+    sebastian/recursion-context: 4.0.5
     sebastian/resource-operations: 3.0.3
-    sebastian/type: 3.2.0
+    sebastian/type: 3.2.1
     sebastian/version: 3.0.2
     signature_pad/signature_pad: 2.3.0
     simplesamlphp/composer-module-installer: v1.2.0
@@ -279,7 +279,7 @@ packages:
     symfony/finder: v3.4.47
     symfony/http-foundation: v3.4.41
     symfony/http-kernel: v3.4.44
-    symfony/options-resolver: v5.4.11
+    symfony/options-resolver: v5.4.21
     symfony/polyfill-ctype: v1.17.0
     symfony/polyfill-iconv: v1.17.0
     symfony/polyfill-intl-idn: v1.17.0
@@ -287,8 +287,8 @@ packages:
     symfony/polyfill-php56: v1.17.0
     symfony/polyfill-php70: v1.17.0
     symfony/polyfill-php72: v1.17.0
-    symfony/polyfill-php73: v1.26.0
-    symfony/polyfill-php80: v1.26.0
+    symfony/polyfill-php73: v1.27.0
+    symfony/polyfill-php80: v1.27.0
     symfony/polyfill-util: v1.17.0
     symfony/process: v3.4.41
     symfony/psr-http-message-bridge: v1.1.2
@@ -296,7 +296,7 @@ packages:
     symfony/serializer: v3.4.41
     symfony/translation: v3.4.41
     symfony/validator: v3.4.41
-    symfony/var-dumper: v4.4.46
+    symfony/var-dumper: v4.4.47
     symfony/yaml: v3.4.41
     tabby/tabby: 12.0.3
     theseer/tokenizer: 1.2.1
