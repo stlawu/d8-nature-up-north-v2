@@ -2,4 +2,4 @@ name: Map compoment
 description: 'Custom maps component'
 package: 'DJ Case'
 type: module
-core: 8.x
+core_version_requirement: ^8.7.7 || ^9.0
