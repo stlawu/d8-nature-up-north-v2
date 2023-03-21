@@ -2,9 +2,9 @@ uuid: e7c38f3b-c092-4177-be9d-1efc28408849
 langcode: en
 status: open
 dependencies: {  }
+weight: 0
 open: null
 close: null
-weight: 0
 uid: 738
 template: false
 archive: false
@@ -12,7 +12,127 @@ id: north_country_wild_uploader_feed
 title: 'North Country Wild Uploader Feedback'
 description: ''
 category: ''
-elements: "first_name:\n  '#type': textfield\n  '#title': 'First Name'\n  '#title_display': before\n  '#description_display': tooltip\n  '#minlength': '1'\n  '#maxlength': '25'\n  '#required': true\nlast_name:\n  '#type': textfield\n  '#title': 'Last Name'\n  '#title_display': before\n  '#description_display': tooltip\n  '#minlength': '1'\n  '#maxlength': '20'\n  '#required': true\nemail_address:\n  '#type': email\n  '#title': 'Email Address'\n  '#title_display': before\n  '#description_display': tooltip\n  '#required': true\ndid_the_software_download_successfully_on_your_computer_1:\n  '#type': checkboxes\n  '#title': 'Did the software download successfully on your computer?'\n  '#options':\n    'Yes': 'Yes'\n    'No': 'No'\n  '#required': true\nwhat_operating_system_are_you_using_:\n  '#type': checkboxes\n  '#title': 'What operating system are you using?'\n  '#options':\n    'Mac OS': 'Mac OS'\n    'Windows 10': 'Windows 10'\n    'Window 8 & earlier': 'Window 8 & earlier'\n    Other: Other\n  '#required': true\nwhat_web_browser_did_you_use_to_run_the_software_:\n  '#type': checkboxes\n  '#title': 'What web browser did you use to download the software?'\n  '#options':\n    'Google Chrome': 'Google Chrome'\n    'Internet Explorer': 'Internet Explorer'\n    'Mozilla Firefox': 'Mozilla Firefox'\n    Safari: Safari\n    'Microsoft Edge': 'Microsoft Edge'\n    Other: Other\n  '#required': true\nwere_the_instructions_in_on_the_software_clear_:\n  '#type': checkboxes\n  '#title': 'Were the instructions in on the software clear?'\n  '#options':\n    'Yes': 'Yes'\n    'No': 'No'\nplease_expand_:\n  '#type': textfield\n  '#title': 'Please expand:'\n  '#states':\n    visible-slide:\n      ':input[name=\"were_the_instructions_in_on_the_software_clear_[No]\"]':\n        checked: true\ndid_any_tabs_of_the_uploader_fail_while_you_were_using_them_:\n  '#type': checkboxes\n  '#title': 'Did any sections of the Uploader fail while you were using it?'\n  '#options':\n    'No': 'No'\n    'Not sure': 'Not sure'\n    'Yes': 'Yes'\nplease_expand_1:\n  '#type': textfield\n  '#title': 'What failed? Please describe what happened.'\n  '#states':\n    visible-slide:\n      ':input[name=\"did_any_tabs_of_the_uploader_fail_while_you_were_using_them_[Yes]\"]':\n        checked: true\ndid_your_images_successfully_upload_:\n  '#type': checkboxes\n  '#title': 'Did your image(s) successfully upload?'\n  '#options':\n    Yes!: Yes!\n    'Not sure': 'Not sure'\n    'No': 'No'\nplease_describe_what_happened_:\n  '#type': textfield\n  '#title': 'Please describe what happened.'\n  '#states':\n    visible-slide:\n      ':input[name=\"did_your_images_successfully_upload_[No]\"]':\n        checked: true\ndid_you_notice_any_errors_or_typos_in_the_software_or_user_guide:\n  '#type': textarea\n  '#title': 'Did you notice any errors or typos in the software or user guide? If so, please describe.'\ndo_you_think_your_students_would_be_able_to_use_this_uploader_su:\n  '#type': checkboxes\n  '#title': 'Do you think your students would be able to use this uploader successfully?'\n  '#options':\n    'Yes': 'Yes'\n    Maybe: Maybe\n    'Probably not': 'Probably not'\nwhy_not_what_would_you_suggest_changing_:\n  '#type': textfield\n  '#title': 'Why not? What would you suggest we change?'\n  '#states':\n    visible-slide:\n      ':input[name=\"do_you_think_your_students_would_be_able_to_use_this_uploader_su[Probably not]\"]':\n        checked: true\nplease_provide_any_additional_feedback_you_have_about_the_upload:\n  '#type': textarea\n  '#title': 'Please provide any additional feedback you have about the Uploader'\nplease_provide_any_additional_feedback_you_have_about_the_user_g:\n  '#type': textarea\n  '#title': 'Please provide any additional feedback you have about the User Guide'\nthanks_for_your_interest_and_registration_see_you_soon_:\n  '#type': label\n  '#title': 'Thanks for your  valuable feedback. We appreciate your time and support!'\nactions:\n  '#type': webform_actions\n  '#title': Submit\n  '#submit__label': 'Submit '"
+elements: |
+  first_name:
+    '#type': textfield
+    '#title': 'First Name'
+    '#title_display': before
+    '#description_display': tooltip
+    '#minlength': 1
+    '#maxlength': 25
+    '#required': true
+  last_name:
+    '#type': textfield
+    '#title': 'Last Name'
+    '#title_display': before
+    '#description_display': tooltip
+    '#minlength': 1
+    '#maxlength': 20
+    '#required': true
+  email_address:
+    '#type': email
+    '#title': 'Email Address'
+    '#title_display': before
+    '#description_display': tooltip
+    '#required': true
+  did_the_software_download_successfully_on_your_computer_1:
+    '#type': checkboxes
+    '#title': 'Did the software download successfully on your computer?'
+    '#options':
+      'Yes': 'Yes'
+      'No': 'No'
+    '#required': true
+  what_operating_system_are_you_using_:
+    '#type': checkboxes
+    '#title': 'What operating system are you using?'
+    '#options':
+      'Mac OS': 'Mac OS'
+      'Windows 10': 'Windows 10'
+      'Window 8 & earlier': 'Window 8 & earlier'
+      Other: Other
+    '#required': true
+  what_web_browser_did_you_use_to_run_the_software_:
+    '#type': checkboxes
+    '#title': 'What web browser did you use to download the software?'
+    '#options':
+      'Google Chrome': 'Google Chrome'
+      'Internet Explorer': 'Internet Explorer'
+      'Mozilla Firefox': 'Mozilla Firefox'
+      Safari: Safari
+      'Microsoft Edge': 'Microsoft Edge'
+      Other: Other
+    '#required': true
+  were_the_instructions_in_on_the_software_clear_:
+    '#type': checkboxes
+    '#title': 'Were the instructions in on the software clear?'
+    '#options':
+      'Yes': 'Yes'
+      'No': 'No'
+  please_expand_:
+    '#type': textfield
+    '#title': 'Please expand:'
+    '#states':
+      visible-slide:
+        ':input[name="were_the_instructions_in_on_the_software_clear_[No]"]':
+          checked: true
+  did_any_tabs_of_the_uploader_fail_while_you_were_using_them_:
+    '#type': checkboxes
+    '#title': 'Did any sections of the Uploader fail while you were using it?'
+    '#options':
+      'No': 'No'
+      'Not sure': 'Not sure'
+      'Yes': 'Yes'
+  please_expand_1:
+    '#type': textfield
+    '#title': 'What failed? Please describe what happened.'
+    '#states':
+      visible-slide:
+        ':input[name="did_any_tabs_of_the_uploader_fail_while_you_were_using_them_[Yes]"]':
+          checked: true
+  did_your_images_successfully_upload_:
+    '#type': checkboxes
+    '#title': 'Did your image(s) successfully upload?'
+    '#options':
+      Yes!: Yes!
+      'Not sure': 'Not sure'
+      'No': 'No'
+  please_describe_what_happened_:
+    '#type': textfield
+    '#title': 'Please describe what happened.'
+    '#states':
+      visible-slide:
+        ':input[name="did_your_images_successfully_upload_[No]"]':
+          checked: true
+  did_you_notice_any_errors_or_typos_in_the_software_or_user_guide:
+    '#type': textarea
+    '#title': 'Did you notice any errors or typos in the software or user guide? If so, please describe.'
+  do_you_think_your_students_would_be_able_to_use_this_uploader_su:
+    '#type': checkboxes
+    '#title': 'Do you think your students would be able to use this uploader successfully?'
+    '#options':
+      'Yes': 'Yes'
+      Maybe: Maybe
+      'Probably not': 'Probably not'
+  why_not_what_would_you_suggest_changing_:
+    '#type': textfield
+    '#title': 'Why not? What would you suggest we change?'
+    '#states':
+      visible-slide:
+        ':input[name="do_you_think_your_students_would_be_able_to_use_this_uploader_su[Probably not]"]':
+          checked: true
+  please_provide_any_additional_feedback_you_have_about_the_upload:
+    '#type': textarea
+    '#title': 'Please provide any additional feedback you have about the Uploader'
+  please_provide_any_additional_feedback_you_have_about_the_user_g:
+    '#type': textarea
+    '#title': 'Please provide any additional feedback you have about the User Guide'
+  thanks_for_your_interest_and_registration_see_you_soon_:
+    '#type': label
+    '#title': 'Thanks for your  valuable feedback. We appreciate your time and support!'
+  actions:
+    '#type': webform_actions
+    '#title': Submit
+    '#submit__label': 'Submit '
 css: ''
 javascript: ''
 settings:
@@ -24,38 +144,51 @@ settings:
   page: true
   page_submit_path: ''
   page_confirm_path: ''
-  page_admin_theme: false
+  page_theme_name: ''
   form_title: both
   form_submit_once: false
-  form_exception_message: ''
   form_open_message: ''
   form_close_message: ''
+  form_exception_message: ''
   form_previous_submissions: true
   form_confidential: false
   form_confidential_message: ''
-  form_remote_addr: true
+  form_disable_remote_addr: false
   form_convert_anonymous: false
   form_prepopulate: false
   form_prepopulate_source_entity: false
   form_prepopulate_source_entity_required: false
   form_prepopulate_source_entity_type: ''
-  form_reset: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
   form_disable_autocomplete: false
   form_novalidate: false
   form_disable_inline_errors: false
   form_required: false
-  form_unsaved: false
-  form_disable_back: false
-  form_submit_back: false
   form_autofocus: false
   form_details_toggle: false
+  form_reset: false
   form_access_denied: default
   form_access_denied_title: ''
   form_access_denied_message: ''
   form_access_denied_attributes: {  }
   form_file_limit: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
   submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
   submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
   submission_views: {  }
   submission_views_replace: {  }
   submission_user_columns: {  }
@@ -64,11 +197,6 @@ settings:
   submission_access_denied_title: ''
   submission_access_denied_message: ''
   submission_access_denied_attributes: {  }
-  submission_exception_message: ''
-  submission_locked_message: ''
-  submission_excluded_elements: {  }
-  submission_exclude_empty: false
-  submission_exclude_empty_checkbox: false
   previous_submission_message: ''
   previous_submissions_message: ''
   autofill: false
@@ -78,11 +206,20 @@ settings:
   wizard_progress_pages: false
   wizard_progress_percentage: false
   wizard_progress_link: false
+  wizard_progress_states: false
   wizard_start_label: ''
   wizard_preview_link: false
   wizard_confirmation: true
   wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
   wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
   preview: 0
   preview_label: ''
   preview_title: ''
@@ -99,9 +236,9 @@ settings:
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
   confirmation_type: page
+  confirmation_url: ''
   confirmation_title: ''
   confirmation_message: ''
-  confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -125,7 +262,11 @@ settings:
   purge_days: null
   results_disabled: false
   results_disabled_ignore: false
+  results_customize: false
+  token_view: false
   token_update: false
+  token_delete: false
+  serial_disabled: false
 access:
   create:
     roles:
@@ -174,3 +315,4 @@ access:
     users: {  }
     permissions: {  }
 handlers: {  }
+variants: {  }

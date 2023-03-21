@@ -1,16 +1,27 @@
 uuid: ebe2813a-abc6-487d-a011-2165fbbd4fe9
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - node.type.maple_data
+    - node.type.maple_observation
+    - node.type.maple_tree
+  module:
+    - entity_browser
+    - media
+    - node
 id: maple_admin
 label: 'Maple Admin'
 weight: 10
 is_admin: null
 permissions:
+  - 'access entity_embed_image_media entity browser pages'
+  - 'access existing_image_media entity browser pages'
   - 'access maple_tree_browser entity browser pages'
   - 'create maple_data content'
   - 'create maple_observation content'
   - 'create maple_tree content'
+  - 'create media'
   - 'delete any maple_data content'
   - 'delete any maple_observation content'
   - 'delete any maple_tree content'

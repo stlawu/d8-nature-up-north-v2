@@ -26,21 +26,21 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_encounter_collection_icon:
+    type: image_image
     weight: 32
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
-    region: content
   field_more_info_link:
+    type: link_default
     weight: 31
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   name:
     type: string_textfield
     weight: -5

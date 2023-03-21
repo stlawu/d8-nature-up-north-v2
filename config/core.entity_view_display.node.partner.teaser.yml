@@ -6,45 +6,93 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.partner.body
     - field.field.node.partner.comment_node_partner
+    - field.field.node.partner.field_hidden_content_theme
     - field.field.node.partner.field_partner_logo
     - field.field.node.partner.field_partner_type
     - field.field.node.partner.field_partner_web_site
+    - image.style.media_library
     - node.type.partner
   module:
+    - field_group
     - image
     - text
     - user
+third_party_settings:
+  field_group:
+    group_wrapper:
+      children:
+        - group_aside
+        - body
+        - links
+      label: Wrapper
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: clearfix
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_aside:
+      children:
+        - field_partner_logo
+      label: Float
+      parent_name: group_wrapper
+      region: content
+      weight: 20
+      format_type: html_element
+      format_settings:
+        classes: 'float-right pl-2 pb-2'
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
 id: node.partner.teaser
 targetEntityType: node
 bundle: partner
 mode: teaser
 content:
   body:
-    label: hidden
-    weight: 1
     type: text_summary_or_trimmed
+    label: hidden
     settings:
       trim_length: 600
     third_party_settings: {  }
+    weight: 21
     region: content
   field_partner_logo:
-    label: hidden
-    weight: 0
     type: image
+    label: hidden
     settings:
-      image_style: ''
       image_link: ''
+      image_style: media_library
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
+    weight: 21
     region: content
   links:
-    weight: 100
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 22
+    region: content
   sharethis:
     weight: 10
     region: content
 hidden:
   comment_node_partner: true
+  field_hidden_content_theme: true
   field_partner_type: true
   field_partner_web_site: true

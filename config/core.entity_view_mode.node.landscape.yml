@@ -1,0 +1,10 @@
+uuid: c77acba0-a109-4bd5-9c53-c7ae007eb1d9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.landscape
+label: Landscape
+targetEntityType: node
+cache: true

@@ -1,0 +1,21 @@
+uuid: 9610c76d-905e-43c4-9754-e8dac2d4968f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_theme
+    - node.type.page
+id: node.page.field_theme
+field_name: field_theme
+entity_type: node
+bundle: page
+label: Theme
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_vocabulary'
+  handler_settings: {  }
+field_type: entity_reference

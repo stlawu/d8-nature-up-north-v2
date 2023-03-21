@@ -39,5 +39,7 @@ content:
     weight: 6
     region: content
 hidden:
+  blogger_profiles: true
   contact: true
+  main_profiles: true
   user_picture: true

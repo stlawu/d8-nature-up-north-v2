@@ -1,9 +1,10 @@
+uuid: 90c7bae8-041b-484a-9bd1-b914d1aa6663
 langcode: en
 status: open
 dependencies: {  }
+weight: 0
 open: null
 close: null
-weight: 0
 uid: 738
 template: false
 archive: false
@@ -11,7 +12,142 @@ id: december_2018_volunteer_training
 title: 'December 2018 Volunteer Training '
 description: ''
 category: ''
-elements: "first_name:\n  '#type': textfield\n  '#title': 'First Name'\n  '#title_display': before\n  '#description_display': tooltip\n  '#minlength': '1'\n  '#maxlength': '25'\n  '#required': true\nlast_name:\n  '#type': textfield\n  '#title': 'Last Name'\n  '#title_display': before\n  '#description_display': tooltip\n  '#minlength': '1'\n  '#maxlength': '20'\n  '#required': true\nwhere_do_you_live_:\n  '#type': textfield\n  '#title': 'What town do you live in?'\n  '#title_display': before\n  '#description_display': tooltip\n  '#required': true\nemail_address:\n  '#type': email\n  '#title': 'Email Address'\n  '#title_display': before\n  '#description_display': tooltip\n  '#required': true\nphone_number:\n  '#type': tel\n  '#title': 'Phone Number'\n  '#title_display': before\n  '#description_display': tooltip\n  '#required': true\nhave_you_attended_a_nature_up_north_program_in_the_past_:\n  '#type': webform_checkboxes_other\n  '#title': 'Have you attended a Nature Up North program in the past?'\n  '#multiple': 2\n  '#title_display': before\n  '#options':\n    'Yes': 'Yes'\n    'Not yet!': 'Not yet!'\n    'I can''t remember': 'I can''t remember'\n  '#options_display': three_columns\nhave_you_volunteered_with_us_before_:\n  '#type': webform_checkboxes_other\n  '#title': 'Have you volunteered with Nature Up North in the past?'\n  '#multiple': 2\n  '#title_display': before\n  '#options':\n    'Yes': 'Yes'\n    'Not yet!': 'Not yet!'\n    'I can''t remember': 'I can''t remember'\n  '#options_display': three_columns\nin_what_capacity_did_you_volunteer_:\n  '#type': textfield\n  '#title': 'In what capacity did you volunteer?'\n  '#multiple': true\n  '#title_display': before\n  '#size': '1'\n  '#rows': '2'\n  '#states':\n    visible:\n      ':input[name=\"have_you_volunteered_with_us_before_[checkboxes][Yes]\"]':\n        checked: true\nwhy_are_you_interested_in_volunteering_now_:\n  '#type': textarea\n  '#title': 'Why are you interested in volunteering now?'\n  '#title_display': before\n  '#size': '1'\n  '#rows': '1'\nhow_much_time_would_you_like_to_volunteer_:\n  '#type': webform_checkboxes_other\n  '#title': 'Approximately how much time do you see yourself volunteering for Nature Up North?                                                        '\n  '#multiple': 2\n  '#title_display': before\n  '#options':\n    Once: Once\n    'As needed': 'As needed'\n    Monthly: Monthly\n    Weekly: Weekly\n    'Not sure': 'Not sure'\n  '#options_display': three_columns\n  '#other__title': Other\ni_have_experience_with_:\n  '#type': webform_checkboxes_other\n  '#title': 'In which areas do you have experience? Check all that apply.'\n  '#title_display': before\n  '#options':\n    Photography: Photography\n    Advertising: Advertising\n    'Graphic Design': 'Graphic Design'\n    Communication: Communication\n    'Community Outreach': 'Community Outreach'\n    'Web Maintenance': 'Web Maintenance'\n    'Environmental Writing': 'Environmental Writing'\n    Teaching: Teaching\n    Fundraising: Fundraising\n  '#options_display': three_columns\ni_am_interested_in_gaining_experience_in_:\n  '#type': webform_checkboxes_other\n  '#title': 'In which areas are you interested in gaining experience? Check all that apply.'\n  '#title_display': before\n  '#options':\n    Photography: Photography\n    Advertising: Advertising\n    'Graphic Design': 'Graphic Design'\n    Communication: Communication\n    'Community Outreach': 'Community Outreach'\n    'Web Maintenance': 'Web Maintenance'\n    'Environmental Writing': 'Environmental Writing'\n    Teaching: Teaching\n    Fundraising: Fundraising\n  '#options_display': three_columns\nhow_did_you_hear_about_this_event_:\n  '#type': webform_select_other\n  '#title': 'How did you hear about this event?'\n  '#options':\n    'Online Calendar': 'Online Calendar'\n    'Facebook ': 'Facebook '\n    Instagram: Instagram\n    'Newspaper ': 'Newspaper '\n    'From a friend': 'From a friend'\n    'I can''t remember': 'I can''t remember'\nis_there_anything_else_you_d_like_to_tell_us_:\n  '#type': textfield\n  '#title': 'Is there anything else you''d like to tell us?'\n  '#title_display': before\nthanks_for_your_interest_and_registration_see_you_soon_:\n  '#type': label\n  '#title': 'Thanks for your interest and registration. See you soon!'\nactions:\n  '#type': webform_actions\n  '#title': Submit\n  '#submit__label': 'Submit '\n"
+elements: |
+  first_name:
+    '#type': textfield
+    '#title': 'First Name'
+    '#title_display': before
+    '#description_display': tooltip
+    '#minlength': 1
+    '#maxlength': 25
+    '#required': true
+  last_name:
+    '#type': textfield
+    '#title': 'Last Name'
+    '#title_display': before
+    '#description_display': tooltip
+    '#minlength': 1
+    '#maxlength': 20
+    '#required': true
+  where_do_you_live_:
+    '#type': textfield
+    '#title': 'What town do you live in?'
+    '#title_display': before
+    '#description_display': tooltip
+    '#required': true
+  email_address:
+    '#type': email
+    '#title': 'Email Address'
+    '#title_display': before
+    '#description_display': tooltip
+    '#required': true
+  phone_number:
+    '#type': tel
+    '#title': 'Phone Number'
+    '#title_display': before
+    '#description_display': tooltip
+    '#required': true
+  have_you_attended_a_nature_up_north_program_in_the_past_:
+    '#type': webform_checkboxes_other
+    '#title': 'Have you attended a Nature Up North program in the past?'
+    '#multiple': 2
+    '#title_display': before
+    '#options':
+      'Yes': 'Yes'
+      'Not yet!': 'Not yet!'
+      'I can''t remember': 'I can''t remember'
+    '#options_display': three_columns
+  have_you_volunteered_with_us_before_:
+    '#type': webform_checkboxes_other
+    '#title': 'Have you volunteered with Nature Up North in the past?'
+    '#multiple': 2
+    '#title_display': before
+    '#options':
+      'Yes': 'Yes'
+      'Not yet!': 'Not yet!'
+      'I can''t remember': 'I can''t remember'
+    '#options_display': three_columns
+  in_what_capacity_did_you_volunteer_:
+    '#type': textfield
+    '#title': 'In what capacity did you volunteer?'
+    '#multiple': true
+    '#title_display': before
+    '#size': 1
+    '#rows': '2'
+    '#states':
+      visible:
+        ':input[name="have_you_volunteered_with_us_before_[checkboxes][Yes]"]':
+          checked: true
+  why_are_you_interested_in_volunteering_now_:
+    '#type': textarea
+    '#title': 'Why are you interested in volunteering now?'
+    '#title_display': before
+    '#size': 1
+    '#rows': 1
+  how_much_time_would_you_like_to_volunteer_:
+    '#type': webform_checkboxes_other
+    '#title': 'Approximately how much time do you see yourself volunteering for Nature Up North?                                                        '
+    '#multiple': 2
+    '#title_display': before
+    '#options':
+      Once: Once
+      'As needed': 'As needed'
+      Monthly: Monthly
+      Weekly: Weekly
+      'Not sure': 'Not sure'
+    '#options_display': three_columns
+    '#other__title': Other
+  i_have_experience_with_:
+    '#type': webform_checkboxes_other
+    '#title': 'In which areas do you have experience? Check all that apply.'
+    '#title_display': before
+    '#options':
+      Photography: Photography
+      Advertising: Advertising
+      'Graphic Design': 'Graphic Design'
+      Communication: Communication
+      'Community Outreach': 'Community Outreach'
+      'Web Maintenance': 'Web Maintenance'
+      'Environmental Writing': 'Environmental Writing'
+      Teaching: Teaching
+      Fundraising: Fundraising
+    '#options_display': three_columns
+  i_am_interested_in_gaining_experience_in_:
+    '#type': webform_checkboxes_other
+    '#title': 'In which areas are you interested in gaining experience? Check all that apply.'
+    '#title_display': before
+    '#options':
+      Photography: Photography
+      Advertising: Advertising
+      'Graphic Design': 'Graphic Design'
+      Communication: Communication
+      'Community Outreach': 'Community Outreach'
+      'Web Maintenance': 'Web Maintenance'
+      'Environmental Writing': 'Environmental Writing'
+      Teaching: Teaching
+      Fundraising: Fundraising
+    '#options_display': three_columns
+  how_did_you_hear_about_this_event_:
+    '#type': webform_select_other
+    '#title': 'How did you hear about this event?'
+    '#options':
+      'Online Calendar': 'Online Calendar'
+      'Facebook ': 'Facebook '
+      Instagram: Instagram
+      'Newspaper ': 'Newspaper '
+      'From a friend': 'From a friend'
+      'I can''t remember': 'I can''t remember'
+  is_there_anything_else_you_d_like_to_tell_us_:
+    '#type': textfield
+    '#title': 'Is there anything else you''d like to tell us?'
+    '#title_display': before
+  thanks_for_your_interest_and_registration_see_you_soon_:
+    '#type': label
+    '#title': 'Thanks for your interest and registration. See you soon!'
+  actions:
+    '#type': webform_actions
+    '#title': Submit
+    '#submit__label': 'Submit '
 css: ''
 javascript: ''
 settings:
@@ -23,38 +159,51 @@ settings:
   page: true
   page_submit_path: ''
   page_confirm_path: ''
-  page_admin_theme: false
+  page_theme_name: ''
   form_title: both
   form_submit_once: false
-  form_exception_message: ''
   form_open_message: ''
   form_close_message: ''
+  form_exception_message: ''
   form_previous_submissions: true
   form_confidential: false
   form_confidential_message: ''
-  form_remote_addr: true
+  form_disable_remote_addr: false
   form_convert_anonymous: false
   form_prepopulate: false
   form_prepopulate_source_entity: false
   form_prepopulate_source_entity_required: false
   form_prepopulate_source_entity_type: ''
-  form_reset: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
   form_disable_autocomplete: false
   form_novalidate: false
   form_disable_inline_errors: false
   form_required: false
-  form_unsaved: false
-  form_disable_back: false
-  form_submit_back: false
   form_autofocus: false
   form_details_toggle: false
+  form_reset: false
   form_access_denied: default
   form_access_denied_title: ''
   form_access_denied_message: ''
   form_access_denied_attributes: {  }
   form_file_limit: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
   submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
   submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
   submission_views: {  }
   submission_views_replace: {  }
   submission_user_columns: {  }
@@ -63,11 +212,6 @@ settings:
   submission_access_denied_title: ''
   submission_access_denied_message: ''
   submission_access_denied_attributes: {  }
-  submission_exception_message: ''
-  submission_locked_message: ''
-  submission_excluded_elements: {  }
-  submission_exclude_empty: false
-  submission_exclude_empty_checkbox: false
   previous_submission_message: ''
   previous_submissions_message: ''
   autofill: false
@@ -77,11 +221,20 @@ settings:
   wizard_progress_pages: false
   wizard_progress_percentage: false
   wizard_progress_link: false
+  wizard_progress_states: false
   wizard_start_label: ''
   wizard_preview_link: false
   wizard_confirmation: true
   wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
   wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
   preview: 0
   preview_label: ''
   preview_title: ''
@@ -98,9 +251,9 @@ settings:
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
   confirmation_type: page
+  confirmation_url: ''
   confirmation_title: ''
   confirmation_message: ''
-  confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -124,7 +277,11 @@ settings:
   purge_days: null
   results_disabled: false
   results_disabled_ignore: false
+  results_customize: false
+  token_view: false
   token_update: false
+  token_delete: false
+  serial_disabled: false
 access:
   create:
     roles:
@@ -173,4 +330,4 @@ access:
     users: {  }
     permissions: {  }
 handlers: {  }
-uuid: 90c7bae8-041b-484a-9bd1-b914d1aa6663
+variants: {  }

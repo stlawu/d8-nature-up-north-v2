@@ -18,26 +18,30 @@ third_party_settings:
   field_group:
     group_column1:
       children: {  }
+      label: Row
       parent_name: ''
+      region: hidden
       weight: 9
       format_type: html_element
       format_settings:
-        id: ''
         classes: row
+        id: ''
         element: div
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
-      label: Row
-      region: hidden
     group_col1:
       children: {  }
+      label: col1
       parent_name: ''
+      region: hidden
       weight: 10
       format_type: html_element
       format_settings:
+        classes: 'col-xs-12 col-md-7'
+        id: ''
         element: div
         show_label: false
         label_element: h3
@@ -45,16 +49,16 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-        id: ''
-        classes: 'col-xs-12 col-md-7'
-      label: col1
-      region: hidden
     group_col2:
       children: {  }
+      label: col2
       parent_name: ''
+      region: hidden
       weight: 11
       format_type: html_element
       format_settings:
+        classes: 'col-xs-12 col-md-5'
+        id: ''
         element: div
         show_label: false
         label_element: h3
@@ -62,10 +66,6 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-        id: ''
-        classes: 'col-xs-12 col-md-5'
-      label: col2
-      region: hidden
 id: node.maple_tree.reference_preview
 targetEntityType: node
 bundle: maple_tree
@@ -73,20 +73,20 @@ mode: reference_preview
 content:
   field_maple_species:
     type: entity_reference_label
-    weight: 0
-    region: content
     label: inline
     settings:
       link: false
     third_party_settings: {  }
+    weight: 0
+    region: content
   field_maple_tree_tag:
     type: string
-    weight: 1
-    region: content
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   body: true
   field_maple_location: true

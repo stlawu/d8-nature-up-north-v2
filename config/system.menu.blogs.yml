@@ -1,0 +1,13 @@
+uuid: 03e6d293-f06c-4da9-82bf-b40e145821df
+langcode: en
+status: true
+dependencies:
+  module:
+    - sitemap
+third_party_settings:
+  sitemap:
+    sitemap_display_name: 'Nature up North Blogs'
+id: blogs
+label: Blogs
+description: 'Blogs menu that primarily appears in the sidebar on blogs listing pages.'
+locked: false

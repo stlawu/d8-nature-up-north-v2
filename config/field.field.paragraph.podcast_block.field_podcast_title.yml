@@ -1,0 +1,28 @@
+uuid: d8c7cbfa-6bc3-45eb-871c-27cab62febf8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_podcast_title
+    - node.type.podcast_episode
+    - paragraphs.paragraphs_type.podcast_block
+id: paragraph.podcast_block.field_podcast_title
+field_name: field_podcast_title
+entity_type: paragraph
+bundle: podcast_block
+label: 'Podcast title'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      podcast_episode: podcast_episode
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

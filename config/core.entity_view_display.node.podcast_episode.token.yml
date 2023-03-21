@@ -1,0 +1,180 @@
+uuid: 2f079c8a-ecc1-45a5-8ec3-b571cf7e6f1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.token
+    - field.field.node.podcast_episode.body
+    - field.field.node.podcast_episode.field_episode_date
+    - field.field.node.podcast_episode.field_episode_embed_box
+    - field.field.node.podcast_episode.field_episode_files
+    - field.field.node.podcast_episode.field_episode_hosts
+    - field.field.node.podcast_episode.field_episode_image
+    - field.field.node.podcast_episode.field_episode_number
+    - field.field.node.podcast_episode.field_episode_transcript
+    - field.field.node.podcast_episode.field_episode_type
+    - field.field.node.podcast_episode.field_related_links
+    - field.field.node.podcast_episode.field_season_number
+    - node.type.podcast_episode
+  module:
+    - field_group
+    - layout_builder
+    - user
+third_party_settings:
+  field_group:
+    group_row:
+      children:
+        - group_column_1
+        - group_column_2
+      label: Row
+      parent_name: ''
+      region: hidden
+      weight: 4
+      format_type: html_element
+      format_settings:
+        classes: row
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_column_1:
+      children:
+        - field_episode_files
+        - field_related_links
+      label: 'Column 1'
+      parent_name: group_row
+      region: hidden
+      weight: 20
+      format_type: html_element
+      format_settings:
+        classes: 'col-sm-4 float-sm-right'
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_column_2:
+      children:
+        - group_embed
+        - group_episode_information
+      label: 'Column 2'
+      parent_name: group_row
+      region: hidden
+      weight: 22
+      format_type: html_element
+      format_settings:
+        classes: 'col-sm-8 float-sm-right'
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_embed:
+      children:
+        - field_episode_embed_box
+      label: Embed
+      parent_name: group_column_2
+      region: hidden
+      weight: 2
+      format_type: html_element
+      format_settings:
+        classes: 'bg-secondary mx-auto my-2'
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_tabs:
+      children:
+        - group_episode_description
+        - group_episode_transcript
+      label: Tabs
+      parent_name: ''
+      region: hidden
+      weight: 3
+      format_type: tabs
+      format_settings:
+        classes: ''
+        id: ''
+        direction: horizontal
+    group_episode_transcript:
+      children:
+        - field_episode_transcript
+      label: ' Episode Transcript'
+      parent_name: group_tabs
+      region: hidden
+      weight: 3
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+    group_episode_description:
+      children:
+        - body
+      label: 'Episode Description'
+      parent_name: group_tabs
+      region: hidden
+      weight: 1
+      format_type: tab
+      format_settings:
+        classes: ''
+        id: ''
+        formatter: closed
+        description: ''
+    group_episode_information:
+      children:
+        - field_episode_date
+        - field_episode_hosts
+        - field_episode_number
+        - field_season_number
+      label: 'Episode information'
+      parent_name: group_column_2
+      region: hidden
+      weight: 3
+      format_type: html_element
+      format_settings:
+        classes: em
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.podcast_episode.token
+targetEntityType: node
+bundle: podcast_episode
+mode: token
+content: {  }
+hidden:
+  body: true
+  field_episode_date: true
+  field_episode_embed_box: true
+  field_episode_files: true
+  field_episode_hosts: true
+  field_episode_image: true
+  field_episode_number: true
+  field_episode_transcript: true
+  field_episode_type: true
+  field_related_links: true
+  field_season_number: true
+  links: true

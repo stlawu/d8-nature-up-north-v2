@@ -17,8 +17,8 @@ plugin: 'system_menu_block:menu-footer'
 settings:
   id: broken
   label: '<none>'
-  provider: core
   label_display: visible
+  provider: core
   level: 1
   depth: 0
   expand_all_items: false

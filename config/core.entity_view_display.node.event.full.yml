@@ -1,0 +1,219 @@
+uuid: c7ff2d33-a05f-4148-a21f-6eac0221340d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.event.body
+    - field.field.node.event.comment_node_event
+    - field.field.node.event.field_add_your_organization
+    - field.field.node.event.field_additional_info
+    - field.field.node.event.field_appropriate_ages
+    - field.field.node.event.field_attachements
+    - field.field.node.event.field_contact_person
+    - field.field.node.event.field_event_address
+    - field.field.node.event.field_event_category
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_email
+    - field.field.node.event.field_event_image
+    - field.field.node.event.field_event_location
+    - field.field.node.event.field_event_telephone
+    - field.field.node.event.field_hidden_content_theme
+    - field.field.node.event.field_instructions
+    - field.field.node.event.field_more_info_url
+    - field.field.node.event.field_skill_level
+    - node.type.event
+  module:
+    - address
+    - field_group
+    - file
+    - image
+    - layout_builder
+    - link
+    - nun_helper
+    - options
+    - telephone
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_age_and_skill_level:
+      children:
+        - field_appropriate_ages
+        - field_skill_level
+      label: 'Age and Skill Level'
+      parent_name: ''
+      region: content
+      weight: 3
+      format_type: details
+      format_settings:
+        classes: 'group-age-skill field-group-fieldset'
+        id: ''
+        open: true
+    group_event_details:
+      children:
+        - field_event_address
+        - field_event_email
+        - field_event_telephone
+        - field_event_location
+        - field_contact_person
+        - field_additional_info
+        - field_more_info_url
+        - field_attachements
+      label: 'Event Details'
+      parent_name: ''
+      region: content
+      weight: 4
+      format_type: details
+      format_settings:
+        classes: 'group-event-details field-group-fieldset'
+        id: ''
+        open: true
+        required_fields: false
+    group_sponsoring_organization:
+      children:
+        - field_add_your_organization
+      label: 'Sponsoring Organization'
+      parent_name: ''
+      region: content
+      weight: 5
+      format_type: details
+      format_settings:
+        classes: ' group-sponsoring-organization field-group-fieldset'
+        id: ''
+        open: true
+        required_fields: false
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.event.full
+targetEntityType: node
+bundle: event
+mode: full
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_add_your_organization:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_additional_info:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_appropriate_ages:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_attachements:
+    type: file_table
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_contact_person:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_event_address:
+    type: address_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_event_date:
+    type: nun_daterange_custom
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_event_email:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_event_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_event_location:
+    type: nun_geolocation_maplink
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_event_telephone:
+    type: telephone_link
+    label: inline
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_hidden_content_theme:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_more_info_url:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_skill_level:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  sharethis:
+    weight: 10
+    region: content
+hidden:
+  comment_node_event: true
+  field_event_category: true
+  field_instructions: true
+  links: true

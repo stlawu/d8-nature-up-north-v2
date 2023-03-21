@@ -9,12 +9,9 @@ dependencies:
     - field.field.node.maple_tree.field_maple_photo
     - field.field.node.maple_tree.field_maple_species
     - field.field.node.maple_tree.field_maple_tree_tag
-    - image.style.large
     - node.type.maple_tree
   module:
     - field_group
-    - geolocation
-    - image
     - user
 third_party_settings:
   field_group:
@@ -22,30 +19,34 @@ third_party_settings:
       children:
         - group_col1
         - group_col2
+      label: Row
       parent_name: ''
+      region: hidden
       weight: 0
       format_type: html_element
       format_settings:
-        id: ''
         classes: row
+        id: ''
         element: div
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
-      label: Row
-      region: content
     group_col1:
       children:
         - field_maple_nickname
-        - field_maple_tree_tag
         - field_maple_species
+        - field_maple_tree_tag
         - maple_tree_data_entity_view_1
+      label: col1
       parent_name: group_column1
+      region: hidden
       weight: 20
       format_type: html_element
       format_settings:
+        classes: 'col-xs-12 col-md-7'
+        id: ''
         element: div
         show_label: false
         label_element: h3
@@ -53,18 +54,18 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-        id: ''
-        classes: 'col-xs-12 col-md-7'
-      label: col1
-      region: content
     group_col2:
       children:
-        - field_maple_photo
         - field_maple_location
+        - field_maple_photo
+      label: col2
       parent_name: group_column1
+      region: hidden
       weight: 21
       format_type: html_element
       format_settings:
+        classes: 'col-xs-12 col-md-5'
+        id: ''
         element: div
         show_label: false
         label_element: h3
@@ -72,91 +73,18 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-        id: ''
-        classes: 'col-xs-12 col-md-5'
-      label: col2
-      region: content
 id: node.maple_tree.default
 targetEntityType: node
 bundle: maple_tree
 mode: default
-content:
-  field_maple_location:
-    weight: 23
-    label: above
-    settings:
-      set_marker: '1'
-      title: ''
-      info_text: ''
-      google_map_settings:
-        height: 400px
-        width: 100%
-        type: SATELLITE
-        zoom: '18'
-        maxZoom: 18
-        minZoom: 0
-        mapTypeControl: 1
-        streetViewControl: 1
-        zoomControl: 1
-        scrollwheel: 1
-        gestureHandling: auto
-        draggable: 1
-        style: ''
-        info_auto_display: 1
-        marker_icon_path: ''
-        disableAutoPan: 1
-        rotateControl: 0
-        fullscreenControl: 0
-        preferScrollingToZooming: 0
-        disableDoubleClickZoom: 0
-      use_overridden_map_settings: 0
-      common_map: ''
-    third_party_settings: {  }
-    type: geolocation_map
-    region: content
-  field_maple_nickname:
-    weight: 24
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_maple_photo:
-    weight: 22
-    label: hidden
-    settings:
-      image_style: large
-      image_link: ''
-    third_party_settings: {  }
-    type: image
-    region: content
-  field_maple_species:
-    weight: 26
-    label: above
-    settings:
-      link: false
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_maple_tree_tag:
-    weight: 25
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  maple_tree_data_entity_view_1:
-    weight: 27
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  maple_tree_observations_entity_view_1:
-    weight: 1
-    region: content
-    settings: {  }
-    third_party_settings: {  }
+content: {  }
 hidden:
   body: true
+  field_maple_location: true
+  field_maple_nickname: true
+  field_maple_photo: true
+  field_maple_species: true
+  field_maple_tree_tag: true
   links: true
+  maple_tree_data_entity_view_1: true
+  maple_tree_observations_entity_view_1: true

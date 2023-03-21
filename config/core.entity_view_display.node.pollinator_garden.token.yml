@@ -1,0 +1,126 @@
+uuid: 42680ecc-fcdf-4ed9-97ad-31a4973951db
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.token
+    - field.field.node.pollinator_garden.field_first_name
+    - field.field.node.pollinator_garden.field_garden_size
+    - field.field.node.pollinator_garden.field_last_name
+    - field.field.node.pollinator_garden.field_note
+    - field.field.node.pollinator_garden.field_pollinator_garden
+    - field.field.node.pollinator_garden.field_pollinator_garden_addition
+    - field.field.node.pollinator_garden.field_pollinator_garden_address
+    - field.field.node.pollinator_garden.field_pollinator_garden_date
+    - field.field.node.pollinator_garden.field_pollinator_garden_day
+    - field.field.node.pollinator_garden.field_pollinator_garden_image
+    - field.field.node.pollinator_garden.field_pollinator_garden_location
+    - field.field.node.pollinator_garden.field_pollinator_garden_month
+    - field.field.node.pollinator_garden.field_pollinator_garden_seeds
+    - field.field.node.pollinator_garden.field_pollinator_garden_space
+    - field.field.node.pollinator_garden.field_pollinator_garden_sqft
+    - field.field.node.pollinator_garden.field_pollinator_garden_year
+    - field.field.node.pollinator_garden.field_pollinator_other_seed_src
+    - field.field.node.pollinator_garden.field_pollinator_other_space
+    - node.type.pollinator_garden
+  module:
+    - field_group
+    - layout_builder
+    - user
+third_party_settings:
+  field_group:
+    group_row:
+      children:
+        - group_col1
+        - group_col2
+      label: Row
+      parent_name: ''
+      region: hidden
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: row
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_col1:
+      children:
+        - field_first_name
+        - field_last_name
+        - field_pollinator_garden_addition
+        - field_pollinator_garden_address
+        - field_pollinator_garden_seeds
+        - field_pollinator_garden_space
+        - field_pollinator_garden_sqft
+        - field_pollinator_other_seed_src
+        - field_pollinator_other_space
+      label: Col1
+      parent_name: group_row
+      region: hidden
+      weight: 20
+      format_type: html_element
+      format_settings:
+        classes: col-md-6
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_col2:
+      children:
+        - field_pollinator_garden_day
+        - field_pollinator_garden_image
+        - field_pollinator_garden_location
+        - field_pollinator_garden_month
+        - field_pollinator_garden_year
+      label: Col2
+      parent_name: group_row
+      region: hidden
+      weight: 21
+      format_type: html_element
+      format_settings:
+        classes: col-md-6
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.pollinator_garden.token
+targetEntityType: node
+bundle: pollinator_garden
+mode: token
+content: {  }
+hidden:
+  field_first_name: true
+  field_garden_size: true
+  field_last_name: true
+  field_note: true
+  field_pollinator_garden: true
+  field_pollinator_garden_addition: true
+  field_pollinator_garden_address: true
+  field_pollinator_garden_date: true
+  field_pollinator_garden_day: true
+  field_pollinator_garden_image: true
+  field_pollinator_garden_location: true
+  field_pollinator_garden_month: true
+  field_pollinator_garden_seeds: true
+  field_pollinator_garden_space: true
+  field_pollinator_garden_sqft: true
+  field_pollinator_garden_year: true
+  field_pollinator_other_seed_src: true
+  field_pollinator_other_space: true
+  links: true

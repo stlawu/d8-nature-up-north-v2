@@ -10,13 +10,13 @@ type: 'canonical_entities:node'
 pattern: 'trailhead/[node:title]'
 selection_criteria:
   2a2fefca-2ef6-41ef-91ff-1b5ef7fecc9d:
-    id: node_type
-    bundles:
-      trail_head: trail_head
+    id: 'entity_bundle:node'
     negate: false
+    uuid: 2a2fefca-2ef6-41ef-91ff-1b5ef7fecc9d
     context_mapping:
       node: node
-    uuid: 2a2fefca-2ef6-41ef-91ff-1b5ef7fecc9d
+    bundles:
+      trail_head: trail_head
 selection_logic: and
 weight: -5
 relationships: {  }

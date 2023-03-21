@@ -1,0 +1,18 @@
+uuid: 2df3000c-9c93-435d-b04f-1e0386a4b6fa
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Landing Page'
+type: landing_page
+description: 'A custom page that is fully configurable using Drupal''s core Layout Builder functionality.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: 9rAU4Pku7eMBQxauQqAgjzlcicFZ2As6zEa6zvTlCB8
 favicon:
   mimetype: image/png
   path: 'public://favicon.png'
@@ -7,13 +9,11 @@ features:
   comment_user_picture: true
   comment_user_verification: true
   favicon: true
-  node_user_picture: true
   logo: true
   name: false
+  node_user_picture: true
   slogan: true
 logo:
   path: 'public://nature_up_north_logo.png'
   url: ''
   use_default: false
-_core:
-  default_config_hash: 9rAU4Pku7eMBQxauQqAgjzlcicFZ2As6zEa6zvTlCB8

@@ -1,0 +1,21 @@
+uuid: cb62e4ab-653c-4b54-9fe1-3b6e523e044e
+langcode: en
+status: true
+dependencies: {  }
+id: navbar_magic
+label: 'Navbar Magic'
+code: |-
+  body.toolbar-fixed.toolbar-horizontal.toolbar-tray-open .navbar-fixed-top {
+    transition: top 0.2s ease-in-out;
+  }
+  body.toolbar-fixed.toolbar-horizontal.toolbar-tray-open .navbar-fixed-top.nav-up {
+    top: -10px;
+  }
+  body.toolbar-fixed.toolbar-horizontal.toolbar-tray-open .navbar-fixed-top.nav-down {
+    top: 79px;
+  }
+media: all
+preprocess: true
+conditions: {  }
+contexts: {  }
+conditions_require_all: true

@@ -3,111 +3,171 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_form_mode.media.media_library
     - field.field.node.blog.body
     - field.field.node.blog.comment_node_blog
     - field.field.node.blog.field_blog_attachment
     - field.field.node.blog.field_blog_category
     - field.field.node.blog.field_blog_image
+    - field.field.node.blog.field_blog_media
     - field.field.node.blog.field_blog_related_content
     - field.field.node.blog.field_class_reference
+    - field.field.node.blog.field_hidden_content_theme
+    - field.field.node.blog.field_hidden_tag_check
     - image.style.thumbnail
     - node.type.blog
   module:
+    - entity_browser_entity_form
+    - field_group
     - file
     - image
+    - inline_entity_form
     - path
     - text
+third_party_settings:
+  field_group:
+    group_legacy_fields:
+      children:
+        - field_blog_image
+      label: 'Legacy Fields'
+      region: content
+      parent_name: ''
+      weight: 10
+      format_type: details_sidebar
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: 'These field should no longer be used as they have new equivalents on the form. They are made available for updating legacy content.'
+        required_fields: true
+        weight: 0
 id: node.blog.default
 targetEntityType: node
 bundle: blog
 mode: default
 content:
   body:
-    weight: 2
     type: text_textarea_with_summary
+    weight: 2
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
-    region: content
   comment:
     type: comment_default
     weight: 20
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
-    weight: 8
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   field_blog_attachment:
-    weight: 5
     type: file_generic
+    weight: 6
+    region: content
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
-    region: content
   field_blog_category:
-    weight: 0
     type: options_buttons
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_blog_image:
-    weight: 3
     type: image_image
+    weight: 4
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
+  field_blog_media:
+    type: inline_entity_form_complex
+    weight: 3
     region: content
+    settings:
+      form_mode: media_library
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: existing_image_media
   field_blog_related_content:
+    type: entity_reference_autocomplete
+    weight: 8
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_class_reference:
     type: entity_reference_autocomplete
     weight: 7
     region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_class_reference:
-    weight: 6
-    type: entity_reference_autocomplete
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
+  field_hidden_content_theme:
+    type: options_buttons
+    weight: 17
     region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_hidden_tag_check:
+    type: boolean_checkbox
+    weight: 9
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   path:
     type: path
-    weight: 11
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
+    weight: 12
+    region: content
     settings:
       display_label: true
-    weight: 9
-    region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
+    weight: 16
+    region: content
     settings:
       display_label: true
-    weight: 121
     third_party_settings: {  }
-    region: content
   sticky:
     type: boolean_checkbox
+    weight: 13
+    region: content
     settings:
       display_label: true
-    weight: 10
-    region: content
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -119,15 +179,16 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 5
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-    region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 50
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }

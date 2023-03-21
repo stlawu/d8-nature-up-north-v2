@@ -3,52 +3,36 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment_node_announcement_.default
     - field.field.node.announcement_.comment_node_announcement_
     - field.field.node.announcement_.field_announcement_details
+    - field.field.node.announcement_.field_hidden_content_theme
     - field.field.node.announcement_.field_thumbnail
+    - image.style.large
     - node.type.announcement_
   module:
-    - comment
     - image
-    - text
     - user
 id: node.announcement_.default
 targetEntityType: node
 bundle: announcement_
 mode: default
 content:
-  comment_node_announcement_:
-    label: hidden
-    type: comment_default
-    weight: 20
-    settings:
-      view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
-    region: content
-  field_announcement_details:
-    label: hidden
-    weight: 1
-    type: text_default
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   field_thumbnail:
-    label: hidden
-    weight: 2
     type: image
+    label: hidden
     settings:
-      image_style: ''
-      image_link: ''
+      image_link: content
+      image_style: large
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
+    weight: 0
     region: content
-  links:
-    weight: 100
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   sharethis:
     weight: 10
     region: content
-hidden: {  }
+hidden:
+  comment_node_announcement_: true
+  field_announcement_details: true
+  field_hidden_content_theme: true
+  links: true

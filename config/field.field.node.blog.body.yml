@@ -6,7 +6,13 @@ dependencies:
     - field.storage.node.body
     - node.type.blog
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - basic_html
+      - full_html
 id: node.blog.body
 field_name: body
 entity_type: node
@@ -19,4 +25,5 @@ default_value: {  }
 default_value_callback: ''
 settings:
   display_summary: true
+  required_summary: false
 field_type: text_with_summary

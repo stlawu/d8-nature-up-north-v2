@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.announcement_.comment_node_announcement_
     - field.field.node.announcement_.field_announcement_details
+    - field.field.node.announcement_.field_hidden_content_theme
     - field.field.node.announcement_.field_thumbnail
     - image.style.thumbnail
     - node.type.announcement_
@@ -20,9 +21,9 @@ content:
   comment:
     type: comment_default
     weight: 20
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 10
@@ -30,22 +31,29 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_announcement_details:
-    weight: 1
     type: text_textarea_with_summary
+    weight: 1
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
+  field_hidden_content_theme:
+    type: options_buttons
+    weight: 122
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_thumbnail:
-    weight: 2
     type: image_image
+    weight: 2
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    region: content
   path:
     type: path
     weight: 30
@@ -54,24 +62,24 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 15
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
+    weight: 121
+    region: content
     settings:
       display_label: true
-    weight: 121
     third_party_settings: {  }
-    region: content
   sticky:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 16
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -84,11 +92,12 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 5
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-    region: content
     third_party_settings: {  }
   url_redirects:
     weight: 50

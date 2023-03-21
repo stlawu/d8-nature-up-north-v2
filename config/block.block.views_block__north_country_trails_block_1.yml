@@ -18,13 +18,13 @@ plugin: 'views_block:north_country_trails-block_1'
 settings:
   id: 'views_block:north_country_trails-block_1'
   label: ''
-  provider: views
   label_display: '0'
+  provider: views
   views_label: ''
   items_per_page: none
 visibility:
   request_path:
     id: request_path
-    pages: /trails
     negate: false
     context_mapping: {  }
+    pages: /trails

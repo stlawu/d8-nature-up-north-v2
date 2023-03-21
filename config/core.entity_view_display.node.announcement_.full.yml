@@ -1,0 +1,71 @@
+uuid: a0e401fc-c19e-4045-beec-552fad769c4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_announcement_.default
+    - core.entity_view_mode.node.full
+    - field.field.node.announcement_.comment_node_announcement_
+    - field.field.node.announcement_.field_announcement_details
+    - field.field.node.announcement_.field_hidden_content_theme
+    - field.field.node.announcement_.field_thumbnail
+    - node.type.announcement_
+  module:
+    - comment
+    - image
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.announcement_.full
+targetEntityType: node
+bundle: announcement_
+mode: full
+content:
+  comment_node_announcement_:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_announcement_details:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_hidden_content_theme:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  sharethis:
+    weight: 10
+    region: content
+hidden: {  }

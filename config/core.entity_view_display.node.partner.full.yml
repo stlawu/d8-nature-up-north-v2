@@ -1,0 +1,74 @@
+uuid: 42da112c-3a83-47a1-9945-2f3b914f8c38
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.partner.body
+    - field.field.node.partner.comment_node_partner
+    - field.field.node.partner.field_hidden_content_theme
+    - field.field.node.partner.field_partner_logo
+    - field.field.node.partner.field_partner_type
+    - field.field.node.partner.field_partner_web_site
+    - image.style.medium
+    - node.type.partner
+  module:
+    - image
+    - layout_builder
+    - link
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.partner.full
+targetEntityType: node
+bundle: partner
+mode: full
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_hidden_content_theme:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_partner_logo:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_partner_web_site:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  sharethis:
+    weight: 10
+    region: content
+hidden:
+  comment_node_partner: true
+  field_partner_type: true
+  links: true

@@ -1,0 +1,130 @@
+uuid: c0432805-0d8c-4e59-97e5-4b76937303c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.token
+    - field.field.node.profile.body
+    - field.field.node.profile.field_area_of_study
+    - field.field.node.profile.field_current_active
+    - field.field.node.profile.field_favorite_outdoor_activity
+    - field.field.node.profile.field_first_name
+    - field.field.node.profile.field_graduation
+    - field.field.node.profile.field_hometown
+    - field.field.node.profile.field_last_name
+    - field.field.node.profile.field_participation
+    - field.field.node.profile.field_portrait
+    - field.field.node.profile.field_project_links
+    - field.field.node.profile.field_title_position_role
+    - field.field.node.profile.field_title_role
+    - field.field.node.profile.field_user_account_on_the_site
+    - image.style.large
+    - node.type.profile
+  module:
+    - field_group
+    - image
+    - layout_builder
+    - user
+third_party_settings:
+  field_group:
+    group_row:
+      children:
+        - group_column1
+        - group_column2
+      label: Row
+      parent_name: ''
+      region: hidden
+      weight: 8
+      format_type: html_element
+      format_settings:
+        classes: row
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_column1:
+      children:
+        - body
+        - field_area_of_study
+        - field_favorite_outdoor_activity
+        - field_graduation
+        - field_hometown
+        - field_project_links
+        - field_title_role
+      label: Column1
+      parent_name: group_row
+      region: hidden
+      weight: 22
+      format_type: html_element
+      format_settings:
+        classes: 'col-xs-12 col-md-5'
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_column2:
+      children: {  }
+      label: Column2
+      parent_name: group_row
+      region: hidden
+      weight: 23
+      format_type: html_element
+      format_settings:
+        classes: 'col-xs-12 col-md-7'
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.profile.token
+targetEntityType: node
+bundle: profile
+mode: token
+content:
+  field_portrait:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: large
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_title_position_role:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  body: true
+  field_area_of_study: true
+  field_current_active: true
+  field_favorite_outdoor_activity: true
+  field_first_name: true
+  field_graduation: true
+  field_hometown: true
+  field_last_name: true
+  field_participation: true
+  field_project_links: true
+  field_title_role: true
+  field_user_account_on_the_site: true
+  links: true

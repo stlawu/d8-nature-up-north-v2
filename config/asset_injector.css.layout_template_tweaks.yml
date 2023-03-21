@@ -1,0 +1,19 @@
+uuid: a2fb9893-a08f-46c6-883d-68c7f14c2cbc
+langcode: en
+status: true
+dependencies: {  }
+id: layout_template_tweaks
+label: 'Layout Template Tweaks'
+code: |-
+  .layout .layout__region {
+    padding-right: 1rem;
+  }
+
+  .layout .layout__region--first {
+    padding-left: 1rem;
+  }
+media: all
+preprocess: true
+conditions: {  }
+contexts: {  }
+conditions_require_all: true

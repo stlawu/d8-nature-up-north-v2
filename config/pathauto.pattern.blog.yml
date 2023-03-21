@@ -10,13 +10,13 @@ type: 'canonical_entities:node'
 pattern: 'justmynature/[node:author]/[node:title]'
 selection_criteria:
   bee2b374-5e63-42bf-9fc2-78ca0d181a59:
-    id: node_type
-    bundles:
-      blog: blog
+    id: 'entity_bundle:node'
     negate: false
+    uuid: bee2b374-5e63-42bf-9fc2-78ca0d181a59
     context_mapping:
       node: node
-    uuid: bee2b374-5e63-42bf-9fc2-78ca0d181a59
+    bundles:
+      blog: blog
 selection_logic: and
 weight: -5
 relationships: {  }

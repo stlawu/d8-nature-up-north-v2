@@ -9,8 +9,11 @@ dependencies:
     - field.field.node.blog.field_blog_attachment
     - field.field.node.blog.field_blog_category
     - field.field.node.blog.field_blog_image
+    - field.field.node.blog.field_blog_media
     - field.field.node.blog.field_blog_related_content
     - field.field.node.blog.field_class_reference
+    - field.field.node.blog.field_hidden_content_theme
+    - field.field.node.blog.field_hidden_tag_check
     - node.type.blog
   module:
     - image
@@ -22,27 +25,29 @@ bundle: blog
 mode: teaser
 content:
   body:
-    label: hidden
-    weight: 0
     type: text_summary_or_trimmed
+    label: hidden
     settings:
       trim_length: 600
     third_party_settings: {  }
+    weight: 0
     region: content
   field_blog_image:
-    label: hidden
-    weight: 1
     type: image
+    label: hidden
     settings:
-      image_style: ''
       image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
+    weight: 1
     region: content
   links:
-    weight: 100
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 100
+    region: content
   sharethis:
     weight: 10
     region: content
@@ -50,5 +55,8 @@ hidden:
   comment_node_blog: true
   field_blog_attachment: true
   field_blog_category: true
+  field_blog_media: true
   field_blog_related_content: true
   field_class_reference: true
+  field_hidden_content_theme: true
+  field_hidden_tag_check: true

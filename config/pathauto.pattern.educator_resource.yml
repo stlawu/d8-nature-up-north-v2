@@ -10,13 +10,13 @@ type: 'canonical_entities:node'
 pattern: '[node:title]'
 selection_criteria:
   287db9ac-88a7-4fbf-b167-3de7d98ddaab:
-    id: node_type
-    bundles:
-      educator_resource: educator_resource
+    id: 'entity_bundle:node'
     negate: false
+    uuid: 287db9ac-88a7-4fbf-b167-3de7d98ddaab
     context_mapping:
       node: node
-    uuid: 287db9ac-88a7-4fbf-b167-3de7d98ddaab
+    bundles:
+      educator_resource: educator_resource
 selection_logic: and
 weight: -5
 relationships: {  }

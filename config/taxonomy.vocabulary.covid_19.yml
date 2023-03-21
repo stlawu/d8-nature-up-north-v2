@@ -1,0 +1,8 @@
+uuid: aa241f5c-d12d-4961-852e-03ad15bfd676
+langcode: en
+status: true
+dependencies: {  }
+name: 'Content themes'
+vid: covid_19
+description: 'themes for linking content across the website'
+weight: 0

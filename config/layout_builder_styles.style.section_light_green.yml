@@ -1,0 +1,11 @@
+uuid: 49c6193d-0b7e-42b2-b9e7-63e0e7191ae0
+langcode: en
+status: true
+dependencies: {  }
+id: section_light_green
+label: 'Section Light Green'
+classes: section-light-green
+type: section
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

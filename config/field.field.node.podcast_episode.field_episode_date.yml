@@ -1,0 +1,21 @@
+uuid: 2f714621-3eda-4b47-9b26-0036fe7277e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_episode_date
+    - node.type.podcast_episode
+  module:
+    - datetime
+id: node.podcast_episode.field_episode_date
+field_name: field_episode_date
+entity_type: node
+bundle: podcast_episode
+label: 'Episode date'
+description: 'Enter the date on which the podcast episode was posted.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,9 +1,10 @@
+uuid: be25fede-ec95-4be0-90e8-3fd3c1a1a415
 langcode: en
-status: open
+status: closed
 dependencies: {  }
+weight: 0
 open: null
 close: null
-weight: 0
 uid: 738
 template: false
 archive: false
@@ -11,7 +12,132 @@ id: 2019_family_weekend_lampson_fall
 title: '2019 Family Weekend: Lampson Falls Waterfall Hike '
 description: 'Registration form for the 2019 Family Weekend&nbsp;Lampson Falls Waterfall Hike&nbsp;'
 category: ''
-elements: "this_hike_is_full_please_register_here_for_our_wait_list_you_wil:\n  '#type': label\n  '#title': 'THIS HIKE IS FULL. Please register here for our wait list. You will be notified via email if space becomes available.Thank you.'\nthis_is_the_registration_form_for_the_waterfall_hike_with_nature:\n  '#type': label\n  '#title': 'Please register here for our waterfall hike on Saturday, September 28th as part of the 2019 St. Lawrence University Family Weekend. Transportation provided from the Brewer Bookstore at 2:00 pm. Please wear comfortable outdoor clothing and shoes, and bring water/snacks. '\nfull_name_1st_person_:\n  '#type': textfield\n  '#title': 'Full Name '\n  '#required': true\nemail_address:\n  '#type': email\n  '#title': 'Contact Email Address'\n  '#help': 'Please enter the email address you would prefer us to contact you at.'\n  '#title_display': before\n  '#description_display': tooltip\n  '#required': true\nmore_details_:\n  '#type': webform_checkboxes_other\n  '#title': 'More details'\n  '#options':\n    Adult: Adult\n    'SLU student': 'SLU student'\n    'youth (<12)': 'youth (<12)'\n  '#required': true\nadd_group_member:\n  '#type': checkbox\n  '#title': 'Add group member'\nfirst_name:\n  '#type': textfield\n  '#title': 'Full Name (2nd person)'\n  '#title_display': before\n  '#description_display': tooltip\n  '#minlength': '1'\n  '#maxlength': '25'\n  '#states':\n    visible:\n      ':input[name=\"add_group_member\"]':\n        checked: true\nmore_details:\n  '#type': webform_checkboxes_other\n  '#title': 'More details'\n  '#options':\n    Adult: Adult\n    'SLU student': 'SLU student'\n    'youth (<12)': 'youth (<12)'\n  '#states':\n    visible:\n      ':input[name=\"add_group_member\"]':\n        checked: true\nadd_group_member_2:\n  '#type': checkbox\n  '#title': 'Add group member'\n  '#states':\n    visible:\n      ':input[name=\"add_group_member\"]':\n        checked: true\nlast_name:\n  '#type': textfield\n  '#title': 'Full Name (3rd person)'\n  '#title_display': before\n  '#description_display': tooltip\n  '#minlength': '1'\n  '#maxlength': '20'\n  '#states':\n    visible:\n      ':input[name=\"add_group_member_2\"]':\n        checked: true\nmore_details__:\n  '#type': webform_checkboxes_other\n  '#title': 'More details'\n  '#options':\n    Adult: Adult\n    'SLU student': 'SLU student'\n    'youth (<12)': 'youth (<12)'\n  '#states':\n    visible:\n      ':input[name=\"add_group_member_2\"]':\n        checked: true\nadd_group_member_3:\n  '#type': checkbox\n  '#title': 'Add group member'\n  '#states':\n    visible:\n      ':input[name=\"add_group_member_2\"]':\n        checked: true\nfull_name_4th_person_:\n  '#type': textfield\n  '#title': 'Full Name (4th person)'\n  '#title_display': before\n  '#description_display': tooltip\n  '#minlength': '1'\n  '#maxlength': '20'\n  '#states':\n    visible:\n      ':input[name=\"add_group_member_3\"]':\n        checked: true\nmore_details___:\n  '#type': webform_checkboxes_other\n  '#title': 'More details'\n  '#options':\n    Adult: Adult\n    'SLU student': 'SLU student'\n    'youth (<12)': 'youth (<12)'\n  '#states':\n    visible:\n      ':input[name=\"add_group_member_3\"]':\n        checked: true\nplease_list_any_other_additional_group_member_s_names_here_:\n  '#type': textfield\n  '#title': 'Please list any other additional group member''s names here. '\n  '#states':\n    visible:\n      ':input[name=\"add_group_member_3\"]':\n        checked: true\nis_there_any_other_information_you_d_like_to_share_:\n  '#type': textfield\n  '#title': 'Is there any other information you''d like to share?'\nthanks_for_your_interest_and_registration_see_you_soon_:\n  '#type': label\n  '#title': 'Thanks for your interest and registration. Contact us at info@natureupnorth.org with any questions. See you soon!'\nactions:\n  '#type': webform_actions\n  '#title': Submit\n  '#submit__label': 'Submit '"
+elements: |
+  this_hike_is_full_please_register_here_for_our_wait_list_you_wil:
+    '#type': label
+    '#title': 'THIS HIKE IS FULL. Please register here for our wait list. You will be notified via email if space becomes available.Thank you.'
+  this_is_the_registration_form_for_the_waterfall_hike_with_nature:
+    '#type': label
+    '#title': 'Please register here for our waterfall hike on Saturday, September 28th as part of the 2019 St. Lawrence University Family Weekend. Transportation provided from the Brewer Bookstore at 2:00 pm. Please wear comfortable outdoor clothing and shoes, and bring water/snacks. '
+  full_name_1st_person_:
+    '#type': textfield
+    '#title': 'Full Name '
+    '#required': true
+  email_address:
+    '#type': email
+    '#title': 'Contact Email Address'
+    '#help': 'Please enter the email address you would prefer us to contact you at.'
+    '#title_display': before
+    '#description_display': tooltip
+    '#required': true
+  more_details_:
+    '#type': webform_checkboxes_other
+    '#title': 'More details'
+    '#options':
+      Adult: Adult
+      'SLU student': 'SLU student'
+      'youth (<12)': 'youth (<12)'
+    '#required': true
+  add_group_member:
+    '#type': checkbox
+    '#title': 'Add group member'
+  first_name:
+    '#type': textfield
+    '#title': 'Full Name (2nd person)'
+    '#title_display': before
+    '#description_display': tooltip
+    '#minlength': 1
+    '#maxlength': 25
+    '#states':
+      visible:
+        ':input[name="add_group_member"]':
+          checked: true
+  more_details:
+    '#type': webform_checkboxes_other
+    '#title': 'More details'
+    '#options':
+      Adult: Adult
+      'SLU student': 'SLU student'
+      'youth (<12)': 'youth (<12)'
+    '#states':
+      visible:
+        ':input[name="add_group_member"]':
+          checked: true
+  add_group_member_2:
+    '#type': checkbox
+    '#title': 'Add group member'
+    '#states':
+      visible:
+        ':input[name="add_group_member"]':
+          checked: true
+  last_name:
+    '#type': textfield
+    '#title': 'Full Name (3rd person)'
+    '#title_display': before
+    '#description_display': tooltip
+    '#minlength': 1
+    '#maxlength': 20
+    '#states':
+      visible:
+        ':input[name="add_group_member_2"]':
+          checked: true
+  more_details__:
+    '#type': webform_checkboxes_other
+    '#title': 'More details'
+    '#options':
+      Adult: Adult
+      'SLU student': 'SLU student'
+      'youth (<12)': 'youth (<12)'
+    '#states':
+      visible:
+        ':input[name="add_group_member_2"]':
+          checked: true
+  add_group_member_3:
+    '#type': checkbox
+    '#title': 'Add group member'
+    '#states':
+      visible:
+        ':input[name="add_group_member_2"]':
+          checked: true
+  full_name_4th_person_:
+    '#type': textfield
+    '#title': 'Full Name (4th person)'
+    '#title_display': before
+    '#description_display': tooltip
+    '#minlength': 1
+    '#maxlength': 20
+    '#states':
+      visible:
+        ':input[name="add_group_member_3"]':
+          checked: true
+  more_details___:
+    '#type': webform_checkboxes_other
+    '#title': 'More details'
+    '#options':
+      Adult: Adult
+      'SLU student': 'SLU student'
+      'youth (<12)': 'youth (<12)'
+    '#states':
+      visible:
+        ':input[name="add_group_member_3"]':
+          checked: true
+  please_list_any_other_additional_group_member_s_names_here_:
+    '#type': textfield
+    '#title': 'Please list any other additional group member''s names here. '
+    '#states':
+      visible:
+        ':input[name="add_group_member_3"]':
+          checked: true
+  is_there_any_other_information_you_d_like_to_share_:
+    '#type': textfield
+    '#title': 'Is there any other information you''d like to share?'
+  thanks_for_your_interest_and_registration_see_you_soon_:
+    '#type': label
+    '#title': 'Thanks for your interest and registration. Contact us at info@natureupnorth.org with any questions. See you soon!'
+  actions:
+    '#type': webform_actions
+    '#title': Submit
+    '#submit__label': 'Submit '
 css: ''
 javascript: ''
 settings:
@@ -23,38 +149,51 @@ settings:
   page: true
   page_submit_path: ''
   page_confirm_path: ''
-  page_admin_theme: false
-  form_title: both
+  page_theme_name: ''
+  form_title: source_entity_webform
   form_submit_once: false
-  form_exception_message: ''
   form_open_message: ''
   form_close_message: ''
+  form_exception_message: ''
   form_previous_submissions: true
   form_confidential: false
   form_confidential_message: ''
-  form_remote_addr: true
+  form_disable_remote_addr: false
   form_convert_anonymous: false
   form_prepopulate: false
   form_prepopulate_source_entity: false
   form_prepopulate_source_entity_required: false
   form_prepopulate_source_entity_type: ''
-  form_reset: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
   form_disable_autocomplete: false
   form_novalidate: false
   form_disable_inline_errors: false
   form_required: false
-  form_unsaved: false
-  form_disable_back: false
-  form_submit_back: false
   form_autofocus: false
   form_details_toggle: false
+  form_reset: false
   form_access_denied: default
   form_access_denied_title: ''
   form_access_denied_message: ''
   form_access_denied_attributes: {  }
   form_file_limit: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
   submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
   submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
   submission_views: {  }
   submission_views_replace: {  }
   submission_user_columns: {  }
@@ -63,11 +202,6 @@ settings:
   submission_access_denied_title: ''
   submission_access_denied_message: ''
   submission_access_denied_attributes: {  }
-  submission_exception_message: ''
-  submission_locked_message: ''
-  submission_excluded_elements: {  }
-  submission_exclude_empty: false
-  submission_exclude_empty_checkbox: false
   previous_submission_message: ''
   previous_submissions_message: ''
   autofill: false
@@ -77,11 +211,20 @@ settings:
   wizard_progress_pages: false
   wizard_progress_percentage: false
   wizard_progress_link: false
+  wizard_progress_states: false
   wizard_start_label: ''
   wizard_preview_link: false
   wizard_confirmation: true
   wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
   wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
   preview: 0
   preview_label: ''
   preview_title: ''
@@ -98,9 +241,9 @@ settings:
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
   confirmation_type: page
+  confirmation_url: ''
   confirmation_title: ''
   confirmation_message: ''
-  confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -124,7 +267,11 @@ settings:
   purge_days: null
   results_disabled: false
   results_disabled_ignore: false
+  results_customize: false
+  token_view: false
   token_update: false
+  token_delete: false
+  serial_disabled: false
 access:
   create:
     roles:
@@ -173,4 +320,4 @@ access:
     users: {  }
     permissions: {  }
 handlers: {  }
-uuid: be25fede-ec95-4be0-90e8-3fd3c1a1a415
+variants: {  }

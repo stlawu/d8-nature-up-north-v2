@@ -16,11 +16,11 @@ plugin: sharethis_block
 settings:
   id: sharethis_block
   label: Sharethis
-  provider: sharethis
   label_display: '0'
+  provider: sharethis
 visibility:
   request_path:
     id: request_path
-    pages: "/node/*\r\n/form/*"
     negate: false
     context_mapping: {  }
+    pages: "/node/*\r\n/form/*"

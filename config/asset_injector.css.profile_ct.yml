@@ -12,9 +12,9 @@ preprocess: true
 conditions:
   'entity_bundle:node':
     id: 'entity_bundle:node'
-    bundles:
-      profile: profile
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
+    bundles:
+      profile: profile
 conditions_require_all: true

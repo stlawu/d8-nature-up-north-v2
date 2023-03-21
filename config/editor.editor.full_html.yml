@@ -41,6 +41,7 @@ settings:
             - DrupalImage
             - Table
             - HorizontalRule
+            - DrupalMediaLibrary
         -
           name: 'Block Formatting'
           items:
@@ -50,14 +51,12 @@ settings:
           items:
             - ShowBlocks
             - Source
-  plugins:
-    stylescombo:
-      styles: ''
+  plugins: {  }
 image_upload:
   status: true
   scheme: public
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: 0
-    height: 0
+    width: null
+    height: null

@@ -1,0 +1,7 @@
+status: 0
+pattern: ''
+escape: false
+dependencies:
+  config:
+    - user.role.nun_staff
+php: 0

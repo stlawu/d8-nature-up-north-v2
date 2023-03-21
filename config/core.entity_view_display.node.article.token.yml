@@ -1,0 +1,38 @@
+uuid: bf884898-f816-4910-a9e5-4d8674e3550e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.token
+    - field.field.node.article.body
+    - field.field.node.article.comment
+    - field.field.node.article.comment_node_article
+    - field.field.node.article.field_hidden_content_theme
+    - field.field.node.article.field_image
+    - field.field.node.article.field_tags
+    - node.type.article
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: qVtHNxqdXB9w369AO5JB5SVhflquWqFm5xfyvYLAIlM
+id: node.article.token
+targetEntityType: node
+bundle: article
+mode: token
+content:
+  sharethis:
+    weight: 10
+    region: content
+hidden:
+  body: true
+  comment: true
+  comment_node_article: true
+  field_hidden_content_theme: true
+  field_image: true
+  field_tags: true
+  links: true

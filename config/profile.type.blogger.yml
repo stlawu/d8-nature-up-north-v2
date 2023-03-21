@@ -6,8 +6,8 @@ _core:
   default_config_hash: 6AeBpeWxser5ur4E-KDhPHDriQQF3y4ImKH0ArsJqFI
 id: blogger
 label: Blogger
-registration: false
 multiple: false
+registration: false
 roles:
   authenticated: '0'
   administrator: '0'

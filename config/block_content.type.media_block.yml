@@ -1,0 +1,8 @@
+uuid: f2f91ee0-c628-40c2-bfa1-35ba838154c9
+langcode: en
+status: true
+dependencies: {  }
+id: media_block
+label: 'Media Block'
+revision: 1
+description: ''

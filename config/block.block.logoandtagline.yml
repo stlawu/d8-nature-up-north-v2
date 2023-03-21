@@ -17,8 +17,8 @@ plugin: 'block_content:a819b27d-a587-4970-b190-2093b3d97cbc'
 settings:
   id: 'block_content:a819b27d-a587-4970-b190-2093b3d97cbc'
   label: 'Logo and tagline'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full

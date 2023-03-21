@@ -10,13 +10,13 @@ type: 'canonical_entities:node'
 pattern: 'encounter/[node:author]/[node:title]'
 selection_criteria:
   8d1f15fc-8611-4cfd-b666-7b71aa793146:
-    id: node_type
-    bundles:
-      encounter: encounter
+    id: 'entity_bundle:node'
     negate: false
+    uuid: 8d1f15fc-8611-4cfd-b666-7b71aa793146
     context_mapping:
       node: node
-    uuid: 8d1f15fc-8611-4cfd-b666-7b71aa793146
+    bundles:
+      encounter: encounter
 selection_logic: and
 weight: -5
 relationships: {  }

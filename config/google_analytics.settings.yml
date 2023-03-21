@@ -1,9 +1,12 @@
-account: UA-1289367-51
+_core:
+  default_config_hash: 5YkLBJiAXgH9BDLkDIb1ozqfCXWwvZggf4XfcXgfjzc
+account: UA-62820834-1
+premium: false
 domain_mode: 0
 cross_domains: ''
 visibility:
   request_path_mode: 0
-  request_path_pages: "/admin\n/admin/*\n/batch\n/node/add*\n/node/*/*\n/user/*/*"
+  request_path_pages: "/admin\r\n/admin/*\r\n/batch\r\n/node/add*\r\n/node/*/*\r\n/user/*/*"
   user_role_mode: 0
   user_role_roles: {  }
   user_account_mode: 0
@@ -16,10 +19,7 @@ track:
   linkid: false
   urlfragments: false
   userid: false
-  messages:
-    status: '0'
-    warning: '0'
-    error: '0'
+  messages: {  }
   site_search: false
   adsense: false
   displayfeatures: false
@@ -35,5 +35,3 @@ codesnippet:
 translation_set: false
 cache: false
 debug: false
-_core:
-  default_config_hash: 5YkLBJiAXgH9BDLkDIb1ozqfCXWwvZggf4XfcXgfjzc

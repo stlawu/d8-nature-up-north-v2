@@ -1,0 +1,40 @@
+uuid: 0c4ae8e2-5467-4e89-8fe7-115d5082464a
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_episode_type
+field_name: field_episode_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Episode
+      label: Episode
+    -
+      value: 'Field Guide'
+      label: 'Audio Field Guide'
+    -
+      value: Bonus
+      label: Bonus
+    -
+      value: Trailer
+      label: Trailer
+    -
+      value: 'Nature Nugget'
+      label: 'Nature Nugget'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

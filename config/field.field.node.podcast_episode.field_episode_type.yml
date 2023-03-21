@@ -1,0 +1,23 @@
+uuid: f7f2ebe6-2fad-42d0-936f-14c689ff8c57
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_episode_type
+    - node.type.podcast_episode
+  module:
+    - options
+id: node.podcast_episode.field_episode_type
+field_name: field_episode_type
+entity_type: node
+bundle: podcast_episode
+label: Type
+description: 'What type of audio file are you putting up? A regular episode? Trailer for an episode? Bonus material? Choose the answer frm the list.'
+required: true
+translatable: false
+default_value:
+  -
+    value: Episode
+default_value_callback: ''
+settings: {  }
+field_type: list_string

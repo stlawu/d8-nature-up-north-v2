@@ -12,9 +12,9 @@ preprocess: true
 conditions:
   node_type:
     id: node_type
-    bundles:
-      pollinator_garden: pollinator_garden
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
+    bundles:
+      pollinator_garden: pollinator_garden
 conditions_require_all: true

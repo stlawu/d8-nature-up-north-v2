@@ -6,11 +6,14 @@ dependencies:
     - core.entity_view_mode.node.token
     - field.field.node.encounter.comment_node_encounter
     - field.field.node.encounter.field_common_species_name
+    - field.field.node.encounter.field_encounter_collection
     - field.field.node.encounter.field_encounter_date
     - field.field.node.encounter.field_encounter_description
     - field.field.node.encounter.field_encounter_image
     - field.field.node.encounter.field_encounter_location
     - field.field.node.encounter.field_encounter_map_label
+    - field.field.node.encounter.field_encounter_media
+    - field.field.node.encounter.field_hidden_content_theme
     - field.field.node.encounter.field_hidden_tags
     - field.field.node.encounter.field_tags_other
     - field.field.node.encounter.field_trail_reference
@@ -26,43 +29,48 @@ bundle: encounter
 mode: token
 content:
   field_encounter_date:
-    label: hidden
-    weight: 1
     type: datetime_default
+    label: hidden
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: medium
     third_party_settings: {  }
+    weight: 1
     region: content
   field_encounter_description:
-    label: hidden
-    weight: 2
     type: text_default
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 2
     region: content
   field_encounter_image:
-    label: hidden
-    weight: 0
     type: image
+    label: hidden
     settings:
-      image_style: ''
       image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
+    weight: 0
     region: content
   links:
-    weight: 100
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 100
+    region: content
   sharethis:
     weight: 10
     region: content
 hidden:
   comment_node_encounter: true
   field_common_species_name: true
+  field_encounter_collection: true
   field_encounter_location: true
   field_encounter_map_label: true
+  field_encounter_media: true
+  field_hidden_content_theme: true
   field_hidden_tags: true
   field_tags_other: true
   field_trail_reference: true

@@ -1,0 +1,25 @@
+uuid: 1296d0b3-c13c-4d2c-b467-fa3391c9afc9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.podcast_block.field_podcast_title
+    - paragraphs.paragraphs_type.podcast_block
+id: paragraph.podcast_block.default
+targetEntityType: paragraph
+bundle: podcast_block
+mode: default
+content:
+  field_podcast_title:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

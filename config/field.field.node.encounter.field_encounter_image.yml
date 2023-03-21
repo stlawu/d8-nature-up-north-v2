@@ -11,13 +11,15 @@ id: node.encounter.field_encounter_image
 field_name: field_encounter_image
 entity_type: node
 bundle: encounter
-label: 'Photos, artwork or illustrations'
+label: 'Legacy: Photos, artwork or illustrations'
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
+  handler: 'default:file'
+  handler_settings: {  }
   file_directory: ''
   file_extensions: 'png gif jpg jpeg heif'
   max_filesize: '100 MB'
@@ -33,6 +35,4 @@ settings:
     title: ''
     width: null
     height: null
-  handler: 'default:file'
-  handler_settings: {  }
 field_type: image

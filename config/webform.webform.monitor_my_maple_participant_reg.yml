@@ -4,9 +4,9 @@ status: open
 dependencies:
   module:
     - mmm_registration
+weight: 0
 open: null
 close: null
-weight: 0
 uid: 85
 template: false
 archive: false
@@ -14,7 +14,107 @@ id: monitor_my_maple_participant_reg
 title: 'Monitor My Maple Participant Registration'
 description: 'Form to enroll folks to the MMM project. Automatically gives users &quot;Maple Monitor&quot; role upon submission.'
 category: ''
-elements: "tell_us_about_you:\n  '#type': webform_wizard_page\n  '#title': 'Tell us about you'\n  '#prev_button_label': Back\n  '#next_button_label': Next\n  overview_text:\n    '#type': processed_text\n    '#text': |\n      <p>Thanks for your interest in our Monitor My Maple community science project.&nbsp; We're glad to have join us in monitoring maple trees here in the North Country.&nbsp; Please fill out the remainder of this form.&nbsp; Once completed, your account will be assigned a new role called \"Maple Monitor\" and you will be able to establish trees and add observations to them.</p>\n      \n    '#format': basic_html\n  your_name:\n    '#type': webform_name\n    '#title': 'Your Name'\n    '#title__access': false\n    '#middle__access': false\n    '#suffix__access': false\n    '#degree__access': false\n    '#required': true\n  contact_email:\n    '#type': webform_email_confirm\n    '#title': 'Contact email'\n    '#description': 'Please provide the email at which you would like to be contacted with updates about the Monitor My Maple project.&nbsp; We NEVER share your email without your permission!&nbsp; This does not have to be the same as your Nature Up North account email address.'\n    '#confirm__title': 'Confirm your email'\n    '#required': true\n  how_did_you_hear_about_the_mmm_project:\n    '#type': webform_checkboxes_other\n    '#title': 'How did you hear about Monitor My Maple? Select as many as apply.'\n    '#title_display': before\n    '#options':\n      1: 'https://www.natureupnorth.org -- The Nature Up North website'\n      2: 'Facebook -- The Nature Up North facebook page'\n      3: 'Instagram -- The Nature Up North instagram account'\n      4: 'Twitter -- The Nature Up North twitter account'\n      5: 'Press release/Newspaper -- A published article in local in print newsmedia'\n      6: 'Door Hang Tag -- A Monitor My Maple hang tag was attached to your door'\n      7: 'Word of mouth -- A friend or colleague mentioned it to you.'\n    '#other__title': Other\n    '#select2': true\nlearn_more_about_the_project:\n  '#type': webform_wizard_page\n  '#title': 'Learn more about the project'\n  '#prev_button_label': Back\n  '#next_button_label': Next\n  how_to_video:\n    '#type': processed_text\n    '#text': |\n      <h3>Training Video</h3>\n      \n      <p>Please watch this short video that introduces the project and explains how to choose and measure your maple tree.</p>\n      \n      <p><iframe allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\" frameborder=\"0\" height=\"374\" src=\"https://www.youtube.com/embed/W9S8ocg08Ys\" width=\"664\"></iframe></p>\n      \n    '#format': full_html\n  agreement:\n    '#type': processed_text\n    '#text': |\n      <hr />\n      <p>Please read and agree to the following policies&nbsp;to continue.</p>\n      \n      <h2>Policies:</h2>\n      \n      <p>Monitor My Maple (MMM) is a community research project&nbsp;directed by the staff at Nature Up North, a project of St. Lawrence University in Canton, New York.&nbsp; All data contributed to the project become the property of Nature Up North.&nbsp; Any publications that result from these data will acknowledge all volunteers with a general statement such as \"Some data for this project were contributed by volunteer scientists from northern New York State\".&nbsp; If you answer \"yes\" to&nbsp;having your name listed as a MMM volunteer, your name will also appear on a dedicated web page acknowledging your contributions.</p>\n      \n    '#format': full_html\n  volunteer_listing:\n    '#type': select\n    '#title': 'Would you like to be listed as a volunteer on the Nature Up North webpage?'\n    '#options':\n      'Yes': 'Yes'\n      'No': 'No'\n  policies_continued:\n    '#type': processed_text\n    '#text': |\n      <p>In addition, by submitting this form, you agree that you will not hold Nature Up North, St. Lawrence University, or any individual other than yourself responsible for any injury or illness that results from your participation in this project.</p>\n      \n    '#format': basic_html\n  shall_we_list_your_name_:\n    '#type': webform_terms_of_service\n    '#title': 'Please agree to the {project policies}'\n    '#description': 'By agreeing to the &quot;Project Policies&quot; you are agreeing to the policies associated with the Monitor My Maple project.'\n    '#required': true\n    '#required_error': 'This is a required answer'\n    '#terms_title': 'Project Policies'\n    '#terms_content': |\n      <p>We hope you are excited about participating!&nbsp; Now please read and agree to the following policies in order to continue.</p>\n      \n      <h3>Policies:</h3>\n      \n      <p>This is a community research project, directed by the staff at Nature Up North, a project of St. Lawrence University in Canton, New York.&nbsp; All data contributed to the project become the property of Nature Up North.&nbsp; Any publications that result from these data will acknowledge all volunteers with a general statement such as &quot;Some data for this project were contributed by volunteer scientists from northern New York State&quot;.&nbsp; If you answer &quot;yes&quot; to the question of having your name listed as a MMM volunteer, your name will also appear on a dedicated web page acknowledging your contributions.</p>\n  video_thanks:\n    '#type': processed_text\n    '#text': |\n      <h3>Thanks for joining our team!&nbsp;</h3>\n      \n      <p>Please visit&nbsp;<a href=\"https://www.natureupnorth.org/maple\">www.natureupnorth.org/maple</a>&nbsp;to learn more about the project.&nbsp; On that page you can also download a paper data sheet on which to record your data.&nbsp;</p>\n      \n    '#format': full_html\n  horizontal_rule:\n    '#type': webform_horizontal_rule"
+elements: |-
+  tell_us_about_you:
+    '#type': webform_wizard_page
+    '#title': 'Tell us about you'
+    '#prev_button_label': Back
+    '#next_button_label': Next
+    overview_text:
+      '#type': processed_text
+      '#text': |
+        <p>Thanks for your interest in our Monitor My Maple community science project.&nbsp; We're glad to have join us in monitoring maple trees here in the North Country.&nbsp; Please fill out the remainder of this form.&nbsp; Once completed, your account will be assigned a new role called "Maple Monitor" and you will be able to establish trees and add observations to them.</p>
+        
+      '#format': basic_html
+    your_name:
+      '#type': webform_name
+      '#title': 'Your Name'
+      '#title__access': false
+      '#middle__access': false
+      '#suffix__access': false
+      '#degree__access': false
+      '#required': true
+    contact_email:
+      '#type': webform_email_confirm
+      '#title': 'Contact email'
+      '#description': 'Please provide the email at which you would like to be contacted with updates about the Monitor My Maple project.&nbsp; We NEVER share your email without your permission!&nbsp; This does not have to be the same as your Nature Up North account email address.'
+      '#confirm__title': 'Confirm your email'
+      '#required': true
+    how_did_you_hear_about_the_mmm_project:
+      '#type': webform_checkboxes_other
+      '#title': 'How did you hear about Monitor My Maple? Select as many as apply.'
+      '#title_display': before
+      '#options':
+        1: 'https://www.natureupnorth.org -- The Nature Up North website'
+        2: 'Facebook -- The Nature Up North facebook page'
+        3: 'Instagram -- The Nature Up North instagram account'
+        4: 'Twitter -- The Nature Up North twitter account'
+        5: 'Press release/Newspaper -- A published article in local in print newsmedia'
+        6: 'Door Hang Tag -- A Monitor My Maple hang tag was attached to your door'
+        7: 'Word of mouth -- A friend or colleague mentioned it to you.'
+      '#other__title': Other
+      '#select2': true
+  learn_more_about_the_project:
+    '#type': webform_wizard_page
+    '#title': 'Learn more about the project'
+    '#prev_button_label': Back
+    '#next_button_label': Next
+    how_to_video:
+      '#type': processed_text
+      '#text': |
+        <h3>Training Video</h3>
+        
+        <p>Please watch this short video that introduces the project and explains how to choose and measure your maple tree.</p>
+        
+        <p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="374" src="https://www.youtube.com/embed/W9S8ocg08Ys" width="664"></iframe></p>
+        
+      '#format': full_html
+    agreement:
+      '#type': processed_text
+      '#text': |
+        <hr />
+        <p>Please read and agree to the following policies&nbsp;to continue.</p>
+        
+        <h2>Policies:</h2>
+        
+        <p>Monitor My Maple (MMM) is a community research project&nbsp;directed by the staff at Nature Up North, a project of St. Lawrence University in Canton, New York.&nbsp; All data contributed to the project become the property of Nature Up North.&nbsp; Any publications that result from these data will acknowledge all volunteers with a general statement such as "Some data for this project were contributed by volunteer scientists from northern New York State".&nbsp; If you answer "yes" to&nbsp;having your name listed as a MMM volunteer, your name will also appear on a dedicated web page acknowledging your contributions.</p>
+        
+      '#format': full_html
+    volunteer_listing:
+      '#type': select
+      '#title': 'Would you like to be listed as a volunteer on the Nature Up North webpage?'
+      '#options':
+        'Yes': 'Yes'
+        'No': 'No'
+    policies_continued:
+      '#type': processed_text
+      '#text': |
+        <p>In addition, by submitting this form, you agree that you will not hold Nature Up North, St. Lawrence University, or any individual other than yourself responsible for any injury or illness that results from your participation in this project.</p>
+        
+      '#format': basic_html
+    shall_we_list_your_name_:
+      '#type': webform_terms_of_service
+      '#title': 'Please agree to the {project policies}'
+      '#description': 'By agreeing to the &quot;Project Policies&quot; you are agreeing to the policies associated with the Monitor My Maple project.'
+      '#required': true
+      '#required_error': 'This is a required answer'
+      '#terms_title': 'Project Policies'
+      '#terms_content': |
+        <p>We hope you are excited about participating!&nbsp; Now please read and agree to the following policies in order to continue.</p>
+        
+        <h3>Policies:</h3>
+        
+        <p>This is a community research project, directed by the staff at Nature Up North, a project of St. Lawrence University in Canton, New York.&nbsp; All data contributed to the project become the property of Nature Up North.&nbsp; Any publications that result from these data will acknowledge all volunteers with a general statement such as &quot;Some data for this project were contributed by volunteer scientists from northern New York State&quot;.&nbsp; If you answer &quot;yes&quot; to the question of having your name listed as a MMM volunteer, your name will also appear on a dedicated web page acknowledging your contributions.</p>
+    video_thanks:
+      '#type': processed_text
+      '#text': |
+        <h3>Thanks for joining our team!&nbsp;</h3>
+        
+        <p>Please visit&nbsp;<a href="https://www.natureupnorth.org/maple">www.natureupnorth.org/maple</a>&nbsp;to learn more about the project.&nbsp; On that page you can also download a paper data sheet on which to record your data.&nbsp;</p>
+        
+      '#format': full_html
+    horizontal_rule:
+      '#type': webform_horizontal_rule
 css: ''
 javascript: ''
 settings:
@@ -26,38 +126,51 @@ settings:
   page: true
   page_submit_path: ''
   page_confirm_path: ''
-  page_admin_theme: false
+  page_theme_name: ''
   form_title: both
   form_submit_once: false
-  form_exception_message: ''
   form_open_message: ''
   form_close_message: ''
+  form_exception_message: ''
   form_previous_submissions: true
   form_confidential: false
   form_confidential_message: ''
-  form_remote_addr: true
+  form_disable_remote_addr: false
   form_convert_anonymous: false
   form_prepopulate: false
   form_prepopulate_source_entity: false
   form_prepopulate_source_entity_required: false
   form_prepopulate_source_entity_type: ''
-  form_reset: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
   form_disable_autocomplete: false
   form_novalidate: false
   form_disable_inline_errors: false
   form_required: false
-  form_unsaved: false
-  form_disable_back: false
-  form_submit_back: false
   form_autofocus: false
   form_details_toggle: false
+  form_reset: false
   form_access_denied: default
   form_access_denied_title: ''
   form_access_denied_message: ''
   form_access_denied_attributes: {  }
   form_file_limit: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
   submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
   submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
   submission_views: {  }
   submission_views_replace: {  }
   submission_user_columns: {  }
@@ -66,11 +179,6 @@ settings:
   submission_access_denied_title: ''
   submission_access_denied_message: ''
   submission_access_denied_attributes: {  }
-  submission_exception_message: ''
-  submission_locked_message: ''
-  submission_excluded_elements: {  }
-  submission_exclude_empty: false
-  submission_exclude_empty_checkbox: false
   previous_submission_message: ''
   previous_submissions_message: ''
   autofill: false
@@ -80,11 +188,20 @@ settings:
   wizard_progress_pages: false
   wizard_progress_percentage: false
   wizard_progress_link: false
+  wizard_progress_states: false
   wizard_start_label: ''
   wizard_preview_link: false
   wizard_confirmation: true
   wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
   wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
   preview: 0
   preview_label: ''
   preview_title: ''
@@ -101,9 +218,9 @@ settings:
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
   confirmation_type: page
+  confirmation_url: ''
   confirmation_title: 'Thank you!'
   confirmation_message: "<br />\r\n<strong>Thanks&nbsp;for signing up to be a Maple Monitor,&nbsp;</strong> <strong>we&#39;re glad to have you on the team.</strong>&nbsp;<br />\r\n<br />\r\n<strong><a href=\"https://www.natureupnorth.org/monitor-my-maple\">Maple Homepage</a>&nbsp;-&nbsp;</strong>This page includes more information about getting started, including a list of materials and a link to download paper data sheets on which to record your data.&nbsp;<br />\r\n<br />\r\n<strong><a href=\"https://www.natureupnorth.org/monitor-my-maple/data\">Monitor My Maple Data Portal</a>&nbsp;-&nbsp;</strong>Visit this page to start entering data.<br />\r\n&nbsp;\r\n<h3>Ready to get started?&nbsp;</h3>\r\n\r\n<ul>\r\n\t<li>Download a&nbsp;<a href=\"https://www.natureupnorth.org/maple\">paper data sheet</a>&nbsp;on which to record details about your tree.</li>\r\n\t<li>Select your tree and record the data called for on the data sheet.</li>\r\n\t<li>Begin observing your tree.&nbsp; You should make 4+ observations of your tree over at least a 4 week period from September 1st - November 1st. More observations are better.</li>\r\n\t<li>Enter your data into the data portal (above). You may wish to enter data as you go rather than wait until the end of the observation season.</li>\r\n</ul>\r\n\r\n<h3>Data Entry Instructions</h3>\r\n\r\n<ul>\r\n\t<li>Visit the data entry portal and select &quot;Add new tree&quot;</li>\r\n\t<li>Enter all of the relevant information about your tree.&nbsp;You need to create a new tree for each different tree you decide to monitor.&nbsp;&nbsp;&nbsp;</li>\r\n\t<li>Upload a picture of your tree (optional).</li>\r\n\t<li>Click on &quot;Step 2. Tell us about your tree&quot;&nbsp;\r\n\t<ul>\r\n\t\t<li>Answer questions about the habitat and growing conditions for your tree</li>\r\n\t</ul>\r\n\t</li>\r\n\t<li>If you have made any observations at this point, scroll down to &quot;Observations&quot; and choose &quot;Add an observation for this tree&quot;.&nbsp; Fill in the details on the form.</li>\r\n\t<li>As you make additional observations, you can return to your tree on the data portal by choosing &quot;Browse Trees&quot; rather than &quot;Add new tree&quot;.&nbsp; Then just click on your tree and you will get the choice to add an observation.</li>\r\n</ul>\r\n<br />\r\nPlease reach out to info@natureupnorth.org if you have any questions.&nbsp;&nbsp;"
-  confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: false
   confirmation_back_label: ''
@@ -127,7 +244,11 @@ settings:
   purge_days: null
   results_disabled: false
   results_disabled_ignore: false
+  results_customize: false
+  token_view: false
   token_update: false
+  token_delete: false
+  serial_disabled: false
 access:
   create:
     roles:
@@ -199,9 +320,11 @@ access:
 handlers:
   mmm_registration:
     id: mmm_registration
-    label: 'MMM Registration'
     handler_id: mmm_registration
+    label: 'MMM Registration'
+    notes: ''
     status: true
     conditions: {  }
     weight: 0
     settings: {  }
+variants: {  }

@@ -1,0 +1,11 @@
+uuid: c2d2fde2-fa93-48cf-84de-4527adaf0c74
+langcode: en
+status: true
+dependencies: {  }
+id: section_light_gray
+label: 'Section Light Gray'
+classes: section-light-gray
+type: section
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

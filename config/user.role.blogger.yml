@@ -1,31 +1,45 @@
 uuid: e55eb943-0f97-4ddc-9503-959e32733fec
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.full_html
+    - node.type.blog
+    - node.type.community_organization
+    - node.type.encounter
+    - node.type.event
+  module:
+    - comment
+    - entity_browser
+    - filter
+    - honeypot
+    - media
+    - node
+    - profile
 id: blogger
 label: blogger
 weight: 4
 is_admin: null
 permissions:
-  - 'bypass honeypot protection'
-  - 'create blog content'
-  - 'create encounter content'
-  - 'create event content'
-  - 'delete own blog content'
-  - 'delete own encounter content'
-  - 'delete revisions'
-  - 'edit own blog content'
-  - 'edit own blogger profile'
-  - 'edit own comments'
-  - 'edit own community_organization content'
-  - 'edit own encounter content'
-  - 'edit own event content'
-  - 'post comments'
-  - 'revert revisions'
-  - 'skip comment approval'
-  - 'use text format basic_html'
-  - 'use text format full_html'
-  - 'view any main profile'
-  - 'view own blogger profile'
-  - 'view own unpublished content'
-  - 'view revisions'
+  0: 'access entity_embed_image_media entity browser pages'
+  1: 'access existing_image_media entity browser pages'
+  2: 'bypass honeypot protection'
+  3: 'create blog content'
+  4: 'create encounter content'
+  5: 'create event content'
+  6: 'create media'
+  7: 'delete own blog content'
+  8: 'delete own encounter content'
+  10: 'edit own blog content'
+  12: 'edit own comments'
+  13: 'edit own community_organization content'
+  14: 'edit own encounter content'
+  15: 'edit own event content'
+  16: 'post comments'
+  18: 'skip comment approval'
+  19: 'use text format basic_html'
+  20: 'use text format full_html'
+  21: 'view any main profile'
+  22: 'view own blogger profile'
+  23: 'view own unpublished content'

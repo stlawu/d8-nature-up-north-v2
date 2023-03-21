@@ -1,41 +1,50 @@
 uuid: 7ef4ac8d-5b27-4a4e-855f-ce6594ae108e
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - node.type.community_organization
+    - node.type.encounter
+    - node.type.event
+    - node.type.maple_data
+    - node.type.maple_observation
+    - node.type.maple_tree
+  module:
+    - comment
+    - entity_browser
+    - honeypot
+    - media
+    - node
+    - profile
 id: maple
 label: 'Maple Monitor'
 weight: 8
 is_admin: null
 permissions:
-  - 'access maple_tree_browser entity browser pages'
-  - 'bypass honeypot protection'
-  - 'create encounter content'
-  - 'create event content'
-  - 'create fall_maple_tree_data content'
-  - 'create maple_data content'
-  - 'create maple_observation content'
-  - 'create maple_tree content'
-  - 'create spring_maple_tree_data content'
-  - 'delete own encounter content'
-  - 'delete own fall_maple_tree_data content'
-  - 'delete own maple_data content'
-  - 'delete own maple_observation content'
-  - 'delete own maple_tree content'
-  - 'delete own spring_maple_tree_data content'
-  - 'edit own comments'
-  - 'edit own community_organization content'
-  - 'edit own encounter content'
-  - 'edit own event content'
-  - 'edit own fall_maple_tree_data content'
-  - 'edit own maple_data content'
-  - 'edit own maple_observation content'
-  - 'edit own maple_tree content'
-  - 'edit own spring_maple_tree_data content'
-  - 'post comments'
-  - 'skip comment approval'
-  - 'view any main profile'
-  - 'view fall_maple_tree_data revisions'
-  - 'view maple_data revisions'
-  - 'view maple_observation revisions'
-  - 'view maple_tree revisions'
-  - 'view spring_maple_tree_data revisions'
+  0: 'access entity_embed_image_media entity browser pages'
+  1: 'access existing_image_media entity browser pages'
+  2: 'access maple_tree_browser entity browser pages'
+  3: 'bypass honeypot protection'
+  4: 'create encounter content'
+  5: 'create event content'
+  7: 'create maple_data content'
+  8: 'create maple_observation content'
+  9: 'create maple_tree content'
+  10: 'create media'
+  12: 'delete own encounter content'
+  14: 'delete own maple_data content'
+  15: 'delete own maple_observation content'
+  16: 'delete own maple_tree content'
+  18: 'edit own comments'
+  19: 'edit own community_organization content'
+  20: 'edit own encounter content'
+  21: 'edit own event content'
+  23: 'edit own maple_data content'
+  24: 'edit own maple_observation content'
+  25: 'edit own maple_tree content'
+  27: 'post comments'
+  28: 'skip comment approval'
+  29: 'view any main profile'
+  31: 'view maple_data revisions'
+  32: 'view maple_observation revisions'
+  33: 'view maple_tree revisions'

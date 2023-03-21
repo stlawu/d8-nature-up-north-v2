@@ -1,0 +1,11 @@
+uuid: 3d2879a1-ed03-47ad-8ea4-c27e7bc39f3b
+langcode: en
+status: true
+dependencies: {  }
+id: section_light_yellow
+label: 'Section Light Yellow'
+classes: section-light-yellow
+type: section
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

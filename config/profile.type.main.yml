@@ -6,8 +6,8 @@ _core:
   default_config_hash: wqTmk5ceeYZrHtHS2N7jq6xGFjdcMH5WUCRH2gblNB4
 id: main
 label: Profile
-registration: true
 multiple: false
+registration: true
 roles:
   authenticated: '0'
   administrator: '0'

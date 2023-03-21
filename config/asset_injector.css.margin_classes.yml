@@ -1,0 +1,23 @@
+uuid: 4e7fbeec-61e4-4962-94b2-e61dcb99cc3a
+langcode: en
+status: true
+dependencies: {  }
+id: margin_classes
+label: 'Margin Classes'
+code: |-
+  .mx-1 { margin-left: 1rem; margin-right: 1rem; }
+  .mx-2 { margin-left: 2rem; margin-right: 2rem; }
+  .mx-3 { margin-left: 4rem; margin-right: 4rem; }
+  .mx-4 { margin-left: 8rem; margin-right: 8rem; }
+  .mx-5 { margin-left: 16rem; margin-right: 16rem; }
+
+  .my-1 { margin-top: 1rem; margin-bottom: 1rem; }
+  .my-2 { margin-top: 2rem; margin-bottom: 2rem; }
+  .my-3 { margin-top: 4rem; margin-bottom: 4rem; }
+  .my-4 { margin-top: 8rem; margin-bottom: 8rem; }
+  .my-5 { margin-top: 16rem; margin-bottom: 16rem; }
+media: all
+preprocess: true
+conditions: {  }
+contexts: {  }
+conditions_require_all: true

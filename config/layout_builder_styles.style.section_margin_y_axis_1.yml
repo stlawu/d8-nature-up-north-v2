@@ -1,0 +1,11 @@
+uuid: 59be1bab-4e5f-4e7a-9bd6-36f7845f27eb
+langcode: en
+status: true
+dependencies: {  }
+id: section_margin_y_axis_1
+label: 'Margin Y-axis: 1'
+classes: my-1
+type: section
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

@@ -1,0 +1,41 @@
+uuid: fef86a2c-6ccf-4b93-853d-f408a04c9abe
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.entity_browser_image_media
+  module:
+    - views
+name: existing_image_media
+label: 'Existing Image Media'
+display: modal
+display_configuration:
+  width: ''
+  height: '600'
+  link_text: 'Select images'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  beadb9e9-f628-4806-a549-d173b44031f2:
+    id: view
+    uuid: beadb9e9-f628-4806-a549-d173b44031f2
+    label: 'My Images'
+    weight: -10
+    settings:
+      submit_text: 'Select images'
+      auto_select: false
+      view: entity_browser_image_media
+      view_display: entity_browser_1
+  1e296670-48c7-4a43-bbb3-51c4c17be1c0:
+    id: view
+    uuid: 1e296670-48c7-4a43-bbb3-51c4c17be1c0
+    label: 'All Images'
+    weight: -9
+    settings:
+      submit_text: 'Select images'
+      auto_select: false
+      view: entity_browser_image_media
+      view_display: entity_browser_2

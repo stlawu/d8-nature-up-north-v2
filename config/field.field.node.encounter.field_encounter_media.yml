@@ -1,0 +1,28 @@
+uuid: e6807ec5-adb1-4052-80a4-d18e9d79065c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_encounter_media
+    - media.type.image
+    - node.type.encounter
+id: node.encounter.field_encounter_media
+field_name: field_encounter_media
+entity_type: node
+bundle: encounter
+label: 'Media: Photos, artwork or illustrations'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

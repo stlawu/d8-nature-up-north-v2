@@ -18,10 +18,10 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
   file_directory: ''
   file_extensions: 'txt doc pdf jpg png jpeg gif docx xls csv zip ppt pptx'
   max_filesize: ''
-  handler: 'default:file'
-  handler_settings: {  }
+  description_field: true
 field_type: file

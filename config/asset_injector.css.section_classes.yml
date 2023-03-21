@@ -1,0 +1,17 @@
+uuid: 17ee62f1-d993-4847-81d2-b4ac45784388
+langcode: en
+status: true
+dependencies: {  }
+id: section_classes
+label: 'Section Classes'
+code: |-
+  .section-light-gray { background: #eeeeee; padding: 1rem; }
+  .section-light-green { background: #ecf7e9; padding: 1rem; }
+  .section-light-tan { background: #f7f0ea; padding: 1rem; }
+  .section-light-blue { background: #eaf0f7; padding: 1rem; }
+  .section-light-yellow { background: #f7f7ea; padding: 1rem; }
+media: all
+preprocess: true
+conditions: {  }
+contexts: {  }
+conditions_require_all: true

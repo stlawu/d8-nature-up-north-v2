@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.educator_resource.field_ed_res_image
     - field.field.node.educator_resource.field_file_s_
     - field.field.node.educator_resource.field_grade_level
+    - field.field.node.educator_resource.field_hidden_content_theme
     - field.field.node.educator_resource.field_link
     - field.field.node.educator_resource.field_nys_standards
     - field.field.node.educator_resource.field_project
@@ -29,9 +30,9 @@ content:
   comment:
     type: comment_default
     weight: 20
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 11
@@ -39,67 +40,74 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_description:
-    weight: 2
     type: text_textarea_with_summary
+    weight: 2
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
-    region: content
   field_ed_res_image:
-    weight: 1
     type: image_image
+    weight: 1
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    region: content
   field_file_s_:
-    weight: 9
     type: file_generic
+    weight: 9
+    region: content
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
-    region: content
   field_grade_level:
-    weight: 4
     type: options_buttons
+    weight: 4
+    region: content
     settings: {  }
     third_party_settings: {  }
+  field_hidden_content_theme:
+    type: options_buttons
+    weight: 123
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_link:
-    weight: 10
     type: link_default
+    weight: 10
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    region: content
   field_nys_standards:
-    weight: 122
-    settings: {  }
-    third_party_settings: {  }
     type: options_select
+    weight: 122
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_project:
+    type: options_buttons
     weight: 3
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
-    region: content
   field_resource_type:
+    type: options_buttons
     weight: 5
-    type: options_buttons
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_subject_s_:
-    weight: 7
     type: options_buttons
+    weight: 7
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   path:
     type: path
     weight: 14
@@ -108,24 +116,24 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 12
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
+    weight: 121
+    region: content
     settings:
       display_label: true
-    weight: 121
     third_party_settings: {  }
-    region: content
   sticky:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 13
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -138,11 +146,12 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 6
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-    region: content
     third_party_settings: {  }
   url_redirects:
     weight: 50

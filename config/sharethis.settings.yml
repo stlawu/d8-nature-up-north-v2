@@ -1,7 +1,10 @@
+_core:
+  default_config_hash: OUePCWmQ_tUOCD4VF7-AP0maPJi2Y18f0JvNTgThhRQ
 button_option: stbc_button
 comments: 0
 late_load: 0
 location: block
+callesi: '0'
 node_types:
   article: article
   page: page
@@ -21,6 +24,7 @@ option_extras:
 option_neworzero: 0
 option_onhover: 1
 option_shorten: 1
+publisherID: dr-df7d1933-a9d7-1bfc-4657-165ccfc665db
 service_option: '"Facebook:facebook","Tweet:twitter","LinkedIn:linkedin","Email:email","ShareThis:sharethis","Pinterest:pinterest"'
 twitter_handle: ''
 twitter_recommends: ''
@@ -116,7 +120,3 @@ sharethisnodes:
     search_result: '0'
     teaser: '0'
     token: '0'
-_core:
-  default_config_hash: OUePCWmQ_tUOCD4VF7-AP0maPJi2Y18f0JvNTgThhRQ
-publisherID: dr-df7d1933-a9d7-1bfc-4657-165ccfc665db
-callesi: '0'

@@ -34,10 +34,10 @@ content:
   main_profiles:
     type: profile_form
     weight: 91
+    region: content
     settings:
       form_mode: default
     third_party_settings: {  }
-    region: content
   path:
     type: path
     weight: 3

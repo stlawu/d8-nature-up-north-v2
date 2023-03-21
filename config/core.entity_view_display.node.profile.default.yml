@@ -22,8 +22,6 @@ dependencies:
   module:
     - field_group
     - image
-    - link
-    - text
     - user
 third_party_settings:
   field_group:
@@ -31,12 +29,14 @@ third_party_settings:
       children:
         - group_column1
         - group_column2
+      label: Row
       parent_name: ''
-      weight: 1
+      region: hidden
+      weight: 8
       format_type: html_element
       format_settings:
-        id: ''
         classes: row
+        id: ''
         element: div
         show_label: false
         label_element: h3
@@ -44,24 +44,23 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-      label: Row
-      region: content
     group_column1:
       children:
-        - field_title_position_role
-        - field_title_role
-        - field_project_links
-        - field_graduation
-        - field_area_of_study
-        - field_hometown
-        - field_favorite_outdoor_activity
         - body
+        - field_area_of_study
+        - field_favorite_outdoor_activity
+        - field_graduation
+        - field_hometown
+        - field_project_links
+        - field_title_role
+      label: Column1
       parent_name: group_row
+      region: hidden
       weight: 22
       format_type: html_element
       format_settings:
-        id: ''
         classes: 'col-xs-12 col-md-5'
+        id: ''
         element: div
         show_label: false
         label_element: h3
@@ -69,17 +68,16 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-      label: Column1
-      region: content
     group_column2:
-      children:
-        - field_portrait
+      children: {  }
+      label: Column2
       parent_name: group_row
+      region: hidden
       weight: 23
       format_type: html_element
       format_settings:
-        id: ''
         classes: 'col-xs-12 col-md-7'
+        id: ''
         element: div
         show_label: false
         label_element: h3
@@ -87,97 +85,41 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-      label: Column2
-      region: content
 id: node.profile.default
 targetEntityType: node
 bundle: profile
 mode: default
 content:
-  body:
-    label: above
-    type: text_default
-    weight: 9
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  field_area_of_study:
-    weight: 6
-    label: inline
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_favorite_outdoor_activity:
-    weight: 8
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_graduation:
-    weight: 5
-    label: inline
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_hometown:
-    weight: 7
-    label: inline
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_portrait:
-    weight: 23
+    type: image
     label: hidden
     settings:
+      image_link: content
       image_style: large
-      image_link: ''
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
-    type: image
-    region: content
-  field_project_links:
-    weight: 4
-    label: inline
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
+    weight: 0
     region: content
   field_title_position_role:
-    weight: 2
+    type: entity_reference_label
     label: hidden
     settings:
       link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 1
     region: content
-  field_title_role:
-    weight: 3
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  links:
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
+  body: true
+  field_area_of_study: true
   field_current_active: true
+  field_favorite_outdoor_activity: true
   field_first_name: true
+  field_graduation: true
+  field_hometown: true
   field_last_name: true
   field_participation: true
+  field_project_links: true
+  field_title_role: true
   field_user_account_on_the_site: true
+  links: true

@@ -31,12 +31,13 @@ content:
   body:
     type: text_textarea_with_summary
     weight: 10
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 12
@@ -44,11 +45,15 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_maple_changing_colors:
+    type: options_buttons
     weight: 7
+    region: content
     settings: {  }
     third_party_settings:
       conditional_fields:
         f09a6931-4369-4477-bee2-e8209d9d189d:
+          entity_type: node
+          bundle: maple_observation
           dependee: field_maple_observation_season
           settings:
             state: visible
@@ -63,16 +68,16 @@ content:
             effect: show
             effect_options: {  }
             selector: ''
-          entity_type: node
-          bundle: maple_observation
-    type: options_buttons
-    region: content
   field_maple_flowering:
+    type: options_buttons
     weight: 6
+    region: content
     settings: {  }
     third_party_settings:
       conditional_fields:
         a3846041-2c80-478d-885f-1d780e465226:
+          entity_type: node
+          bundle: maple_observation
           dependee: field_maple_observation_season
           settings:
             state: visible
@@ -87,16 +92,16 @@ content:
             effect: show
             effect_options: {  }
             selector: ''
-          entity_type: node
-          bundle: maple_observation
-    type: options_buttons
-    region: content
   field_maple_fruit:
+    type: options_buttons
     weight: 9
+    region: content
     settings: {  }
     third_party_settings:
       conditional_fields:
         8db17775-b92a-40c6-a52f-86d63bb485be:
+          entity_type: node
+          bundle: maple_observation
           dependee: field_maple_observation_season
           settings:
             state: visible
@@ -111,24 +116,24 @@ content:
             effect: show
             effect_options: {  }
             selector: ''
-          entity_type: node
-          bundle: maple_observation
-    type: options_buttons
-    region: content
   field_maple_image:
+    type: image_image
     weight: 26
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
-    region: content
   field_maple_leaf_buds:
+    type: options_buttons
     weight: 4
+    region: content
     settings: {  }
     third_party_settings:
       conditional_fields:
         9234ab59-f151-43a0-beb5-9ea32e3914ae:
+          entity_type: node
+          bundle: maple_observation
           dependee: field_maple_observation_season
           settings:
             state: visible
@@ -143,16 +148,16 @@ content:
             effect: show
             effect_options: {  }
             selector: ''
-          entity_type: node
-          bundle: maple_observation
-    type: options_buttons
-    region: content
   field_maple_leaves_dropping:
+    type: options_buttons
     weight: 8
+    region: content
     settings: {  }
     third_party_settings:
       conditional_fields:
         faf9e838-5188-4806-a2a2-be06c15b6301:
+          entity_type: node
+          bundle: maple_observation
           dependee: field_maple_observation_season
           settings:
             state: visible
@@ -167,16 +172,16 @@ content:
             effect: show
             effect_options: {  }
             selector: ''
-          entity_type: node
-          bundle: maple_observation
-    type: options_buttons
-    region: content
   field_maple_leaves_unfolded:
+    type: options_buttons
     weight: 5
+    region: content
     settings: {  }
     third_party_settings:
       conditional_fields:
         29eeb887-e9cc-412f-a698-739e7ef882aa:
+          entity_type: node
+          bundle: maple_observation
           dependee: field_maple_observation_season
           settings:
             state: visible
@@ -191,37 +196,33 @@ content:
             effect: show
             effect_options: {  }
             selector: ''
-          entity_type: node
-          bundle: maple_observation
-    type: options_buttons
-    region: content
   field_maple_observation_date:
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
     type: datetime_default
+    weight: 2
     region: content
-  field_maple_observation_season:
-    weight: 3
     settings: {  }
     third_party_settings: {  }
+  field_maple_observation_season:
     type: options_buttons
+    weight: 3
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_maple_tree:
+    type: entity_browser_entity_reference
     weight: 0
+    region: content
     settings:
       entity_browser: maple_tree_browser
       field_widget_display: rendered_entity
-      field_widget_replace: true
-      open: true
-      selection_mode: selection_append
-      field_widget_display_settings:
-        view_mode: reference_preview
       field_widget_edit: false
       field_widget_remove: false
+      field_widget_replace: true
+      open: true
+      field_widget_display_settings:
+        view_mode: reference_preview
+      selection_mode: selection_append
     third_party_settings: {  }
-    type: entity_browser_entity_reference
-    region: content
   path:
     type: path
     weight: 15
@@ -230,24 +231,24 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 13
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 17
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 14
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -260,11 +261,12 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 11
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-    region: content
     third_party_settings: {  }
   url_redirects:
     weight: 16

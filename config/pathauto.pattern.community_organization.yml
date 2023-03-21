@@ -10,13 +10,13 @@ type: 'canonical_entities:node'
 pattern: 'community/[node:title]'
 selection_criteria:
   b99114e6-f1f6-4ecd-9948-67f48a3f820e:
-    id: node_type
-    bundles:
-      community_organization: community_organization
+    id: 'entity_bundle:node'
     negate: false
+    uuid: b99114e6-f1f6-4ecd-9948-67f48a3f820e
     context_mapping:
       node: node
-    uuid: b99114e6-f1f6-4ecd-9948-67f48a3f820e
+    bundles:
+      community_organization: community_organization
 selection_logic: and
 weight: -5
 relationships: {  }

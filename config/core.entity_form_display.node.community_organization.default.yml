@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.community_organization.body
+    - field.field.node.community_organization.field_hidden_content_theme
     - field.field.node.community_organization.field_organization_address
     - field.field.node.community_organization.field_organization_email
     - field.field.node.community_organization.field_organization_location
@@ -29,115 +30,121 @@ third_party_settings:
         - field_organization_address
         - field_organization_telephone
         - field_organization_email
+      label: 'Contact Information'
+      region: content
       parent_name: ''
       weight: 2
       format_type: fieldset
       format_settings:
-        id: ''
         classes: ''
+        id: ''
         description: ''
         required_fields: true
-      label: 'Contact Information'
-      region: content
 id: node.community_organization.default
 targetEntityType: node
 bundle: community_organization
 mode: default
 content:
   body:
-    weight: 1
     type: text_textarea_with_summary
+    weight: 1
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
-    region: content
   comment:
     type: comment_default
     weight: 20
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_hidden_content_theme:
+    type: options_buttons
+    weight: 122
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_organization_address:
-    weight: 11
-    settings:
-      default_country: null
-    third_party_settings: {  }
     type: address_default
+    weight: 11
     region: content
-  field_organization_email:
-    weight: 13
-    settings:
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
+  field_organization_email:
     type: email_default
+    weight: 13
     region: content
-  field_organization_location:
-    weight: 10
     settings:
-      default_longitude: '-74.331616'
-      default_latitude: '43.850214'
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_organization_location:
+    type: geolocation_googlegeocoder
+    weight: 10
+    region: content
+    settings:
       auto_client_location: '1'
-      populate_address_field: '1'
-      target_address_field: field_organization_address
-      explicite_actions_address_field: '1'
+      auto_client_location_marker: '0'
+      allow_override_map_settings: 0
       google_map_settings:
+        type: ROADMAP
+        zoom: 8
+        minZoom: 0
+        maxZoom: 18
+        rotateControl: false
         height: 400px
         width: 100%
-        type: ROADMAP
-        zoom: '8'
-        maxZoom: 18
-        minZoom: 0
+        gestureHandling: auto
         mapTypeControl: 1
         streetViewControl: 1
         zoomControl: 1
         scrollwheel: 1
-        gestureHandling: auto
         draggable: 1
         style: ''
         info_auto_display: 1
         marker_icon_path: ''
         disableAutoPan: 1
-        rotateControl: 0
         fullscreenControl: 0
         preferScrollingToZooming: 0
         disableDoubleClickZoom: 0
-      auto_client_location_marker: '0'
-      allow_override_map_settings: 0
+      default_longitude: '-74.331616'
+      default_latitude: '43.850214'
+      populate_address_field: '1'
+      target_address_field: field_organization_address
+      explicite_actions_address_field: '1'
     third_party_settings: {  }
-    type: geolocation_googlegeocoder
-    region: content
   field_organization_logo:
-    weight: 4
     type: image_image
+    weight: 4
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    region: content
   field_organization_telephone:
+    type: telephone_default
     weight: 12
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: telephone_default
-    region: content
   field_organization_web_site:
-    weight: 3
     type: link_default
+    weight: 3
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    region: content
   path:
     type: path
     weight: 9
@@ -146,24 +153,24 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 7
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
+    weight: 121
+    region: content
     settings:
       display_label: true
-    weight: 121
     third_party_settings: {  }
-    region: content
   sticky:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 8
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -176,11 +183,12 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 5
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-    region: content
     third_party_settings: {  }
   url_redirects:
     weight: 50

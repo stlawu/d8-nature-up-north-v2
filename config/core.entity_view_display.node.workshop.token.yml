@@ -1,0 +1,33 @@
+uuid: 9d3cd2bf-93d4-49d0-856d-442a9e078dd1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.token
+    - field.field.node.workshop.body
+    - field.field.node.workshop.field_dates_of_event
+    - field.field.node.workshop.field_hidden_content_theme
+    - field.field.node.workshop.field_workshop_leaders
+    - field.field.node.workshop.field_workshop_type
+    - field.field.node.workshop.field_workshop_year
+    - node.type.workshop
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.workshop.token
+targetEntityType: node
+bundle: workshop
+mode: token
+content: {  }
+hidden:
+  body: true
+  field_dates_of_event: true
+  field_hidden_content_theme: true
+  field_workshop_leaders: true
+  field_workshop_type: true
+  field_workshop_year: true
+  links: true

@@ -1,0 +1,180 @@
+uuid: 18fa8e6e-fbd2-4a65-9f0f-3b8e4f92b254
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.maple_tree.body
+    - field.field.node.maple_tree.field_maple_location
+    - field.field.node.maple_tree.field_maple_nickname
+    - field.field.node.maple_tree.field_maple_photo
+    - field.field.node.maple_tree.field_maple_species
+    - field.field.node.maple_tree.field_maple_tree_tag
+    - image.style.large
+    - node.type.maple_tree
+  module:
+    - field_group
+    - geolocation
+    - image
+    - layout_builder
+    - user
+third_party_settings:
+  field_group:
+    group_column1:
+      children:
+        - group_col1
+        - group_col2
+      label: Row
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: row
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+    group_col1:
+      children:
+        - field_maple_nickname
+        - field_maple_tree_tag
+        - field_maple_species
+        - maple_tree_data_entity_view_1
+      label: col1
+      parent_name: group_column1
+      region: content
+      weight: 20
+      format_type: html_element
+      format_settings:
+        classes: 'col-xs-12 col-md-7'
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_col2:
+      children:
+        - field_maple_photo
+        - field_maple_location
+      label: col2
+      parent_name: group_column1
+      region: content
+      weight: 21
+      format_type: html_element
+      format_settings:
+        classes: 'col-xs-12 col-md-5'
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.maple_tree.full
+targetEntityType: node
+bundle: maple_tree
+mode: full
+content:
+  field_maple_location:
+    type: geolocation_map
+    label: above
+    settings:
+      set_marker: true
+      show_label: false
+      common_map: false
+      show_delta_label: false
+      use_overridden_map_settings: false
+      title: ''
+      info_text: ''
+      centre:
+        fit_bounds:
+          enable: true
+          weight: -101
+          settings:
+            reset_zoom: true
+          map_center_id: fit_bounds
+      map_provider_id: google_maps
+      map_provider_settings:
+        type: SATELLITE
+        zoom: 18
+        minZoom: 0
+        maxZoom: 18
+        rotateControl: false
+        height: 400px
+        width: 100%
+        gestureHandling: auto
+        mapTypeControl: 1
+        streetViewControl: 1
+        zoomControl: 1
+        scrollwheel: 1
+        draggable: 1
+        style: ''
+        info_auto_display: 1
+        marker_icon_path: ''
+        disableAutoPan: 1
+        fullscreenControl: 0
+        preferScrollingToZooming: 0
+        disableDoubleClickZoom: 0
+      data_provider_settings: {  }
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_maple_nickname:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_maple_photo:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: large
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_maple_species:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_maple_tree_tag:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  maple_tree_data_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  maple_tree_observations_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  body: true
+  links: true

@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.event.field_event_image
     - field.field.node.event.field_event_location
     - field.field.node.event.field_event_telephone
+    - field.field.node.event.field_hidden_content_theme
     - field.field.node.event.field_instructions
     - field.field.node.event.field_more_info_url
     - field.field.node.event.field_skill_level
@@ -39,15 +40,15 @@ third_party_settings:
     group_instructions_group:
       children:
         - group_instructions
+      label: 'Instructions group'
+      region: content
       parent_name: ''
       weight: 0
       format_type: accordion
       format_settings:
-        id: ''
         classes: 'group-instructions-group field-group-accordion'
+        id: ''
         effect: none
-      label: 'Instructions group'
-      region: content
     group_event_group:
       children:
         - group_event_description
@@ -57,87 +58,87 @@ third_party_settings:
         - group_participation
         - group_event_details
         - group_more_information
+      label: 'Event group'
+      region: content
       parent_name: ''
       weight: 1
       format_type: accordion
       format_settings:
-        id: ''
         classes: ' group-event-group field-group-accordion'
+        id: ''
         effect: none
-      label: 'Event group'
-      region: content
     group_event_description:
       children:
         - title
         - body
+      label: 'Event description'
+      region: content
       parent_name: group_event_group
       weight: 5
       format_type: accordion_item
       format_settings:
-        id: ''
         classes: ' group-event-description field-group-accordion-item'
+        id: ''
         formatter: open
-        required_fields: true
         description: ''
-      label: 'Event description'
-      region: content
+        required_fields: true
     group_event_category:
       children:
         - field_event_category
+      label: 'Event category'
+      region: content
       parent_name: group_event_group
       weight: 6
       format_type: accordion_item
       format_settings:
-        id: ''
         classes: ' group-event-information field-group-accordion-item'
+        id: ''
         formatter: closed
-        required_fields: true
         description: ''
-      label: 'Event category'
-      region: content
+        required_fields: true
     group_event_image:
       children:
         - field_event_image
+      label: 'Event image'
+      region: content
       parent_name: group_event_group
       weight: 7
       format_type: accordion_item
       format_settings:
-        id: ''
         classes: ' group-event-image field-group-accordion-item'
+        id: ''
         formatter: closed
-        required_fields: true
         description: ''
-      label: 'Event image'
-      region: content
+        required_fields: true
     group_sponsoring_org:
       children:
         - field_add_your_organization
+      label: 'Sponsoring organization'
+      region: content
       parent_name: group_event_group
       weight: 8
       format_type: accordion_item
       format_settings:
-        id: ''
         classes: ' group-sponsor-org field-group-accordion-item'
+        id: ''
         formatter: closed
-        required_fields: true
         description: ''
-      label: 'Sponsoring organization'
-      region: content
+        required_fields: true
     group_participation:
       children:
         - field_appropriate_ages
         - field_skill_level
+      label: 'Who may participate?'
+      region: content
       parent_name: group_event_group
       weight: 9
       format_type: accordion_item
       format_settings:
-        id: ''
         classes: ' group-participation field-group-accordion-item'
+        id: ''
         formatter: closed
-        required_fields: true
         description: ''
-      label: 'Who may participate?'
-      region: content
+        required_fields: true
     group_event_details:
       children:
         - field_event_location
@@ -147,66 +148,65 @@ third_party_settings:
         - field_event_date
         - field_contact_person
         - field_additional_info
+      label: 'Event details'
+      region: content
       parent_name: group_event_group
       weight: 10
       format_type: accordion_item
       format_settings:
-        label: 'Event details'
+        classes: ' group-eventdetails field-group-accordion-item'
+        id: ''
         formatter: open
         required_fields: true
-        id: ''
-        classes: ' group-eventdetails field-group-accordion-item'
-      label: 'Event details'
-      region: content
     group_more_information:
       children:
         - field_more_info_url
         - field_attachements
+      label: 'For more information'
+      region: content
       parent_name: group_event_group
       weight: 11
       format_type: accordion_item
       format_settings:
-        id: ''
         classes: ' group-more-information field-group-accordion-item'
+        id: ''
         formatter: closed
-        required_fields: true
         description: ''
-      label: 'For more information'
-      region: content
+        required_fields: true
     group_instructions:
       children:
         - field_instructions
+      label: Instructions
+      region: content
       parent_name: group_instructions_group
       weight: 10
       format_type: details
       format_settings:
-        label: Instructions
+        classes: ''
+        id: ''
         open: true
         required_fields: true
-        id: ''
-        classes: ''
-      label: Instructions
-      region: content
 id: node.event.default
 targetEntityType: node
 bundle: event
 mode: default
 content:
   body:
-    weight: 2
     type: text_textarea_with_summary
+    weight: 2
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
-    region: content
   comment:
     type: comment_default
     weight: 20
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 4
@@ -214,140 +214,146 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_add_your_organization:
-    weight: 4
     type: entity_reference_autocomplete
+    weight: 4
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   field_additional_info:
-    weight: 41
     type: text_textfield
+    weight: 41
+    region: content
     settings:
       size: 255
       placeholder: ''
     third_party_settings: {  }
-    region: content
   field_appropriate_ages:
-    weight: 45
     type: options_buttons
+    weight: 45
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_attachements:
-    weight: 54
     type: file_generic
+    weight: 54
+    region: content
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
-    region: content
   field_contact_person:
-    weight: 40
     type: text_textfield
+    weight: 40
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   field_event_address:
-    weight: 35
-    settings:
-      default_country: null
-    third_party_settings: {  }
     type: address_default
+    weight: 35
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_event_category:
-    weight: 9
     type: options_buttons
+    weight: 9
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_event_date:
-    weight: 39
     type: daterange_default
+    weight: 39
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_event_email:
-    weight: 36
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
     type: email_default
+    weight: 36
     region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
   field_event_image:
-    weight: 11
     type: image_image
+    weight: 11
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    region: content
   field_event_location:
+    type: geolocation_googlegeocoder
     weight: 34
+    region: content
     settings:
-      default_longitude: '-74.331616'
-      default_latitude: '43.850214'
-      populate_address_field: '1'
-      target_address_field: field_event_address
-      explicite_actions_address_field: '1'
+      auto_client_location: '0'
+      auto_client_location_marker: '0'
+      allow_override_map_settings: 0
       google_map_settings:
+        type: ROADMAP
+        zoom: 8
+        minZoom: 0
+        maxZoom: 18
+        rotateControl: false
         height: 400px
         width: 100%
-        type: ROADMAP
-        zoom: '8'
-        maxZoom: 18
-        minZoom: 0
+        gestureHandling: auto
         mapTypeControl: 1
         streetViewControl: 1
         zoomControl: 1
         scrollwheel: 1
-        gestureHandling: auto
         draggable: 1
         style: ''
         info_auto_display: 1
         marker_icon_path: ''
         disableAutoPan: 1
-        rotateControl: 0
         fullscreenControl: 0
         preferScrollingToZooming: 0
         disableDoubleClickZoom: 0
-      auto_client_location: '0'
-      auto_client_location_marker: '0'
-      allow_override_map_settings: 0
+      default_longitude: '-74.331616'
+      default_latitude: '43.850214'
+      populate_address_field: '1'
+      target_address_field: field_event_address
+      explicite_actions_address_field: '1'
     third_party_settings: {  }
-    type: geolocation_googlegeocoder
-    region: content
   field_event_telephone:
+    type: telephone_default
     weight: 37
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: telephone_default
+  field_hidden_content_theme:
+    type: options_buttons
+    weight: 122
     region: content
-  field_instructions:
-    weight: 62
-    type: markup
     settings: {  }
     third_party_settings: {  }
+  field_instructions:
+    type: markup
+    weight: 62
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_more_info_url:
-    weight: 53
     type: link_default
+    weight: 53
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    region: content
   field_skill_level:
-    weight: 47
     type: options_buttons
+    weight: 47
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   path:
     type: path
     weight: 7
@@ -356,24 +362,24 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 5
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
+    weight: 121
+    region: content
     settings:
       display_label: true
-    weight: 121
     third_party_settings: {  }
-    region: content
   sticky:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 6
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -386,11 +392,12 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 3
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-    region: content
     third_party_settings: {  }
   url_redirects:
     weight: 50

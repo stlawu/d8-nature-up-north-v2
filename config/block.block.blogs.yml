@@ -1,0 +1,30 @@
+uuid: 62800cd4-8bb3-430e-b536-8c1e85936b89
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.blogs
+  module:
+    - system
+  theme:
+    - nun
+id: blogs
+theme: nun
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'system_menu_block:blogs'
+settings:
+  id: 'system_menu_block:blogs'
+  label: Blogs
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: "/blogs\r\n/blogs/*"

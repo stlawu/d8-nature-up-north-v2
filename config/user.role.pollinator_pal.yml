@@ -1,11 +1,20 @@
 uuid: 4772bc77-3b16-41ff-af27-a151e15f4a66
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - node.type.pollinator_garden
+  module:
+    - entity_browser
+    - media
+    - node
 id: pollinator_pal
 label: 'Pollinator Pal'
 weight: 11
 is_admin: null
 permissions:
+  - 'access entity_embed_image_media entity browser pages'
+  - 'access existing_image_media entity browser pages'
+  - 'create media'
   - 'create pollinator_garden content'
   - 'edit own pollinator_garden content'

@@ -11,11 +11,14 @@ dependencies:
     - node.type.maple_tree
     - taxonomy.vocabulary.maple_species
     - user.role.administrator
+    - user.role.anonymous
+    - user.role.authenticated
     - user.role.maple
     - user.role.maple_admin
   module:
     - csv_serialization
     - geolocation
+    - geolocation_google_maps
     - image
     - node
     - rest
@@ -30,117 +33,14 @@ description: ''
 tag: ''
 base_table: node_field_data
 base_field: nid
-core: 8.x
 display:
   default:
-    display_plugin: default
     id: default
     display_title: Master
+    display_plugin: default
     position: 0
     display_options:
-      access:
-        type: role
-        options:
-          role:
-            administrator: administrator
-            maple: maple
-            maple_admin: maple_admin
-      cache:
-        type: tag
-        options: {  }
-      query:
-        type: views_query
-        options:
-          disable_sql_rewrite: false
-          distinct: false
-          replica: false
-          query_comment: ''
-          query_tags: {  }
-      exposed_form:
-        type: basic
-        options:
-          submit_button: Filter
-          reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      pager:
-        type: mini
-        options:
-          items_per_page: 50
-          offset: 0
-          id: 0
-          total_pages: null
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-          tags:
-            previous: ‹‹
-            next: ››
-      style:
-        type: table
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          override: true
-          sticky: false
-          caption: ''
-          summary: ''
-          description: ''
-          columns:
-            title: title
-            field_maple_tree_tag: field_maple_tree_tag
-            field_maple_species: title
-            created: created
-            field_maple_photo: field_maple_photo
-          info:
-            title:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: '<br>'
-              empty_column: false
-              responsive: ''
-            field_maple_tree_tag:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_maple_species:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            created:
-              sortable: true
-              default_sort_order: desc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_maple_photo:
-              sortable: false
-              default_sort_order: asc
-              align: views-align-right
-              separator: ''
-              empty_column: false
-              responsive: ''
-          default: created
-          empty_table: false
-      row:
-        type: fields
+      title: 'Data Entry Portal'
       fields:
         title:
           id: title
@@ -149,6 +49,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: Tree
           exclude: false
           alter:
@@ -204,9 +107,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_maple_tree_tag:
           id: field_maple_tree_tag
           table: node__field_maple_tree_tag
@@ -214,6 +114,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: true
           alter:
@@ -269,7 +170,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_maple_species:
           id: field_maple_species
           table: node__field_maple_species
@@ -277,6 +177,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -332,7 +233,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         created:
           id: created
           table: node_field_data
@@ -340,6 +240,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: field
           label: 'Added on'
           exclude: false
           alter:
@@ -397,9 +300,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: created
-          plugin_id: field
         field_maple_photo:
           id: field_maple_photo
           table: node__field_maple_photo
@@ -407,6 +307,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -451,8 +352,10 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_style: 100px_cropped_square
             image_link: ''
+            image_style: 100px_cropped_square
+            image_loading:
+              attribute: lazy
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -463,7 +366,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_maple_location:
           id: field_maple_location
           table: node__field_maple_location
@@ -471,6 +373,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: geolocation_field
           label: Location
           exclude: true
           alter:
@@ -525,28 +428,91 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: geolocation_field
+      pager:
+        type: mini
+        options:
+          offset: 0
+          items_per_page: 50
+          total_pages: null
+          id: 0
+          tags:
+            next: ››
+            previous: ‹‹
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Filter
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: role
+        options:
+          role:
+            anonymous: anonymous
+            authenticated: authenticated
+            administrator: administrator
+            maple: maple
+            maple_admin: maple_admin
+      cache:
+        type: tag
+        options: {  }
+      empty: {  }
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: created
+          exposed: false
+          granularity: second
+      arguments: {  }
       filters:
         status:
-          value: '1'
+          id: status
           table: node_field_data
           field: status
-          plugin_id: boolean
           entity_type: node
           entity_field: status
-          id: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
           expose:
             operator: ''
-          group: 1
+            operator_limit_selection: false
+            operator_list: {  }
         type:
           id: type
           table: node_field_data
           field: type
-          value:
-            maple_tree: maple_tree
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          value:
+            maple_tree: maple_tree
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
         field_maple_species_target_id:
           id: field_maple_species_target_id
           table: node__field_maple_species
@@ -554,6 +520,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: taxonomy_index_tid
           operator: or
           value: {  }
           group: 1
@@ -564,6 +531,8 @@ display:
             description: ''
             use_operator: false
             operator: field_maple_species_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: species
             required: false
             remember: false
@@ -595,36 +564,81 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: select
-          limit: true
           vid: maple_species
+          type: select
           hierarchy: false
+          limit: true
           error_message: true
-          plugin_id: taxonomy_index_tid
-      sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-      title: 'Data Entry Portal'
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          columns:
+            title: title
+            field_maple_tree_tag: field_maple_tree_tag
+            field_maple_species: title
+            created: created
+            field_maple_photo: field_maple_photo
+          default: created
+          info:
+            title:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: '<br>'
+              empty_column: false
+              responsive: ''
+            field_maple_tree_tag:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_maple_species:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            created:
+              sortable: true
+              default_sort_order: desc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_maple_photo:
+              sortable: false
+              default_sort_order: asc
+              align: views-align-right
+              separator: ''
+              empty_column: false
+              responsive: ''
+          override: true
+          sticky: false
+          summary: ''
+          empty_table: false
+          caption: ''
+          description: ''
+      row:
+        type: fields
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_tags: {  }
+      relationships: {  }
+      use_ajax: true
       header: {  }
       footer: {  }
-      empty: {  }
-      relationships: {  }
-      arguments: {  }
       display_extenders: {  }
-      use_ajax: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -641,66 +655,72 @@ display:
         - 'config:field.storage.node.field_maple_species'
         - 'config:field.storage.node.field_maple_tree_tag'
   attachment_1:
-    display_plugin: attachment
     id: attachment_1
     display_title: Attachment
+    display_plugin: attachment
     position: 3
     display_options:
-      display_extenders: {  }
+      access:
+        type: role
+        options:
+          role:
+            administrator: administrator
       style:
         type: maps_common
         options:
           geolocation_field: field_maple_location
           title_field: none
+          icon_field: none
+          marker_row_number: 0
+          even_empty: 0
+          show_raw_locations: 0
           dynamic_map:
             enabled: 1
-            update_handler: boundary_filter_field_maple_location_boundary
             hide_form: 1
             views_refresh_delay: '1200'
+            update_handler: boundary_filter_field_maple_location_boundary
             update_target: page_1
           centre:
             boundary_filter_field_maple_location_boundary:
               enable: true
               weight: -10
+              map_center_id: views_boundary_filter
             fit_bounds:
               enable: true
               weight: -9
+              map_center_id: fit_bounds
             first_row:
               enable: true
               weight: -8
+              map_center_id: first_row
             client_location:
               enable: true
               weight: -7
               settings:
                 update_map: '0'
+              map_center_id: client_location
             fixed_value:
+              enable: false
               weight: -6
               settings:
-                latitude: ''
-                longitude: ''
-              enable: false
-          show_raw_locations: 0
-          even_empty: 0
-          icon_field: none
-          marker_row_number: 0
-          context_popup_content: ''
-          marker_clusterer: 0
-          marker_clusterer_image_path: ''
-          marker_clusterer_styles: ''
-          google_map_settings:
+                latitude: null
+                longitude: null
+              map_center_id: location_plugins
+          map_provider_id: google_maps
+          map_provider_settings:
+            type: ROADMAP
+            zoom: 10
+            minZoom: 0
+            maxZoom: 18
+            rotateControl: false
             height: 400px
             width: 100%
-            type: ROADMAP
-            zoom: '10'
-            maxZoom: 18
-            minZoom: 0
+            gestureHandling: auto
             mapTypeControl: 1
             streetViewControl: 1
             zoomControl: 1
-            rotateControl: 0
             fullscreenControl: 0
             scrollwheel: 1
-            gestureHandling: auto
             draggable: 1
             preferScrollingToZooming: 0
             disableDoubleClickZoom: 0
@@ -708,21 +728,21 @@ display:
             info_auto_display: 1
             marker_icon_path: ''
             disableAutoPan: 1
-      defaults:
-        style: false
-        row: false
-        access: false
+          context_popup_content: ''
+          marker_clusterer: 0
+          marker_clusterer_image_path: ''
+          marker_clusterer_styles: ''
       row:
         type: fields
         options: {  }
+      defaults:
+        access: false
+        style: false
+        row: false
+      display_extenders: {  }
+      displays: {  }
       attachment_position: after
       inherit_exposed_filters: true
-      displays: {  }
-      access:
-        type: role
-        options:
-          role:
-            administrator: administrator
     cache_metadata:
       max-age: -1
       contexts:
@@ -738,83 +758,11 @@ display:
         - 'config:field.storage.node.field_maple_species'
         - 'config:field.storage.node.field_maple_tree_tag'
   attachment_2:
-    display_plugin: attachment
     id: attachment_2
     display_title: Attachment
+    display_plugin: attachment
     position: 3
     display_options:
-      display_extenders: {  }
-      style:
-        type: maps_common
-        options:
-          geolocation_field: field_maple_location
-          title_field: none
-          dynamic_map:
-            enabled: 1
-            update_handler: boundary_filter_field_maple_location_boundary
-            hide_form: 1
-            views_refresh_delay: '1200'
-            update_target: page_2
-          centre:
-            fit_bounds:
-              enable: true
-              weight: 0
-            first_row:
-              enable: true
-              weight: 0
-            fixed_value:
-              enable: true
-              weight: 0
-              settings:
-                latitude: ''
-                longitude: ''
-            client_location:
-              enable: true
-              weight: 0
-              settings:
-                update_map: '0'
-            boundary_filter_field_maple_location_boundary:
-              enable: true
-              weight: 0
-          show_raw_locations: 0
-          even_empty: 0
-          icon_field: none
-          marker_row_number: 0
-          context_popup_content: ''
-          marker_clusterer: 0
-          marker_clusterer_image_path: ''
-          marker_clusterer_styles: ''
-          google_map_settings:
-            height: 400px
-            width: 100%
-            type: ROADMAP
-            zoom: '10'
-            maxZoom: 18
-            minZoom: 0
-            mapTypeControl: 1
-            streetViewControl: 1
-            zoomControl: 1
-            rotateControl: 0
-            fullscreenControl: 0
-            scrollwheel: 1
-            gestureHandling: auto
-            draggable: 1
-            preferScrollingToZooming: 0
-            disableDoubleClickZoom: 0
-            style: ''
-            info_auto_display: 1
-            marker_icon_path: ''
-            disableAutoPan: 1
-      defaults:
-        style: false
-        row: false
-        arguments: false
-      row:
-        type: fields
-        options: {  }
-      attachment_position: after
-      inherit_exposed_filters: true
-      displays: {  }
       arguments:
         uid:
           id: uid
@@ -823,6 +771,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: uid
+          plugin_id: numeric
           default_action: default
           exception:
             value: all
@@ -836,8 +787,8 @@ display:
           summary_options:
             base_path: ''
             count: true
-            items_per_page: 25
             override: false
+            items_per_page: 25
           summary:
             sort_order: asc
             number_of_records: 0
@@ -849,9 +800,84 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
-          entity_type: node
-          entity_field: uid
-          plugin_id: numeric
+      style:
+        type: maps_common
+        options:
+          geolocation_field: field_maple_location
+          title_field: none
+          icon_field: none
+          marker_row_number: 0
+          even_empty: 0
+          show_raw_locations: 0
+          dynamic_map:
+            enabled: 1
+            hide_form: 1
+            views_refresh_delay: '1200'
+            update_handler: boundary_filter_field_maple_location_boundary
+            update_target: page_2
+          centre:
+            fit_bounds:
+              enable: true
+              weight: 0
+              map_center_id: fit_bounds
+            first_row:
+              enable: true
+              weight: 0
+              map_center_id: first_row
+            fixed_value:
+              enable: true
+              weight: 0
+              settings:
+                latitude: null
+                longitude: null
+              map_center_id: location_plugins
+            client_location:
+              enable: true
+              weight: 0
+              settings:
+                update_map: '0'
+              map_center_id: client_location
+            boundary_filter_field_maple_location_boundary:
+              enable: true
+              weight: 0
+              map_center_id: views_boundary_filter
+          map_provider_id: google_maps
+          map_provider_settings:
+            type: ROADMAP
+            zoom: 10
+            minZoom: 0
+            maxZoom: 18
+            rotateControl: false
+            height: 400px
+            width: 100%
+            gestureHandling: auto
+            mapTypeControl: 1
+            streetViewControl: 1
+            zoomControl: 1
+            fullscreenControl: 0
+            scrollwheel: 1
+            draggable: 1
+            preferScrollingToZooming: 0
+            disableDoubleClickZoom: 0
+            style: ''
+            info_auto_display: 1
+            marker_icon_path: ''
+            disableAutoPan: 1
+          context_popup_content: ''
+          marker_clusterer: 0
+          marker_clusterer_image_path: ''
+          marker_clusterer_styles: ''
+      row:
+        type: fields
+        options: {  }
+      defaults:
+        style: false
+        row: false
+        arguments: false
+      display_extenders: {  }
+      displays: {  }
+      attachment_position: after
+      inherit_exposed_filters: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -867,12 +893,19 @@ display:
         - 'config:field.storage.node.field_maple_species'
         - 'config:field.storage.node.field_maple_tree_tag'
   data_export_1:
-    display_plugin: data_export
     id: data_export_1
     display_title: 'Data export'
+    display_plugin: data_export
     position: 5
     display_options:
-      display_extenders: {  }
+      access:
+        type: role
+        options:
+          role:
+            authenticated: authenticated
+            administrator: administrator
+            maple: maple
+            maple_admin: maple_admin
       style:
         type: data_export
         options:
@@ -897,11 +930,14 @@ display:
               category: ''
               manager: ''
               company: ''
+      defaults:
+        access: false
+      display_extenders: {  }
+      path: monitor-my-maple/data/all/export/csv
       displays:
         page_1: page_1
         default: '0'
         page_2: '0'
-      path: monitor-my-maple/data/all/export/csv
       filename: 'monitor-my-maple_[view:total-rows]-items.csv'
     cache_metadata:
       max-age: -1
@@ -919,9 +955,9 @@ display:
         - 'config:field.storage.node.field_maple_species'
         - 'config:field.storage.node.field_maple_tree_tag'
   page_1:
-    display_plugin: page
     id: page_1
     display_title: Page
+    display_plugin: page
     position: 1
     display_options:
       display_extenders: {  }
@@ -930,11 +966,11 @@ display:
         type: 'default tab'
         title: 'All Trees'
         description: ''
-        expanded: false
-        parent: ''
         weight: 0
-        context: '0'
+        expanded: false
         menu_name: main
+        parent: ''
+        context: '0'
       tab_options:
         type: normal
         title: Trees
@@ -956,24 +992,11 @@ display:
         - 'config:field.storage.node.field_maple_species'
         - 'config:field.storage.node.field_maple_tree_tag'
   page_2:
-    display_plugin: page
     id: page_2
     display_title: 'Page 2'
+    display_plugin: page
     position: 2
     display_options:
-      display_extenders: {  }
-      path: monitor-my-maple/data/my-trees
-      defaults:
-        arguments: false
-      menu:
-        type: tab
-        title: 'My Trees'
-        description: ''
-        expanded: false
-        parent: 'menu_link_content:9bfa77ee-b267-4f91-abef-288624dcd2b5'
-        weight: 1
-        context: '0'
-        menu_name: monitor-my-maple
       arguments:
         uid:
           id: uid
@@ -982,6 +1005,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: uid
+          plugin_id: numeric
           default_action: default
           exception:
             value: all
@@ -995,8 +1021,8 @@ display:
           summary_options:
             base_path: ''
             count: true
-            items_per_page: 25
             override: false
+            items_per_page: 25
           summary:
             sort_order: asc
             number_of_records: 0
@@ -1008,9 +1034,19 @@ display:
           validate_options: {  }
           break_phrase: false
           not: false
-          entity_type: node
-          entity_field: uid
-          plugin_id: numeric
+      defaults:
+        arguments: false
+      display_extenders: {  }
+      path: monitor-my-maple/data/my-trees
+      menu:
+        type: tab
+        title: 'My Trees'
+        description: ''
+        weight: 1
+        expanded: false
+        menu_name: monitor-my-maple
+        parent: 'menu_link_content:9bfa77ee-b267-4f91-abef-288624dcd2b5'
+        context: '0'
     cache_metadata:
       max-age: -1
       contexts:

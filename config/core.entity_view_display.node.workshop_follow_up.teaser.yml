@@ -5,6 +5,14 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.workshop_follow_up.body
+    - field.field.node.workshop_follow_up.field_associated_workshop
+    - field.field.node.workshop_follow_up.field_existing_resource
+    - field.field.node.workshop_follow_up.field_hidden_content_theme
+    - field.field.node.workshop_follow_up.field_resource_file
+    - field.field.node.workshop_follow_up.field_resource_image
+    - field.field.node.workshop_follow_up.field_resource_link
+    - field.field.node.workshop_follow_up.field_workshop_type
+    - field.field.node.workshop_follow_up.field_workshop_year
     - node.type.workshop_follow_up
   module:
     - text
@@ -15,16 +23,24 @@ bundle: workshop_follow_up
 mode: teaser
 content:
   body:
-    label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    label: hidden
     settings:
       trim_length: 600
     third_party_settings: {  }
+    weight: 0
     region: content
   links:
-    weight: 100
     settings: {  }
     third_party_settings: {  }
+    weight: 1
     region: content
-hidden: {  }
+hidden:
+  field_associated_workshop: true
+  field_existing_resource: true
+  field_hidden_content_theme: true
+  field_resource_file: true
+  field_resource_image: true
+  field_resource_link: true
+  field_workshop_type: true
+  field_workshop_year: true

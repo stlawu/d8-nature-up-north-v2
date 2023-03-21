@@ -1,0 +1,38 @@
+uuid: edfb10ce-a14c-4870-b6d7-61cba454a888
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.token
+    - field.field.node.page.body
+    - field.field.node.page.comment_node_page
+    - field.field.node.page.field_basic_page_attachment
+    - field.field.node.page.field_basic_page_image
+    - field.field.node.page.field_hidden_content_theme
+    - field.field.node.page.field_theme
+    - node.type.page
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: g1S3_GLaxq4l3I9RIca5Mlz02MxI2KmOquZpHw59akM
+id: node.page.token
+targetEntityType: node
+bundle: page
+mode: token
+content:
+  sharethis:
+    weight: 10
+    region: content
+hidden:
+  body: true
+  comment_node_page: true
+  field_basic_page_attachment: true
+  field_basic_page_image: true
+  field_hidden_content_theme: true
+  field_theme: true
+  links: true

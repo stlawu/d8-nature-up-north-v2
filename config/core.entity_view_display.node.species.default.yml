@@ -1,0 +1,83 @@
+uuid: ede0c28e-f994-4e88-9bc1-419702c3428d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.species.body
+    - field.field.node.species.field_link_eol_org
+    - field.field.node.species.field_media
+    - node.type.species
+  module:
+    - field_group
+    - user
+third_party_settings:
+  field_group:
+    group_row:
+      children:
+        - group_column_1
+        - group_column_2
+      label: Row
+      parent_name: ''
+      region: hidden
+      weight: 1
+      format_type: html_element
+      format_settings:
+        classes: row
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_column_1:
+      children:
+        - body
+      label: 'Column 1'
+      parent_name: group_row
+      region: hidden
+      weight: 20
+      format_type: html_element
+      format_settings:
+        classes: 'col col-md-8'
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_column_2:
+      children:
+        - field_media
+        - field_link_eol_org
+      label: 'Column 2'
+      parent_name: group_row
+      region: hidden
+      weight: 21
+      format_type: html_element
+      format_settings:
+        classes: 'col col-md-4'
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+id: node.species.default
+targetEntityType: node
+bundle: species
+mode: default
+content: {  }
+hidden:
+  body: true
+  field_link_eol_org: true
+  field_media: true
+  links: true

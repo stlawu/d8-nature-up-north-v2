@@ -1,0 +1,23 @@
+uuid: f2d83867-ae3e-45f6-94ee-1271784cd00a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.species
+  module:
+    - text
+id: node.species.body
+field_name: body
+entity_type: node
+bundle: species
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

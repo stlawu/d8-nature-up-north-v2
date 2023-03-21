@@ -23,61 +23,14 @@ description: ''
 tag: ''
 base_table: node_field_data
 base_field: nid
-core: 8.x
 display:
   default:
-    display_plugin: default
     id: default
     display_title: Master
+    display_plugin: default
     position: 0
     display_options:
-      access:
-        type: perm
-        options:
-          perm: 'access content'
-      cache:
-        type: tag
-        options: {  }
-      query:
-        type: views_query
-        options:
-          disable_sql_rewrite: false
-          distinct: false
-          replica: false
-          query_comment: ''
-          query_tags: {  }
-      exposed_form:
-        type: basic
-        options:
-          submit_button: Apply
-          reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      pager:
-        type: mini
-        options:
-          items_per_page: 25
-          offset: 0
-          id: 0
-          total_pages: null
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-          tags:
-            previous: ‹‹
-            next: ››
-      style:
-        type: default
-      row:
-        type: fields
+      title: 'Resources from Nature Up North'
       fields:
         title:
           id: title
@@ -86,6 +39,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -141,9 +97,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
         field_ed_res_image:
           id: field_ed_res_image
           table: node__field_ed_res_image
@@ -151,6 +104,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -195,8 +149,10 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_style: medium
             image_link: content
+            image_style: medium
+            image_loading:
+              attribute: lazy
           group_column: ''
           group_columns: {  }
           group_rows: true
@@ -207,7 +163,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_description:
           id: field_description
           table: node__field_description
@@ -215,6 +170,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: ''
           exclude: false
           alter:
@@ -269,7 +225,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_grade_level:
           id: field_grade_level
           table: node__field_grade_level
@@ -277,6 +232,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'Grade level'
           exclude: false
           alter:
@@ -331,7 +287,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_resource_type:
           id: field_resource_type
           table: node__field_resource_type
@@ -339,6 +294,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: 'Resource Type'
           exclude: false
           alter:
@@ -393,7 +349,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
         field_subject_s_:
           id: field_subject_s_
           table: node__field_subject_s_
@@ -401,6 +356,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: field
           label: Subject(s)
           exclude: false
           alter:
@@ -455,28 +411,85 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
+      pager:
+        type: mini
+        options:
+          offset: 0
+          items_per_page: 25
+          total_pages: null
+          id: 0
+          tags:
+            next: ››
+            previous: ‹‹
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+      cache:
+        type: tag
+        options: {  }
+      empty: {  }
+      sorts:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: title
+          exposed: false
+      arguments: {  }
       filters:
         status:
-          value: '1'
+          id: status
           table: node_field_data
           field: status
-          plugin_id: boolean
           entity_type: node
           entity_field: status
-          id: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
           expose:
             operator: ''
-          group: 1
+            operator_limit_selection: false
+            operator_list: {  }
         type:
           id: type
           table: node_field_data
           field: type
-          value:
-            educator_resource: educator_resource
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          value:
+            educator_resource: educator_resource
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
         field_grade_level_value:
           id: field_grade_level_value
           table: node__field_grade_level
@@ -484,6 +497,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: list_field
           operator: or
           value: {  }
           group: 1
@@ -494,6 +508,8 @@ display:
             description: ''
             use_operator: false
             operator: field_grade_level_value_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_grade_level_value
             required: false
             remember: false
@@ -520,7 +536,6 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: true
-          plugin_id: list_field
         field_resource_type_value:
           id: field_resource_type_value
           table: node__field_resource_type
@@ -528,6 +543,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: list_field
           operator: or
           value: {  }
           group: 1
@@ -538,6 +554,8 @@ display:
             description: ''
             use_operator: false
             operator: field_resource_type_value_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_resource_type_value
             required: false
             remember: false
@@ -564,7 +582,6 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: true
-          plugin_id: list_field
         field_subject_s__value:
           id: field_subject_s__value
           table: node__field_subject_s_
@@ -572,6 +589,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: list_field
           operator: or
           value: {  }
           group: 1
@@ -582,6 +600,8 @@ display:
             description: ''
             use_operator: false
             operator: field_subject_s__value_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_subject_s__value
             required: false
             remember: false
@@ -608,23 +628,19 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: true
-          plugin_id: list_field
-      sorts:
-        title:
-          id: title
-          table: node_field_data
-          field: title
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          entity_type: node
-          entity_field: title
-          plugin_id: standard
-      title: 'Resources from Nature Up North'
+      style:
+        type: default
+      row:
+        type: fields
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_tags: {  }
+      relationships: {  }
       header:
         area:
           id: area
@@ -633,16 +649,13 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: text
           empty: false
-          tokenize: false
           content:
             value: "<p class=\"p1\"><span class=\"s1\"><em>Place-based education is the process of using the local community and environment as a starting point to teach concepts in language arts, mathematics, social studies, science, and other subjects across the curriculum… Community vitality and environmental quality are improved through the active engagement of local citizens, community organizations, and environmental resources in the life of the school.</em></span></p>\r\n<p class=\"p2\"><span class=\"s1\"><em>-David Sobel, Place-Based Education</em></span></p>\r\n<p class=\"p2\"><span class=\"s1\">&nbsp;</span></p>\r\n<p class=\"p2\"><span class=\"s1\">Nature Up North works to be a resource for Northern New York teachers who wish to incorporate more place- and nature-based learning into their curriculum. &nbsp;One of our goals is to engage with K-12 teachers to promote hands-on outdoor lessons that improve learning outcomes, particularly in STEM subjects, while at the same time helping students connect with the natural world.</span></p>\r\n<p class=\"p2\"><span class=\"s1\">We are fortunate in the North Country to be surrounded by forests, wetlands, rivers, and farms that serve as excellent resources for bringing the classroom outdoors.&nbsp; Here, we offer lesson plans, activity guides, and other resources that encourage hands-on learning about the local environment. &nbsp;&nbsp;</span></p>\r\n<p class=\"p3\">&nbsp;</p>\r\n<p class=\"p1\"><span class=\"s1\">Some of these resources, such as the “Interview with a Scientist” and the North Country nutrient cycle diagrams, offer place-based versions of lessons in the Common Core Curriculum.&nbsp; The Monitor My Maple Teacher Guide offers ways to engage students in hands-on citizen science projects, with examples for how to integrate project elements into science and math learning at various grade levels.&nbsp;</span></p>\r\n<p class=\"p1\"><span class=\"s1\">This page is new and expanding.&nbsp; Please check back soon for updates!</span></p>\r\n<hr>"
             format: full_html
-          plugin_id: text
+          tokenize: false
       footer: {  }
-      empty: {  }
-      relationships: {  }
-      arguments: {  }
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -660,9 +673,9 @@ display:
         - 'config:field.storage.node.field_resource_type'
         - 'config:field.storage.node.field_subject_s_'
   page_1:
-    display_plugin: page
     id: page_1
     display_title: Page
+    display_plugin: page
     position: 1
     display_options:
       display_extenders: {  }

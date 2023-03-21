@@ -1,0 +1,32 @@
+uuid: 73aaa1d2-cf43-4a9b-91ec-88a590a6eb94
+langcode: en
+status: true
+dependencies: {  }
+id: ui_dialog_tweaks
+label: 'Off-canvas Tweaks'
+code: |-
+  #drupal-off-canvas .panel-default > .panel-heading {
+    margin: 0;
+  }
+  #drupal-off-canvas .links a {
+      color: #6291bd;
+      background-color: #fafafa;
+      border-radius: 15px;
+      padding: 0.25rem 1rem;
+      display: block;
+      line-height: 1.5rem;
+      margin: 0.25rem 0;
+  }
+  #drupal-off-canvas .inline-block-list {
+    margin: 10px;
+  }
+  #drupal-off-canvas .fieldset-legend {color: lightgray;}
+  #drupal-off-canvas button, #drupal-off-canvas .button {background: white; padding: .5rem 1rem;}
+  #drupal-off-canvas .inline-block-list li{
+    margin: 5px;
+  }
+media: all
+preprocess: true
+conditions: {  }
+contexts: {  }
+conditions_require_all: true

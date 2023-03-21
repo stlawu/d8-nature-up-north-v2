@@ -10,13 +10,13 @@ type: 'canonical_entities:node'
 pattern: 'partner/[node:title]'
 selection_criteria:
   b00b178d-43b2-467d-bf13-2879f5aed197:
-    id: node_type
-    bundles:
-      partner: partner
+    id: 'entity_bundle:node'
     negate: false
+    uuid: b00b178d-43b2-467d-bf13-2879f5aed197
     context_mapping:
       node: node
-    uuid: b00b178d-43b2-467d-bf13-2879f5aed197
+    bundles:
+      partner: partner
 selection_logic: and
 weight: -5
 relationships: {  }

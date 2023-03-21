@@ -19,21 +19,21 @@ plugin: 'block_content:8568af99-8802-4edd-9a66-2d28ced50160'
 settings:
   id: 'block_content:8568af99-8802-4edd-9a66-2d28ced50160'
   label: 'What''s Your Nature?'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   user_role:
     id: user_role
-    roles:
-      anonymous: anonymous
     negate: false
     context_mapping:
       user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous
   request_path:
     id: request_path
-    pages: /node/11705
     negate: true
     context_mapping: {  }
+    pages: "/node/11705\r\n/naturally-speaking"

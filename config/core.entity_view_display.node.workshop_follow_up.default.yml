@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.workshop_follow_up.body
     - field.field.node.workshop_follow_up.field_associated_workshop
     - field.field.node.workshop_follow_up.field_existing_resource
+    - field.field.node.workshop_follow_up.field_hidden_content_theme
     - field.field.node.workshop_follow_up.field_resource_file
     - field.field.node.workshop_follow_up.field_resource_image
     - field.field.node.workshop_follow_up.field_resource_link
@@ -13,85 +14,33 @@ dependencies:
     - field.field.node.workshop_follow_up.field_workshop_year
     - node.type.workshop_follow_up
   module:
-    - file
-    - image
-    - link
     - options
-    - text
     - user
 id: node.workshop_follow_up.default
 targetEntityType: node
 bundle: workshop_follow_up
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
-    region: content
-  field_associated_workshop:
-    weight: 112
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_existing_resource:
-    weight: 111
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_resource_file:
-    weight: 107
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: file_url_plain
-    region: content
-  field_resource_image:
-    weight: 108
-    label: hidden
-    settings:
-      image_style: ''
-    third_party_settings: {  }
-    type: image_url
-    region: content
-  field_resource_link:
-    weight: 110
-    label: hidden
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
-    region: content
   field_workshop_type:
-    weight: 114
-    label: above
+    type: list_default
+    label: visually_hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 1
     region: content
   field_workshop_year:
-    weight: 113
-    label: above
-    settings: {  }
-    third_party_settings: {  }
     type: list_default
-    region: content
-  links:
-    weight: 100
-    region: content
+    label: visually_hidden
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  field_associated_workshop: true
+  field_existing_resource: true
+  field_hidden_content_theme: true
+  field_resource_file: true
+  field_resource_image: true
+  field_resource_link: true
+  links: true

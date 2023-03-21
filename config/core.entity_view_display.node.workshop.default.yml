@@ -5,61 +5,30 @@ dependencies:
   config:
     - field.field.node.workshop.body
     - field.field.node.workshop.field_dates_of_event
+    - field.field.node.workshop.field_hidden_content_theme
     - field.field.node.workshop.field_workshop_leaders
     - field.field.node.workshop.field_workshop_type
     - field.field.node.workshop.field_workshop_year
     - node.type.workshop
   module:
-    - datetime_range
-    - options
-    - text
+    - nun_helper
     - user
 id: node.workshop.default
 targetEntityType: node
 bundle: workshop
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 101
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   field_dates_of_event:
-    weight: 103
-    label: above
-    settings:
-      separator: '-'
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: daterange_default
-    region: content
-  field_workshop_leaders:
-    weight: 106
-    label: above
+    type: nun_daterange_custom
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 0
     region: content
-  field_workshop_type:
-    weight: 102
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  field_workshop_year:
-    weight: 105
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-hidden: {  }
+hidden:
+  body: true
+  field_hidden_content_theme: true
+  field_workshop_leaders: true
+  field_workshop_type: true
+  field_workshop_year: true
+  links: true

@@ -1,0 +1,36 @@
+uuid: d97a5171-52bd-44d3-bbff-99979f18debf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.nundle_words.body
+    - field.field.node.nundle_words.field_nundle_csv_data
+    - node.type.nundle_words
+  module:
+    - text
+    - user
+id: node.nundle_words.default
+targetEntityType: node
+bundle: nundle_words
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_nundle_csv_data:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

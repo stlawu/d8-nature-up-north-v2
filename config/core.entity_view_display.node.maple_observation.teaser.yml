@@ -5,8 +5,19 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.maple_observation.body
+    - field.field.node.maple_observation.field_maple_changing_colors
+    - field.field.node.maple_observation.field_maple_flowering
+    - field.field.node.maple_observation.field_maple_fruit
+    - field.field.node.maple_observation.field_maple_image
+    - field.field.node.maple_observation.field_maple_leaf_buds
+    - field.field.node.maple_observation.field_maple_leaves_dropping
+    - field.field.node.maple_observation.field_maple_leaves_unfolded
+    - field.field.node.maple_observation.field_maple_observation_date
+    - field.field.node.maple_observation.field_maple_observation_season
+    - field.field.node.maple_observation.field_maple_tree
     - node.type.maple_observation
   module:
+    - datetime
     - text
     - user
 id: node.maple_observation.teaser
@@ -15,21 +26,41 @@ bundle: maple_observation
 mode: teaser
 content:
   body:
-    label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    label: hidden
     settings:
       trim_length: 600
     third_party_settings: {  }
+    weight: 2
+    region: content
+  field_maple_observation_date:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: day_only
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_maple_tree:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
     region: content
   links:
-    weight: 100
     settings: {  }
     third_party_settings: {  }
+    weight: 3
     region: content
 hidden:
+  field_maple_changing_colors: true
   field_maple_flowering: true
+  field_maple_fruit: true
+  field_maple_image: true
   field_maple_leaf_buds: true
+  field_maple_leaves_dropping: true
   field_maple_leaves_unfolded: true
-  field_maple_observation_date: true
-  field_maple_tree: true
+  field_maple_observation_season: true

@@ -1,0 +1,29 @@
+uuid: 78d16676-ae47-44ae-b7f7-154ce939ab40
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_episode_transcript
+    - node.type.podcast_episode
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - basic_html
+      - full_html
+id: node.podcast_episode.field_episode_transcript
+field_name: field_episode_transcript
+entity_type: node
+bundle: podcast_episode
+label: 'Episode transcript'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

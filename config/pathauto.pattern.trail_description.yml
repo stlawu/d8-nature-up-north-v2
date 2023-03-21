@@ -10,13 +10,13 @@ type: 'canonical_entities:node'
 pattern: 'trail/[node:title]'
 selection_criteria:
   97a23dec-0362-4398-ab8d-ebc2f0195e18:
-    id: node_type
-    bundles:
-      trail: trail
+    id: 'entity_bundle:node'
     negate: false
+    uuid: 97a23dec-0362-4398-ab8d-ebc2f0195e18
     context_mapping:
       node: node
-    uuid: 97a23dec-0362-4398-ab8d-ebc2f0195e18
+    bundles:
+      trail: trail
 selection_logic: and
 weight: -5
 relationships: {  }

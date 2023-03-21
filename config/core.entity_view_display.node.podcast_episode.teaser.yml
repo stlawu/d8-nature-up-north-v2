@@ -1,0 +1,50 @@
+uuid: 81e14a0f-5444-4323-9239-ba2e0a8d1322
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.podcast_episode.body
+    - field.field.node.podcast_episode.field_episode_date
+    - field.field.node.podcast_episode.field_episode_embed_box
+    - field.field.node.podcast_episode.field_episode_files
+    - field.field.node.podcast_episode.field_episode_hosts
+    - field.field.node.podcast_episode.field_episode_image
+    - field.field.node.podcast_episode.field_episode_number
+    - field.field.node.podcast_episode.field_episode_transcript
+    - field.field.node.podcast_episode.field_episode_type
+    - field.field.node.podcast_episode.field_related_links
+    - field.field.node.podcast_episode.field_season_number
+    - node.type.podcast_episode
+  module:
+    - text
+    - user
+id: node.podcast_episode.teaser
+targetEntityType: node
+bundle: podcast_episode
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_episode_date: true
+  field_episode_embed_box: true
+  field_episode_files: true
+  field_episode_hosts: true
+  field_episode_image: true
+  field_episode_number: true
+  field_episode_transcript: true
+  field_episode_type: true
+  field_related_links: true
+  field_season_number: true

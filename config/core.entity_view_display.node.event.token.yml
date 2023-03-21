@@ -1,0 +1,127 @@
+uuid: 22c9cfb6-e62c-4007-9b3f-f4ff0ff4a4f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.token
+    - field.field.node.event.body
+    - field.field.node.event.comment_node_event
+    - field.field.node.event.field_add_your_organization
+    - field.field.node.event.field_additional_info
+    - field.field.node.event.field_appropriate_ages
+    - field.field.node.event.field_attachements
+    - field.field.node.event.field_contact_person
+    - field.field.node.event.field_event_address
+    - field.field.node.event.field_event_category
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_email
+    - field.field.node.event.field_event_image
+    - field.field.node.event.field_event_location
+    - field.field.node.event.field_event_telephone
+    - field.field.node.event.field_hidden_content_theme
+    - field.field.node.event.field_instructions
+    - field.field.node.event.field_more_info_url
+    - field.field.node.event.field_skill_level
+    - node.type.event
+  module:
+    - field_group
+    - image
+    - layout_builder
+    - nun_helper
+    - user
+third_party_settings:
+  field_group:
+    group_age_and_skill_level:
+      children:
+        - field_appropriate_ages
+        - field_skill_level
+      label: 'Age and Skill Level'
+      parent_name: ''
+      region: hidden
+      weight: 3
+      format_type: details
+      format_settings:
+        classes: 'group-age-skill field-group-fieldset'
+        id: ''
+        open: true
+    group_event_details:
+      children:
+        - field_additional_info
+        - field_attachements
+        - field_contact_person
+        - field_event_address
+        - field_event_email
+        - field_event_location
+        - field_event_telephone
+        - field_more_info_url
+      label: 'Event Details'
+      parent_name: ''
+      region: hidden
+      weight: 4
+      format_type: details
+      format_settings:
+        classes: 'group-event-details field-group-fieldset'
+        id: ''
+        open: true
+        required_fields: false
+    group_sponsoring_organization:
+      children:
+        - field_add_your_organization
+        - field_hidden_content_theme
+      label: 'Sponsoring Organization'
+      parent_name: ''
+      region: hidden
+      weight: 5
+      format_type: details
+      format_settings:
+        classes: ' group-sponsoring-organization field-group-fieldset'
+        id: ''
+        open: true
+        required_fields: false
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.event.token
+targetEntityType: node
+bundle: event
+mode: token
+content:
+  field_event_date:
+    type: nun_daterange_custom
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_event_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  sharethis:
+    weight: 10
+    region: content
+hidden:
+  body: true
+  comment_node_event: true
+  field_add_your_organization: true
+  field_additional_info: true
+  field_appropriate_ages: true
+  field_attachements: true
+  field_contact_person: true
+  field_event_address: true
+  field_event_category: true
+  field_event_email: true
+  field_event_location: true
+  field_event_telephone: true
+  field_hidden_content_theme: true
+  field_instructions: true
+  field_more_info_url: true
+  field_skill_level: true
+  links: true

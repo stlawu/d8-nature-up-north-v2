@@ -1,0 +1,23 @@
+uuid: 319cfb48-daf7-4b98-9df9-5f977268f041
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_episode_number
+    - node.type.podcast_episode
+id: node.podcast_episode.field_episode_number
+field_name: field_episode_number
+entity_type: node
+bundle: podcast_episode
+label: Episode
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

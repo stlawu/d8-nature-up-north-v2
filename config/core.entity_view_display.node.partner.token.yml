@@ -1,0 +1,48 @@
+uuid: 6b2401ca-800e-40d2-83b4-c864c0fea71a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.token
+    - field.field.node.partner.body
+    - field.field.node.partner.comment_node_partner
+    - field.field.node.partner.field_hidden_content_theme
+    - field.field.node.partner.field_partner_logo
+    - field.field.node.partner.field_partner_type
+    - field.field.node.partner.field_partner_web_site
+    - image.style.medium
+    - node.type.partner
+  module:
+    - image
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.partner.token
+targetEntityType: node
+bundle: partner
+mode: token
+content:
+  field_partner_logo:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  sharethis:
+    weight: 10
+    region: content
+hidden:
+  body: true
+  comment_node_partner: true
+  field_hidden_content_theme: true
+  field_partner_type: true
+  field_partner_web_site: true
+  links: true

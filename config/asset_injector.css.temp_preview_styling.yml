@@ -1,0 +1,51 @@
+uuid: fb905541-5ffe-414d-bd16-dcf57eaaeecf
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: temp_preview_styling
+label: 'Temp Preview Styling'
+code: |-
+
+  .blog--card,
+  .page--card,
+  .article--card,
+  .profile--card,
+  .event--card,
+  .encounter--card,
+  .workshop-follow-up--card,
+  .encounter--card {
+      width: 400px;
+      border: 1px solid green;
+      border-radius: 10px;
+      box-shadow: .5rem .5rem 1rem grey;
+      background: lightgoldenrodyellow;
+  }
+  .event--blog img,
+  .event--page img,
+  .event--article img,
+  .event--profile img,
+  .event--card img,
+  .encounter--card img,
+  .workshop-follow-up--card img,
+  .encounter--card img {
+      border-radius: 0 0 10px 10px;
+      border-top: 3px solid green;
+  }
+
+  .font-weight-bold {
+      font-weight: bold;
+  }
+  .small {
+      font-size: 1rem;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/node/*/preview'
+contexts: {  }
+conditions_require_all: true

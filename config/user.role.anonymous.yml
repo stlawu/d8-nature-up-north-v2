@@ -1,7 +1,16 @@
 uuid: 7459a3fc-8f81-4ba5-89e7-c2c7eb604a62
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.simple_html
+  module:
+    - comment
+    - contact
+    - filter
+    - media
+    - search
+    - system
 _core:
   default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
 id: anonymous
@@ -9,17 +18,10 @@ label: 'anonymous user'
 weight: 0
 is_admin: false
 permissions:
-  - 'access archive'
-  - 'access campaign monitor registration'
-  - 'access campaign monitor user'
-  - 'access comments'
-  - 'access content'
-  - 'access site-wide contact form'
-  - 'access user profiles'
-  - 'create monitorchange_chapel content'
-  - 'create monitorchange_slu_quad content'
-  - 'create photo_post_from_canton_school content'
-  - 'create photo_post_from_eastside_element content'
-  - 'join newsletter'
-  - 'search content'
-  - 'view date repeats'
+  3: 'access comments'
+  4: 'access content'
+  5: 'access site-wide contact form'
+  6: 'access user profiles'
+  12: 'search content'
+  13: 'use text format simple_html'
+  15: 'view media'

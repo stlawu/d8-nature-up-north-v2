@@ -1,7 +1,7 @@
-status: '2'
+status: 2
 pattern: '[current-user:account-name]''s Tree added on [current-date:comment_format]'
-php: 0
-escape: 0
+escape: false
 dependencies:
   config:
     - node.type.maple_tree
+php: 0

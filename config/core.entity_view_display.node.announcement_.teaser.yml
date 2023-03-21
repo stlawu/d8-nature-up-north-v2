@@ -16,10 +16,10 @@ bundle: announcement_
 mode: teaser
 content:
   links:
-    weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
   sharethis:
     weight: 10
     region: content

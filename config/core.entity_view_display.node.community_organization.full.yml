@@ -1,0 +1,116 @@
+uuid: 1adbfe03-b4ef-4310-9f19-20b0a59128c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.community_organization.body
+    - field.field.node.community_organization.field_hidden_content_theme
+    - field.field.node.community_organization.field_organization_address
+    - field.field.node.community_organization.field_organization_email
+    - field.field.node.community_organization.field_organization_location
+    - field.field.node.community_organization.field_organization_logo
+    - field.field.node.community_organization.field_organization_telephone
+    - field.field.node.community_organization.field_organization_web_site
+    - node.type.community_organization
+  module:
+    - address
+    - image
+    - layout_builder
+    - link
+    - nun_helper
+    - telephone
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.community_organization.full
+targetEntityType: node
+bundle: community_organization
+mode: full
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  comment_node_community_organization:
+    type: comment_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_hidden_content_theme:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_organization_address:
+    type: address_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_organization_email:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_organization_location:
+    type: nun_geolocation_maplink
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_organization_logo:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_organization_telephone:
+    type: telephone_link
+    label: inline
+    settings:
+      title: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_organization_web_site:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  sharethis:
+    weight: 10
+    region: content
+hidden: {  }
