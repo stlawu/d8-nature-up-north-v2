@@ -24,6 +24,7 @@
         "drupal/asset_injector": "^2.16",
         "drupal/auto_entitylabel": "^3",
         "drupal/backup_migrate": "^5",
+        "drupal/better_exposed_filters": "^6.0",
         "drupal/bootstrap": "^3",
         "drupal/bootstrap_layouts": "^5",
         "drupal/captcha": "^1.0",

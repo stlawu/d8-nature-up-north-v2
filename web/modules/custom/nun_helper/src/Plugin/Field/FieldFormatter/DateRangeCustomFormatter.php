@@ -36,7 +36,7 @@ class DateRangeCustomFormatter extends FormatterBase {
   protected function buildDate(DrupalDateTime $date,$fmt = DateRangeCustomFormatter::FMT_FULL) {
       return [
           '#plain_text' => $date->format($fmt,[
-              'timezone' => drupal_get_user_timezone(),
+              // 'timezone' => drupal_get_user_timezone(),
           ]),
       ];
   }

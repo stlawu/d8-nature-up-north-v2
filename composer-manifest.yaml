@@ -49,6 +49,7 @@ packages:
     drupal/asset_injector: 2.16.0
     drupal/auto_entitylabel: 3.0.0
     drupal/backup_migrate: 5.0.3
+    drupal/better_exposed_filters: 6.0.3
     drupal/blazy: 2.14.0
     drupal/bootstrap: 3.27.0
     drupal/bootstrap_layouts: 5.3.0
@@ -89,7 +90,10 @@ packages:
     drupal/inline_entity_form: 1.0.0-rc15
     drupal/jquery_ui: 1.6.0
     drupal/jquery_ui_autocomplete: 2.0.0
+    drupal/jquery_ui_datepicker: 2.0.0
     drupal/jquery_ui_menu: 2.0.0
+    drupal/jquery_ui_slider: 2.0.0
+    drupal/jquery_ui_touch_punch: 1.1.0
     drupal/layout_builder_styles: 1.0.0-beta4
     drupal/mailgun: 1.1.0
     drupal/mailsystem: 4.4.0
@@ -186,6 +190,7 @@ packages:
     phpunit/php-text-template: 3.0.0
     phpunit/php-timer: 6.0.0
     phpunit/phpunit: 10.0.17
+    politsin/jquery-ui-touch-punch: '1.0'
     progress-tracker/progress-tracker: 2.0.7
     psr/cache: 1.0.1
     psr/container: 1.1.2

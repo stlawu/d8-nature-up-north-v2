@@ -26,7 +26,7 @@ use \Drupal\user\Entity\User;
              if('blog' === $node->getType()) {
                  $user = User::load($node->getOwnerId());
                  $return['#user_url'] = Url::fromUri('base:/user/'.$user->id(),['absolute'=>TRUE])->toString();
-                 $profile_storage = \Drupal::entityManager()->getStorage('profile');
+                 $profile_storage = \Drupal::entityTypeManager()->getStorage('profile');
 
                  $profile = $profile_storage->loadByUser($user, 'main');
                  $blogger = $profile_storage->loadByUser($user,'blogger');

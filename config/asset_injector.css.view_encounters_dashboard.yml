@@ -1,0 +1,21 @@
+uuid: 0f6e204e-13ae-4dec-940b-f710f2d693c1
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: view_encounters_dashboard
+label: 'View: Encounters Dashboard'
+code: |-
+  #edit-field-encounter-location-boundary-wrapper {
+  	display: none;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/encounters\r\n/encounters-dashboard"
+contexts: {  }
+conditions_require_all: true
