@@ -53,7 +53,7 @@
         "drupal/file_mdm": "^2.5",
         "drupal/flag": "^4.0",
         "drupal/geolocation": "^3.12",
-        "drupal/google_analytics": "^2.3",
+        "drupal/google_analytics": "^3",
         "drupal/honeypot": "^2",
         "drupal/image_effects": "^3",
         "drupal/inline_entity_form": "^1.0",

@@ -57,7 +57,8 @@ use Drupal\views\ViewExecutable;
 
       $profile_data = array();
       $user = \Drupal\user\Entity\User::load($vars['node']->getOwnerId());
-      $profile = \Drupal::entityManager()->getStorage('profile')->loadByUser($user, 'main');
+      // $profile = \Drupal::entityManager()->getStorage('profile')->loadByUser($user, 'main');
+      $profile = \Drupal::entityTypeManager()->getStorage('profile')->loadByUser($user, 'main');
 
       if (!empty($profile)) {
         $photo_field = $profile->get('field_profile_photo');
