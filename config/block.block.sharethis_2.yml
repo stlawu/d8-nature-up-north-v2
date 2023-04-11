@@ -1,0 +1,25 @@
+uuid: 61bda597-e927-4fc7-a7ad-0f37419b1890
+langcode: en
+status: true
+dependencies:
+  module:
+    - sharethis
+    - system
+  theme:
+    - nun
+id: sharethis_2
+theme: nun
+region: content
+weight: -8
+provider: null
+plugin: sharethis_block
+settings:
+  id: sharethis_block
+  label: Sharethis
+  label_display: '0'
+  provider: sharethis
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/form/*'

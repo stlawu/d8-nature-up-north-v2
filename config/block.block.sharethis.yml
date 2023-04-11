@@ -3,14 +3,14 @@ langcode: en
 status: true
 dependencies:
   module:
+    - node
     - sharethis
-    - system
   theme:
     - nun
 id: sharethis
 theme: nun
 region: content
-weight: -6
+weight: -9
 provider: null
 plugin: sharethis_block
 settings:
@@ -19,8 +19,32 @@ settings:
   label_display: '0'
   provider: sharethis
 visibility:
-  request_path:
-    id: request_path
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
     negate: false
-    context_mapping: {  }
-    pages: "/node/*\r\n/form/*"
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      announcement_: announcement_
+      article: article
+      blog: blog
+      community_organization: community_organization
+      educator_resource: educator_resource
+      encounter: encounter
+      event: event
+      landing_page: landing_page
+      maple_data: maple_data
+      maple_observation: maple_observation
+      maple_tree: maple_tree
+      nundle_words: nundle_words
+      page: page
+      partner: partner
+      peel_away_image: peel_away_image
+      podcast_episode: podcast_episode
+      pollinator_garden: pollinator_garden
+      profile: profile
+      species: species
+      trail: trail
+      trail_head: trail_head
+      workshop: workshop
+      workshop_follow_up: workshop_follow_up

@@ -761,11 +761,16 @@ display:
               manager: ''
               company: ''
       display_extenders: {  }
-      path: node/%/observations/export/csv
+      path: node/%node/observations/export/csv
       displays:
         page_1: page_1
         default: '0'
       filename: 'monitor-my-maple_[view:total-rows]-observations.csv'
+      automatic_download: false
+      store_in_public_file_directory: false
+      custom_redirect_path: false
+      redirect_to_display: none
+      include_query_params: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -868,7 +873,7 @@ display:
       use_more_always: true
       use_more_text: 'View all Observations'
       display_extenders: {  }
-      path: node/%/observations
+      path: node/%node/observations
     cache_metadata:
       max-age: -1
       contexts:

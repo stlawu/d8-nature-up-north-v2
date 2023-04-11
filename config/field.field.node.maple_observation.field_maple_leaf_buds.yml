@@ -13,7 +13,7 @@ entity_type: node
 bundle: maple_observation
 label: 'Do you see breaking leaf buds?'
 description: 'Mark "Yes" if one or more of the buds has broken so that you can see its green tip.'
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

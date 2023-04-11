@@ -5,7 +5,7 @@ dependencies:
   config:
     - views.view.more_encounters_from_user
   module:
-    - ctools
+    - node
     - views
   theme:
     - nun

@@ -5,7 +5,7 @@ dependencies:
   config:
     - system.menu.monitor-my-maple
   module:
-    - ctools
+    - node
     - system
   theme:
     - nun

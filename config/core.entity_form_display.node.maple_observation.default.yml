@@ -57,6 +57,25 @@ content:
           dependee: field_maple_observation_season
           settings:
             state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Fall
+            effect: show
+            effect_options: {  }
+            selector: ''
+        6b327c61-4f63-494d-8291-15a6e7074d3b:
+          entity_type: node
+          bundle: maple_observation
+          dependee: field_maple_observation_season
+          settings:
+            state: required
+            reset: false
             condition: value
             grouping: AND
             values_set: 1
@@ -81,6 +100,25 @@ content:
           dependee: field_maple_observation_season
           settings:
             state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Spring
+            effect: show
+            effect_options: {  }
+            selector: ''
+        c1cfc0ef-790e-4919-8d5e-ebff99776dfd:
+          entity_type: node
+          bundle: maple_observation
+          dependee: field_maple_observation_season
+          settings:
+            state: required
+            reset: false
             condition: value
             grouping: AND
             values_set: 1
@@ -105,6 +143,25 @@ content:
           dependee: field_maple_observation_season
           settings:
             state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Fall
+            effect: show
+            effect_options: {  }
+            selector: ''
+        0f1981ad-4f91-463b-9a13-833ecc5520ad:
+          entity_type: node
+          bundle: maple_observation
+          dependee: field_maple_observation_season
+          settings:
+            state: required
+            reset: false
             condition: value
             grouping: AND
             values_set: 1
@@ -137,6 +194,25 @@ content:
           dependee: field_maple_observation_season
           settings:
             state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Spring
+            effect: show
+            effect_options: {  }
+            selector: ''
+        49d4c070-1ef9-4b4f-a32a-7a1b9052aad6:
+          entity_type: node
+          bundle: maple_observation
+          dependee: field_maple_observation_season
+          settings:
+            state: required
+            reset: false
             condition: value
             grouping: AND
             values_set: 1
@@ -161,6 +237,25 @@ content:
           dependee: field_maple_observation_season
           settings:
             state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Fall
+            effect: show
+            effect_options: {  }
+            selector: ''
+        ce2ee2c8-b9a3-46b0-ba52-52a6888deb26:
+          entity_type: node
+          bundle: maple_observation
+          dependee: field_maple_observation_season
+          settings:
+            state: required
+            reset: false
             condition: value
             grouping: AND
             values_set: 1
@@ -185,6 +280,25 @@ content:
           dependee: field_maple_observation_season
           settings:
             state: visible
+            reset: false
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: Spring
+            effect: show
+            effect_options: {  }
+            selector: ''
+        131c5ac1-3738-4bc7-870e-2d96c68188f3:
+          entity_type: node
+          bundle: maple_observation
+          dependee: field_maple_observation_season
+          settings:
+            state: required
+            reset: false
             condition: value
             grouping: AND
             values_set: 1

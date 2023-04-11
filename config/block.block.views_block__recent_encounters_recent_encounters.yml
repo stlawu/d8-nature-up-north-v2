@@ -5,9 +5,10 @@ dependencies:
   config:
     - views.view.recent_encounters
   module:
-    - ctools
+    - node
     - system
     - views
+    - webform
   theme:
     - nun
 id: views_block__recent_encounters_recent_encounters
