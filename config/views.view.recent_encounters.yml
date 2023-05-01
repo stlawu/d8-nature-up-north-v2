@@ -645,7 +645,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: false
-          content: '<a href="/encounters-map">View map</a>'
+          content: '<a href="/encounters">View map</a>'
           tokenize: false
       display_extenders: {  }
       block_description: 'Recent Encounters'

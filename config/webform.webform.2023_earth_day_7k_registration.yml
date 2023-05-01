@@ -1,6 +1,6 @@
 uuid: 074f1ba5-a830-4b94-bb35-b9abb57e64e5
 langcode: en
-status: open
+status: closed
 dependencies: {  }
 weight: 0
 open: null
@@ -58,7 +58,6 @@ elements: |-
     '#message_message': |
       <strong>Submitting Below Will Complete Your Registration And Take You To Our Payment Form</strong><br />
       All net proceeds from this event will support environmental education opportunities in the North Country for families, K-12 students, and community members.&nbsp;
-      
   thank_you_for_your_interest_and_registration_:
     '#type': label
     '#title': 'Thank you for your interest and registration!'
@@ -74,7 +73,7 @@ settings:
   page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
-  form_title: both
+  form_title: source_entity_webform
   form_submit_once: false
   form_open_message: ''
   form_close_message: ''
@@ -149,6 +148,8 @@ settings:
   wizard_toggle: false
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
   preview: 0
   preview_label: ''
   preview_title: ''
