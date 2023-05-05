@@ -3,17 +3,16 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment_node_trail_head.default
     - core.entity_view_mode.node.full
     - field.field.node.trail_head.comment_node_trail_head
     - field.field.node.trail_head.field_location
+    - field.field.node.trail_head.field_media
     - field.field.node.trail_head.field_trail
     - field.field.node.trail_head.field_trail_access
     - node.type.trail_head
   module:
-    - comment
-    - geolocation
     - layout_builder
+    - nun_helper
     - text
     - user
 third_party_settings:
@@ -25,36 +24,40 @@ targetEntityType: node
 bundle: trail_head
 mode: full
 content:
-  comment_node_trail_head:
-    type: comment_default
+  field_location:
+    type: nun_geolocation_maplink
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_media:
+    type: entity_reference_entity_view
     label: hidden
     settings:
       view_mode: default
-      pager_id: 0
+      link: false
     third_party_settings: {  }
-    weight: 20
+    weight: 2
     region: content
-  field_location:
-    type: geolocation_latlng
-    label: above
-    settings: {  }
+  field_trail:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
     third_party_settings: {  }
-    weight: 101
+    weight: 0
     region: content
   field_trail_access:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 2
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 100
+    weight: 1
     region: content
   sharethis:
     weight: 10
     region: content
 hidden:
-  field_trail: true
+  comment_node_trail_head: true
+  links: true

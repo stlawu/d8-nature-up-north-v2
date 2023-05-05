@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.trail_head.comment_node_trail_head
     - field.field.node.trail_head.field_location
+    - field.field.node.trail_head.field_media
     - field.field.node.trail_head.field_trail
     - field.field.node.trail_head.field_trail_access
     - node.type.trail_head
@@ -29,5 +30,6 @@ content:
 hidden:
   comment_node_trail_head: true
   field_location: true
+  field_media: true
   field_trail_access: true
   links: true

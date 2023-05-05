@@ -1,0 +1,21 @@
+uuid: 0e386f3f-e6c0-47a9-97f2-86fdf476fd69
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: view_north_country_trails
+label: 'View: north_country_trails'
+code: |-
+  .map-component {
+      display: none;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /trails
+contexts: {  }
+conditions_require_all: true
