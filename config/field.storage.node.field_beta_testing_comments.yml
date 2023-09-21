@@ -1,0 +1,20 @@
+uuid: a220c76c-e953-4ac6-ab1b-3398b9d04b4c
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - node
+id: node.field_beta_testing_comments
+field_name: field_beta_testing_comments
+entity_type: node
+type: comment
+settings:
+  comment_type: comment_node_blog
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

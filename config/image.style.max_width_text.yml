@@ -1,0 +1,15 @@
+uuid: e9d1ce9e-01aa-46ca-994e-8dab2efa7419
+langcode: en
+status: true
+dependencies: {  }
+name: max_width_text
+label: 'Max Width: Text'
+effects:
+  6ec9a3fb-9f81-42b8-85bd-6991a29c334e:
+    uuid: 6ec9a3fb-9f81-42b8-85bd-6991a29c334e
+    id: image_scale
+    weight: 1
+    data:
+      width: 600
+      height: null
+      upscale: false

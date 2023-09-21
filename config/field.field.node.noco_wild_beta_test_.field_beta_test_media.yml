@@ -1,0 +1,29 @@
+uuid: 38ec0398-72d3-4752-b63e-e648dddf7870
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_beta_test_media
+    - media.type.image
+    - node.type.noco_wild_beta_test_
+id: node.noco_wild_beta_test_.field_beta_test_media
+field_name: field_beta_test_media
+entity_type: node
+bundle: noco_wild_beta_test_
+label: Media
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

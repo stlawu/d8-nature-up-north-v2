@@ -726,7 +726,7 @@ display:
           value:
             min: '2020-01-01 00:00:00'
             max: ''
-            value: '2020-01-01 00:00:00'
+            value: '2000-01-01 00:00:00'
             type: date
           group: 1
           exposed: false

@@ -1,0 +1,27 @@
+uuid: b71ffccd-6152-425e-aa08-f9a9e88cfc3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_files
+    - node.type.noco_wild_beta_test_
+  module:
+    - file
+id: node.noco_wild_beta_test_.field_files
+field_name: field_files
+entity_type: node
+bundle: noco_wild_beta_test_
+label: Files
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt jar xlsx docx pdf pptx'
+  max_filesize: ''
+  description_field: true
+field_type: file

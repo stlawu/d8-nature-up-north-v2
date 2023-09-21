@@ -1,0 +1,40 @@
+uuid: dd5f818d-77cf-4825-b01c-ccc7830aeb05
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.noco_wild_beta_test_.body
+    - field.field.node.noco_wild_beta_test_.field_beta_test_media
+    - field.field.node.noco_wild_beta_test_.field_beta_testing_comments
+    - field.field.node.noco_wild_beta_test_.field_files
+    - field.field.node.noco_wild_beta_test_.field_nocowild_category
+    - field.field.node.noco_wild_beta_test_.field_web_links
+    - node.type.noco_wild_beta_test_
+  module:
+    - text
+    - user
+id: node.noco_wild_beta_test_.teaser
+targetEntityType: node
+bundle: noco_wild_beta_test_
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_beta_test_media: true
+  field_beta_testing_comments: true
+  field_files: true
+  field_nocowild_category: true
+  field_web_links: true

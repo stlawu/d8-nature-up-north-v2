@@ -2,6 +2,11 @@ uuid: d2e3a648-ccd0-402b-99f7-b665ff5577f2
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.full
+    - core.entity_view_mode.media.large
+    - core.entity_view_mode.media.medium
+    - core.entity_view_mode.media.small
   module:
     - media
 _core:
@@ -35,7 +40,7 @@ filters:
     status: false
     weight: -10
     settings:
-      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <s> <sup> <sub> <img src alt data-entity-type data-entity-uuid> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p> <h1> <pre>'
+      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <s> <sup> <sub> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p> <h1> <pre> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt title> <img src alt data-entity-type data-entity-uuid src alt data-entity-type data-entity-uuid data-align data-caption>'
       filter_html_help: true
       filter_html_nofollow: false
   media_embed:
@@ -44,6 +49,22 @@ filters:
     status: true
     weight: 100
     settings:
-      default_view_mode: default
-      allowed_view_modes: {  }
+      default_view_mode: large
+      allowed_view_modes:
+        full: full
+        large: large
+        medium: medium
+        small: small
       allowed_media_types: {  }
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_caption:
+    id: filter_caption
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }

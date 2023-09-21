@@ -1,0 +1,15 @@
+uuid: 5fc9836d-23cf-4bc2-bb1d-949ca90ca6cb
+langcode: en
+status: true
+dependencies: {  }
+name: max_width_page
+label: 'Max Width: Page'
+effects:
+  e105b332-132e-4dab-8a01-0e6a838e8a6e:
+    uuid: e105b332-132e-4dab-8a01-0e6a838e8a6e
+    id: image_scale
+    weight: 1
+    data:
+      width: 1200
+      height: null
+      upscale: false

@@ -1,0 +1,17 @@
+uuid: bce92251-aa8d-4a69-aff7-14f336eb3803
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'NoCo Wild beta test content'
+type: noco_wild_beta_test_
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

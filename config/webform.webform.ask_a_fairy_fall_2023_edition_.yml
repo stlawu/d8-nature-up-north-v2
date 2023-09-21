@@ -1,6 +1,6 @@
-uuid: 8f8eb126-3764-431e-bb06-e49f5388d9d4
+uuid: a57597f2-2c18-4742-8a28-940f99fee818
 langcode: en
-status: closed
+status: open
 dependencies: {  }
 weight: 0
 open: null
@@ -8,16 +8,15 @@ close: null
 uid: 19466
 template: false
 archive: false
-id: ask_a_fairy_fall_2022_edition
-title: 'Ask A Fairy Fall 2022 Edition'
+id: ask_a_fairy_fall_2023_edition_
+title: 'Ask A Fairy Fall 2023 Edition!'
 description: ''
 category: ''
 elements: |-
   processed_text:
     '#type': processed_text
-    '#text': |
-      <p>Great job! You found the fairy house! Ask your question in the box below and stay tuned to http://www.natureupnorth.org to find a fairy's answer!</p>
-    '#format': basic_html
+    '#text': 'Great job! You found the fairy house! Ask your question in the box below and stay tuned to https://www.natureupnorth.org to find a fairy''s answer!'
+    '#format': plain_text
   name:
     '#type': textfield
     '#title': Name
@@ -26,16 +25,16 @@ elements: |-
     '#title': Age
   what_is_your_question_for_the_fairies_:
     '#type': textarea
-    '#title': 'What is your question for the fairies? '
+    '#title': 'What is your question for the fairies?'
   do_you_want_to_share_a_picture_of_you_at_the_fairy_house_for_the:
     '#type': webform_image_file
     '#title': 'Do you want to share a picture of you at the fairy house for the fairies to see?'
-  which_trail_did_you_find_the_fairys_house_on:
+  which_trail_did_you_find_the_fairy_house_on_:
     '#type': radios
-    '#title': 'Which trail did you find the fairy''s house on? '
+    '#title': 'Which trail did you find the fairy house on? '
     '#options':
-      'Lampson Falls, Clare': 'Lampson Falls, Clare'
-      'Indian Creek Nature Center, Rensselaer Falls': 'Indian Creek Nature Center, Rensselaer Falls'
+      'Stone Valley Trail': 'Stone Valley Trail'
+      'Hart''s Falls Preseve': 'Hart''s Falls Preseve'
 css: ''
 javascript: ''
 settings:
@@ -48,7 +47,7 @@ settings:
   page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
-  form_title: source_entity_webform
+  form_title: both
   form_submit_once: false
   form_open_message: ''
   form_close_message: ''

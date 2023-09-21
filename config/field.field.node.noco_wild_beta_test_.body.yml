@@ -1,0 +1,30 @@
+uuid: 0d071051-4f46-4a66-8d26-660f103655de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.noco_wild_beta_test_
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - plain_text
+      - basic_html
+      - full_html
+id: node.noco_wild_beta_test_.body
+field_name: body
+entity_type: node
+bundle: noco_wild_beta_test_
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

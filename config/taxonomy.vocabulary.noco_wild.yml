@@ -1,0 +1,8 @@
+uuid: 45a46cfc-9405-4e3f-91fa-36f961dcc982
+langcode: en
+status: true
+dependencies: {  }
+name: 'NoCo Wild'
+vid: noco_wild
+description: 'taxonomy for North Country Wild project'
+weight: 0

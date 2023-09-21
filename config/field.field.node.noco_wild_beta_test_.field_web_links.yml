@@ -1,0 +1,23 @@
+uuid: 0265eb48-a8b8-4e93-a64f-6c6f7091fae9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_web_links
+    - node.type.noco_wild_beta_test_
+  module:
+    - link
+id: node.noco_wild_beta_test_.field_web_links
+field_name: field_web_links
+entity_type: node
+bundle: noco_wild_beta_test_
+label: 'Web links'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

@@ -1,0 +1,14 @@
+uuid: 0ada2a6c-b2df-449f-bf5c-159ae7fa8a3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.nocowild_beta_tester
+  module:
+    - user
+id: user_add_role_action.nocowild_beta_tester
+label: 'Add the NoCoWild Beta tester role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: nocowild_beta_tester

@@ -1,0 +1,14 @@
+uuid: f18e87e6-f2cd-4e10-8d82-be657097a839
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+id: nocowild_beta_tester
+label: 'NoCoWild Beta tester'
+weight: 12
+is_admin: null
+permissions:
+  - 'edit own comments'
+  - 'post comments'
+  - 'skip comment approval'

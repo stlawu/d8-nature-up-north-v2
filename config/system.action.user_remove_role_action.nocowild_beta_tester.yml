@@ -1,0 +1,14 @@
+uuid: 5de06897-e7ea-4757-ad43-114611d93508
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.nocowild_beta_tester
+  module:
+    - user
+id: user_remove_role_action.nocowild_beta_tester
+label: 'Remove the NoCoWild Beta tester role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: nocowild_beta_tester

@@ -1,0 +1,33 @@
+uuid: 2bfbd382-56ea-4fce-afcb-84912d526757
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nocowild_category
+    - node.type.noco_wild_beta_test_
+    - taxonomy.vocabulary.noco_wild
+  content:
+    - 'taxonomy_term:noco_wild:7a29d696-e08c-45f9-961c-21d78db521d7'
+id: node.noco_wild_beta_test_.field_nocowild_category
+field_name: field_nocowild_category
+entity_type: node
+bundle: noco_wild_beta_test_
+label: 'NoCoWild Category'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 7a29d696-e08c-45f9-961c-21d78db521d7
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      noco_wild: noco_wild
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
