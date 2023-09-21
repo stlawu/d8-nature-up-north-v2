@@ -10,8 +10,8 @@ code: ".page-header,\r\n#block-sharethis {\r\n  display: none;\r\n}"
 media: all
 preprocess: true
 conditions:
-  node_type:
-    id: node_type
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
