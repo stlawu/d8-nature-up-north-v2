@@ -6,6 +6,7 @@ id: margin_x_axis_5
 label: 'Margin X-axis: 5'
 classes: mx-5
 type: component
+group: default
 block_restrictions: {  }
 layout_restrictions: {  }
 weight: 0

@@ -2,4 +2,4 @@ name: 'NUN Maps'
 description: 'NUN Maps'
 package: 'DJ Case'
 type: module
-core_version_requirement: ^8.7.7 || ^9.0
+core_version_requirement: ^8 || ^9 || ^10

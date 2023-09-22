@@ -2,4 +2,4 @@ name: NUN Migration Helper
 type: module
 description: Code to assist in the NUN migration.
 package: DJ Case
-core_version_requirement: ^8.7.7 || ^9.0
+core_version_requirement: ^8 || ^9 || ^10

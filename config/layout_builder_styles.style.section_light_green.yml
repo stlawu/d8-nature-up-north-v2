@@ -6,6 +6,7 @@ id: section_light_green
 label: 'Section Light Green'
 classes: section-light-green
 type: section
+group: default
 block_restrictions: {  }
 layout_restrictions: {  }
 weight: 0

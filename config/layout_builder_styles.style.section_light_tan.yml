@@ -6,6 +6,7 @@ id: section_light_tan
 label: 'Section Light Tan'
 classes: section-light-tan
 type: section
+group: default
 block_restrictions: {  }
 layout_restrictions: {  }
 weight: 0

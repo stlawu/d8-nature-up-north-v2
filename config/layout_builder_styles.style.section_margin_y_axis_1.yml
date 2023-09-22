@@ -6,6 +6,7 @@ id: section_margin_y_axis_1
 label: 'Margin Y-axis: 1'
 classes: my-1
 type: section
+group: default
 block_restrictions: {  }
 layout_restrictions: {  }
 weight: 0

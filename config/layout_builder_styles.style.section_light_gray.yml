@@ -6,6 +6,7 @@ id: section_light_gray
 label: 'Section Light Gray'
 classes: section-light-gray
 type: section
+group: default
 block_restrictions: {  }
 layout_restrictions: {  }
 weight: 0

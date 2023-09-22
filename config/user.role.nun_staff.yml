@@ -54,7 +54,6 @@ dependencies:
     - node
     - paragraphs
     - profile
-    - quickedit
     - search
     - sitemap
     - system
@@ -74,7 +73,6 @@ permissions:
   - 'access contextual links'
   - 'access entity_embed_image_media entity browser pages'
   - 'access existing_image_media entity browser pages'
-  - 'access in-place editing'
   - 'access maple_tree_browser entity browser pages'
   - 'access own webform configuration'
   - 'access profile overview'
