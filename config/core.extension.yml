@@ -29,7 +29,6 @@ module:
   datetime: 0
   datetime_range: 0
   dblog: 0
-  devel: 0
   dynamic_page_cache: 0
   editor: 0
   email_registration: 0
@@ -112,7 +111,6 @@ module:
   typed_data: 0
   update: 0
   user: 0
-  vardumper: 0
   views_data_export: 0
   views_ui: 0
   webform: 0
