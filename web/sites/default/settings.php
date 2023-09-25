@@ -22,7 +22,8 @@ include __DIR__ . "/settings.pantheon.php";
 // $config_directories = array(
 //   CONFIG_SYNC_DIRECTORY => dirname(DRUPAL_ROOT) . '/config',
 // );
-$settings['config_sync_directory'] = '../config';
+//$settings['config_sync_directory'] = '../config';
+$settings['config_sync_directory'] = '../config/sync/default';
 
 /**
  * If there is a local settings file, then include it
