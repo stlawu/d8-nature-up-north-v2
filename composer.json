@@ -183,7 +183,7 @@
             "drupal/core": {
                 "Workaround for 'Call to a member function getLabel() after enabling layout_builder' [#2985882]": "https://www.drupal.org/files/issues/2020-04-08/2985882-field-85.patch"
             },
-            "drupal/simple_fb_connect": {
+            "disabled/simple_fb_connect": {
                 "Drupal 10 compatibility fixes [#3289624]": "https://www.drupal.org/files/issues/2023-05-05/simple_fb_connect-3289624--d10.6.patch"
             }
         },
