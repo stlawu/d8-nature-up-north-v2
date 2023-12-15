@@ -11,7 +11,7 @@ archive: false
 id: virtual_campfire_creatures_of_th
 title: 'Virtual Campfire: Creatures Of The Night'
 description: ''
-category: ''
+categories: {  }
 elements: |-
   event_details:
     '#type': item
@@ -131,6 +131,8 @@ settings:
   wizard_toggle: false
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
   preview: 0
   preview_label: ''
   preview_title: ''

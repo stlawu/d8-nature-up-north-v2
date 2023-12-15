@@ -11,7 +11,7 @@ archive: false
 id: 2019_family_weekend_lampson_fall
 title: '2019 Family Weekend: Lampson Falls Waterfall Hike '
 description: 'Registration form for the 2019 Family Weekend&nbsp;Lampson Falls Waterfall Hike&nbsp;'
-category: ''
+categories: {  }
 elements: |
   this_hike_is_full_please_register_here_for_our_wait_list_you_wil:
     '#type': label
@@ -225,6 +225,8 @@ settings:
   wizard_toggle: false
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
   preview: 0
   preview_label: ''
   preview_title: ''

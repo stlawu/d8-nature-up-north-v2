@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - filter.format.simple_html
+    - filter.format.webform_default
   module:
     - comment
     - contact
@@ -27,5 +28,6 @@ permissions:
   - 'change own username'
   - 'search content'
   - 'use text format simple_html'
+  - 'use text format webform_default'
   - 'view media'
   - 'view own main profile'

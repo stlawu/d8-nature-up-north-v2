@@ -11,7 +11,7 @@ archive: false
 id: questions_about_bats
 title: 'Questions about bats'
 description: 'Form for folks to submit questions about bats prior to podcast interview.'
-category: ''
+categories: {  }
 elements: |-
   processed_text:
     '#type': processed_text
@@ -113,6 +113,8 @@ settings:
   wizard_toggle: false
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
   preview: 0
   preview_label: ''
   preview_title: ''

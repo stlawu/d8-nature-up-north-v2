@@ -1,7 +1,7 @@
 name: d-8-nature-up-north-v-2
 recipe: pantheon
 config:
-  framework: drupal8
+  framework: drupal9
   site: d8-nature-up-north-v2
   id: f696edcc-8347-415d-baeb-c4c23d243ebe
 tooling:

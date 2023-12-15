@@ -11,7 +11,7 @@ archive: false
 id: ask_a_fairy_fall_2020_edition
 title: 'Ask a fairy Fall 2020 edition'
 description: 'This spring we need to do a virtual fairy house exercise due to covid 19'
-category: ''
+categories: {  }
 elements: |-
   processed_text:
     '#type': processed_text
@@ -122,6 +122,8 @@ settings:
   wizard_toggle: true
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
   preview: 0
   preview_label: ''
   preview_title: ''

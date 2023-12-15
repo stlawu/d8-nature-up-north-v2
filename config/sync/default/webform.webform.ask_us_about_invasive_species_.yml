@@ -11,7 +11,7 @@ archive: false
 id: ask_us_about_invasive_species_
 title: 'Ask Us About Invasive Species!'
 description: 'Questions or the upcoming podcast with SLELO PRISM'
-category: ''
+categories: {  }
 elements: |-
   name:
     '#type': textfield
@@ -116,6 +116,8 @@ settings:
   wizard_toggle: true
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
   preview: 0
   preview_label: ''
   preview_title: ''

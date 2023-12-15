@@ -11,7 +11,7 @@ archive: false
 id: ask_a_fairy_fall_2022_edition
 title: 'Ask A Fairy Fall 2022 Edition'
 description: ''
-category: ''
+categories: {  }
 elements: |-
   processed_text:
     '#type': processed_text

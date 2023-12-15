@@ -7,7 +7,7 @@ dependencies:
 id: view_encounters_dashboard
 label: 'View: Encounters Dashboard'
 code: |-
-  #edit-field-encounter-location-boundary-wrapper {
+  #edit-field-encounter-location-boundary-wrapper, [id^=edit-field-encounter-location-boundary-wrapper] {
   	display: none;
   }
 media: all
@@ -16,6 +16,6 @@ conditions:
   request_path:
     id: request_path
     negate: false
-    pages: "/encounters\r\n/encounters-dashboard"
+    pages: "/encounters\r\n/encounters/all\r\n/encounters-dashboard"
 contexts: {  }
 conditions_require_all: true

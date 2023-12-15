@@ -11,7 +11,7 @@ archive: false
 id: monitor_my_maple_with_adk_lauren
 title: 'Monitor My Maple with ADK Laurentian Chapter Registration'
 description: ''
-category: ''
+categories: {  }
 elements: |-
   names_of_participants:
     '#type': textarea

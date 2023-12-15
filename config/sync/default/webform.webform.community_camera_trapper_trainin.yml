@@ -11,7 +11,7 @@ archive: false
 id: community_camera_trapper_trainin
 title: 'Community Camera Trapper Training Course'
 description: 'This webform serves as the online training site for the 2020 pilot phase of the community camera trapper project funded by the Cloudsplitter Foundation.'
-category: ''
+categories: {  }
 elements: null
 css: ''
 javascript: ''
@@ -100,6 +100,8 @@ settings:
   wizard_toggle: false
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
   preview: 0
   preview_label: ''
   preview_title: ''

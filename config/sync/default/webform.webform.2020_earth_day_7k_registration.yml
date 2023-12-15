@@ -16,7 +16,7 @@ archive: false
 id: 2020_earth_day_7k_registration
 title: '2020 Earth Day 7K Registration'
 description: 'Registration form for the 2020 Earth Day 7k Trail run/walk.'
-category: ''
+categories: {  }
 elements: |-
   please_submit_once_for_each_person_registering_thank_you_:
     '#type': label
@@ -212,6 +212,8 @@ settings:
   wizard_toggle: true
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
   preview: 0
   preview_label: ''
   preview_title: ''
