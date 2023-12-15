@@ -9,7 +9,7 @@ dependencies:
     - node
     - user
 id: kayla_s_tinypic_finder
-label: 'Kayla''s TinyPic Finder'
+label: "Kayla's TinyPic Finder"
 module: views
 description: ''
 tag: ''
@@ -22,7 +22,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Kayla''s TinyPic Finder'
+      title: "Kayla's TinyPic Finder"
       fields:
         title:
           id: title

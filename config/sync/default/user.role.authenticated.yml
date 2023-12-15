@@ -8,6 +8,7 @@ dependencies:
   module:
     - comment
     - contact
+    - file
     - filter
     - media
     - profile
@@ -26,6 +27,7 @@ permissions:
   - 'access user profiles'
   - 'cancel account'
   - 'change own username'
+  - 'delete own files'
   - 'search content'
   - 'use text format simple_html'
   - 'use text format webform_default'

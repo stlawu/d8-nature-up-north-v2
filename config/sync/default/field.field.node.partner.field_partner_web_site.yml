@@ -12,7 +12,7 @@ field_name: field_partner_web_site
 entity_type: node
 bundle: partner
 label: 'Web site'
-description: 'The URL of the partner''s web site'
+description: "The URL of the partner's web site"
 required: false
 translatable: false
 default_value: {  }

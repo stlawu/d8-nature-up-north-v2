@@ -1,0 +1,11 @@
+name: Simple FB Connect
+type: module
+description: 'Allows users to authenticate with their Facebook accounts.'
+package: Authentication
+core_version_requirement: ^9 || ^10
+configure: simple_fb_connect.settings_form
+
+# Information added by Drupal.org packaging script on 2021-10-05
+version: '8.x-3.2'
+project: 'simple_fb_connect'
+datestamp: 1633456603

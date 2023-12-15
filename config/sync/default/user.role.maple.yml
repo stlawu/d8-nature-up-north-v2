@@ -12,6 +12,7 @@ dependencies:
   module:
     - comment
     - entity_browser
+    - file
     - honeypot
     - media
     - node
@@ -32,6 +33,7 @@ permissions:
   - 'create maple_tree content'
   - 'create media'
   - 'delete own encounter content'
+  - 'delete own files'
   - 'delete own maple_data content'
   - 'delete own maple_observation content'
   - 'delete own maple_tree content'

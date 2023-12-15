@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.comment_node_article
+    - field.field.node.article.field_hidden_content_theme
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
     - node.type.article
@@ -28,5 +29,6 @@ hidden:
   body: true
   comment: true
   comment_node_article: true
+  field_hidden_content_theme: true
   field_image: true
   field_tags: true

@@ -20,9 +20,11 @@ dependencies:
   module:
     - backup_migrate
     - block
+    - block_content
     - comment
     - contact
     - entity_browser
+    - file
     - filter
     - google_analytics
     - honeypot
@@ -47,6 +49,7 @@ is_admin: null
 permissions:
   - 'access administration pages'
   - 'access backup files'
+  - 'access block library'
   - 'access comments'
   - 'access content'
   - 'access content overview'
@@ -59,6 +62,8 @@ permissions:
   - 'access user contact forms'
   - 'access user profiles'
   - 'administer backup and migrate'
+  - 'administer block content'
+  - 'administer block types'
   - 'administer blocks'
   - 'administer comments'
   - 'administer contact forms'
@@ -114,6 +119,7 @@ permissions:
   - 'delete own community_organization content'
   - 'delete own encounter content'
   - 'delete own event content'
+  - 'delete own files'
   - 'delete own page content'
   - 'delete own partner content'
   - 'delete own pollinator_garden content'

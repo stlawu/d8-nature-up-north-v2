@@ -4,7 +4,7 @@ langcode: en
 uuid: 49f2d6ff-d9d1-41c7-9893-3ed09246f292
 name: 'Nature Up North'
 mail: info@natureupnorth.org
-slogan: 'It''s just our Nature here in northern New York'
+slogan: "It's just our Nature here in northern New York"
 page:
   403: /toboggan/denied
   404: /node/12

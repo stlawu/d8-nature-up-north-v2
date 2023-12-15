@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.announcement_.comment_node_announcement_
     - field.field.node.announcement_.field_announcement_details
+    - field.field.node.announcement_.field_hidden_content_theme
     - field.field.node.announcement_.field_thumbnail
     - node.type.announcement_
   module:
@@ -26,4 +27,5 @@ content:
 hidden:
   comment_node_announcement_: true
   field_announcement_details: true
+  field_hidden_content_theme: true
   field_thumbnail: true

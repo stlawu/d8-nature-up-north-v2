@@ -579,7 +579,7 @@ display:
       menu:
         type: tab
         title: Preview
-        description: 'Preview the Node''s Display Modes'
+        description: "Preview the Node's Display Modes"
         weight: 0
         expanded: false
         menu_name: admin

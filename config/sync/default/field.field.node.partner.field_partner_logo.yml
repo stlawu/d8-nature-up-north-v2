@@ -12,7 +12,7 @@ field_name: field_partner_logo
 entity_type: node
 bundle: partner
 label: Logo
-description: 'Partner''s logo, mark or other graphic to display.'
+description: "Partner's logo, mark or other graphic to display."
 required: false
 translatable: false
 default_value: {  }

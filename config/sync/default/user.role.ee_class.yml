@@ -9,6 +9,7 @@ dependencies:
   module:
     - comment
     - entity_browser
+    - file
     - honeypot
     - media
     - node
@@ -31,6 +32,7 @@ permissions:
   - 'create media'
   - 'delete own encounter content'
   - 'delete own event content'
+  - 'delete own files'
   - 'edit own comments'
   - 'edit own community_organization content'
   - 'edit own encounter content'

@@ -12,7 +12,7 @@ field_name: field_organization_logo
 entity_type: node
 bundle: community_organization
 label: Logo
-description: 'Organization''s logo, mark, or other graphic to display'
+description: "Organization's logo, mark, or other graphic to display"
 required: false
 translatable: false
 default_value: {  }

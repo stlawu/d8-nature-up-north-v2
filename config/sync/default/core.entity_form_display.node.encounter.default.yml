@@ -123,7 +123,7 @@ content:
           settings:
             location_option_id: fixed_value
             latitude: 44.6
-            longitude: !!float -75
+            longitude: -75.0
           map_center_id: location_plugins
         fit_bounds:
           enable: false
@@ -665,7 +665,7 @@ content:
         inertiaDeceleration: 3000
         easeLinearity: 0.2
         worldCopyJump: false
-        maxBoundsViscosity: !!float 0
+        maxBoundsViscosity: 0.0
         keyboard: true
         keyboardPanDelta: 80
         scrollWheelZoom: true

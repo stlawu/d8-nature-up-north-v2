@@ -1,5 +1,5 @@
 status: 2
-pattern: '[current-user:account-name]''s Tree added on [current-date:comment_format]'
+pattern: "[current-user:account-name]'s Tree added on [current-date:comment_format]"
 escape: false
 dependencies:
   config:

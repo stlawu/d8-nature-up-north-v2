@@ -12,7 +12,7 @@ field_name: field_organization_web_site
 entity_type: node
 bundle: community_organization
 label: 'Web site'
-description: 'The URL of the community organization''s website'
+description: "The URL of the community organization's website"
 required: false
 translatable: false
 default_value: {  }

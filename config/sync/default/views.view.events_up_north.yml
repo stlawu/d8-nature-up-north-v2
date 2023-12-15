@@ -553,7 +553,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: '<hr><strong>{{ field_event_date_1|split('' - '')[0] }}</strong><hr>'
+            text: "<hr><strong>{{ field_event_date_1|split(' - ')[0] }}</strong><hr>"
             make_link: false
             path: ''
             absolute: false
@@ -602,7 +602,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: '{{ field_event_date_2|split('' - '')[0] }}'
+            text: "{{ field_event_date_2|split(' - ')[0] }}"
             make_link: false
             path: ''
             absolute: false
@@ -716,7 +716,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<strong>{{ field_event_date_3|split('' - '')[0] }} | </strong>'
+            text: "<strong>{{ field_event_date_3|split(' - ')[0] }} | </strong>"
             make_link: false
             path: ''
             absolute: false

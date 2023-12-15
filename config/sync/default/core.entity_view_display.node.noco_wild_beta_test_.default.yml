@@ -10,13 +10,11 @@ dependencies:
     - field.field.node.noco_wild_beta_test_.field_files
     - field.field.node.noco_wild_beta_test_.field_nocowild_category
     - field.field.node.noco_wild_beta_test_.field_web_links
-    - field.field.node.noco_wild_beta_test_.layout_builder__layout
     - node.type.noco_wild_beta_test_
   module:
     - comment
     - file
     - layout_builder
-    - layout_discovery
     - link
     - text
     - user

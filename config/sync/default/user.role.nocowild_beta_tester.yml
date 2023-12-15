@@ -4,11 +4,13 @@ status: true
 dependencies:
   module:
     - comment
+    - file
 id: nocowild_beta_tester
 label: 'NoCoWild Beta tester'
 weight: 12
 is_admin: null
 permissions:
+  - 'delete own files'
   - 'edit own comments'
   - 'post comments'
   - 'skip comment approval'

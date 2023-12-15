@@ -5,8 +5,12 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.pollinator_garden.field_first_name
+    - field.field.node.pollinator_garden.field_garden_size
     - field.field.node.pollinator_garden.field_last_name
+    - field.field.node.pollinator_garden.field_note
     - field.field.node.pollinator_garden.field_pollinator_garden
+    - field.field.node.pollinator_garden.field_pollinator_garden_addition
+    - field.field.node.pollinator_garden.field_pollinator_garden_address
     - field.field.node.pollinator_garden.field_pollinator_garden_date
     - field.field.node.pollinator_garden.field_pollinator_garden_day
     - field.field.node.pollinator_garden.field_pollinator_garden_image
@@ -17,6 +21,7 @@ dependencies:
     - field.field.node.pollinator_garden.field_pollinator_garden_sqft
     - field.field.node.pollinator_garden.field_pollinator_garden_year
     - field.field.node.pollinator_garden.field_pollinator_other_seed_src
+    - field.field.node.pollinator_garden.field_pollinator_other_space
     - node.type.pollinator_garden
   module:
     - user
@@ -32,8 +37,12 @@ content:
     region: content
 hidden:
   field_first_name: true
+  field_garden_size: true
   field_last_name: true
+  field_note: true
   field_pollinator_garden: true
+  field_pollinator_garden_addition: true
+  field_pollinator_garden_address: true
   field_pollinator_garden_date: true
   field_pollinator_garden_day: true
   field_pollinator_garden_image: true
@@ -44,3 +53,4 @@ hidden:
   field_pollinator_garden_sqft: true
   field_pollinator_garden_year: true
   field_pollinator_other_seed_src: true
+  field_pollinator_other_space: true

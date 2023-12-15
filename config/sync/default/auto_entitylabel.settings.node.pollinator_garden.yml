@@ -1,5 +1,5 @@
 status: 2
-pattern: '[node:field_first_name]''s Garden'
+pattern: "[node:field_first_name]'s Garden"
 escape: false
 dependencies:
   config:

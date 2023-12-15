@@ -46,6 +46,7 @@ dependencies:
     - contextual
     - entity_browser
     - field_permissions
+    - file
     - filter
     - google_analytics
     - honeypot
@@ -148,6 +149,7 @@ permissions:
   - 'delete own educator_resource content'
   - 'delete own encounter content'
   - 'delete own event content'
+  - 'delete own files'
   - 'delete own maple_data content'
   - 'delete own maple_observation content'
   - 'delete own maple_tree content'

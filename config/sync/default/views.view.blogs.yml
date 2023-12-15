@@ -289,6 +289,15 @@ display:
             date_format: custom
             custom_date_format: 'F j, Y'
             timezone: ''
+            tooltip:
+              date_format: ''
+              custom_date_format: ''
+            time_diff:
+              enabled: false
+              future_format: '@interval hence'
+              past_format: '@interval ago'
+              granularity: 2
+              refresh: 60
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -374,9 +383,9 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<strong>Blog:</strong> <a href="/blogs/{{ field_blog_category|lower|replace({'' '': ''-''}) }}">{{ field_blog_category }}</a>'
+            text: "<strong>Blog:</strong> <a href=\"/blogs/{{ field_blog_category|lower|replace({' ': '-'}) }}\">{{ field_blog_category }}</a>"
             make_link: false
-            path: '/blogs/{{ field_blog_category|lower|replace({'' '': ''-''}) }}'
+            path: "/blogs/{{ field_blog_category|lower|replace({' ': '-'}) }}"
             absolute: true
             external: false
             replace_spaces: true

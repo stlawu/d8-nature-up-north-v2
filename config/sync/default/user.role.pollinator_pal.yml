@@ -6,6 +6,7 @@ dependencies:
     - node.type.pollinator_garden
   module:
     - entity_browser
+    - file
     - media
     - node
 id: pollinator_pal
@@ -17,4 +18,5 @@ permissions:
   - 'access existing_image_media entity browser pages'
   - 'create media'
   - 'create pollinator_garden content'
+  - 'delete own files'
   - 'edit own pollinator_garden content'

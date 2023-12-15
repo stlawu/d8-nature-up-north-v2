@@ -8,6 +8,7 @@ dependencies:
     - node.type.maple_tree
   module:
     - entity_browser
+    - file
     - media
     - node
 id: maple_admin
@@ -25,6 +26,7 @@ permissions:
   - 'delete any maple_data content'
   - 'delete any maple_observation content'
   - 'delete any maple_tree content'
+  - 'delete own files'
   - 'delete own maple_data content'
   - 'delete own maple_observation content'
   - 'delete own maple_tree content'

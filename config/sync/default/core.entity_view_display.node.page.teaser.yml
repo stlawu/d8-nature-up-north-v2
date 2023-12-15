@@ -8,6 +8,8 @@ dependencies:
     - field.field.node.page.comment_node_page
     - field.field.node.page.field_basic_page_attachment
     - field.field.node.page.field_basic_page_image
+    - field.field.node.page.field_hidden_content_theme
+    - field.field.node.page.field_theme
     - node.type.page
   module:
     - text
@@ -39,3 +41,5 @@ hidden:
   comment_node_page: true
   field_basic_page_attachment: true
   field_basic_page_image: true
+  field_hidden_content_theme: true
+  field_theme: true

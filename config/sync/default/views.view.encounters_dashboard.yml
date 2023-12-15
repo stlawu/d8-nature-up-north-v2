@@ -980,7 +980,7 @@ display:
               settings:
                 location_option_id: fixed_value
                 latitude: 44.5
-                longitude: !!float -75
+                longitude: -75.0
               map_center_id: location_plugins
             fit_bounds:
               enable: false
@@ -1051,7 +1051,7 @@ display:
                 weight: 0
                 settings:
                   display_control: false
-                  bearing: !!float 0
+                  bearing: 0.0
                 enabled: false
               leaflet_control_attribution:
                 weight: 0
@@ -1535,7 +1535,7 @@ display:
             inertiaDeceleration: 3000
             easeLinearity: 0.2
             worldCopyJump: false
-            maxBoundsViscosity: !!float 0
+            maxBoundsViscosity: 0.0
             keyboard: true
             keyboardPanDelta: 80
             scrollWheelZoom: true
@@ -1909,7 +1909,7 @@ display:
               settings:
                 location_option_id: fixed_value
                 latitude: 44.66
-                longitude: !!float -75
+                longitude: -75.0
               map_center_id: location_plugins
             fit_bounds:
               enable: false
@@ -1974,7 +1974,7 @@ display:
                 weight: 0
                 settings:
                   display_control: false
-                  bearing: !!float 0
+                  bearing: 0.0
                 enabled: false
               leaflet_control_attribution:
                 weight: 0
@@ -1998,7 +1998,7 @@ display:
                     autocomplete_min_length: 1
                     location_priority:
                       lat: 44.5
-                      lng: !!float -75
+                      lng: -75.0
                     remove_duplicates: false
                 enabled: true
               leaflet_control_locate:
@@ -2450,7 +2450,7 @@ display:
             inertiaDeceleration: 3000
             easeLinearity: 0.2
             worldCopyJump: false
-            maxBoundsViscosity: !!float 0
+            maxBoundsViscosity: 0.0
             keyboard: true
             keyboardPanDelta: 80
             scrollWheelZoom: true

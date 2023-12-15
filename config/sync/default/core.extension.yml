@@ -88,6 +88,7 @@ module:
   path: 0
   path_alias: 0
   pathauto: 0
+  phpass: 0
   prepopulate: 0
   prlp: 0
   profile: 0

@@ -18,7 +18,7 @@ provider: null
 plugin: 'block_content:8568af99-8802-4edd-9a66-2d28ced50160'
 settings:
   id: 'block_content:8568af99-8802-4edd-9a66-2d28ced50160'
-  label: 'What''s Your Nature?'
+  label: "What's Your Nature?"
   label_display: '0'
   provider: block_content
   status: true

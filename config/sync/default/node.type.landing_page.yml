@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 name: 'Landing Page'
 type: landing_page
-description: 'A custom page that is fully configurable using Drupal''s core Layout Builder functionality.'
+description: "A custom page that is fully configurable using Drupal's core Layout Builder functionality."
 help: ''
 new_revision: true
 preview_mode: 1
