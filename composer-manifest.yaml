@@ -53,7 +53,7 @@ packages:
     drupal/core-composer-scaffold: 10.1.7
     drupal/core-project-message: 10.1.7
     drupal/core-recommended: 10.1.7
-    drupal/csv_serialization: 3.0.0
+    drupal/csv_serialization: 4.0.0
     drupal/ctools: 3.14.0
     drupal/devel: 5.1.2
     drupal/ds: 3.15.0
