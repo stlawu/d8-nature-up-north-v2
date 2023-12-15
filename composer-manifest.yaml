@@ -8,11 +8,6 @@ packages:
     bower-asset/jquery: 3.6.4
     chi-teck/drupal-code-generator: 1.33.1
     choices/choices: 9.0.1
-    ckeditor/autogrow: 4.21.0
-    ckeditor/codemirror: v1.18.7
-    ckeditor/fakeobjects: 4.21.0
-    ckeditor/image: 4.21.0
-    ckeditor/link: 4.21.0
     codemirror/codemirror: 5.65.12
     commerceguys/addressing: v1.4.2
     composer/installers: v1.12.0
@@ -47,10 +42,12 @@ packages:
     drupal/bootstrap: 3.29.0
     drupal/bootstrap_layouts: 5.3.0
     drupal/captcha: 1.14.0
+    drupal/ckeditor: 1.0.2
     drupal/coffee: 1.3.0
     drupal/colorbox: 2.0.1
+    drupal/composer_deploy: 1.7.0
     drupal/conditional_fields: 4.0.0-alpha5
-    drupal/config_direct_save: 2.1.0
+    drupal/config_direct_save: 3.0.1
     drupal/config_update: 1.7.0
     drupal/core: 9.5.11
     drupal/core-composer-scaffold: 9.5.11
@@ -65,7 +62,7 @@ packages:
     drupal/entity: 1.4.0
     drupal/entity_browser: 2.10.0
     drupal/entity_embed: 1.5.0
-    drupal/entity_reference_display: 1.4.0
+    drupal/entity_reference_display: 2.0.0
     drupal/entity_reference_revisions: 1.10.0
     drupal/entity_reference_views_select: 1.5.0
     drupal/eva: 3.0.0
@@ -89,7 +86,7 @@ packages:
     drupal/jquery_ui_touch_punch: 1.1.0
     drupal/layout_builder_styles: 2.0.0
     drupal/mailsystem: 4.4.0
-    drupal/markup: 1.0.0-beta5
+    drupal/markup: 2.0.0-beta6
     drupal/menu_block: 1.10.0
     drupal/paragraphs: 1.16.0
     drupal/pathauto: 1.12.0
@@ -168,6 +165,7 @@ packages:
     phpunit/php-timer: 6.0.0
     phpunit/phpunit: 10.5.3
     politsin/jquery-ui-touch-punch: '1.0'
+    popperjs/popperjs: 2.11.6
     progress-tracker/progress-tracker: 2.0.7
     psr/cache: 1.0.1
     psr/container: 1.1.2
@@ -234,8 +232,7 @@ packages:
     symfony/yaml: v4.4.45
     tabby/tabby: 12.0.3
     theseer/tokenizer: 1.2.2
-    tippyjs/5.x: 5.2.1
-    tippyjs/6.x: 6.3.7
+    tippyjs/tippyjs: 6.3.7
     twig/twig: v2.15.6
     typo3/phar-stream-wrapper: v3.1.7
     webflo/drupal-finder: 1.2.2
