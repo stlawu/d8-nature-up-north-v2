@@ -1,6 +1,6 @@
 _core:
   default_config_hash: 5YkLBJiAXgH9BDLkDIb1ozqfCXWwvZggf4XfcXgfjzc
-account: UA-62820834-1
+account: 'UA-62820834-1,G-MTYVQ7RFR2'
 domain_mode: 0
 cross_domains: ''
 visibility:
@@ -25,7 +25,8 @@ track:
   displayfeatures: false
 privacy:
   anonymizeip: false
-custom: {  }
+custom:
+  parameters: {  }
 codesnippet:
   create: {  }
   before: ''
