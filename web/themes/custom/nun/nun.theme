@@ -65,8 +65,8 @@ use Drupal\views\ViewExecutable;
         if(!$photo_field->isEmpty()) {
           $photo_field_value = $photo_field->getValue();
           $profile_data['image_url'] = ImageStyle::load('square_encounter_large')->buildUrl($photo_field->entity->uri->value);
-          $profile_data['image_title'] = $photo_field_value['title'];
-          $profile_data['image_alt'] = $photo_field_value['alt'];
+          $profile_data['image_title'] = array_key_exists('title', $photo_field_value) ? $photo_field_value['title'] : "";
+          $profile_data['image_alt'] = array_key_exists('alt', $photo_field_value) ? $photo_field_value['alt'] : "";
         } else {
           $default_image = $photo_field->getSetting('default_image');
           if($default_image && $default_image['uuid']) {
