@@ -107,6 +107,8 @@ packages:
     drupal/typed_data: 1.0.0-beta2
     drupal/upgrade_status: 4.0.0
     drupal/views_data_export: 1.4.0
+    drupal/views_sort_null_field: 1.2.0
+    drupal/viewsreference: 2.0.0-beta7
     drupal/webform: 6.2.2
     drush/drush: 12.4.3
     egulias/email-validator: 4.0.2

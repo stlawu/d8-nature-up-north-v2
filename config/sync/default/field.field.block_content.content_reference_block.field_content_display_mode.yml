@@ -20,7 +20,8 @@ default_value_callback: ''
 settings:
   exclude:
     default: default
+    card: card
     full: full
     teaser: teaser
-  negate: 1
+  negate: true
 field_type: entity_reference_display

@@ -1,0 +1,33 @@
+uuid: 5e4507a6-f367-4079-9fa1-88eca4bbec80
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.view_reference_block
+    - field.field.block_content.view_reference_block.body
+    - field.field.block_content.view_reference_block.field_view
+  module:
+    - text
+    - viewsreference
+id: block_content.view_reference_block.default
+targetEntityType: block_content
+bundle: view_reference_block
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_view:
+    type: viewsreference_formatter
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

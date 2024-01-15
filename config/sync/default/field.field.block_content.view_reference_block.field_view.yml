@@ -1,0 +1,35 @@
+uuid: 467c4297-cdc2-47bf-8a0d-c279cb422b46
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.view_reference_block
+    - field.storage.block_content.field_view
+  module:
+    - viewsreference
+id: block_content.view_reference_block.field_view
+field_name: field_view
+entity_type: block_content
+bundle: view_reference_block
+label: View
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+  plugin_types:
+    block: block
+  preselect_views:
+    profiles_blocks: profiles_blocks
+  enabled_settings:
+    pager: pager
+    argument: argument
+    limit: 0
+    offset: 0
+    title: true
+field_type: viewsreference

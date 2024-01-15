@@ -1,0 +1,26 @@
+uuid: 1ca54140-d842-4225-bc24-428842d184e8
+langcode: en
+status: true
+dependencies: {  }
+id: display_mode_card
+label: 'Display mode: card'
+code: |-
+  .card {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin: .5rem;
+      max-width: 320px;
+  }
+  .card .card-body {
+      padding: 0 1rem 1rem;
+  }
+  .card .card-img-top,
+  .card .card-img-top img {
+      object-fit: cover;
+      aspect-ratio: 1;
+  }
+media: all
+preprocess: true
+conditions: {  }
+contexts: {  }
+conditions_require_all: true

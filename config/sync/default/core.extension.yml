@@ -115,7 +115,9 @@ module:
   upgrade_status: 0
   user: 0
   views_data_export: 0
+  views_sort_null_field: 0
   views_ui: 0
+  viewsreference: 0
   webform: 0
   webform_jqueryui_datepicker: 0
   webform_ui: 0

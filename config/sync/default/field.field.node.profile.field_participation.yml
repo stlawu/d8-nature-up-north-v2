@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_participation
     - node.type.profile
+    - taxonomy.vocabulary.team_member_season
 id: node.profile.field_participation
 field_name: field_participation
 entity_type: node
@@ -16,10 +17,13 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: views
+  handler: 'default:taxonomy_term'
   handler_settings:
-    view:
-      view_name: entity_reference_team_member_season
-      display_name: entity_reference_1
-      arguments: {  }
+    target_bundles:
+      team_member_season: team_member_season
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
 field_type: entity_reference

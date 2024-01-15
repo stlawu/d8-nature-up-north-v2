@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eda369bcdbf841cca2af60e707688e01",
+    "content-hash": "771f8e566f445db4a7dbc82190d2a7e1",
     "packages": [
         {
             "name": "algolia/places",
@@ -6867,6 +6867,125 @@
             "homepage": "https://www.drupal.org/project/views_data_export",
             "support": {
                 "source": "https://git.drupalcode.org/project/views_data_export"
+            }
+        },
+        {
+            "name": "drupal/views_sort_null_field",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/views_sort_null_field.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_sort_null_field-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "d7b450b0ad27512675358abee82f8b41893f6d26"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1695412507",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "generalredneck",
+                    "homepage": "https://www.drupal.org/user/368854"
+                },
+                {
+                    "name": "joachim",
+                    "homepage": "https://www.drupal.org/user/107701"
+                },
+                {
+                    "name": "miiimooo",
+                    "homepage": "https://www.drupal.org/user/62954"
+                }
+            ],
+            "description": "This module provides an additional sort for FieldAPI fields, which sorts by whether the field is empty or not. This allows empty (i.e. NULL) values in fields to be sorted last.",
+            "homepage": "https://www.drupal.org/project/views_sort_null_field",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/views_sort_null_field",
+                "issues": "https://www.drupal.org/project/issues/views_sort_null_field"
+            }
+        },
+        {
+            "name": "drupal/viewsreference",
+            "version": "2.0.0-beta7",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/viewsreference.git",
+                "reference": "8.x-2.0-beta7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/viewsreference-8.x-2.0-beta7.zip",
+                "reference": "8.x-2.0-beta7",
+                "shasum": "a1adf505b6cc7e175c548a2db52d6e26ba59a299"
+            },
+            "require": {
+                "drupal/core": "^9.3 || ^10"
+            },
+            "conflict": {
+                "drupal/viewsreferennce": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-2.0-beta7",
+                    "datestamp": "1698849225",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "jasonawant",
+                    "homepage": "https://www.drupal.org/user/589890"
+                },
+                {
+                    "name": "joekers",
+                    "homepage": "https://www.drupal.org/user/2229066"
+                },
+                {
+                    "name": "NewZeal",
+                    "homepage": "https://www.drupal.org/user/93571"
+                },
+                {
+                    "name": "seanB",
+                    "homepage": "https://www.drupal.org/user/545912"
+                }
+            ],
+            "description": "Views reference",
+            "homepage": "http://drupal.org/project/viewsreference",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/viewsreference",
+                "issues": "https://www.drupal.org/project/issues/viewsreference"
             }
         },
         {
@@ -15128,7 +15247,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/simple_block": 10
+        "drupal/simple_block": 10,
+        "drupal/viewsreference": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,

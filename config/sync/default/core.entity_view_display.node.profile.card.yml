@@ -1,8 +1,9 @@
-uuid: b75b401d-14e0-45a0-8fdf-ea1c0e3cf9ed
+uuid: 49a4c31e-f9c8-457e-825e-948e09ad679a
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.card
     - field.field.node.profile.body
     - field.field.node.profile.field_area_of_study
     - field.field.node.profile.field_current_active
@@ -22,6 +23,7 @@ dependencies:
   module:
     - field_group
     - image
+    - layout_builder
     - user
 third_party_settings:
   field_group:
@@ -84,10 +86,13 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-id: node.profile.default
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.profile.card
 targetEntityType: node
 bundle: profile
-mode: default
+mode: card
 content:
   field_portrait:
     type: image
