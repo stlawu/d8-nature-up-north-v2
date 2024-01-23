@@ -1,40 +1,98 @@
-uuid: a57597f2-2c18-4742-8a28-940f99fee818
+uuid: b5cd21af-07df-4396-bfe3-7e7f41259910
 langcode: en
 status: closed
 dependencies: {  }
 weight: 0
 open: null
 close: null
-uid: 19466
+uid: 19788
 template: false
 archive: false
-id: ask_a_fairy_fall_2023_edition_
-title: 'Ask A Fairy Fall 2023 Edition!'
+id: lampson_falls_hike_duplicate
+title: 'Lampson Falls Hike Duplicate'
 description: ''
 categories: {  }
 elements: |-
-  processed_text:
-    '#type': processed_text
-    '#text': 'Great job! You found the fairy house! Ask your question in the box below and stay tuned to https://www.natureupnorth.org to find a fairy''s answer!'
-    '#format': plain_text
-  name:
+  please_submit_once_for_each_person_registering_thank_you_:
+    '#type': label
+    '#title': 'Please submit once for each person registering. Thank you!'
+  first_name:
     '#type': textfield
-    '#title': Name
-  age:
+    '#title': 'First Name'
+    '#title_display': before
+    '#description_display': tooltip
+    '#minlength': 1
+    '#maxlength': 25
+    '#required': true
+  last_name:
     '#type': textfield
-    '#title': Age
-  what_is_your_question_for_the_fairies_:
-    '#type': textarea
-    '#title': 'What is your question for the fairies?'
-  do_you_want_to_share_a_picture_of_you_at_the_fairy_house_for_the:
-    '#type': webform_image_file
-    '#title': 'Do you want to share a picture of you at the fairy house for the fairies to see?'
-  which_trail_did_you_find_the_fairy_house_on_:
-    '#type': radios
-    '#title': 'Which trail did you find the fairy house on? '
+    '#title': 'Last Name'
+    '#title_display': before
+    '#description_display': tooltip
+    '#minlength': 1
+    '#maxlength': 30
+    '#required': true
+  email_address:
+    '#type': email
+    '#title': 'Email Address'
+    '#title_display': before
+    '#description_display': tooltip
+    '#required': true
+  age_class:
+    '#type': select
+    '#title': 'Age Class'
     '#options':
-      'Stone Valley Trail': 'Stone Valley Trail'
-      'Hart''s Falls Preseve': 'Hart''s Falls Preseve'
+      'Youth (12 and under)': 'Youth (12 and under)'
+      'Open (13-39)': 'Open (13-39)'
+      'Masters (40+)': 'Masters (40+)'
+    '#required': true
+  division:
+    '#type': select
+    '#title': Division
+    '#options':
+      Women: Women
+      Men: Men
+      'Gender Nonconforming': 'Gender Nonconforming'
+      'Prefer not to say': 'Prefer not to say'
+    '#required': true
+  would_you_like_a_t_shirt_:
+    '#type': select
+    '#title': 'Would You Like A T-Shirt?'
+    '#options':
+      'Yes': 'Yes'
+      'No': 'No'
+    '#required': true
+  t_shirt_size_unisex_:
+    '#type': select
+    '#title': 'T-Shirt Size (unisex)'
+    '#options':
+      'Youth (S)': 'Youth (S)'
+      'Youth (M)': 'Youth (M)'
+      'Youth (L)': 'Youth (L)'
+      'Youth (XL)': 'Youth (XL)'
+      'Adult (S)': 'Adult (S)'
+      'Adult (M)': 'Adult (M)'
+      'Adult (L)': 'Adult (L)'
+      'Adult (XL)': 'Adult (XL)'
+  how_did_you_hear_about_this_event_:
+    '#type': select
+    '#title': 'How did you hear about this event? '
+    '#options':
+      'Online calendar': 'Online calendar'
+      Instagram: Instagram
+      Facebook: Facebook
+      Newspaper: Newspaper
+      'From a friend': 'From a friend'
+      Other: Other
+  payment:
+    '#type': webform_message
+    '#message_type': info
+    '#message_message': |
+      <p><strong>Submitting Below Will Complete Your Registration And Take You To Our Payment Form</strong><br />
+      All net proceeds from this event will support environmental education opportunities in the North Country for families, K-12 students, and community members.&nbsp;</p>
+  thank_you_for_your_interest_and_registration_:
+    '#type': label
+    '#title': 'Thank you for your interest and registration!'
 css: ''
 javascript: ''
 settings:
@@ -119,7 +177,7 @@ settings:
   wizard_track: ''
   wizard_prev_button_label: ''
   wizard_next_button_label: ''
-  wizard_toggle: false
+  wizard_toggle: true
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
   wizard_page_type: container
@@ -139,8 +197,8 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: page
-  confirmation_url: ''
+  confirmation_type: url
+  confirmation_url: 'https://alumni.stlawu.edu/nature-up-north-7k'
   confirmation_title: ''
   confirmation_message: ''
   confirmation_attributes: {  }

@@ -1,40 +1,43 @@
-uuid: a57597f2-2c18-4742-8a28-940f99fee818
+uuid: 33f2d7ce-8ad4-459a-998d-f7c6f35113e8
 langcode: en
 status: closed
 dependencies: {  }
 weight: 0
 open: null
 close: null
-uid: 19466
+uid: 19788
 template: false
 archive: false
-id: ask_a_fairy_fall_2023_edition_
-title: 'Ask A Fairy Fall 2023 Edition!'
-description: ''
+id: lampson_falls_hike_jan_7th_2024
+title: 'Lampson Falls Hike Jan. 7th 2024'
+description: 'This is a signup page for a hike to Lampson Falls on Jan. 7th 2024.'
 categories: {  }
 elements: |-
-  processed_text:
-    '#type': processed_text
-    '#text': 'Great job! You found the fairy house! Ask your question in the box below and stay tuned to https://www.natureupnorth.org to find a fairy''s answer!'
-    '#format': plain_text
-  name:
-    '#type': textfield
-    '#title': Name
-  age:
-    '#type': textfield
-    '#title': Age
-  what_is_your_question_for_the_fairies_:
-    '#type': textarea
-    '#title': 'What is your question for the fairies?'
-  do_you_want_to_share_a_picture_of_you_at_the_fairy_house_for_the:
-    '#type': webform_image_file
-    '#title': 'Do you want to share a picture of you at the fairy house for the fairies to see?'
-  which_trail_did_you_find_the_fairy_house_on_:
-    '#type': radios
-    '#title': 'Which trail did you find the fairy house on? '
-    '#options':
-      'Stone Valley Trail': 'Stone Valley Trail'
-      'Hart''s Falls Preseve': 'Hart''s Falls Preseve'
+  your_name:
+    '#type': webform_name
+    '#title': 'Your Name'
+    '#title__access': false
+    '#first__required': true
+    '#middle__access': false
+    '#last__required': true
+    '#suffix__access': false
+    '#degree__access': false
+    '#flexbox': '0'
+  your_email:
+    '#type': email
+    '#title': 'Your Email'
+  your_preferred_phone_number:
+    '#type': tel
+    '#title': 'Your preferred phone number'
+  how_many_people_are_you_bringing_:
+    '#type': number
+    '#title': 'How many people are you bringing?'
+  how_many_pairs_of_snowshoes_will_you_need_:
+    '#type': number
+    '#title': 'How many children''s pairs of snowshoes will you need?'
+  how_many_adult_pairs_will_you_need_:
+    '#type': number
+    '#title': 'How many adult pairs of snowshoes will you need?'
 css: ''
 javascript: ''
 settings:
@@ -218,5 +221,42 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  email:
+    id: email
+    handler_id: email
+    label: Email
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: 'info@natureupnorth.org, djfrench@stlawu.edu'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: _default
+      body: _default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
 variants: {  }
