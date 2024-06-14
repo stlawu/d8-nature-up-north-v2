@@ -27,6 +27,7 @@ dependencies:
     - file
     - filter
     - google_analytics
+    - help
     - honeypot
     - image
     - media
@@ -55,6 +56,7 @@ permissions:
   - 'access content overview'
   - 'access entity_embed_image_media entity browser pages'
   - 'access existing_image_media entity browser pages'
+  - 'access help pages'
   - 'access site in maintenance mode'
   - 'access site reports'
   - 'access site-wide contact form'

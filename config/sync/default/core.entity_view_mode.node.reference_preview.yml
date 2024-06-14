@@ -6,5 +6,6 @@ dependencies:
     - node
 id: node.reference_preview
 label: 'Reference Preview'
+description: ''
 targetEntityType: node
 cache: true

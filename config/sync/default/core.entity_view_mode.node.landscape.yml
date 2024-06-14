@@ -6,5 +6,6 @@ dependencies:
     - node
 id: node.landscape
 label: Landscape
+description: ''
 targetEntityType: node
 cache: true

@@ -15,5 +15,5 @@ features:
   slogan: true
 logo:
   path: 'public://nature_up_north_logo.png'
-  url: ''
+  url: null
   use_default: false

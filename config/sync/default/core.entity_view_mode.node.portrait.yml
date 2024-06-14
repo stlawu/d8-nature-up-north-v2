@@ -6,5 +6,6 @@ dependencies:
     - node
 id: node.portrait
 label: Portrait
+description: ''
 targetEntityType: node
 cache: true
