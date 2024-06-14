@@ -1,6 +1,6 @@
-uuid: 38404c73-0f9d-4e72-bb13-14a926a89c02
+uuid: d140ec49-602f-484d-bdc9-7d20fae6224c
 langcode: en
-status: closed
+status: open
 dependencies: {  }
 weight: 0
 open: null
@@ -8,14 +8,14 @@ close: null
 uid: 19788
 template: false
 archive: false
-id: 6th_annual_cardboard_sled_race_r
-title: '6th Annual Cardboard Sled Race Registration'
-description: 'Registration page for the 6th annual cardboard sled race'
+id: raven_steals_the_sun_registratio
+title: 'Raven Steals the Sun Registration'
+description: '<p>Register for&nbsp;Raven Steals the Sun: Native American Eclipse Stories with Perry Ground</p>'
 categories: {  }
 elements: |-
-  please_submit_once_for_each_person_registering_thank_you_:
+  please_submit_once_for_each_participant_:
     '#type': label
-    '#title': "Please submit once with your team leader's details (name, email)"
+    '#title': 'Please submit once for each participant.'
   first_name:
     '#type': textfield
     '#title': 'First Name'
@@ -28,18 +28,6 @@ elements: |-
     '#type': email
     '#title': 'Email Address'
     '#required': true
-  your_team_name:
-    '#type': textfield
-    '#title': 'Your Team Name'
-    '#required': true
-  age_class:
-    '#type': select
-    '#title': 'Age Class'
-    '#options':
-      'Youth (12 and under)': 'Youth (12 and under)'
-      'Open (13-39)': 'Open (13-39)'
-      'Masters (40+)': 'Masters (40+)'
-    '#required': true
   how_did_you_hear_about_this_event_:
     '#type': select
     '#title': 'How did you hear about this event? '
@@ -50,11 +38,6 @@ elements: |-
       Newspaper: Newspaper
       'Word of mouth': 'Word of mouth'
       Other: Other
-  payment:
-    '#type': webform_message
-    '#message_message': |
-      <strong>Submitting Below Will Complete Your Registration And Take You To Our Payment Form</strong><br />
-      All net proceeds from this event will support environmental education opportunities in the North Country for families, K-12 students, and community members.&nbsp;
   thank_you_for_your_interest_and_registration_:
     '#type': label
     '#title': 'Thank you for your interest and registration!'
@@ -163,7 +146,7 @@ settings:
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
   confirmation_type: url
-  confirmation_url: 'https://www.natureupnorth.org/event/6th-annual-nature-north-cardboard-sled-races'
+  confirmation_url: 'https://www.natureupnorth.org/event/hike-red-sandstone-trail-potsdam-pride'
   confirmation_title: ''
   confirmation_message: ''
   confirmation_attributes: {  }
