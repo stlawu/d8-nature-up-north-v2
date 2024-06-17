@@ -53,7 +53,7 @@
         "drupal/features": "^3.8",
         "drupal/field_group": "^3.4",
         "drupal/field_permissions": "^1.0",
-        "drupal/file_mdm": "^3",
+        "drupal/file_mdm": "^3.1.0",
         "drupal/flag": "^4.0",
         "drupal/geolocation": "^3.12",
         "drupal/google_analytics": "^4.0",
