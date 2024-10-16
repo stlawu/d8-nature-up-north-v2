@@ -5,7 +5,7 @@ dependencies: {  }
 name: 'Community Organization'
 type: community_organization
 description: 'A community organization that does something environmental/place based;'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

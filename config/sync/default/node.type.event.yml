@@ -5,7 +5,7 @@ dependencies: {  }
 name: Event
 type: event
 description: 'An environmentally-oriented event taking place within the NUN region'
-help: ''
+help: null
 new_revision: false
 preview_mode: 1
 display_submitted: false

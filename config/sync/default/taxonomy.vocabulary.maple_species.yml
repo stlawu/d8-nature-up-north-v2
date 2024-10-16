@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Maple Species'
 vid: maple_species
-description: ''
+description: null
 weight: 0
+new_revision: false

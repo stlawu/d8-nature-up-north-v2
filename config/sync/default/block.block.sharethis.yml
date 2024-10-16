@@ -5,6 +5,7 @@ dependencies:
   module:
     - node
     - sharethis
+    - system
   theme:
     - nun
 id: sharethis
@@ -48,3 +49,7 @@ visibility:
       trail_head: trail_head
       workshop: workshop
       workshop_follow_up: workshop_follow_up
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/node/add/*\r\n/node/*/edit"

@@ -5,7 +5,7 @@ dependencies: {  }
 name: 'Peel Away Image'
 type: peel_away_image
 description: 'A piece of content (image), headline, link, description that will be grouped as a peel away header on the front page'
-help: ''
+help: null
 new_revision: false
 preview_mode: 1
 display_submitted: false

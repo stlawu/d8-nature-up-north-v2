@@ -1,11 +1,14 @@
 _core:
   default_config_hash: yUNkiSB-fp4pyUb6B2L9HiiCdISBDvK7r1v9_XkGUaQ
+langcode: en
 page_title: Sitemap
+path: sitemap
 message:
   value: ''
   format: restricted_html
 plugins:
   frontpage:
+    base_plugin: frontpage
     enabled: true
     weight: -50
     settings:

@@ -12,7 +12,7 @@ third_party_settings:
 name: 'Landing Page'
 type: landing_page
 description: "A custom page that is fully configurable using Drupal's core Layout Builder functionality."
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

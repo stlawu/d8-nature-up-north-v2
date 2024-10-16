@@ -6,3 +6,4 @@ name: 'Blog category'
 vid: blog_category
 description: 'Blog category'
 weight: -6
+new_revision: false

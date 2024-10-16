@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: Class
 vid: class
-description: ''
+description: null
 weight: -5
+new_revision: false

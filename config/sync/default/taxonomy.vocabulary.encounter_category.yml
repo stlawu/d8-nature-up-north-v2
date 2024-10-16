@@ -6,3 +6,4 @@ name: 'Encounter category'
 vid: encounter_category
 description: 'Encounter category'
 weight: -8
+new_revision: false

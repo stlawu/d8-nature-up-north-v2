@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.user.user.user_picture
+    - image.style.100px_cropped_square
   module:
     - image
     - user
@@ -14,24 +15,40 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
+  blogger_profiles:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  main_profiles:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
   member_for:
     settings: {  }
     third_party_settings: {  }
-    weight: 5
+    weight: 1
     region: content
   user_picture:
     type: image
     label: hidden
     settings:
       image_link: content
-      image_style: ''
+      image_style: 100px_cropped_square
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 6
+    weight: 0
     region: content
 hidden:
-  blogger_profiles: true
-  main_profiles: true
   profile_blogger: true
   profile_main: true

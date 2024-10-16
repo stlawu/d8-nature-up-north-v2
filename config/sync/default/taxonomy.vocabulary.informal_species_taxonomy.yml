@@ -6,3 +6,4 @@ name: 'Informal species taxonomy'
 vid: informal_species_taxonomy
 description: 'Informal species taxonomy'
 weight: -4
+new_revision: false

@@ -5,7 +5,7 @@ dependencies: {  }
 name: 'Partners & Sponsors'
 type: partner
 description: 'A partner or sponsor'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

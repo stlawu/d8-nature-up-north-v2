@@ -6,3 +6,4 @@ name: 'Sponsoring organization'
 vid: sponsoring_organization
 description: 'Event sponsoring organizations - used by Event content type'
 weight: -3
+new_revision: false

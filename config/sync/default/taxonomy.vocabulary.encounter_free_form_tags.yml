@@ -6,3 +6,4 @@ name: 'Encounter free form tags'
 vid: encounter_free_form_tags
 description: 'For use in collecting free form tags in encounters'
 weight: -9
+new_revision: false

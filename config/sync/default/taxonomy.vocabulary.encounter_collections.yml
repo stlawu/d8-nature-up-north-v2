@@ -6,3 +6,4 @@ name: 'Encounter Collections'
 vid: encounter_collections
 description: 'Collections of encounters that share a common theme.'
 weight: 0
+new_revision: false

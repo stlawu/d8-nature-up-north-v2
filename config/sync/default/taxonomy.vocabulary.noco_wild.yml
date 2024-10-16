@@ -6,3 +6,4 @@ name: 'NoCo Wild'
 vid: noco_wild
 description: 'taxonomy for North Country Wild project'
 weight: 0
+new_revision: false

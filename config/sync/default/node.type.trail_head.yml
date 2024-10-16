@@ -5,7 +5,7 @@ dependencies: {  }
 name: 'Trail Head'
 type: trail_head
 description: 'An access point to a trail.'
-help: ''
+help: null
 new_revision: false
 preview_mode: 1
 display_submitted: false

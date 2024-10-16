@@ -6,3 +6,4 @@ name: 'Maple habitat'
 vid: maple_habitat
 description: 'Use for setting the habitat of maple trees.'
 weight: 0
+new_revision: false

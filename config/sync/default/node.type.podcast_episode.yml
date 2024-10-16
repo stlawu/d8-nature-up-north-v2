@@ -11,7 +11,7 @@ third_party_settings:
 name: 'Podcast episode'
 type: podcast_episode
 description: 'Content type for podcast episodes'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

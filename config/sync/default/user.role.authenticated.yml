@@ -8,12 +8,14 @@ dependencies:
   module:
     - comment
     - contact
+    - field_permissions
     - file
     - filter
     - media
     - profile
     - search
     - system
+    - toolbar
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
 id: authenticated
@@ -24,12 +26,19 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access site-wide contact form'
+  - 'access toolbar'
   - 'access user profiles'
   - 'cancel account'
   - 'change own username'
+  - 'create main profile'
   - 'delete own files'
+  - 'edit own field_encounter_image'
   - 'search content'
+  - 'update own main profile'
   - 'use text format simple_html'
   - 'use text format webform_default'
   - 'view media'
+  - 'view own blogger profile'
+  - 'view own field_encounter_image'
   - 'view own main profile'
+  - 'view the administration theme'

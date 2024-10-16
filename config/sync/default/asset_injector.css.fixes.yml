@@ -1,0 +1,16 @@
+uuid: 161c1552-d5ff-4061-a099-51e3a50f14c5
+langcode: en
+status: true
+dependencies: {  }
+id: fixes
+label: Fixes
+code: |-
+  .form-item table .label {
+      color: #333;
+      font-size: initial;
+  }
+media: all
+preprocess: true
+conditions: {  }
+contexts: {  }
+conditions_require_all: true
