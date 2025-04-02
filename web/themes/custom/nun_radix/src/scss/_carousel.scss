@@ -1,0 +1,95 @@
+.owl-main-outer-wrapper {
+  position: relative;
+  clear: both;
+  .owl-wrapper-outer {
+    .owl-item {
+      background: white;
+      text-align: center;
+      .item {
+        height: 250px;
+        position: relative;
+        img {
+          position:  absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+        }
+      }
+    }
+  }
+}
+
+.owl-thumb-outer-wrapper {
+  margin-top: 10px;
+  .owl-item {
+    width: 85px !important;
+    img {
+      cursor: pointer;
+    }
+  }
+}
+
+.nav-left {
+  position:  absolute;
+  height: 250px;
+  width: 50%;
+  top: 0;
+  background: url("../img/left-arrow.png") no-repeat left center;
+  cursor: pointer;
+}
+.nav-right {
+  position:  absolute;
+  height: 250px;
+  width: 50%;
+  top: 0;
+  right: 0;
+  background: url("../img/right-arrow.png") no-repeat right center;
+  cursor: pointer;
+}
+.caption {
+  padding: 10px;
+}
+
+@media (max-width: 400px) {
+  .owl-main-outer-wrapper .owl-wrapper-outer .owl-item .item {
+    height: 250px;
+  }
+  .nav-left, .nav-right {
+    height: 250px;
+  }
+}
+@media (min-width: 401px) and (max-width: 767px) {
+  .owl-main-outer-wrapper .owl-wrapper-outer .owl-item .item {
+    height: 310px;
+  }
+  .nav-left, .nav-right {
+    height: 310px;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .owl-main-outer-wrapper .owl-wrapper-outer .owl-item .item {
+    height: 371px;
+  }
+  .nav-left, .nav-right {
+    height: 371px;
+  }
+}
+@media (min-width: 980px){
+  .owl-main-outer-wrapper .owl-wrapper-outer .owl-item .item {
+    height: 483px;
+  }
+  .nav-left, .nav-right {
+    height: 483px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .owl-main-outer-wrapper .owl-wrapper-outer .owl-item .item {
+    height: 600px;
+  }
+  .nav-left, .nav-right {
+    height: 600px;
+  }
+}

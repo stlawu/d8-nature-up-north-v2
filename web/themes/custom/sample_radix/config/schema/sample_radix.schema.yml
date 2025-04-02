@@ -1,0 +1,5 @@
+# Schema for the configuration files of the sample_radix theme.
+
+sample_radix.settings:
+  type: theme_settings
+  label: 'sample_radix settings'

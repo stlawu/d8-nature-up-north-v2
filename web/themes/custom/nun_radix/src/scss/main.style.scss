@@ -1,0 +1,41 @@
+// Bootstrap
+// -----------------------------------------------------------------------------
+@import 'init';
+@import 'bootstrap';
+
+// Include any custom stylesheets here
+// -----------------------------------------------------------------------------
+@import "base/elements";
+@import "base/functions";
+@import "base/helpers";
+@import "base/typography";
+@import "base/bootswatch";
+
+// Base-theme overrides.
+@import 'reusables';
+@import 'header';
+//@import 'front';
+@import 'curtain';
+@import 'views';
+//@import 'footer';
+//@import 'overrides';
+@import 'blocks';
+//@import 'comments';
+//@import 'nodes';
+//@import 'carousel';
+
+.mw-card {
+  max-width: 225px;
+}
+.mw-aside {
+  max-width: 400px;
+}
+.mw-text {
+  max-width: 600px;
+}
+.mw-content {
+  max-width: 720px;
+}
+.mw-page {
+  max-width: 1200px;
+}

@@ -1,0 +1,5 @@
+# Schema for the configuration files of the nun_radix theme.
+
+nun_radix.settings:
+  type: theme_settings
+  label: 'nun_radix settings'

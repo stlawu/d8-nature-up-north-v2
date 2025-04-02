@@ -47,6 +47,7 @@ packages:
     drupal/ckeditor: 1.0.2
     drupal/coffee: 1.4.0
     drupal/colorbox: 2.1.1
+    drupal/components: 3.1.0
     drupal/composer_deploy: 1.10.0
     drupal/conditional_fields: 4.0.0-alpha5
     drupal/config_direct_save: 3.0.2
@@ -97,6 +98,7 @@ packages:
     drupal/prepopulate: 2.4.0
     drupal/prlp: 1.11.0
     drupal/profile: 1.11.0
+    drupal/radix: 6.0.0-rc6
     drupal/recaptcha: 3.4.0
     drupal/redirect: 1.10.0
     drupal/rules: 3.0.0-alpha8

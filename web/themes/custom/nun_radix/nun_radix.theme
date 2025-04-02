@@ -1,0 +1,357 @@
+<?php
+
+use Drupal\image\Entity\ImageStyle;
+use Drupal\Core\Url;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\media\MediaForm;
+use Drupal\views\Form\ViewsForm;
+use Drupal\views\ViewExecutable;
+
+/**
+ * @file
+ * Theme functions.
+ */
+
+// Include all files from the includes directory.
+$includes_path = dirname(__FILE__) . '/includes/*.theme';
+foreach (glob($includes_path) as $file) {
+  require_once dirname(__FILE__) . '/includes/' . basename($file);
+}
+
+function nun_radix_preprocess_page(&$vars) {
+  if($vars['is_front'] === TRUE) {
+    $vars['announcements'] = views_embed_view('announcements', 'home_page_block');
+    $vars['blogs'] = views_embed_view('front_main_content_block', 'home_page_block');
+    $vars['events_up_north'] = views_embed_view('events_up_north_block', 'home_page_block');
+    $vars['recent_encounters'] = views_embed_view('recent_encounters', 'home_page_block');
+    $vars['peel_away_image'] = views_embed_view('peel_away_image', 'peel_away');
+  }
+}
+
+function nun_radix_preprocess_comment(&$vars) {
+  $date = $vars['comment']->getCreatedTime();
+  $vars['created'] = \Drupal::service('date.formatter')->format($date, 'comment_format');
+}
+
+function nun_radix_preprocess_node(&$vars) {
+  if($vars['node']->getType() === 'blog') {
+    $date = $vars['node']->getCreatedTime();
+    $vars['date'] = \Drupal::service('date.formatter')->format($date, 'custom', 'F j, Y');
+
+    // If the encounter doesn't images in the media field, look to the legacy image field instead
+    if (count($vars['node']->get('field_blog_media')) > 0) {
+      $vars['blog_image_data'] = getImageCarouselData($vars['node'], 'field_blog_media');
+    }
+    else {
+      $vars['blog_image_data'] = getImageCarouselData($vars['node'], 'field_blog_image');
+    }
+
+    $vars['blog_author_block'] = \Drupal::service('plugin.manager.block')->createInstance('blog_author')->build();
+  }
+  elseif($vars['node']->getType() === 'encounter') {
+    $date = $vars['node']->getCreatedTime();
+    $vars['date'] = \Drupal::service('date.formatter')->format($date, 'custom', 'F j, Y');
+
+    // If the encounter doesn't have images in the media field, look to the legacy image field instead
+    if (count($vars['node']->get('field_encounter_media')) > 0) {
+      $vars['encounter_image_data'] = getImageCarouselData($vars['node'], 'field_encounter_media');
+    }
+    else {
+      $vars['encounter_image_data'] = getImageCarouselData($vars['node'], 'field_encounter_image');
+    }
+
+    $profile_data = array();
+    $user = \Drupal\user\Entity\User::load($vars['node']->getOwnerId());
+    // $profile = \Drupal::entityManager()->getStorage('profile')->loadByUser($user, 'main');
+    $profile = \Drupal::entityTypeManager()->getStorage('profile')->loadByUser($user, 'main');
+
+    if (!empty($profile)) {
+      $photo_field = $profile->get('field_profile_photo');
+      if(!$photo_field->isEmpty()) {
+        $photo_field_value = $photo_field->getValue();
+        $profile_data['image_url'] = ImageStyle::load('square_encounter_large')->buildUrl($photo_field->entity->uri->value);
+        $profile_data['image_title'] = array_key_exists('title', $photo_field_value) ? $photo_field_value['title'] : "";
+        $profile_data['image_alt'] = array_key_exists('alt', $photo_field_value) ? $photo_field_value['alt'] : "";
+      } else {
+        $default_image = $photo_field->getSetting('default_image');
+        if($default_image && $default_image['uuid']) {
+          $default_photo_file = \Drupal::service('entity.repository')->loadEntityByUuid('file',$default_image['uuid']);
+          if($default_photo_file) {
+            $profile_data['image_url'] = ImageStyle::load('medium')->buildUrl($default_photo_file->getFileUri());
+          }
+        }
+      }
+    }
+      
+    $profile_data['full_name'] = $profile->get('field_profile_full_name')->value;
+    $profile_data['hometown'] = $profile->get('field_profile_hometown')->value;
+      
+    $vars['profile_information'] = $profile_data;
+
+  }
+} 
+
+function nun_radix_page_attachments_alter(&$build) {
+  $routeMatch = \Drupal::routeMatch();
+  $routeName = $routeMatch->getRouteName();
+  if('entity.node.canonical' === $routeName) {
+    $node = $routeMatch->getParameter('node');
+    if('encounter' === $node->getType()) {
+      $location = $node->get('field_encounter_location');
+      if($location && !$location->isEmpty()) {
+        $build['#attached']['library'][] = 'nun/encounter';
+        $build['#attached']['drupalSettings']['encounter_geolocation'] = $location->getValue()[0];
+      }   
+    }
+  } else if ('node.add' === $routeName || 'entity.node.edit_form' === $routeName) {
+    $bundle = 'node.add' === $routeName ?
+      $routeMatch->getParameter('node_type')->id() :
+      $routeMatch->getParameter('node')->getType();
+    if($bundle === 'encounter') {
+      $build['#attached']['library'][] = 'nun/encounter_mod';
+    }
+  }  
+}
+
+ function getImageCarouselData($node, $fieldname) {
+   //get the images with an image style for the carousel.
+   $images = $node->get($fieldname);
+   if(count($images) > 0) {
+     $urls = array();
+     if(count($images) > 1) {
+       $i = 0;
+       foreach($images as $image) {
+         // if the field is a media field, look at it's image field
+         if ($image->entity->getEntityTypeId() == 'media' && $image->entity->bundle() == 'image') {
+           $image = $image->entity->get('field_media_image');
+         }
+         $uri = $image->entity->uri->value;
+         $properties[$i]['title'] = $image->getValue()['title'];
+         $properties[$i]['alt'] = $image->getValue()['alt'];
+         $width = $image->getValue()['width'];
+         $height = $image->getValue()['height'];
+         if($height > $width) {
+           //no aspect switcher in d8, so test for landscape or portrait manually and load appropriate image style
+           $properties[$i]['uri'] = ImageStyle::load('image_carousel_portrait')->buildUrl($uri);
+         } else {
+           $properties[$i]['uri'] = ImageStyle::load('image_carousel_landscape')->buildUrl($uri);
+         }
+
+         $properties[$i]['thumb_uri'] = ImageStyle::load('square_encounter_thumbnail')->buildUrl($uri);
+         $i++;
+       }
+     } else {
+       //use a different image style when there is only one image
+       $image = $images[0];
+       if ($image->entity->getEntityTypeId() == 'media' && $image->entity->bundle() == 'image') {
+         $image = $image->entity->get('field_media_image');
+       }
+       $uri = $image->entity->uri->value;
+       $properties['title'] = $images[0]->getValue()['title'];
+       $properties['alt'] = $images[0]->getValue()['alt'];
+       $properties['uri'] = ImageStyle::load('width_800')->buildUrl($uri);
+     }
+     return $properties;
+   }
+ }
+
+
+// Media Library hooks from Seven
+
+/**
+ * Implements hook_preprocess_views_view_fields().
+ *
+ * This targets each rendered media item in the grid display of the media
+ * library's modal dialog.
+ */
+function nun_radix_preprocess_views_view_fields__media_library(array &$variables) {
+  // Add classes to media rendered entity field so it can be targeted for
+  // styling. Adding this class in a template is very difficult to do.
+  if (isset($variables['fields']['rendered_entity']->wrapper_attributes)) {
+    $variables['fields']['rendered_entity']->wrapper_attributes->addClass('media-library-item__click-to-select-trigger');
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function nun_radix_form_alter(array &$form, FormStateInterface $form_state, $form_id) {
+  $form_object = $form_state->getFormObject();
+  if ($form_object instanceof ViewsForm && strpos($form_object->getBaseFormId(), 'views_form_media_library') === 0) {
+    if (isset($form['header'])) {
+      $form['header']['#attributes']['class'][] = 'media-library-views-form__header';
+      $form['header']['media_bulk_form']['#attributes']['class'][] = 'media-library-views-form__bulk_form';
+    }
+    $form['actions']['submit']['#attributes']['class'] = ['media-library-select'];
+  }
+  // Add after build to add a CSS class to the form actions.
+  if ($form_id === 'views_exposed_form' && strpos($form['#id'], 'views-exposed-form-media-library-widget') === 0) {
+    $form['actions']['#attributes']['class'][] = 'media-library-view--form-actions';
+  }
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function nun_radix_form_media_library_add_form_alter(array &$form, FormStateInterface $form_state) {
+  $form['#attributes']['class'][] = 'media-library-add-form';
+  $form['#attached']['library'][] = 'nun/media_library';
+
+  // If there are unsaved media items, apply styling classes to various parts
+  // of the form.
+  if (isset($form['media'])) {
+    $form['#attributes']['class'][] = 'media-library-add-form--with-input';
+
+    // Put a wrapper around the informational message above the unsaved media
+    // items.
+    $form['description']['#template'] = '<p class="media-library-add-form__description">{{ text }}</p>';
+  }
+  else {
+    $form['#attributes']['class'][] = 'media-library-add-form--without-input';
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function nun_radix_form_media_library_add_form_upload_alter(array &$form, FormStateInterface $form_state) {
+  $form['#attributes']['class'][] = 'media-library-add-form--upload';
+
+  if (isset($form['container'])) {
+    $form['container']['#attributes']['class'][] = 'media-library-add-form__input-wrapper';
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function nun_radix_form_media_library_add_form_oembed_alter(array &$form, FormStateInterface $form_state) {
+  $form['#attributes']['class'][] = 'media-library-add-form--oembed';
+
+  // If no media items have been added yet, add a couple of styling classes
+  // to the initial URL form.
+  if (isset($form['container'])) {
+    $form['container']['#attributes']['class'][] = 'media-library-add-form__input-wrapper';
+    $form['container']['url']['#attributes']['class'][] = 'media-library-add-form-oembed-url';
+    $form['container']['submit']['#attributes']['class'][] = 'media-library-add-form-oembed-submit';
+  }
+}
+
+/**
+ * Implements hook_preprocess_item_list__media_library_add_form_media_list().
+ *
+ * This targets each new, unsaved media item added to the media library, before
+ * they are saved.
+ */
+function nun_radix_preprocess_item_list__media_library_add_form_media_list(array &$variables) {
+  foreach ($variables['items'] as &$item) {
+    $item['value']['preview']['#attributes']['class'][] = 'media-library-add-form__preview';
+    $item['value']['fields']['#attributes']['class'][] = 'media-library-add-form__fields';
+    $item['value']['remove_button']['#attributes']['class'][] = 'media-library-add-form__remove-button';
+
+    // #source_field_name is set by AddFormBase::buildEntityFormElement()
+    // to help themes and form_alter hooks identify the source field.
+    $fields = &$item['value']['fields'];
+    $source_field_name = $fields['#source_field_name'];
+    if (isset($fields[$source_field_name])) {
+      $fields[$source_field_name]['#attributes']['class'][] = 'media-library-add-form__source-field';
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_media_library_item__widget().
+ *
+ * This targets each media item selected in an entity reference field.
+ */
+function nun_radix_preprocess_media_library_item__widget(array &$variables) {
+  $variables['content']['remove_button']['#attributes']['class'][] = 'media-library-item__remove';
+}
+
+/**
+ * Implements hook_preprocess_media_library_item__small().
+ *
+ * This targets each pre-selected media item selected when adding new media in
+ * the modal media library dialog.
+ */
+function nun_radix_preprocess_media_library_item__small(array &$variables) {
+  $variables['content']['select']['#attributes']['class'][] = 'media-library-item__click-to-select-checkbox';
+}
+
+/**
+ * @todo Remove this when https://www.drupal.org/project/drupal/issues/2999549
+ * lands.
+ *
+ * @see \Drupal\media_library\Plugin\Field\FieldWidget\MediaLibraryWidget::formElement()
+ */
+function nun_radix_preprocess_fieldset__media_library_widget(array &$variables) {
+  if (isset($variables['prefix']['weight_toggle'])) {
+    $variables['prefix']['weight_toggle']['#attributes']['class'][] = 'media-library-widget__toggle-weight';
+  }
+  if (isset($variables['suffix']['open_button'])) {
+    $variables['suffix']['open_button']['#attributes']['class'][] = 'media-library-open-button';
+  }
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function nun_radix_views_pre_render(ViewExecutable $view) {
+  $add_classes = function (&$option, array $classes_to_add) {
+    $classes = preg_split('/\s+/', $option);
+    $classes = array_filter($classes);
+    $classes = array_merge($classes, $classes_to_add);
+    $option = implode(' ', array_unique($classes));
+  };
+
+  if ($view->id() === 'media_library') {
+    if ($view->display_handler->options['defaults']['css_class']) {
+      $add_classes($view->displayHandlers->get('default')->options['css_class'], ['media-library-view']);
+    }
+    else {
+      $add_classes($view->display_handler->options['css_class'], ['media-library-view']);
+    }
+
+    if ($view->current_display === 'page') {
+      if (array_key_exists('media_bulk_form', $view->field)) {
+        $add_classes($view->field['media_bulk_form']->options['element_class'], ['media-library-item__click-to-select-checkbox']);
+      }
+      if (array_key_exists('rendered_entity', $view->field)) {
+        $add_classes($view->field['rendered_entity']->options['element_class'], ['media-library-item__content']);
+      }
+      if (array_key_exists('edit_media', $view->field)) {
+        $add_classes($view->field['edit_media']->options['alter']['link_class'], ['media-library-item__edit']);
+      }
+      if (array_key_exists('delete_media', $view->field)) {
+        $add_classes($view->field['delete_media']->options['alter']['link_class'], ['media-library-item__remove']);
+      }
+    }
+    elseif (strpos($view->current_display, 'widget') === 0) {
+      if (array_key_exists('rendered_entity', $view->field)) {
+        $add_classes($view->field['rendered_entity']->options['element_class'], ['media-library-item__content']);
+      }
+      if (array_key_exists('media_library_select_form', $view->field)) {
+        $add_classes($view->field['media_library_select_form']->options['element_wrapper_class'], ['media-library-item__click-to-select-checkbox']);
+      }
+
+      if ($view->display_handler->options['defaults']['css_class']) {
+        $add_classes($view->displayHandlers->get('default')->options['css_class'], ['media-library-view--widget']);
+      }
+      else {
+        $add_classes($view->display_handler->options['css_class'], ['media-library-view--widget']);
+      }
+    }
+  }
+}
+
+// Media Library hooks from Classy
+
+/**
+ * Implements hook_preprocess_links__media_library_menu().
+ */
+function nun_radix_preprocess_links__media_library_menu(array &$variables) {
+  foreach ($variables['links'] as &$link) {
+    $link['link']['#options']['attributes']['class'][] = 'media-library-menu__link';
+  }
+}
+

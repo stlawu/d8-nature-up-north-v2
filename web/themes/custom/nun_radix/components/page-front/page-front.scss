@@ -1,0 +1,532 @@
+@import "../../src/scss/init";
+
+$header-bg:  #fafafa;
+$nav-bg: #15586F;
+$light-gray: #afafaf;
+$link-blue: #307093;
+$button-yellow: #f0ac41;
+$annoucements-bg: #f9ebd6;
+$blue-text: #16587E;
+$events-bg: #165870;
+
+//big map background and button
+.wild-encounters {
+  background: black;
+  padding-top: 25px;
+  border-top: 2px solid #aaa;
+  .map-bg {
+    text-align: center;
+    position: relative;
+    @include media-breakpoint-up(lg) {
+      background-size: cover;
+      height: 375px;
+      padding-top: 0;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+    a.go-explore {
+      border-radius: 25px;
+      background: rgba(0, 0, 0, .5);
+      color: white;
+      border: 2px solid white;
+      font-size: 1.5em;
+      padding: 10px 20px;
+      font-family: Arial Black,Arial Bold,Gadget,sans-serif;
+      text-decoration: none;
+      position: absolute;
+      z-index: 1;
+      left: 44%;
+      top: 42%;
+      display: none;
+      @include media-breakpoint-up(sm) {
+        padding: 12px 35px;
+        font-size: 2em;
+      }
+      @include media-breakpoint-up(md) {
+        padding: 12px 40px;
+        font-size: 2.2em;
+      }
+      @include media-breakpoint-up(lg) {
+        padding: 15px 50px;
+        font-size: 2.5em;
+      }
+    }
+    a.go-explore:hover {
+      background: black;
+    }
+  }
+}
+
+.encounters-buttons {
+  text-align: center;
+  margin-bottom: 75px;
+  h1 {
+    font-family: Arial Black,Arial Bold,Gadget,sans-serif;
+    color: white;
+    @include media-breakpoint-up(sm) {
+      font-size: 35px;
+      margin-bottom: 25px;
+      margin-top: 30px;
+    }
+    @include media-breakpoint-up(md) {
+      font-size: 45px;
+      margin-bottom: 25px;
+      margin-top: 40px;
+    }
+  }
+  ul {
+    li {
+      width: 42%;
+      vertical-align: top;
+      @include media-breakpoint-up(lg) {
+        width: 35%;
+      }
+      a {
+        width: 100%;
+        display: inline-block;
+        border: 2px solid white;
+        font-size: 1.2em;
+        color: white;
+        padding: 30px;
+        text-decoration: none;
+        border-radius: 4px;
+        vertical-align: middle;
+        @include media-breakpoint-up(sm) {
+          font-size: 1.2em;
+          padding: 20px 40px;
+          height: 92px;
+        }
+        @include media-breakpoint-up(md) {
+          font-size: 1.3em;
+          padding: 20px 75px;
+          height: 100px;
+        }
+      }
+      a.post-on-map {
+        color: $button-yellow;
+        border-color: $button-yellow;
+        @include media-breakpoint-up(sm) {
+          //padding: 33px 45px;
+        }
+        @include media-breakpoint-up(lg) {
+          padding: 34px 75px;
+        }
+      }
+    }
+  }
+}
+
+/* Northworty encounters block */
+.wild-encounters {
+  .view-display-id-home_page_block {
+    text-align: center;
+    div#recent-encounters-home {
+      color: white;
+      > img {
+        display: inline-block;
+        vertical-align: top;
+      }
+      .recent-header {
+        display: inline-block;
+        vertical-align: top;
+        h2 {
+          color: white;
+          font-size: 45px;
+          margin-left: 15px;
+          margin-top: 0px;
+          font-weight: 200;
+          letter-spacing: 4px;
+          span.recent-txt {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    .view-content {
+      margin-bottom: 100px;
+      .views-row {
+        display: inline-block;
+        position: relative;
+        padding: 0 10px;
+        width: 48%;
+        vertical-align: top;
+        margin-bottom: 10px;
+        @include media-breakpoint-up(sm) {
+          margin-bottom: 15px;
+        }
+        @include media-breakpoint-up(md) {
+          width: 24%;
+          margin-bottom: 0px;
+        }
+        .views-field-field-encounter-image {
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+        .views-field-count {
+          position: relative;
+          @include media-breakpoint-up(sm) {
+            font-size: 15px;
+          }
+          @include media-breakpoint-up(lg) {
+            font-size: 16px;
+          }
+          span {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: block;
+            font-size: 16px;
+            padding: 5px 15px 5px 10px;
+            position: absolute;
+            right: 0;
+            text-align: right;
+            bottom: 0px;
+            width: 100%;
+          }
+        }
+        .views-field-count span:before {
+          background-image: url("../img/northworthy_white_sm.png");
+          background-repeat: no-repeat;
+          content: " ";
+          display: inline-table;
+          height: 20px;
+          vertical-align: top;
+          width: 15px;
+          margin-right: 10px;
+        }
+        .views-field-title {
+          margin-top: 7px;
+          text-align: left;
+          a, a:hover {
+            color: white;
+            letter-spacing: .5px;
+          }
+        }
+      }
+    }
+  }
+}
+//announcement section
+.annoucements {
+  background: $annoucements-bg;
+  border-top: 2px solid #aaa;
+  padding-bottom: 15px;
+  .view-announcements {
+    position: relative;
+    .views-field-title {
+      margin-top: 12px;
+      margin-bottom: 10px;
+      font-size: 22px;
+      font-family: Arial Black,Arial Bold,Gadget,sans-serif;
+      position: relative;
+      padding-right: 50px;
+      @include media-breakpoint-up(sm) {
+        font-size: 30px;
+      }
+      a, a:hover {
+        color: #555;
+        text-decoration: none;
+      }
+    }
+    .views-field-title.smaller {
+      font-size: 22px;
+    }
+    .views-field-nothing {
+      display: inline-block;
+      position: absolute;
+      right: 10px;
+      top: 5px;
+      a, a:hover {
+        color: #555;
+        outline: 0;
+        font-size: 22px;
+        @include media-breakpoint-up(sm) {
+          font-size: 26px;
+        }
+      }
+    }
+    .views-field-field-thumbnail {
+      float: right;
+      width: 33%;
+      padding:4px;
+      margin-left: 10px;
+      border-radius: 4px;
+      box-shadow: 0 0 4px #ccc;
+      @include media-breakpoint-up(sm) {
+        width: 25%;
+      }
+    }
+    .views-field-title > span:after {
+      @include media-breakpoint-up(sm) {
+        top:10px;
+      }
+    }
+    a.views-more-link {
+      display: block;
+      font-weight: normal;
+      margin-top: 5px;
+    }
+  }
+}
+
+//blogs home page block
+.blogs {
+  background: #ccc;
+  padding-bottom: 15px;
+  .view-front-main-content-block {
+    .views-row {
+      float: left;
+      width: 100%;
+      padding: 15px;
+      .front-page-blog-image {
+        float: left;
+        margin-right: 20px;
+        max-width: 380px;
+        width: 45%;
+        position: relative;
+        @include media-breakpoint-up(sm) {
+          width: 33%;
+        }
+        span {
+          background-color: rgba(0, 0, 0, 0.5);
+          color: white;
+          display: block;
+          font-size: 14px;
+          padding: 2px 15px 2px 10px;
+          position: absolute;
+          right: 0;
+          text-align: right;
+          bottom: 0px;
+          width: 100%;
+          font-weight: 300;
+          letter-spacing: .9px;
+          @include media-breakpoint-up(sm) {
+            font-size: 16px;
+          }
+        }
+      }
+      .views-field-title {
+        h3 {
+          margin-top: 0px;
+          a, a:hover {
+            color: #51802B;
+            text-decoration: none;
+          }
+        }
+      }
+      .views-field-body {
+        color: $blue-text;
+      }
+      .views-field-view-node {
+        float: right;
+        a {
+          display: inline-block;
+          border-radius: 5px;
+          padding: 2px 10px;
+          border: 1px solid #aaa;
+          text-decoration: none;
+        }
+        a:hover {
+          background: #333;
+          color: #eee;
+        }
+      }
+    }
+    .views-row-even {
+      background: #fff;
+    }
+  }
+}
+
+//nature up norht events home page block
+.events-up-north {
+  background: $events-bg;
+  padding: 15px 0px;
+  color: white;
+  h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .view-events-up-north-block {
+    .views-row {
+      width: 31%;
+      margin-left: 2%;
+      display: inline-block;
+      vertical-align: top;
+      .views-field-field-event-date {
+        border-radius: 5px;
+        background: #8AABB7;
+        box-shadow: 0px 0px 2px #fff;
+        color: $events-bg;
+        text-align: center;
+        padding: 7px 8px;
+        border: 1px solid #fff;
+        margin-bottom: 10px;
+      }
+      .views-field-title {
+        margin-bottom: 7px;
+        a, a:hover {
+          text-decoration: none;
+          color: white;
+          font-size: 16px;
+          font-weight: bold;
+        }
+      }
+      .views-field-body {
+          font-weight: 300;
+      }
+    }
+    .views-row-first {
+      margin-left: 0px;
+    }
+    .view-footer {
+      margin-top: 7px;
+      text-align: right;
+      a, a:hover {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+//donate section
+.donate {
+  a.btn-donate {
+    background-image: linear-gradient(to bottom, #f4a72d, #d38813);
+    background-repeat: repeat-x;
+    border-radius: 4px;
+    box-shadow: 0px 0px 3px darken($light-gray, 15%);
+    border: 1px solid white;
+    text-shadow: 0px 0px 3px #333;
+    color: white;
+    width: 100%;
+    max-width: 300px;
+    font-size: 18px;
+  }
+  a:hover {
+    background-image: linear-gradient(to bottom, #d38813, #f4a72d);
+  }
+}
+
+
+/****************** HOMEPAGE OVERRIDES FOR EXTRA SMALL DEVICE - MAX WIDTH 480PX *************/
+@include media-breakpoint-down(xs) {
+  //big map background and button
+  .wild-encounters {
+    .map-bg {
+      a.go-explore {
+        padding: 10px 25px;
+        font-size: 1.2em;
+      }
+    }
+  }
+
+  //big encounters buttons on home page
+  .encounters-buttons {
+    h1 {
+      font-size: 25px;
+      margin-bottom: 15px;
+      margin-top: 20px;
+    }
+    ul {
+      li {
+        width: 100%;
+        a {
+          font-size: 1.1em;
+          padding: 20px 75px;
+          height: auto;
+          margin-bottom: 15px;
+        }
+        a.post-on-map {
+          padding: 34px 75px;
+        }
+      }
+    }
+  }
+
+  /* recent encounters on home page  */
+  .wild-encounters {
+    .view-display-id-home_page_block {
+      text-align: center;
+      div#recent-encounters-home {
+        color: white;
+        > img {
+          display: none;
+        }
+        .recent-header {
+          display: inline-block;
+          vertical-align: top;
+
+          h2 {
+            color: white;
+            font-size: 30px;
+            margin-left: 0px;
+            margin-top: 0px;
+            font-weight: 200;
+            letter-spacing: 3px;
+            span.recent-txt {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+      .view-content {
+        .views-row {
+          padding: 0 10px;
+          width: 98%;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .annoucements {
+    .view-announcements {
+      .views-field-field-thumbnail {
+        width: 50%;
+      }
+    }
+  }
+
+  .blogs {
+    .view-front-main-content-block {
+      .views-row {
+        .front-page-blog-image {
+          float: none;
+          width: 100%;
+        }
+        .views-field-title {
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  //nature up norht events home page block
+  .events-up-north {
+    background: $events-bg;
+    padding: 15px 0px;
+    color: white;
+    h1 {
+      color: white;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .view-events-up-north-block {
+      .views-row {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+}
+

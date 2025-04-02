@@ -1,0 +1,40 @@
+name: sample_radix
+description: ''
+screenshot: screenshot.png
+'alt text': 'sample_radix theme screenshot'
+core_version_requirement: ^10
+engine: twig
+type: theme
+'base theme': radix
+starterkit: true
+dependencies:
+  - 'drupal:serialization'
+'interface translation project': sample_radix
+'interface translation server pattern': themes/custom/sample_radix/translations/%language.po
+regions:
+  navbar_branding: 'Navbar branding'
+  navbar_left: 'Navbar left'
+  navbar_right: 'Navbar right'
+  header: Header
+  content: Content
+  page_bottom: 'Page bottom'
+  footer: Footer
+libraries:
+  - sample_radix/style
+ckeditor5-stylesheets:
+  - build/css/main.style.css
+libraries-extend:
+  core/drupal.ajax:
+    - sample_radix/drupal.ajax
+  core/drupal.checkbox:
+    - sample_radix/drupal.checkbox
+  core/drupal.message:
+    - sample_radix/drupal.message
+  core/drupal.progress:
+    - sample_radix/drupal.progress
+  clientside_validation_jquery/cv.jquery.validate:
+    - sample_radix/jquery.validate
+version: 1.0.0
+project: radix
+datestamp: 1729163927
+generator: 'radix_starterkit:6.0.0-rc6'

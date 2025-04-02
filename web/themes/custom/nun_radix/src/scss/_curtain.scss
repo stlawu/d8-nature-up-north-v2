@@ -1,0 +1,269 @@
+body.navbar-is-fixed-top.path-frontpage {
+  padding-top: 41px;
+  @include media-breakpoint-up(sm) {
+    padding-top: 30px;
+  }
+  @include media-breakpoint-up(lg) {
+    padding-top: 33px;
+  }
+}
+body.navbar-is-fixed-top.path-frontpage {
+    //margin-top: 0px;
+}
+.peel-away {
+  display: none;
+  float: left;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  height: 100.2%;
+  box-shadow: 0 7px 16px rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  z-index: 1040;
+  transition-duration: 0.5s;
+  transition-property: transform, -webkit-transform, -moz-transform;
+  transition-timing-function: ease-in-out;
+  border-bottom: 1px solid $light;
+  padding-bottom: 15px;
+  @include media-breakpoint-up(sm) {
+    display: block;
+  }
+  .container {
+    position: relative;
+    height: 100%;
+  }
+  .view-peel-away-image {
+    display: none;
+    position: absolute;
+    padding: 20px;
+    right: 20px;
+    bottom: 40px;
+    background: rgba(255,255,255,.8);
+    border-radius: 10px;
+    @include media-breakpoint-up(sm) {
+      display: block;
+      width: 350px;
+      bottom: 45px;
+    }
+    @include media-breakpoint-up(md) {
+      width: 400px;
+      bottom: 40px;
+    }
+    @include media-breakpoint-up(sm) {
+      width: 500px;
+    }
+    h2 {
+      margin-top: 0px;
+      @include media-breakpoint-up(sm) {
+        font-size: 1.1em;
+      }
+      @include media-breakpoint-up(md) {
+        font-size: 1.3em;
+      }
+      @include media-breakpoint-up(lg) {
+        font-size: 1.5em;
+      }
+    }
+    .views-field-field-peel-away-description {
+      font-weight: bold;
+    }
+  }
+  .col-sm-8.peel-nav {
+    @extend header, #navbar;
+    padding-right: 0px;
+    @include media-breakpoint-up(md) {
+      padding-right: 0px;
+    }
+    nav {
+      background: rgba(255,255,255,.8);
+      border-radius: 0px 0px 10px 10px;
+      padding-top: 10px;
+      margin-top: 0px;
+      float: right;
+      display: inline-block;
+      @include media-breakpoint-up(md) {
+        width: 610px;
+      }
+      .navbar-right {
+        > li a {
+          font-weight: normal;
+          span.caret {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+  .col-sm-4.peel-logo {
+    background: rgba(255,255,255,.8);
+    border-radius: 0px 0px 10px 10px;
+    padding-bottom: 8px;
+  }
+  .down-arrow {
+    background-image: url("../img/peel-away-down-arrow.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 45px 27px;
+    bottom: 10px;
+    display: block;
+    height: 50px;
+    left: 50%;
+    margin-left: -50px;
+    position: absolute;
+    width: 100px;
+    z-index: 1;
+  }
+  .arrow {
+    margin-top: 10px;
+    float: left;
+    width: 100%;
+  }
+  .arrow.absolute {
+    position: absolute;
+    float: none;
+    width: auto;
+    bottom: 7px;
+    left: 50%;
+    text-align: center;
+  }
+  .project-of {
+    color: $dark;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-left: 10px;
+    @include media-breakpoint-up(sm) {
+      font-size: 17px;
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: 18px;
+    }
+  }
+  .peel-logo {
+    .menu.nav {
+      li {
+        @extend .peel-away-button;
+        border-radius: 4px;
+        margin-bottom: 12px;
+        padding: 0;
+        a {
+          color: $link-color;
+          font-size: 1.5em;
+          text-align: center;
+          font-weight: bold;
+          padding: 12px 10px;
+          @include media-breakpoint-up(sm) {
+            font-size: 1.1em;
+            padding: 7px 10px;
+          }
+          @include media-breakpoint-up(md) {
+            font-size: 1.3em;
+          }
+         @include media-breakpoint-up(lg) {
+            font-size: 1.5em;
+          }
+          span.title, span.description {
+            display: block;
+            font-size: inherit;
+          }
+          span.description {
+            font-size: .85em;
+          }
+        }
+        a:hover {
+          background: transparent;
+        }
+      }
+      li:hover {
+        @extend .highlighted-menu;
+        a {
+          color: white;
+        }
+      }
+    }
+    img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    }
+  }
+}
+
+.home-wrapper {
+  //margin-top: 97px;
+}
+.home-wrapper.fixed {
+  position: fixed;
+  left: 0px;
+  width: 100%;
+}
+
+//the my account menu when user is not logged in (has no .user-loggin-in class)
+.peel-away .peel-nav nav{
+  > ul.menu.nav:first-child {
+    > li:last-child {
+      background-image: linear-gradient(to bottom, #f4a72d, #d38813);
+      background-repeat: repeat-x;
+      border-radius: 4px;
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f4a72d', endColorstr='#d38813');/*For IE7-8-9*/
+      box-shadow: 0px 0px 3px darken($light, 15%);
+      -webkit-box-shadow: 0px 0px 3px darken($light, 15%);
+      border: 1px solid white;
+      text-shadow: 0px 0px 3px #333;
+      > a {
+        color: white !important;
+      }
+    }
+    > li:last-child:hover {
+      background-image: linear-gradient(to bottom, #d38813, #f4a72d);
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#d38813', endColorstr='#f4a72d');/*For IE7-8-9*/
+    }
+  }
+}
+//the one for users who are logged in.
+.user-logged-in .peel-away .peel-nav nav{
+  > ul.menu.nav:first-child {
+    > li:last-child {
+      > a {
+        background-image: linear-gradient(to bottom, #b73535, #a71111);
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#b73535', endColorstr='#a71111');/*For IE7-8-9*/
+        background-repeat: repeat-x;
+        border-radius: 4px;
+        box-shadow: 0px 0px 3px darken($light, 15%);
+        border: 1px solid white;
+
+      }
+      > a {
+        color: white !important;
+      }
+    }
+  }
+}
+
+//hide "create an account" for logged in users
+.user-logged-in .peel-away div.peel-logo > ul.menu > li:last-child {
+  display: none;
+}
+
+.peel-away div.peel-logo > ul.menu {
+  > li:last-child {
+    background-image: linear-gradient(to bottom, #f4a72d, #d38813);
+    background-repeat: repeat-x;
+    border-radius: 4px;
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f4a72d', endColorstr='#d38813');/*For IE7-8-9*/
+    box-shadow: 0px 0px 3px darken($light, 15%);
+    -webkit-box-shadow: 0px 0px 3px darken($light, 15%);
+    border: 1px solid white;
+    text-shadow: 0px 0px 3px #333;
+    > a {
+      color: white !important;
+    }
+  }
+  > li:last-child:hover {
+    background-image: linear-gradient(to bottom, #d38813, #f4a72d);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#d38813', endColorstr='#f4a72d');/*For IE7-8-9*/
+  }
+}
