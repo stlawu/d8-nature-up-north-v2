@@ -13,6 +13,7 @@ dependencies:
     - filter
     - media
     - profile
+    - quiz
     - search
     - system
     - toolbar
@@ -25,6 +26,7 @@ is_admin: false
 permissions:
   - 'access comments'
   - 'access content'
+  - 'access quiz'
   - 'access site-wide contact form'
   - 'access toolbar'
   - 'access user profiles'
@@ -37,8 +39,10 @@ permissions:
   - 'update own main profile'
   - 'use text format simple_html'
   - 'use text format webform_default'
+  - 'view any quiz'
   - 'view media'
   - 'view own blogger profile'
   - 'view own field_encounter_image'
   - 'view own main profile'
+  - 'view own quiz_result'
   - 'view the administration theme'
