@@ -1,19 +1,19 @@
-uuid: 7e663c2c-1885-448d-af56-51906dd08e02
+uuid: 797dbf3e-af4f-4f7d-be22-4f15a7462144
 langcode: en
 status: true
 dependencies:
   module:
     - media
     - node
-id: node.field_media
-field_name: field_media
+id: node.field_hero_background
+field_name: field_hero_background
 entity_type: node
 type: entity_reference
 settings:
   target_type: media
 module: core
 locked: false
-cardinality: -1
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

@@ -1,0 +1,137 @@
+uuid: 7edbc9f4-88cb-44a3-83fb-a72d32814d09
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.project.body
+    - field.field.node.project.field_hero_background
+    - field.field.node.project.field_media
+    - field.field.node.project.field_project_logo
+    - field.field.node.project.layout_builder__layout
+    - node.type.project
+  module:
+    - bootstrap_layouts
+    - layout_builder
+    - layout_discovery
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          340b038d-00ab-476f-bebf-3b3556f970cb:
+            uuid: 340b038d-00ab-476f-bebf-3b3556f970cb
+            region: content
+            configuration:
+              id: 'extra_field_block:node:project:project_ct_hero_entity_view_1'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 1
+            additional: {  }
+          376cd89b-c8a8-4521-a33c-5b44573cc7f9:
+            uuid: 376cd89b-c8a8-4521-a33c-5b44573cc7f9
+            region: content
+            configuration:
+              id: 'extra_field_block:node:project:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: bs_1col
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          layout:
+            wrapper: div
+            classes:
+              row: row
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            main:
+              wrapper: div
+              classes:
+                col-sm-12: col-sm-12
+              add_region_classes: 1
+              attributes: ''
+          layout_builder_styles_style:
+            section_light_blue: section_light_blue
+            section_light_gray: 0
+            section_light_green: 0
+            section_light_tan: 0
+            section_light_yellow: 0
+            section_margin_y_axis_1: 0
+            section_margin_y_axis_2: 0
+            section_margin_y_axis_3: 0
+            section_margin_y_axis_4: 0
+            section_margin_y_axis_5: 0
+        components:
+          c4a6b316-d980-4a16-87ed-1c05de529338:
+            uuid: c4a6b316-d980-4a16-87ed-1c05de529338
+            region: main
+            configuration:
+              id: 'field_block:node:project:body'
+              label: Body
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional:
+              layout_builder_styles_style:
+                margin_x_axis_1: 0
+                margin_x_axis_2: 0
+                margin_x_axis_3: 0
+                margin_x_axis_4: 0
+                margin_x_axis_5: 0
+                margin_y_axis_1: 0
+                margin_y_axis_2: 0
+                margin_y_axis_3: 0
+                margin_y_axis_4: 0
+                margin_y_axis_5: 0
+        third_party_settings: {  }
+id: node.project.full
+targetEntityType: node
+bundle: project
+mode: full
+content:
+  field_media:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  project_ct_hero_entity_view_1:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+hidden:
+  body: true
+  field_hero_background: true
+  field_project_logo: true
+  layout_builder__layout: true

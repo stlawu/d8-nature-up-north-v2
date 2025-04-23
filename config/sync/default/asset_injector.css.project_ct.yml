@@ -1,0 +1,32 @@
+uuid: df41867e-e64c-4c52-ae48-0979d5edef49
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: project_ct
+label: 'Project CT'
+code: |-
+  .hero {
+  	position: relative;
+  }
+  .hero-content {
+    position: absolute;
+    background: white;
+    background: rgba(255, 255, 255, .8);
+    top: 50%;
+    padding: 2rem 5rem;
+    margin: 2rem 5rem;
+  }
+media: all
+preprocess: true
+conditions:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      project: project
+contexts: {  }
+conditions_require_all: true
