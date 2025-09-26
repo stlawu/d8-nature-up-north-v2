@@ -28,7 +28,7 @@ dependencies:
     - datetime_range
     - field_group
     - file
-    - geolocation
+    - geolocation_google_maps
     - image
     - link
     - markup
@@ -44,11 +44,17 @@ third_party_settings:
       region: content
       parent_name: ''
       weight: 0
-      format_type: accordion
+      format_type: tabs
       format_settings:
         classes: 'group-instructions-group field-group-accordion'
+        show_empty_fields: false
         id: ''
-        effect: none
+        label_as_html: false
+        description: ''
+        required_fields: true
+        direction: vertical
+        width_breakpoint: 640
+        open: '1'
     group_event_group:
       children:
         - group_event_description
@@ -62,10 +68,16 @@ third_party_settings:
       region: content
       parent_name: ''
       weight: 1
-      format_type: accordion
+      format_type: tabs
       format_settings:
         classes: ' group-event-group field-group-accordion'
+        show_empty_fields: false
         id: ''
+        label_as_html: false
+        required_fields: true
+        direction: vertical
+        width_breakpoint: 640
+        open: false
         effect: none
     group_event_description:
       children:
@@ -75,10 +87,12 @@ third_party_settings:
       region: content
       parent_name: group_event_group
       weight: 5
-      format_type: accordion_item
+      format_type: tab
       format_settings:
         classes: ' group-event-description field-group-accordion-item'
+        show_empty_fields: false
         id: ''
+        label_as_html: false
         formatter: open
         description: ''
         required_fields: true
@@ -89,13 +103,16 @@ third_party_settings:
       region: content
       parent_name: group_event_group
       weight: 6
-      format_type: accordion_item
+      format_type: tab
       format_settings:
         classes: ' group-event-information field-group-accordion-item'
+        show_empty_fields: false
         id: ''
+        label_as_html: false
         formatter: closed
         description: ''
         required_fields: true
+        open: false
     group_event_image:
       children:
         - field_event_image
@@ -103,13 +120,16 @@ third_party_settings:
       region: content
       parent_name: group_event_group
       weight: 7
-      format_type: accordion_item
+      format_type: tab
       format_settings:
         classes: ' group-event-image field-group-accordion-item'
+        show_empty_fields: false
         id: ''
+        label_as_html: false
         formatter: closed
         description: ''
         required_fields: true
+        open: false
     group_sponsoring_org:
       children:
         - field_add_your_organization
@@ -117,13 +137,16 @@ third_party_settings:
       region: content
       parent_name: group_event_group
       weight: 8
-      format_type: accordion_item
+      format_type: tab
       format_settings:
         classes: ' group-sponsor-org field-group-accordion-item'
+        show_empty_fields: false
         id: ''
+        label_as_html: false
         formatter: closed
         description: ''
         required_fields: true
+        open: false
     group_participation:
       children:
         - field_appropriate_ages
@@ -132,13 +155,16 @@ third_party_settings:
       region: content
       parent_name: group_event_group
       weight: 9
-      format_type: accordion_item
+      format_type: tab
       format_settings:
         classes: ' group-participation field-group-accordion-item'
+        show_empty_fields: false
         id: ''
+        label_as_html: false
         formatter: closed
         description: ''
         required_fields: true
+        open: false
     group_event_details:
       children:
         - field_event_location
@@ -152,11 +178,14 @@ third_party_settings:
       region: content
       parent_name: group_event_group
       weight: 10
-      format_type: accordion_item
+      format_type: tab
       format_settings:
         classes: ' group-eventdetails field-group-accordion-item'
+        show_empty_fields: false
         id: ''
-        formatter: open
+        label_as_html: false
+        formatter: closed
+        description: ''
         required_fields: true
     group_more_information:
       children:
@@ -166,13 +195,16 @@ third_party_settings:
       region: content
       parent_name: group_event_group
       weight: 11
-      format_type: accordion_item
+      format_type: tab
       format_settings:
         classes: ' group-more-information field-group-accordion-item'
+        show_empty_fields: false
         id: ''
+        label_as_html: false
         formatter: closed
         description: ''
         required_fields: true
+        open: false
     group_instructions:
       children:
         - field_instructions
@@ -180,12 +212,16 @@ third_party_settings:
       region: content
       parent_name: group_instructions_group
       weight: 10
-      format_type: details
+      format_type: tab
       format_settings:
         classes: ''
+        show_empty_fields: false
         id: ''
-        open: true
+        label_as_html: false
+        formatter: closed
+        description: ''
         required_fields: true
+        open: true
 id: node.event.default
 targetEntityType: node
 bundle: event
@@ -294,6 +330,10 @@ content:
       auto_client_location: '0'
       auto_client_location_marker: '0'
       allow_override_map_settings: 0
+      hide_textfield_form: false
+      centre:
+        fit_bounds:
+          enable: true
       google_map_settings:
         type: ROADMAP
         zoom: 8
@@ -315,11 +355,6 @@ content:
         fullscreenControl: 0
         preferScrollingToZooming: 0
         disableDoubleClickZoom: 0
-      default_longitude: '-74.331616'
-      default_latitude: '43.850214'
-      populate_address_field: '1'
-      target_address_field: field_event_address
-      explicite_actions_address_field: '1'
     third_party_settings: {  }
   field_event_telephone:
     type: telephone_default

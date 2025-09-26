@@ -72,7 +72,7 @@ packages:
     drupal/entity_reference_views_select: 1.6.0
     drupal/eva: 3.1.1
     drupal/features: 3.15.0
-    drupal/field_group: 3.4.0
+    drupal/field_group: 3.6.0
     drupal/field_permissions: 1.4.0
     drupal/file_mdm: 3.1.0
     drupal/file_mdm_exif: 3.1.0
@@ -80,8 +80,8 @@ packages:
     drupal/flag: 4.0.0-beta7
     drupal/geolocation: 3.14.0
     drupal/google_analytics: 4.0.3
-    drupal/honeypot: 2.1.4
-    drupal/image_effects: 3.6.0
+    drupal/honeypot: 2.2.2
+    drupal/image_effects: 4.0.0
     drupal/inline_entity_form: 1.0.0-rc17
     drupal/jquery_ui: 1.7.0
     drupal/jquery_ui_autocomplete: 2.1.0
@@ -100,7 +100,7 @@ packages:
     drupal/prepopulate: 2.5.0
     drupal/prlp: 1.11.0
     drupal/profile: 1.12.0
-    drupal/quiz: 7.0.0-alpha1
+    drupal/quiz: 7.0.2
     drupal/radix: 6.0.2
     drupal/range: 1.6.0
     drupal/recaptcha: 3.4.0
