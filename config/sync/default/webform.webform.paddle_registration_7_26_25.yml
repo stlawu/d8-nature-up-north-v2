@@ -1,46 +1,88 @@
-uuid: f36723c5-dcb8-401b-8e31-bbaad88e2c73
+uuid: 2f12ee6b-4b2a-4f86-9cf6-1cba0d4608eb
 langcode: en
-status: closed
-dependencies: {  }
+status: open
+dependencies:
+  module:
+    - honeypot
+third_party_settings:
+  honeypot:
+    time_restriction: true
 weight: 0
 open: null
 close: null
 uid: 19788
 template: false
 archive: false
-id: ask_a_fairy_fall_2024_edition
-title: 'Ask A Fairy Fall 2024 Edition!'
-description: ''
+id: paddle_registration_7_26_25
+title: 'Community Paddle Registration July 26'
+description: '<p>Registration form for our community paddle</p>'
 categories: {  }
 elements: |-
-  processed_text:
-    '#type': processed_text
-    '#text': "Great job! You found the fairy house! Ask your question in the box below and stay tuned to https://www.natureupnorth.org to find a fairy's answer!"
-    '#format': plain_text
-  name:
+  first_name:
     '#type': textfield
-    '#title': Name
-  age:
+    '#title': 'First Name'
+    '#title_display': before
+    '#description_display': tooltip
+    '#minlength': 1
+    '#maxlength': 25
+    '#required': true
+  last_name:
     '#type': textfield
-    '#title': Age
-  what_is_your_question_for_the_fairies_:
+    '#title': 'Last Name'
+    '#title_display': before
+    '#description_display': tooltip
+    '#minlength': 1
+    '#maxlength': 20
+    '#required': true
+  email_address:
+    '#type': email
+    '#title': 'Email Address'
+    '#title_display': before
+    '#description_display': tooltip
+    '#required': true
+  how_many_people_are_in_your_group_:
+    '#type': number
+    '#title': 'How many people are in your group?'
+    '#description': '<p>Let us know how many people you are bringing (including yourself).</p>'
+    '#min': 1
+    '#max': 10
+    '#required': true
+  will_you_need_to_borrow_a_canoe_and_equipment_:
+    '#type': checkbox
+    '#title': 'Will you need to borrow a canoe and equipment?'
+  how_many_boats_will_you_need_:
+    '#type': number
+    '#title': 'If so, how many boats will you need?'
+    '#description': '<p>Canoes can take a minimum of 2, and maximum of 4 people.</p>'
+    '#min': 0
+    '#max': 3
+  please_list_what_equipment_you_will_need_and_how_many_of_each_:
     '#type': textarea
-    '#title': 'What is your question for the fairies?'
-  do_you_want_to_share_a_picture_of_you_at_the_fairy_house_for_the:
-    '#type': webform_image_file
-    '#title': 'Do you want to share a picture of you at the fairy house for the fairies to see?'
-  which_trail_did_you_find_the_fairy_house_on_:
-    '#type': radios
-    '#title': 'Which trail did you find the fairy house on? '
+    '#title': 'Please list what equipment you will need, and how many of each.'
+    '#description': '<p>Example: 1 paddle, 2 life jackets</p>'
+  how_did_you_hear_about_this_event_:
+    '#type': select
+    '#title': 'How did you hear about this event?'
     '#options':
-      'The Munter Trail': 'The Munter Trail'
-      'Nicandri Nature Center': 'Nicandri Nature Center'
-      'The Huckleberry Lake Trail': 'The Huckleberry Lake Trail'
+      'Online Calendar': 'Online Calendar'
+      'Facebook ': 'Facebook '
+      Instagram: Instagram
+      'Newspaper ': 'Newspaper '
+      'From a friend': 'From a friend'
+      "I can't remember": "I can't remember"
+      Other: Other
+  thanks_for_your_interest_and_registration_see_you_soon_:
+    '#type': label
+    '#title': 'Thanks for your interest and registration!'
+  actions:
+    '#type': webform_actions
+    '#title': Submit
+    '#submit__label': 'Submit '
 css: ''
 javascript: ''
 settings:
   ajax: false
-  ajax_scroll_top: form
+  ajax_scroll_top: ''
   ajax_progress_type: ''
   ajax_effect: ''
   ajax_speed: null
@@ -140,8 +182,8 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: page
-  confirmation_url: ''
+  confirmation_type: url
+  confirmation_url: 'https://www.natureupnorth.org/event/night-time-bat-paddle'
   confirmation_title: ''
   confirmation_message: ''
   confirmation_attributes: {  }

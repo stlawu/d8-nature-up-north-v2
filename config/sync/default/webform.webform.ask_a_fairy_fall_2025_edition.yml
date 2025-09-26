@@ -1,6 +1,6 @@
-uuid: f36723c5-dcb8-401b-8e31-bbaad88e2c73
+uuid: b71bb4f1-4794-4e9b-b557-e5f7f3cd91ae
 langcode: en
-status: closed
+status: open
 dependencies: {  }
 weight: 0
 open: null
@@ -8,8 +8,8 @@ close: null
 uid: 19788
 template: false
 archive: false
-id: ask_a_fairy_fall_2024_edition
-title: 'Ask A Fairy Fall 2024 Edition!'
+id: ask_a_fairy_fall_2025_edition
+title: 'Ask A Fairy Fall 2025 Edition!'
 description: ''
 categories: {  }
 elements: |-
@@ -33,9 +33,9 @@ elements: |-
     '#type': radios
     '#title': 'Which trail did you find the fairy house on? '
     '#options':
-      'The Munter Trail': 'The Munter Trail'
-      'Nicandri Nature Center': 'Nicandri Nature Center'
-      'The Huckleberry Lake Trail': 'The Huckleberry Lake Trail'
+      'Stone Valley': 'Stone Valley'
+      'Indian Creek Nature Center': 'Indian Creek Nature Center'
+      'Copper Rock Falls': 'Copper Rock Falls'
 css: ''
 javascript: ''
 settings:
