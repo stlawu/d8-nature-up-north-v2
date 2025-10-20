@@ -76,11 +76,9 @@ use Drupal\views\ViewExecutable;
             }
           }
         }
+        $profile_data['full_name'] = $profile->get('field_profile_full_name')->value;
+        $profile_data['hometown'] = $profile->get('field_profile_hometown')->value;
       }
-
-      $profile_data['full_name'] = $profile->get('field_profile_full_name')->value;
-      $profile_data['hometown'] = $profile->get('field_profile_hometown')->value;
-
       $vars['profile_information'] = $profile_data;
 
     }

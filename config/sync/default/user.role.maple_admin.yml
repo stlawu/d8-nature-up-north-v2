@@ -3,6 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.entity_embed_image_media
+    - entity_browser.browser.existing_image_media
+    - entity_browser.browser.maple_tree_browser
     - node.type.maple_data
     - node.type.maple_observation
     - node.type.maple_tree

@@ -1,0 +1,26 @@
+uuid: b02b007b-85cc-4106-afb0-253702caaa55
+langcode: en
+status: true
+dependencies:
+  config:
+    - quiz.question.type.directions
+  module:
+    - text
+  enforced:
+    module:
+      - quiz_directions
+_core:
+  default_config_hash: na8xFX0w3RJtKD7-BhNI20a3bSB0FTgWHqkWO3sErk4
+id: quiz_question.directions.default
+targetEntityType: quiz_question
+bundle: directions
+mode: default
+content:
+  body:
+    type: text_default
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

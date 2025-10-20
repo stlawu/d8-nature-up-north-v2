@@ -1,0 +1,23 @@
+uuid: d66adbc3-3c06-4bef-bbe9-9c660ac8a410
+langcode: en
+status: true
+dependencies:
+  module:
+    - quiz
+  enforced:
+    module:
+      - quiz_matching
+_core:
+  default_config_hash: zKPHxsyq2uUh0ZWuEOxDVsY1rSYUaKHE4d7M9SYZk7w
+id: quiz_question.choice_penalty
+field_name: choice_penalty
+entity_type: quiz_question
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

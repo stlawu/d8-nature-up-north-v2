@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.entity_embed_image_media
+    - entity_browser.browser.existing_image_media
     - filter.format.basic_html
     - filter.format.full_html
     - node.type.blog

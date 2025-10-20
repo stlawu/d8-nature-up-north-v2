@@ -1,0 +1,41 @@
+uuid: dd96ba2d-3311-4c7e-afaa-19bb33642d45
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.quiz_result_answer.matching.matching_user_answer
+    - quiz.result.answer.type.matching
+  module:
+    - paragraphs
+    - text
+  enforced:
+    module:
+      - quiz_matching
+_core:
+  default_config_hash: vvTK2TiRdp2X8h6ikcLuNr9N-umB4O1D7izXpgb1Z9Q
+id: quiz_result_answer.matching.default
+targetEntityType: quiz_result_answer
+bundle: matching
+mode: default
+content:
+  answer_feedback:
+    type: text_textarea
+    region: content
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  matching_user_answer:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }
