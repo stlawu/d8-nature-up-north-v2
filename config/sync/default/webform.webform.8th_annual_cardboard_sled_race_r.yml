@@ -1,6 +1,6 @@
-uuid: 24ead7bc-021a-46f4-9446-e25eb0e7a2d0
+uuid: dc07c2a6-fe37-452c-bbc8-48a292a7ca52
 langcode: en
-status: closed
+status: open
 dependencies: {  }
 weight: 0
 open: null
@@ -8,9 +8,9 @@ close: null
 uid: 19788
 template: false
 archive: false
-id: 7th_annual_cardboard_sled_race_r
-title: '7th Annual Cardboard Sled Race Registration'
-description: '<p>Registration page for the 7th annual cardboard sled race</p>'
+id: 8th_annual_cardboard_sled_race_r
+title: '8th Annual Cardboard Sled Race Registration'
+description: '<p>Registration page for the 8th annual cardboard sled race</p>'
 categories: {  }
 elements: |-
   please_submit_once_for_each_person_registering_thank_you_:

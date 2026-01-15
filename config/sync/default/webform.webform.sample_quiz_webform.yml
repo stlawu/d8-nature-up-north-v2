@@ -1,63 +1,149 @@
-uuid: 24ead7bc-021a-46f4-9446-e25eb0e7a2d0
+uuid: b3f8640d-657f-48ba-8004-134a17c1d43f
 langcode: en
-status: closed
+status: open
 dependencies: {  }
 weight: 0
 open: null
 close: null
-uid: 19788
+uid: 17621
 template: false
 archive: false
-id: 7th_annual_cardboard_sled_race_r
-title: '7th Annual Cardboard Sled Race Registration'
-description: '<p>Registration page for the 7th annual cardboard sled race</p>'
+id: sample_quiz_webform
+title: 'Sample Quiz Webform'
+description: ''
 categories: {  }
 elements: |-
-  please_submit_once_for_each_person_registering_thank_you_:
-    '#type': label
-    '#title': "Please submit once with your team leader's details (name, email)"
-  first_name:
-    '#type': textfield
-    '#title': 'First Name'
-    '#required': true
-  last_name:
-    '#type': textfield
-    '#title': 'Last Name'
-    '#required': true
-  email_address:
-    '#type': email
-    '#title': 'Email Address'
-    '#required': true
-  your_team_name:
-    '#type': textfield
-    '#title': 'Your Team Name'
-    '#required': true
-  age_class:
-    '#type': select
-    '#title': 'Age Class'
-    '#options':
-      'Youth (12 and under)': 'Youth (12 and under)'
-      'Open (13-39)': 'Open (13-39)'
-      'Masters (40+)': 'Masters (40+)'
-    '#required': true
-  how_did_you_hear_about_this_event_:
-    '#type': select
-    '#title': 'How did you hear about this event? '
-    '#options':
-      'Online calendar': 'Online calendar'
-      Instagram: Instagram
-      Facebook: Facebook
-      Newspaper: Newspaper
-      'Word of mouth': 'Word of mouth'
-      Other: Other
-  payment:
-    '#type': webform_message
-    '#message_message': |-
-      <p><strong>Submitting Below Will Complete Your Registration And Take You To Our Payment Form</strong><br />
-      All net proceeds from this event will support environmental education opportunities in the North Country for families, K-12 students, and community members.&nbsp;</p>
-  thank_you_for_your_interest_and_registration_:
-    '#type': label
-    '#title': 'Thank you for your interest and registration!'
+  quiz:
+    '#type': webform_wizard_page
+    '#title': Quiz
+    multiple_choice_question_1:
+      '#type': radios
+      '#title': 'Multiple choice question 1'
+      '#options':
+        answer_1: '1'
+        answer_2: '2'
+        answer_3: '3'
+        answer_4: '4'
+    multiple_choice_question_2:
+      '#type': radios
+      '#title': 'Multiple choice question 2'
+      '#options':
+        answer_1: '1'
+        answer_2: '2'
+        answer_3: '3'
+        answer_4: '4'
+    multiple_choice_question_3:
+      '#type': radios
+      '#title': 'Multiple choice question 3'
+      '#options':
+        answer_1: '1'
+        answer_2: '2'
+        answer_3: '3'
+        answer_4: '4'
+    multiple_choice_question_4:
+      '#type': radios
+      '#title': 'Multiple choice question 4'
+      '#options':
+        answer_1: '1'
+        answer_2: '2'
+        answer_3: '3'
+        answer_4: '4'
+    likert_1:
+      '#type': webform_likert
+      '#title': Likert
+      '#questions':
+        question_1: 'Question 1? -- Choice 1 description text can go here.'
+        question_2: 'Question 2? -- Choice 2 description text can go here.'
+        question_3: 'Question 3? -- Choice 3 description text can go here.'
+      '#answers':
+        answer_1: 'Answer 1 -- Answer 1 description text can go here.'
+        answer_2: 'Answer 2 -- Answer 2 description text can go here.'
+        answer_3: 'Answer 3 -- Answer 3 description text can go here.'
+      '#sticky': false
+    likert_2:
+      '#type': webform_likert
+      '#title': Likert
+      '#questions':
+        question_1: 'Question 1? -- Choice 1 description text can go here.'
+        question_2: 'Question 2? -- Choice 2 description text can go here.'
+        question_3: 'Question 3? -- Choice 3 description text can go here.'
+      '#answers':
+        answer_1: 'Answer 1 -- Answer 1 description text can go here.'
+        answer_2: 'Answer 2 -- Answer 2 description text can go here.'
+        answer_3: 'Answer 3 -- Answer 3 description text can go here.'
+      '#sticky': false
+  scoring:
+    '#type': webform_wizard_page
+    '#title': Scoring
+    grade:
+      '#type': webform_computed_twig
+      '#title': Grade
+      '#template': |-
+        {# Answer keys #}
+        {% set multiple_choice_key = {
+          'multiple_choice_question_1': 'answer_4',
+          'multiple_choice_question_2': 'answer_3',
+          'multiple_choice_question_3': 'answer_2',
+          'multiple_choice_question_4': 'answer_1'
+        } %}
+
+        {% set likert_1_key = {
+          'question_1': 'answer_3',
+          'question_2': 'answer_2',
+          'question_3': 'answer_1'
+        } %}
+
+        {% set likert_2_key = {
+          'question_1': 'answer_1',
+          'question_2': 'answer_2',
+          'question_3': 'answer_3'
+        } %}
+
+        {% set score = 0 %}
+
+        {# Total questions = MC + Likert 1 + Likert 2 #}
+        {% set total =
+          multiple_choice_key|length
+          + likert_1_key|length
+          + likert_2_key|length
+        %}
+
+        {# Score multiple choice #}
+        {% for field, correct in multiple_choice_key %}
+          {% if data[field] is defined and data[field] == correct %}
+            {% set score = score + 1 %}
+          {% endif %}
+        {% endfor %}
+
+        {# Score likert_1 #}
+        {% if data.likert_1 is defined %}
+          {% for question, correct in likert_1_key %}
+            {% if data.likert_1[question] is defined
+              and data.likert_1[question] == correct %}
+              {% set score = score + 1 %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+
+        {# Score likert_2 #}
+        {% if data.likert_2 is defined %}
+          {% for question, correct in likert_2_key %}
+            {% if data.likert_2[question] is defined
+              and data.likert_2[question] == correct %}
+              {% set score = score + 1 %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+
+        <p><strong>Score:</strong> {{ score }} / {{ total }}</p>
+
+        {% if score == total %}
+          <p>🎉 Perfect score!</p>
+        {% elseif score >= total / 2 %}
+          <p>👍 Good job!</p>
+        {% else %}
+          <p>📘 Keep practicing.</p>
+        {% endif %}
 css: ''
 javascript: ''
 settings:
@@ -70,7 +156,7 @@ settings:
   page_submit_path: ''
   page_confirm_path: ''
   page_theme_name: ''
-  form_title: source_entity_webform
+  form_title: both
   form_submit_once: false
   form_open_message: ''
   form_close_message: ''
@@ -162,8 +248,8 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: url
-  confirmation_url: 'https://www.natureupnorth.org/event/7th-annual-cardboard-sled-race'
+  confirmation_type: page
+  confirmation_url: ''
   confirmation_title: ''
   confirmation_message: ''
   confirmation_attributes: {  }

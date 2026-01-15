@@ -1,6 +1,6 @@
-uuid: 24ead7bc-021a-46f4-9446-e25eb0e7a2d0
+uuid: 6f457341-acf8-4365-9d7e-9d93f4c81806
 langcode: en
-status: closed
+status: open
 dependencies: {  }
 weight: 0
 open: null
@@ -8,56 +8,41 @@ close: null
 uid: 19788
 template: false
 archive: false
-id: 7th_annual_cardboard_sled_race_r
-title: '7th Annual Cardboard Sled Race Registration'
-description: '<p>Registration page for the 7th annual cardboard sled race</p>'
+id: first_hike_2026
+title: 'First Hike 2026'
+description: '<p>This is a signup page for a hike at Ferrone Woods 1/4/2026.</p>'
 categories: {  }
 elements: |-
-  please_submit_once_for_each_person_registering_thank_you_:
-    '#type': label
-    '#title': "Please submit once with your team leader's details (name, email)"
-  first_name:
-    '#type': textfield
-    '#title': 'First Name'
+  your_name:
+    '#type': webform_name
+    '#title': 'Your Name'
+    '#title__access': false
+    '#first__required': true
+    '#middle__access': false
+    '#last__required': true
+    '#suffix__access': false
+    '#degree__access': false
+    '#flexbox': '0'
     '#required': true
-  last_name:
-    '#type': textfield
-    '#title': 'Last Name'
-    '#required': true
-  email_address:
+  your_email:
     '#type': email
-    '#title': 'Email Address'
+    '#title': 'Your Email'
     '#required': true
-  your_team_name:
-    '#type': textfield
-    '#title': 'Your Team Name'
+  your_preferred_phone_number:
+    '#type': tel
+    '#title': 'Your preferred phone number'
+  how_many_people_are_you_bringing_:
+    '#type': number
+    '#title': 'How many people are in your group?'
     '#required': true
-  age_class:
-    '#type': select
-    '#title': 'Age Class'
-    '#options':
-      'Youth (12 and under)': 'Youth (12 and under)'
-      'Open (13-39)': 'Open (13-39)'
-      'Masters (40+)': 'Masters (40+)'
+  how_many_pairs_of_snowshoes_will_you_need_:
+    '#type': number
+    '#title': "How many children's pairs of snowshoes will you need?"
     '#required': true
-  how_did_you_hear_about_this_event_:
-    '#type': select
-    '#title': 'How did you hear about this event? '
-    '#options':
-      'Online calendar': 'Online calendar'
-      Instagram: Instagram
-      Facebook: Facebook
-      Newspaper: Newspaper
-      'Word of mouth': 'Word of mouth'
-      Other: Other
-  payment:
-    '#type': webform_message
-    '#message_message': |-
-      <p><strong>Submitting Below Will Complete Your Registration And Take You To Our Payment Form</strong><br />
-      All net proceeds from this event will support environmental education opportunities in the North Country for families, K-12 students, and community members.&nbsp;</p>
-  thank_you_for_your_interest_and_registration_:
-    '#type': label
-    '#title': 'Thank you for your interest and registration!'
+  how_many_adult_pairs_will_you_need_:
+    '#type': number
+    '#title': 'How many adult pairs of snowshoes will you need?'
+    '#required': true
 css: ''
 javascript: ''
 settings:
@@ -162,10 +147,10 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: url
-  confirmation_url: 'https://www.natureupnorth.org/event/7th-annual-cardboard-sled-race'
+  confirmation_type: page
+  confirmation_url: ''
   confirmation_title: ''
-  confirmation_message: ''
+  confirmation_message: '<h5>Thank you for registering for our "first" day hike!<br><br>We''re aware of an issue with the website is providing: Unable to send email - <strong>Please disregard this error</strong>, and know that you''re registration was successful!</h5>'
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -241,5 +226,42 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  email:
+    id: email
+    handler_id: email
+    label: Email
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: 'info@natureupnorth.org, djfrench@stlawu.edu'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: _default
+      body: _default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
 variants: {  }
