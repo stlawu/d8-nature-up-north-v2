@@ -1,0 +1,22 @@
+uuid: a0c05a64-0ef9-4739-b0e2-90bc18dfc672
+langcode: en
+status: true
+dependencies: {  }
+id: email
+name: email
+description: Email
+grant_types:
+  refresh_token:
+    status: true
+    description: Email
+  authorization_code:
+    status: true
+    description: Email
+  client_credentials:
+    status: true
+    description: Email
+umbrella: false
+parent: _none
+granularity_id: role
+granularity_configuration:
+  role: authenticated

@@ -1,0 +1,22 @@
+uuid: 2aad7fba-83d0-4561-a767-1b49cfa119a0
+langcode: en
+status: true
+dependencies: {  }
+id: authorize
+name: authorize
+description: Authorize
+grant_types:
+  refresh_token:
+    status: true
+    description: Authorize
+  authorization_code:
+    status: true
+    description: Authorize
+  client_credentials:
+    status: true
+    description: Authorize
+umbrella: false
+parent: _none
+granularity_id: role
+granularity_configuration:
+  role: authenticated
