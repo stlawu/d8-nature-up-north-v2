@@ -1,0 +1,22 @@
+uuid: cdb52a76-9039-4516-aad8-d7f82624db77
+langcode: en
+status: true
+dependencies: {  }
+id: access_token
+name: access_token
+description: 'Access Token'
+grant_types:
+  refresh_token:
+    status: false
+    description: ''
+  authorization_code:
+    status: true
+    description: 'Access Token'
+  client_credentials:
+    status: true
+    description: 'Access Token'
+umbrella: false
+parent: _none
+granularity_id: role
+granularity_configuration:
+  role: authenticated

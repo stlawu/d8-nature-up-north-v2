@@ -24,6 +24,7 @@ module:
   conditional_fields: 0
   config: 0
   config_direct_save: 0
+  consumers: 0
   contact: 0
   contextual: 0
   csv_serialization: 0
@@ -85,6 +86,7 @@ module:
   nun_helper: 0
   nun_maps: 0
   nun_migration: 0
+  openid_connect: 0
   options: 0
   page_cache: 0
   path: 0
@@ -99,12 +101,14 @@ module:
   redirect: 0
   responsive_image: 0
   rest: 0
-  rules: 0
   search: 0
   serialization: 0
   sharethis: 0
   shortcut: 0
   simple_fb_connect: 0
+  simple_oauth: 0
+  simple_oauth_static_scope: 0
+  simple_oauth_static_scope_example: 0
   sitemap: 0
   system: 0
   taxonomy: 0
