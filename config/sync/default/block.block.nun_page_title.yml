@@ -2,6 +2,8 @@ uuid: d02bc421-37e4-46f5-89a8-9d4eb05b0245
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - nun
 _core:
@@ -17,4 +19,8 @@ settings:
   label: 'Page title'
   label_display: '0'
   provider: core
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: /node/18606
