@@ -302,7 +302,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "  <section class=\"hero\">\r\n    {{ field_hero_background }}\r\n    <div class=\"hero-content\">\r\n      {{ field_project_logo }}\r\n      <h1 class=\"hero-title\">{{ title }}</h1>\r\n    </div>\r\n  </section>"
+            text: "  <section class=\"hero\">\r\n    {{ field_hero_background }}\r\n    <div class=\"hero-content\">\r\n      <div class=\"clearfix\">\r\n        <div class=\"float-left\">\r\n          <div class=\"mx-1\">\r\n          {{ field_project_logo }}\r\n          </div>\r\n        </div>\r\n        <h1 class=\"hero-title mb-0 d-inline-block\">{{ title }}</h1>\r\n      </div>\r\n    </div>\r\n  </section>"
             make_link: false
             path: ''
             absolute: false

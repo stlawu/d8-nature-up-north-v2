@@ -947,6 +947,7 @@ display:
         default: '0'
         page_2: '0'
       filename: 'monitor-my-maple_[view:total-rows]-items.csv'
+      export_filesystem: private
     cache_metadata:
       max-age: -1
       contexts:
