@@ -14,7 +14,7 @@
         }
     ],
     "require": {
-        "php": ">=8.2",
+        "php": ">=8.3",
         "bower-asset/colorbox": "^1.6",
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.7",
@@ -202,7 +202,7 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "platform": {
-            "php": "8.2"
+            "php": "8.3"
         },
         "allow-plugins": {
             "composer/installers": true,
