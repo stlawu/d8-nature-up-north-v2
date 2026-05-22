@@ -2,17 +2,18 @@ uuid: 3fa7bf1e-20e4-4fd9-a22c-ba52d44ec5db
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.trail_head
   module:
     - node
 id: trail_head
 label: 'Trail Head'
 type: 'canonical_entities:node'
-pattern: 'trailhead/[node:title]'
+pattern: '/trailhead/[node:title]'
 selection_criteria:
   2a2fefca-2ef6-41ef-91ff-1b5ef7fecc9d:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 2a2fefca-2ef6-41ef-91ff-1b5ef7fecc9d
     context_mapping:
       node: node
     bundles:

@@ -2,17 +2,18 @@ uuid: 032754a8-671c-43e7-8bc4-002771214ff8
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.event
   module:
     - node
 id: event
 label: Event
 type: 'canonical_entities:node'
-pattern: 'event/[node:title]'
+pattern: '/event/[node:title]'
 selection_criteria:
   32650547-a3e5-4b34-b910-9559b22a5896:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 32650547-a3e5-4b34-b910-9559b22a5896
     context_mapping:
       node: node
     bundles:

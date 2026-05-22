@@ -2,17 +2,18 @@ uuid: 07e0a582-cf3b-4991-8044-f2d6d64b131c
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.encounter
   module:
     - node
 id: encounter
 label: Encounter
 type: 'canonical_entities:node'
-pattern: 'encounter/[node:author]/[node:title]'
+pattern: '/encounter/[node:author]/[node:title]'
 selection_criteria:
   8d1f15fc-8611-4cfd-b666-7b71aa793146:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 8d1f15fc-8611-4cfd-b666-7b71aa793146
     context_mapping:
       node: node
     bundles:

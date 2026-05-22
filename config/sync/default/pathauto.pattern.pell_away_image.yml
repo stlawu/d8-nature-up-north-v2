@@ -2,17 +2,18 @@ uuid: fbff4f7e-97d9-4f12-b63a-c50841053905
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.peel_away_image
   module:
     - node
 id: pell_away_image
 label: 'Pell Away Image'
 type: 'canonical_entities:node'
-pattern: '[node:title]'
+pattern: '/[node:title]'
 selection_criteria:
   fe64bc05-5336-4ad9-91fe-8ad2362016da:
     id: 'entity_bundle:node'
     negate: false
-    uuid: fe64bc05-5336-4ad9-91fe-8ad2362016da
     context_mapping:
       node: node
     bundles:

@@ -2,17 +2,18 @@ uuid: 36d02d6e-f291-4e84-b98c-7eb85ab7a05e
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.trail
   module:
     - node
 id: trail_description
 label: 'Trail Description'
 type: 'canonical_entities:node'
-pattern: 'trail/[node:title]'
+pattern: '/trail/[node:title]'
 selection_criteria:
   97a23dec-0362-4398-ab8d-ebc2f0195e18:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 97a23dec-0362-4398-ab8d-ebc2f0195e18
     context_mapping:
       node: node
     bundles:

@@ -2,17 +2,18 @@ uuid: d69f91fd-3c9e-4758-b80d-d75580f53bc6
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.announcement_
   module:
     - node
 id: announcement
 label: Announcement
 type: 'canonical_entities:node'
-pattern: 'announcement/[node:title]'
+pattern: '/announcement/[node:title]'
 selection_criteria:
   7e4622b4-fea9-46ac-b4d6-858e7ea9796d:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 7e4622b4-fea9-46ac-b4d6-858e7ea9796d
     context_mapping:
       node: node
     bundles:
