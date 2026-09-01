@@ -35,8 +35,8 @@ use \Drupal\user\Entity\User;
                  if(!$photo_field->isEmpty()) {
                      $photo_field_value = $photo_field->getValue();
                      $return['#image_url'] = ImageStyle::load('medium')->buildUrl($photo_field->entity->uri->value);
-                     $return['#image_title'] = $photo_field_value['title'];
-                     $return['#image_alt'] = $photo_field_value['alt'];
+                     $return['#image_title'] = array_key_exists('title', $photo_field_value) ? $photo_field_value['title'] : "";
+                     $return['#image_alt'] =  array_key_exists('alt', $photo_field_value) ? $photo_field_value['alt'] : "";
                  } else {
                      $default_image = $photo_field->getSetting('default_image');
                      if($default_image && $default_image['uuid']) {
