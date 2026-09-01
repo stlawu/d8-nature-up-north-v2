@@ -48,25 +48,25 @@ packages:
     drupal/captcha: 1.17.0
     drupal/ckeditor: 1.0.2
     drupal/coffee: 1.4.0
-    drupal/colorbox: 2.2.0
+    drupal/colorbox: 2.2.1
     drupal/components: 3.2.0
     drupal/composer_deploy: 1.10.0
     drupal/conditional_fields: 4.0.0-alpha6
     drupal/config_direct_save: 3.0.2
     drupal/config_update: 2.0.0-alpha4
     drupal/consumers: 1.24.0
-    drupal/core: 10.6.9
-    drupal/core-composer-scaffold: 10.6.9
+    drupal/core: 10.6.15
+    drupal/core-composer-scaffold: 10.6.15
     drupal/core-project-message: 10.6.9
-    drupal/core-recommended: 10.6.9
+    drupal/core-recommended: 10.6.15
     drupal/csv_serialization: 4.0.1
     drupal/ctools: 3.15.0
     drupal/devel: 5.4.0
     drupal/ds: 3.37.0
     drupal/email_registration: 1.4.0
     drupal/embed: 1.10.0
-    drupal/entity: 1.6.0
-    drupal/entity_browser: 2.15.0
+    drupal/entity: 1.8.0
+    drupal/entity_browser: 2.17.0
     drupal/entity_embed: 1.7.0
     drupal/entity_reference_display: 2.0.5
     drupal/entity_reference_revisions: 1.14.0
@@ -79,7 +79,7 @@ packages:
     drupal/file_mdm_exif: 3.1.0
     drupal/file_mdm_font: 3.1.0
     drupal/flag: 4.0.0-beta7
-    drupal/geolocation: 3.14.0
+    drupal/geolocation: 3.15.0
     drupal/google_analytics: 4.0.3
     drupal/honeypot: 2.2.2
     drupal/image_effects: 'dev-4.0.x:7981b2dda341ca0c28d95d22183e730749151cb0'
@@ -97,7 +97,7 @@ packages:
     drupal/markup: 2.0.1
     drupal/menu_block: 1.14.0
     drupal/openid_connect: 1.5.0
-    drupal/paragraphs: 1.20.0
+    drupal/paragraphs: 1.23.0
     drupal/pathauto: 1.15.0
     drupal/prepopulate: 2.5.0
     drupal/prlp: 1.11.0
@@ -131,9 +131,9 @@ packages:
     google/recaptcha: 1.3.1
     grasmash/expander: 3.0.1
     grasmash/yaml-cli: 3.2.1
-    guzzlehttp/guzzle: 7.10.3
-    guzzlehttp/promises: 2.3.1
-    guzzlehttp/psr7: 2.8.1
+    guzzlehttp/guzzle: 7.15.5
+    guzzlehttp/promises: 2.5.3
+    guzzlehttp/psr7: 2.13.1
     joachim-n/composer-manifest: 1.1.7
     jquery/chosen: 1.8.7
     jquery/geocomplete: 1.7.0
@@ -155,16 +155,16 @@ packages:
     league/oauth2-server: 9.3.0
     league/uri: 7.8.1
     league/uri-interfaces: 7.8.1
-    masterminds/html5: 2.10.0
-    mck89/peast: v1.17.6
+    masterminds/html5: 2.10.1
+    mck89/peast: v1.17.7
     mglaman/phpstan-drupal: 1.3.9
     mikey179/vfsstream: v1.6.12
-    myclabs/deep-copy: 1.13.4
-    nikic/php-parser: v5.7.0
+    myclabs/deep-copy: 1.14.0
+    nikic/php-parser: v5.8.0
     oomphinc/composer-installers-extender: 2.0.1
     pantheon-systems/quicksilver-pushback: 1.0.1
     paragonie/random_compat: v9.99.100
-    pear/archive_tar: 1.6.0
+    pear/archive_tar: 1.6.1
     pear/console_getopt: v1.4.3
     pear/pear-core-minimal: v1.10.18
     pear/pear_exception: v1.0.2
@@ -180,7 +180,7 @@ packages:
     phpunit/php-invoker: 3.1.1
     phpunit/php-text-template: 2.0.4
     phpunit/php-timer: 5.0.3
-    phpunit/phpunit: 9.6.34
+    phpunit/phpunit: 9.6.36
     politsin/jquery-ui-touch-punch: '1.0'
     popperjs/popperjs: 2.11.6
     progress-tracker/progress-tracker: 2.0.7
@@ -204,12 +204,12 @@ packages:
     sebastian/complexity: 2.0.3
     sebastian/diff: 4.0.6
     sebastian/environment: 5.1.5
-    sebastian/exporter: 4.0.8
+    sebastian/exporter: 4.0.9
     sebastian/global-state: 5.0.8
     sebastian/lines-of-code: 1.0.4
     sebastian/object-enumerator: 4.0.4
     sebastian/object-reflector: 2.0.4
-    sebastian/recursion-context: 4.0.6
+    sebastian/recursion-context: 4.0.7
     sebastian/resource-operations: 3.0.4
     sebastian/type: 3.2.1
     sebastian/version: 3.0.2
@@ -219,45 +219,46 @@ packages:
     steverhoades/oauth2-openid-connect-server: v3.0.1
     svg-pan-zoom/svg-pan-zoom: 3.6.1
     symfony/config: v7.0.8
-    symfony/console: v6.4.39
+    symfony/console: v6.4.45
     symfony/css-selector: v2.8.52
-    symfony/dependency-injection: v6.4.38
-    symfony/deprecation-contracts: v3.7.0
-    symfony/error-handler: v6.4.36
-    symfony/event-dispatcher: v6.4.37
-    symfony/event-dispatcher-contracts: v3.7.0
-    symfony/filesystem: v6.4.39
-    symfony/finder: v6.4.34
-    symfony/http-foundation: v6.4.35
-    symfony/http-kernel: v6.4.40
-    symfony/mailer: v6.4.40
-    symfony/mime: v6.4.40
+    symfony/dependency-injection: v6.4.44
+    symfony/deprecation-contracts: v3.7.1
+    symfony/error-handler: v6.4.44
+    symfony/event-dispatcher: v6.4.44
+    symfony/event-dispatcher-contracts: v3.7.1
+    symfony/filesystem: v6.4.45
+    symfony/finder: v6.4.44
+    symfony/http-foundation: v6.4.45
+    symfony/http-kernel: v6.4.45
+    symfony/mailer: v6.4.44
+    symfony/mime: v6.4.45
     symfony/polyfill-ctype: v1.37.0
     symfony/polyfill-iconv: v1.37.0
-    symfony/polyfill-intl-grapheme: v1.37.0
-    symfony/polyfill-intl-idn: v1.37.0
-    symfony/polyfill-intl-normalizer: v1.37.0
-    symfony/polyfill-mbstring: v1.37.0
-    symfony/polyfill-php81: v1.37.0
-    symfony/polyfill-php83: v1.37.0
-    symfony/polyfill-php84: v1.37.0
-    symfony/process: v6.4.39
+    symfony/polyfill-intl-grapheme: v1.41.0
+    symfony/polyfill-intl-idn: v1.42.0
+    symfony/polyfill-intl-normalizer: v1.42.0
+    symfony/polyfill-mbstring: v1.38.2
+    symfony/polyfill-php80: v1.37.0
+    symfony/polyfill-php81: v1.38.1
+    symfony/polyfill-php83: v1.41.0
+    symfony/polyfill-php84: v1.38.1
+    symfony/process: v6.4.45
     symfony/psr-http-message-bridge: v6.4.32
-    symfony/routing: v6.4.40
-    symfony/serializer: v6.4.37
-    symfony/service-contracts: v3.7.0
-    symfony/string: v6.4.39
-    symfony/translation: v7.4.10
-    symfony/translation-contracts: v3.7.0
-    symfony/validator: v6.4.37
-    symfony/var-dumper: v6.4.36
-    symfony/var-exporter: v6.4.37
-    symfony/yaml: v6.4.40
+    symfony/routing: v6.4.45
+    symfony/serializer: v6.4.45
+    symfony/service-contracts: v3.7.3
+    symfony/string: v6.4.43
+    symfony/translation: v7.4.17
+    symfony/translation-contracts: v3.7.1
+    symfony/validator: v6.4.45
+    symfony/var-dumper: v6.4.45
+    symfony/var-exporter: v6.4.45
+    symfony/yaml: v6.4.45
     tabby/tabby: 12.0.3
     theseer/tokenizer: 1.3.1
     tippyjs/tippyjs: 6.3.7
-    twig/twig: v3.26.0
+    twig/twig: v3.28.0
     webflo/drupal-finder: 1.3.1
-    webmozart/assert: 2.4.0
+    webmozart/assert: 2.4.1
     wikimedia/composer-merge-plugin: v2.1.0
     zaporylie/composer-drupal-optimizations: 1.2.0
