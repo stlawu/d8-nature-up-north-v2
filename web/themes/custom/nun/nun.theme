@@ -120,10 +120,10 @@ use Drupal\views\ViewExecutable;
            $image = $image->entity->get('field_media_image');
          }
          $uri = $image->entity->uri->value;
-         $properties[$i]['title'] = $image->getValue()['title'];
-         $properties[$i]['alt'] = $image->getValue()['alt'];
-         $width = $image->getValue()['width'];
-         $height = $image->getValue()['height'];
+         $properties[$i]['title'] = array_key_exists('title', $image->getValue()) ? $image->getValue()['title'] : "";
+         $properties[$i]['alt'] = array_key_exists('alt', $image->getValue()) ? $image->getValue()['alt'] : "";
+         $width = array_key_exists('width', $image->getValue()) ? $image->getValue()['width'] : "";
+         $height = array_key_exists('height', $image->getValue()) ? $image->getValue()['height'] : "";
          if($height > $width) {
            //no aspect switcher in d8, so test for landscape or portrait manually and load appropriate image style
            $properties[$i]['uri'] = ImageStyle::load('image_carousel_portrait')->buildUrl($uri);
